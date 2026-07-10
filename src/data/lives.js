@@ -1,3 +1,5 @@
+/* ライブデータ */
+
 export const lives = [
   /* 2019年 */
   { id: "live2019_01", name: "バトボライブ2019", date: "2019-07-07", type: "fes" },
@@ -82,4 +84,4 @@ export const lives = [
   { id: "live2026_03", name: "仮ノ現", date:"2026-06-27", type: "oneman"},
   { id: "live2026_04", name: "原因は君にもある。", date:"2026-07-07", type: "oneman"},
   { id: "live2026_05", name: "JOIN ALIVE", date:"2026-07-19", type: "fes"},
-];
+]
