@@ -59,7 +59,7 @@ export const lives = [
 
   /* 2024年 */
   { id: "live2024_01", name: "架空のアウトライン", date: "2024-03-23", type: "oneman"},
-  { id: "live2024_02", name: "NYLON 20TH ANNIVERSARY PARTY", date: "2024-04-19", type: "fes"},
+  { id: "live2024_02", name: "NYLON 20TH", date: "2024-04-19", type: "fes"},
   { id: "live2024_03", name: "夢現の続き", date: "2024-07-07", type: "oneman"},
   { id: "live2024_04", name: "エビライ2024", date: "2024-08-17", type: "fes"},
   { id: "live2024_05", name: "白昼夢への招待", date: "2024-11-17", type: "oneman"},
