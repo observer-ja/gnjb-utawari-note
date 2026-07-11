@@ -13,7 +13,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs002",
@@ -26,7 +26,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs003",
@@ -39,7 +39,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs004",
@@ -52,7 +52,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs005",
@@ -65,7 +65,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs006",
@@ -78,7 +78,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
     {
         id: "bs007",
@@ -91,7 +91,7 @@ export const songsIndex = [
         tieup_info: null,
         call: false,
         mv: false,
-        live_history: null,
+        live_history: [],
     },
 
     /* 2019年 */
