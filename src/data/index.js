@@ -1452,6 +1452,266 @@ export const songsIndex = [
     },
 
     /* 2025年 */
+    {
+        id: "song066",
+        title: "LLL",
+        title_kana: "zzz_lll",
+        date: "2025-03-10",
+        cd: ["al_04"],
+        cd_track: { "al_04": 2 },
+        composer: ".ENDRECHERI./堂本剛",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song067",
+        title: "因果応報アンチノミー",
+        title_kana: "いんがおうほうあんちのみー",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 1 },
+        composer: "久下真音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song068",
+        title: "フィナーレ",
+        title_kana: "ふぃなーれ",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 6 },
+        composer: "玉谷友輝",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song069",
+        title: "方程式は恋模様",
+        title_kana: "ほうていしきはこいもよう",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 7 },
+        composer: "真白あまね",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song070",
+        title: "カラフるワンダフル",
+        title_kana: "からふるわんだふる",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 9 },
+        composer: "久下真音",
+        tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』エンディングソング"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song071",
+        title: "in the Fate",
+        title_kana: "zzz_inthefate",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 10 },
+        composer: "SARVAL",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song072",
+        title: "Paradox Re:Write",
+        title_kana: "zzz_paradoxrewrite",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 11 },
+        composer: "Kiyoki",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song073",
+        title: "多分、僕のソネット",
+        title_kana: "たぶんぼくのそねっと",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 13 },
+        composer: "久下真音",
+        tieup: ["読売テレビ ドラマDiVE『あらばしり』エンディング主題歌"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song074",
+        title: "貴方らしく",
+        title_kana: "あなたらしく",
+        date: "2025-04-23",
+        cd: ["al_04"],
+        cd_track: { "al_04": 14 },
+        composer: "YASU",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song075",
+        title: "パラノイドランデブー",
+        title_kana: "ぱらのいどらんでぶー",
+        date: "2025-10-15",
+        cd: ["sg_04"],
+        cd_track: { "sg_04": 1 },
+        composer: "川谷絵音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song076",
+        title: "ビネットネット",
+        title_kana: "びねっとねっと",
+        date: "2025-10-15",
+        cd: ["sg_04"],
+        cd_track: { "sg_04": 2 },
+        composer: "笹川真生",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song077",
+        title: "希望的観測の定義",
+        title_kana: "きぼうてきかんそくのていぎ",
+        date: "2025-10-15",
+        cd: ["sg_04"],
+        cd_track: { "sg_04": 3 },
+        composer: "久下真音",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song078",
+        title: "トレモロ",
+        title_kana: "とれもろ",
+        date: "2025-11-08",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 5 },
+        composer: "久下真音",
+        tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』オープニング曲"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
 
     /* 2026年 */
 
