@@ -1714,6 +1714,126 @@ export const songsIndex = [
     },
 
     /* 2026年 */
+    {
+        id: "song079",
+        title: "NOW",
+        title_kana: "zzz_now",
+        date: "2026-01-19",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 6 },
+        composer: "Nolzy",
+        tieup: ["読売テレビ ドラマDiVE『親友の「同棲して」に「うん」て言うまで』オープニング主題歌"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song080",
+        title: "ニヒリズムプリズム",
+        title_kana: "にひりずむぷりずむ",
+        date: "2026-03-11",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 1 },
+        composer: "久下真音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song081",
+        title: "疾走",
+        title_kana: "しっそう",
+        date: "2026-03-11",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 2 },
+        composer: "B33G",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song082",
+        title: "愛無常",
+        title_kana: "あいむじょう",
+        date: "2026-03-11",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 3 },
+        composer: "竹縄航太",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song083",
+        title: "Silence",
+        title_kana: "zzz_silence",
+        date: "2026-03-11",
+        cd: ["ep_03"],
+        cd_track: { "ep_03": 4 },
+        composer: "⭐︎Taku Takahashi",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song084",
+        title: "火宴",
+        title_kana: "かえん",
+        date: "2026-07-06",
+        cd: [],
+        cd_track: {},
+        composer: "SARVAL",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
 
     /* ひな形
     {
