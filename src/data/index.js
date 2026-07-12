@@ -1150,6 +1150,306 @@ export const songsIndex = [
     },
     
     /* 2024年 */
+    {
+        id: "song051",
+        title: "ダイヤモンドリリー",
+        title_kana: "だいやもんどりりー",
+        date: "2024-01-10",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 5 },
+        composer: "MIMI",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song052",
+        title: "マルチバース・アドベンチャー",
+        title_kana: "まるちばーすあどべんちゃー",
+        date: "2024-02-11",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 1 },
+        composer: "久下真音",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song053",
+        title: "ケイカクドヲリ",
+        title_kana: "けいかくどをり",
+        date: "2024-03-13",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 2 },
+        composer: "Seiji Iwasaki",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song054",
+        title: "美しい人",
+        title_kana: "うつくしいひと",
+        date: "2024-03-13",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 3 },
+        composer: "南雲ゆうき",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song055",
+        title: "推論的に宇宙人",
+        title_kana: "すいろんてきにうちゅうじん",
+        date: "2024-03-13",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 4 },
+        composer: "ナユタン星人",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song056",
+        title: "『誰も知らない歌』",
+        title_kana: "だれもしらないうた",
+        date: "2024-03-13",
+        cd: ["ep_01"],
+        cd_track: { "ep_01": 6 },
+        composer: "じん",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song057",
+        title: "Mania",
+        title_kana: "zzz_mania",
+        date: "2024-05-03",
+        cd: ["al_04"],
+        cd_track: { "al_04": 4 },
+        composer: "久下真音",
+        tieup: ["読売テレビ ドラマDiVE『シークレット同盟』OPテーマソング"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song058",
+        title: "P-P-P-PERO",
+        title_kana: "zzz_ppppero",
+        date: "2024-07-05",
+        cd: ["al_04"],
+        cd_track: { "al_04": 8 },
+        composer: "久下真音",
+        tieup: ["アニメ『エグミレガシー』主題歌"],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song059",
+        title: "原因は自分にある。【別解】",
+        title_kana: "げんいんはじぶんにあるべっかい",
+        date: "2024-10-09",
+        cd: [],
+        cd_track: {},
+        composer: "久下真音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song060",
+        title: "夢之相 - イメノアイ",
+        title_kana: "いめのあい",
+        date: "2024-11-11",
+        cd: ["al_04"],
+        cd_track: { "al_04": 3 },
+        composer: "堀江晶太",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song061",
+        title: "Operation Ego",
+        title_kana: "zzz_operationego",
+        date: "2024-11-27",
+        cd: ["ep_02"],
+        cd_track: { "ep_02": 1 },
+        composer: "サツキ",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song062",
+        title: "遊戯的反逆ノススメ",
+        title_kana: "ゆうぎてきはんぎゃくのすすめ",
+        date: "2024-12-04",
+        cd: ["ep_02"],
+        cd_track: { "ep_02": 2 },
+        composer: "B33G",
+        tieup: [],
+        call: true,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song063",
+        title: "小説ならば",
+        title_kana: "しょうせつならば",
+        date: "2024-12-04",
+        cd: ["ep_02"],
+        cd_track: { "ep_02": 3 },
+        composer: "岩野亨",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song064",
+        title: "Go to the Moon",
+        title_kana: "zzz_gotothemoon",
+        date: "2024-12-04",
+        cd: ["ep_02"],
+        cd_track: { "ep_02": 4 },
+        composer: "久下真音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song065",
+        title: "アビスと清らな銀世界",
+        title_kana: "あびすときよらなぎんせかい",
+        date: "2024-12-18",
+        cd: [],
+        cd_track: {},
+        composer: "久下真音",
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
 
     /* 2025年 */
 
