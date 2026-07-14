@@ -75,8 +75,9 @@ export const lives = [
   { id: "live2025_04", name: "エビライ2025", date: "2025-08-15", type: "fes"},
   { id: "live2025_05", name: "アスパ2025", date: "2025-08-30", type: "fes"},
   { id: "live2025_06", name: "ガルアワ2025AW", date: "2025-10-18", type: "fes"},
-  { id: "live2025_07", name: "GFEST.2025", date: "2025-11-23", type: "fes"},
-  { id: "live2025_08", name: "Laboratory", date: "2025-12-23", type: "oneman"},
+  { id: "live2025_07", name: "バズリズムLIVE 2025", date: "2025-11-02", type: "fes"},
+  { id: "live2025_08", name: "GFEST.2025", date: "2025-11-23", type: "fes"},
+  { id: "live2025_09", name: "Laboratory", date: "2025-12-23", type: "oneman"},
 
   /* 2026年 */
   { id: "live2026_01", name: "輪廻の箱庭", date:"2026-03-17", type: "oneman"},
