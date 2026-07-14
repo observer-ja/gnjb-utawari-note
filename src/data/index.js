@@ -150,8 +150,8 @@ export const songsIndex = [
         composer: ["久下真音"],
         arranger: ["久下真音"],
         tieup: [
-            "テレビ朝日「お願い！ランキング」9月度EDテーマソング",
-            "AbemaTV「Abema Prime」10月度EDテーマソング"
+            "テレビ朝日「お願い！ランキング」 2019年9月度エンディングテーマソング",
+            "AbemaTV「Abema Prime」 2019年10月度エンディングテーマソング"
         ],
         call: false,
         links: {
@@ -258,7 +258,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ朝日系「BREAK OUT」2020年1月度OPテーマソング"],
+        tieup: ["テレビ朝日系「BREAK OUT」 2020年1月度オープニングテーマソング"],
         call: true,
         links: {
             mv: "https://www.youtube.com/watch?v=hUO_t7h9sKA",
@@ -367,7 +367,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["MBS／TBS系ドラマ「年の差婚」OPテーマソング"],
+        tieup: ["MBS/TBSドラマイズム「年の差婚」 オープニングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=HK8CCSngJHE",
@@ -591,7 +591,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ東京系ドラマ「じゃない方の彼女」EDテーマソング"],
+        tieup: ["テレビ東京系10月クールドラマ「じゃない方の彼女」 エンディングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=YdA1h6qG6C4",
@@ -633,7 +633,7 @@ export const songsIndex = [
         lyricist: ["みきとP"],
         composer: ["みきとP"],
         arranger: ["木下哲", "みきとP"],
-        tieup: ["テレビ朝日系「BREAK OUT」2021年12月度OPテーマソング"],
+        tieup: [],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=SnduVH9DPKw",
@@ -918,7 +918,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["TBS「王様のブランチ」2023年1月度エンディングテーマ"],
+        tieup: ["TBS「王様のブランチ」 2023年1月度エンディングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=ErNj6BgfXvc",
@@ -1070,7 +1070,7 @@ export const songsIndex = [
         lyricist: ["izki"],
         composer: ["izki"],
         arranger: ["izki"],
-        tieup: ["テレビ東京系「デュエル・マスターズ WIN 決闘学園編」エンディングテーマ"],
+        tieup: ["テレビ東京系アニメ「デュエル・マスターズ WIN 決闘学園編」 エンディングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=SgIjog093T8",
@@ -1227,7 +1227,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」OPテーマソング"],
+        tieup: ["テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」 オープニングテーマソング"],
         call: false,
         links: {
             mv: null,
@@ -1411,7 +1411,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["読売テレビ ドラマDiVE『シークレット同盟』OPテーマソング"],
+        tieup: ["読売テレビ・ドラマDiVE『シークレット同盟』 オープニングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=_kbBYjpHKvw",
@@ -1442,7 +1442,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["アニメ『エグミレガシー』主題歌"],
+        tieup: ["アニメ『エグミレガシー』 テーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=KVw0gdH_wPI",
@@ -1727,7 +1727,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』エンディングソング"],
+        tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』 エンディングテーマソング"],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=aSM59ANCgXA",
@@ -1797,7 +1797,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["読売テレビ ドラマDiVE『あらばしり』エンディング主題歌"],
+        tieup: ["読売テレビ・ドラマDiVE「あらばしり」 エンディングテーマソング"],
         call: false,
         links: {
             mv: null,
@@ -1917,7 +1917,7 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』オープニング曲"],
+        tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』 オープニングテーマソング"],
         call: false,
         links: {
             mv: null,
@@ -1942,7 +1942,7 @@ export const songsIndex = [
         lyricist: ["Nolzy"],
         composer: ["Nolzy"],
         arranger: ["Nolzy"],
-        tieup: ["読売テレビ ドラマDiVE『親友の「同棲して」に「うん」て言うまで』オープニング主題歌"],
+        tieup: ["読売テレビ・ドラマDiVE『親友の「同棲して」に「うん」て言うまで』 オープニングテーマソング"],
         call: false,
         links: {
             mv: null,
@@ -2054,7 +2054,7 @@ export const songsIndex = [
         lyricist: ["Kiyoki"],
         composer: ["SARVAL"],
         arranger: ["SARVAL", "Orcaにゃん", "真白あまね"],
-        tieup: [],
+        tieup: ["テレビ東京系アニメ『鉄鍋のジャン!』 オープニングテーマソング"],
         call: false,
         links: {
             mv: null,
