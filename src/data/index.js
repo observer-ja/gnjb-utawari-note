@@ -30,7 +30,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4x9HfV3Ts78ZHGQsaymmCe",
             apple_music: "",
             line_music: "",
         },
@@ -47,7 +47,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5Lbca0cOGt9l3w5mL4VkPq",
             apple_music: "",
             line_music: "",
         },
@@ -64,7 +64,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3IdHdLPu5Bx9f3G8O6jo5z",
             apple_music: "",
             line_music: "",
         },
@@ -81,7 +81,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4kDExms3YDoIi5nXUdIAoE",
             apple_music: "",
             line_music: "",
         },
@@ -98,7 +98,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1qETVMaFM5LkyjLWTfBkZ0",
             apple_music: "",
             line_music: "",
         },
@@ -115,7 +115,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: null,
-            spotify: "",
+            spotify: "https://open.spotify.com/track/7mFKKSh1CDM6DErmVrmO5m",
             apple_music: "",
             line_music: "",
         },
@@ -140,7 +140,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=-9lpqo83-AA",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4IV4wWIoXASUh61rAI8zlM",
             apple_music: "",
             line_music: "",
         },
@@ -160,7 +160,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/247zj1W13s0A45rLLxq5Bt",
             apple_music: "",
             line_music: "",
         },
@@ -179,7 +179,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2fjUWC8ty7l00RPA53NHYP",
             apple_music: "",
             line_music: "",
         },
@@ -201,7 +201,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/08IUfJ5tPNodMLseXpJZZe",
             apple_music: "",
             line_music: "",
         },
@@ -225,7 +225,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/77w4zGklhZhsM7pdDf63bU",
             apple_music: "",
             line_music: "",
         },
@@ -244,7 +244,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0hgPezCVXVHmqXGXgwiMSS",
             apple_music: "",
             line_music: "",
         },
@@ -263,7 +263,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/6S11Fpkixsbzk1h709XzPi",
             apple_music: "",
             line_music: "",
         },
@@ -282,7 +282,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/05IaFhpk0snhDX4UjEoprs",
             apple_music: "",
             line_music: "",
         },
@@ -301,7 +301,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/76w3sWVKL3xdFP5FBOv4fW",
             apple_music: "",
             line_music: "",
         },
@@ -320,7 +320,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0Xvrfpr02t3rvgYsI6ZEZe",
             apple_music: "",
             line_music: "",
         },
@@ -340,7 +340,26 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5bOBtSbFMCBG96l7A0mky7",
+            apple_music: "",
+            line_music: "",
+        },
+        live_history: [
+            
+        ],
+    },
+    {
+        id: "song012",
+        title: "In the Nude",
+        title_kana: "zzz_inthenude",
+        date: "2021-12-13",
+        cds: [{ id: "al_01", track: 4 },],
+        composer: ["久下真音"],
+        tieup: [],
+        call: false,
+        links: {
+            mv: "",
+            spotify: "https://open.spotify.com/track/3iPQiBrNFhXxZZz1fleVdI",
             apple_music: "",
             line_music: "",
         },
@@ -351,36 +370,17 @@ export const songsIndex = [
 
     /* 2021年 */
     {
-        id: "song012",
-        title: "柘榴",
-        title_kana: "ざくろ",
-        date: "2021-01-13",
-        cds: [{ id: "al_01", track: 1 },],
-        composer: ["久下真音"],
+        id: "song014",
+        title: "スノウダンス",
+        title_kana: "すのうだんす",
+        date: "2021-01-01",
+        cds: [{ id: "al_01", track: 5 },],
+        composer: ["Ayase"],
         tieup: [],
         call: false,
         links: {
             mv: "",
-            spotify: "",
-            apple_music: "",
-            line_music: "",
-        },
-        live_history: [
-            
-        ],
-    },
-    {
-        id: "song013",
-        title: "In the Nude",
-        title_kana: "zzz_inthenude",
-        date: "2021-01-13",
-        cds: [{ id: "al_01", track: 4 },],
-        composer: ["久下真音"],
-        tieup: [],
-        call: false,
-        links: {
-            mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4c1WDszgF2oz1UpGcwxax2",
             apple_music: "",
             line_music: "",
         },
@@ -390,16 +390,16 @@ export const songsIndex = [
     },
     {
         id: "song014",
-        title: "スノウダンス",
-        title_kana: "すのうだんす",
+        title: "柘榴",
+        title_kana: "ざくろ",
         date: "2021-01-13",
-        cds: [{ id: "al_01", track: 5 },],
-        composer: ["Ayase"],
+        cds: [{ id: "al_01", track: 1 },],
+        composer: ["久下真音"],
         tieup: [],
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3QeJKotbyJm2Bf65us2XI2",
             apple_music: "",
             line_music: "",
         },
@@ -418,7 +418,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5GUVHXaFyEXP9lQEwVocQY",
             apple_music: "",
             line_music: "",
         },
@@ -437,7 +437,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1vqp3VxbSsPUYul4mIfjGz",
             apple_music: "",
             line_music: "",
         },
@@ -456,7 +456,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1qViBt9YSX8YWArUuBLUag",
             apple_music: "",
             line_music: "",
         },
@@ -475,7 +475,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0GouqJGQE2dtO7wVol4yvr",
             apple_music: "",
             line_music: "",
         },
@@ -494,7 +494,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2HQvL3AENi8H6LPbpd58wA",
             apple_music: "",
             line_music: "",
         },
@@ -513,7 +513,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1q8uK9dFtc0IOolOki5JfT",
             apple_music: "",
             line_music: "",
         },
@@ -532,7 +532,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3Xj9PZaqPhZUCUqvMVKVpf",
             apple_music: "",
             line_music: "",
         },
@@ -551,7 +551,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3Kn0Df5iSkTl2tcQMatL5T",
             apple_music: "",
             line_music: "",
         },
@@ -570,7 +570,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/06q68iQ8DZFpUBmzWe9nuC",
             apple_music: "",
             line_music: "",
         },
@@ -589,7 +589,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/636awXV8eDX6gD6fA0WVRx",
             apple_music: "",
             line_music: "",
         },
@@ -608,7 +608,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5r8RkM9tVab347UF2SRQt9",
             apple_music: "",
             line_music: "",
         },
@@ -627,7 +627,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0iOXGy6dtAqEuaWhaqkb4R",
             apple_music: "",
             line_music: "",
         },
@@ -648,7 +648,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/27uYtluOPiQSRXZdBSY6hO",
             apple_music: "",
             line_music: "",
         },
@@ -667,7 +667,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3cFouDxvTfhHo5OoQoFgGx",
             apple_music: "",
             line_music: "",
         },
@@ -686,7 +686,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5LMJtGDkaOs66dgTCffDss",
             apple_music: "",
             line_music: "",
         },
@@ -705,7 +705,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5oDvcoDrcYDtiAxjRfcdos",
             apple_music: "",
             line_music: "",
         },
@@ -724,7 +724,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0Aw0obEGgrHcVIXzqWAA29",
             apple_music: "",
             line_music: "",
         },
@@ -743,7 +743,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/23xWbjLF0HyuQIgSqKHdEQ",
             apple_music: "",
             line_music: "",
         },
@@ -762,7 +762,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0VvNtK1B7ZBln4L4GTTTHV",
             apple_music: "",
             line_music: "",
         },
@@ -781,7 +781,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4OzgBpnlznWd72HNLZHOp4",
             apple_music: "",
             line_music: "",
         },
@@ -802,7 +802,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0aUTgemKnK946bC7DPxRl6",
             apple_music: "",
             line_music: "",
         },
@@ -821,7 +821,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3RTL8wlZcFh1qpzFYtQ6MX",
             apple_music: "",
             line_music: "",
         },
@@ -840,7 +840,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1MdUS4vrLKIJ81YwThp8WP",
             apple_music: "",
             line_music: "",
         },
@@ -859,7 +859,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2Q6XcF8o5eUvEIA1vR8YB1",
             apple_music: "",
             line_music: "",
         },
@@ -878,7 +878,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0YCL6p4btZjOtOpmo9V2op",
             apple_music: "",
             line_music: "",
         },
@@ -897,7 +897,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/516aKBkovU8TwcBEC0U89k",
             apple_music: "",
             line_music: "",
         },
@@ -916,7 +916,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1j84JRrMRekoSSH2yU1kHP",
             apple_music: "",
             line_music: "",
         },
@@ -935,7 +935,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2Gcid6LvComOG1Hop2kCf9",
             apple_music: "",
             line_music: "",
         },
@@ -954,7 +954,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5m6PQRk6Y88GkFzK4TgDiO",
             apple_music: "",
             line_music: "",
         },
@@ -973,7 +973,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1n19BYXjlCyNFhqoBRrMkc",
             apple_music: "",
             line_music: "",
         },
@@ -992,7 +992,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3B0RfZGfuOBVl3llPNTBdT",
             apple_music: "",
             line_music: "",
         },
@@ -1011,7 +1011,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5yK3dAppqCQYsx7X5h7qoq",
             apple_music: "",
             line_music: "",
         },
@@ -1030,7 +1030,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4uXqD7ooukoGrkx5NhwRAl",
             apple_music: "",
             line_music: "",
         },
@@ -1049,7 +1049,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2S6iuA49Pay71EJv1RCGVX",
             apple_music: "",
             line_music: "",
         },
@@ -1068,7 +1068,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/01tA7BkMevxSIlWSbJSCPq",
             apple_music: "",
             line_music: "",
         },
@@ -1087,7 +1087,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/7iXhqF9wwmi2wi5F6fvx5G",
             apple_music: "",
             line_music: "",
         },
@@ -1108,7 +1108,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/676LDL3TVRJ4UrHQlQmUEi",
             apple_music: "",
             line_music: "",
         },
@@ -1127,7 +1127,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/73bwO8YNQzVwEld8c0yr1U",
             apple_music: "",
             line_music: "",
         },
@@ -1146,7 +1146,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2MI4L9ifebVs6DBpm0kbFW",
             apple_music: "",
             line_music: "",
         },
@@ -1165,7 +1165,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5Jg5SYOaxwymuosRUDfxqR",
             apple_music: "",
             line_music: "",
         },
@@ -1184,7 +1184,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/7ewxrPqF0obZ3PzcX20gH0",
             apple_music: "",
             line_music: "",
         },
@@ -1203,7 +1203,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5rqHKMMJ8w397PCeEOai1i",
             apple_music: "",
             line_music: "",
         },
@@ -1222,7 +1222,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/672t5orA6YcHdTM5aGFjUG",
             apple_music: "",
             line_music: "",
         },
@@ -1241,7 +1241,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/51B7M78gRDEYzXAtwdj9cM",
             apple_music: "",
             line_music: "",
         },
@@ -1260,7 +1260,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0QurLzmjaPLt2XQ2UEcqyy",
             apple_music: "",
             line_music: "",
         },
@@ -1279,7 +1279,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0JnnVhCalDiOo0jXn0ivlc",
             apple_music: "",
             line_music: "",
         },
@@ -1298,7 +1298,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/55V3psa2OcuOx5fcDqNKXz",
             apple_music: "",
             line_music: "",
         },
@@ -1317,7 +1317,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5fZclM8jW0kY7JKEbOIPEi",
             apple_music: "",
             line_music: "",
         },
@@ -1336,7 +1336,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/46bFnfqjy3nyPKi6GtldSW",
             apple_music: "",
             line_music: "",
         },
@@ -1355,7 +1355,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
             apple_music: "",
             line_music: "",
         },
@@ -1374,7 +1374,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/0nTn7BrtU9tOcdSdzplysR",
             apple_music: "",
             line_music: "",
         },
@@ -1395,7 +1395,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5OaH7cJm8yIDB6H6PXLocY",
             apple_music: "",
             line_music: "",
         },
@@ -1414,7 +1414,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5oLO5hl3wM0MdYv87gSzhs",
             apple_music: "",
             line_music: "",
         },
@@ -1433,7 +1433,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1agWIt6R3A5MdpX1L5quLY",
             apple_music: "",
             line_music: "",
         },
@@ -1452,7 +1452,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2DXyFzJwUdq5yoljbyaAXF",
             apple_music: "",
             line_music: "",
         },
@@ -1471,7 +1471,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/7x2i2i2JvhqNWALk5jvz6c",
             apple_music: "",
             line_music: "",
         },
@@ -1490,7 +1490,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1mPy0egDHMQnbuLVWuHedK",
             apple_music: "",
             line_music: "",
         },
@@ -1509,7 +1509,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/5LerS745dIrtRbCysv5igU",
             apple_music: "",
             line_music: "",
         },
@@ -1528,7 +1528,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1OLnkhGpRCBkuIad3sbHuZ",
             apple_music: "",
             line_music: "",
         },
@@ -1547,7 +1547,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1yfC94XjRlidTGYdxd2Wkc",
             apple_music: "",
             line_music: "",
         },
@@ -1566,7 +1566,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4uYdHqrUBrf2UkEuF9lkMP",
             apple_music: "",
             line_music: "",
         },
@@ -1585,7 +1585,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/76B2mLXjdcyifbvuecYCxf",
             apple_music: "",
             line_music: "",
         },
@@ -1604,7 +1604,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4yZrNNeXM7xhLPzQhj1oOH",
             apple_music: "",
             line_music: "",
         },
@@ -1623,7 +1623,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/3raLYsviJFadclJa87w2j0",
             apple_music: "",
             line_music: "",
         },
@@ -1644,7 +1644,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/4GwMw1iuQv0J0d8Lshz09Y",
             apple_music: "",
             line_music: "",
         },
@@ -1656,14 +1656,14 @@ export const songsIndex = [
         id: "song080",
         title: "ニヒリズムプリズム",
         title_kana: "にひりずむぷりずむ",
-        date: "2026-03-11",
+        date: "2026-03-02",
         cds: [{ id: "ep_03", track: 1 },],
         composer: ["久下真音"],
         tieup: [],
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1tq4FHHczdk3metmlrjrkZ",
             apple_music: "",
             line_music: "",
         },
@@ -1683,7 +1683,7 @@ export const songsIndex = [
         call: true,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/6idtrXLVnkpgPUWXD30yrE",
             apple_music: "",
             line_music: "",
         },
@@ -1702,7 +1702,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/1cKDi4rrpDchhwZirxZ61n",
             apple_music: "",
             line_music: "",
         },
@@ -1721,7 +1721,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/10XffNZUvZ7qY0B6FqWqho",
             apple_music: "",
             line_music: "",
         },
@@ -1740,7 +1740,7 @@ export const songsIndex = [
         call: false,
         links: {
             mv: "",
-            spotify: "",
+            spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
             apple_music: "",
             line_music: "",
         },
