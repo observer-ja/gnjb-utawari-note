@@ -32,7 +32,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/4x9HfV3Ts78ZHGQsaymmCe",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c22d",
         },
         live_history: [],
     },
@@ -49,7 +49,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/5Lbca0cOGt9l3w5mL4VkPq",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c22e",
         },
         live_history: [],
     },
@@ -66,7 +66,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/3IdHdLPu5Bx9f3G8O6jo5z",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c22f",
         },
         live_history: [],
     },
@@ -83,7 +83,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/4kDExms3YDoIi5nXUdIAoE",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c231",
         },
         live_history: [],
     },
@@ -100,7 +100,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/1qETVMaFM5LkyjLWTfBkZ0",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c232",
         },
         live_history: [],
     },
@@ -117,7 +117,7 @@ export const songsIndex = [
             mv: null,
             spotify: "https://open.spotify.com/track/7mFKKSh1CDM6DErmVrmO5m",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000f39c233",
         },
         live_history: [],
     },
@@ -142,7 +142,7 @@ export const songsIndex = [
             mv: "https://www.youtube.com/watch?v=-9lpqo83-AA",
             spotify: "https://open.spotify.com/track/4IV4wWIoXASUh61rAI8zlM",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000fccf41d",
         },
         live_history: [
             { live_id: "live2026_04", position: 1, perf: null, note: "" },
@@ -162,7 +162,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/247zj1W13s0A45rLLxq5Bt",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000fd23028",
         },
         live_history: [
             { live_id: "live2026_03", position: 5, perf: null, note: "" },
@@ -181,7 +181,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2fjUWC8ty7l00RPA53NHYP",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000fd23029",
         },
         live_history: [
             
@@ -203,7 +203,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/08IUfJ5tPNodMLseXpJZZe",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000000fd2302a",
         },
         live_history: [
             { live_id: "live2026_03", position: 4, perf: null, note: "Piano ver." },
@@ -227,7 +227,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/77w4zGklhZhsM7pdDf63bU",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000105e8133",
         },
         live_history: [
             { live_id: "live2026_03", position: 2, perf: null, note: "" },
@@ -246,7 +246,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0hgPezCVXVHmqXGXgwiMSS",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000010699a9d",
         },
         live_history: [
             { live_id: "live2026_03", position: 3, perf: null, note: "" },
@@ -265,7 +265,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/6S11Fpkixsbzk1h709XzPi",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000010699a9e",
         },
         live_history: [
             
@@ -284,7 +284,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/05IaFhpk0snhDX4UjEoprs",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000010699a9f",
         },
         live_history: [
             
@@ -303,7 +303,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/76w3sWVKL3xdFP5FBOv4fW",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000010c2b802",
         },
         live_history: [
             
@@ -322,7 +322,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0Xvrfpr02t3rvgYsI6ZEZe",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000115e5bec",
         },
         live_history: [
             { live_id: "live2026_04", position: 2, perf: null, note: "" },
@@ -342,7 +342,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5bOBtSbFMCBG96l7A0mky7",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000011ec2aeb",
         },
         live_history: [
             
@@ -361,7 +361,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3iPQiBrNFhXxZZz1fleVdI",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001230be85",
         },
         live_history: [
             
@@ -382,7 +382,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4c1WDszgF2oz1UpGcwxax2",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000123b011f",
         },
         live_history: [
             
@@ -401,7 +401,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3QeJKotbyJm2Bf65us2XI2",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000124c54cc",
         },
         live_history: [
             
@@ -420,7 +420,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5GUVHXaFyEXP9lQEwVocQY",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000124c54d1",
         },
         live_history: [
             
@@ -439,7 +439,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1vqp3VxbSsPUYul4mIfjGz",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000124c54d5",
         },
         live_history: [
             { live_id: "live2026_03", position: 26, perf: null, note: "" },
@@ -458,7 +458,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1qViBt9YSX8YWArUuBLUag",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000013b96d56",
         },
         live_history: [
             
@@ -477,7 +477,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0GouqJGQE2dtO7wVol4yvr",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000141d0ede",
         },
         live_history: [
             
@@ -496,7 +496,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2HQvL3AENi8H6LPbpd58wA",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001474720a",
         },
         live_history: [
             
@@ -515,7 +515,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1q8uK9dFtc0IOolOki5JfT",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000014d29bc1",
         },
         live_history: [
             { live_id: "live2026_04", position: 3, perf: null, note: "" },
@@ -534,7 +534,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3Xj9PZaqPhZUCUqvMVKVpf",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000014c3c588",
         },
         live_history: [
             
@@ -553,7 +553,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3Kn0Df5iSkTl2tcQMatL5T",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000014eb5845",
         },
         live_history: [
             
@@ -572,7 +572,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/06q68iQ8DZFpUBmzWe9nuC",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000150e3dad",
         },
         live_history: [
             
@@ -591,7 +591,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/636awXV8eDX6gD6fA0WVRx",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000150e3dae",
         },
         live_history: [
             
@@ -610,7 +610,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5r8RkM9tVab347UF2SRQt9",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000150e3daf",
         },
         live_history: [
             
@@ -629,7 +629,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0iOXGy6dtAqEuaWhaqkb4R",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000150e3db0",
         },
         live_history: [
             
@@ -650,7 +650,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/27uYtluOPiQSRXZdBSY6hO",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000015c8e5b3",
         },
         live_history: [
             
@@ -669,7 +669,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3cFouDxvTfhHo5OoQoFgGx",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000015d84e68",
         },
         live_history: [
             
@@ -688,7 +688,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5LMJtGDkaOs66dgTCffDss",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001611388f",
         },
         live_history: [
             
@@ -707,7 +707,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5oDvcoDrcYDtiAxjRfcdos",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001687cb73",
         },
         live_history: [
             
@@ -726,7 +726,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0Aw0obEGgrHcVIXzqWAA29",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000017091d88",
         },
         live_history: [
             { live_id: "live2026_04", position: 9, perf: null, note: "" },
@@ -745,7 +745,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/23xWbjLF0HyuQIgSqKHdEQ",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000178dcc22",
         },
         live_history: [
             
@@ -764,7 +764,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0VvNtK1B7ZBln4L4GTTTHV",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000017c5397a",
         },
         live_history: [
             { live_id: "live2026_03", position: 15, perf: 1, note: "日替わり曲" },
@@ -783,7 +783,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4OzgBpnlznWd72HNLZHOp4",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001826c0bb",
         },
         live_history: [
             { live_id: "live2026_04", position: 4, perf: null, note: "" },
@@ -804,7 +804,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0aUTgemKnK946bC7DPxRl6",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018cf3fc4",
         },
         live_history: [
             
@@ -823,7 +823,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3RTL8wlZcFh1qpzFYtQ6MX",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018f8eb0a",
         },
         live_history: [
             
@@ -842,7 +842,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1MdUS4vrLKIJ81YwThp8WP",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018f8eb10",
         },
         live_history: [
             
@@ -861,7 +861,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2Q6XcF8o5eUvEIA1vR8YB1",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018f8eb11",
         },
         live_history: [
             
@@ -880,7 +880,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0YCL6p4btZjOtOpmo9V2op",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018f8eb16",
         },
         live_history: [
             
@@ -899,7 +899,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/516aKBkovU8TwcBEC0U89k",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000018f8eb17",
         },
         live_history: [
             
@@ -918,7 +918,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1j84JRrMRekoSSH2yU1kHP",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000019c894d4",
         },
         live_history: [
             
@@ -937,7 +937,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2Gcid6LvComOG1Hop2kCf9",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000019f312ca",
         },
         live_history: [
             
@@ -956,7 +956,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5m6PQRk6Y88GkFzK4TgDiO",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001abab0d5",
         },
         live_history: [
             
@@ -975,7 +975,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1n19BYXjlCyNFhqoBRrMkc",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001abab0d6",
         },
         live_history: [
             { live_id: "live2026_03", position: 9, perf: null, note: "Aメロでソロダンス" },
@@ -994,7 +994,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3B0RfZGfuOBVl3llPNTBdT",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001abab0d7",
         },
         live_history: [
             
@@ -1013,7 +1013,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5yK3dAppqCQYsx7X5h7qoq",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001abab0d8",
         },
         live_history: [
             { live_id: "live2026_03", position: 17, perf: null, note: "" },
@@ -1032,7 +1032,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4uXqD7ooukoGrkx5NhwRAl",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001abab0d9",
         },
         live_history: [
             
@@ -1051,7 +1051,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2S6iuA49Pay71EJv1RCGVX",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001b59dd60",
         },
         live_history: [
             
@@ -1070,7 +1070,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/01tA7BkMevxSIlWSbJSCPq",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001b82f72d",
         },
         live_history: [
             
@@ -1089,7 +1089,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/7iXhqF9wwmi2wi5F6fvx5G",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001c6800a2",
         },
         live_history: [
             { live_id: "live2026_03", position: 24, perf: null, note: "" },
@@ -1110,7 +1110,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/676LDL3TVRJ4UrHQlQmUEi",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001d79bd70",
         },
         live_history: [
             
@@ -1129,7 +1129,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/73bwO8YNQzVwEld8c0yr1U",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001db66694",
         },
         live_history: [
             { live_id: "live2026_04", position: 5, perf: null, note: "" },
@@ -1148,7 +1148,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2MI4L9ifebVs6DBpm0kbFW",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001e02f000",
         },
         live_history: [
             { live_id: "live2026_03", position: 12, perf: null, note: "" },
@@ -1167,7 +1167,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5Jg5SYOaxwymuosRUDfxqR",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001e02f001",
         },
         live_history: [
             { live_id: "live2026_03", position: 19, perf: null, note: "メドレー" },
@@ -1186,7 +1186,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/7ewxrPqF0obZ3PzcX20gH0",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001e02f002",
         },
         live_history: [
             { live_id: "live2026_03", position: 15, perf: 2, note: "日替わり曲" },
@@ -1205,7 +1205,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5rqHKMMJ8w397PCeEOai1i",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001e02f004",
         },
         live_history: [
             
@@ -1224,7 +1224,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/672t5orA6YcHdTM5aGFjUG",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001ea734eb",
         },
         live_history: [
             { live_id: "live2026_03", position: 21, perf: null, note: "" },
@@ -1243,7 +1243,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/51B7M78gRDEYzXAtwdj9cM",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000001f349430",
         },
         live_history: [
             
@@ -1262,7 +1262,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0QurLzmjaPLt2XQ2UEcqyy",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000200d0619",
         },
         live_history: [
             
@@ -1281,7 +1281,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0JnnVhCalDiOo0jXn0ivlc",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000002048242f",
         },
         live_history: [
             
@@ -1300,7 +1300,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/55V3psa2OcuOx5fcDqNKXz",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000207f5eea",
         },
         live_history: [
             
@@ -1319,7 +1319,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5fZclM8jW0kY7JKEbOIPEi",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000207f5eeb",
         },
         live_history: [
             { live_id: "live2026_03", position: 23, perf: null, note: "" },
@@ -1338,7 +1338,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/46bFnfqjy3nyPKi6GtldSW",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000207f5eec",
         },
         live_history: [
             { live_id: "live2026_04", position: 6, perf: null, note: "" },
@@ -1357,7 +1357,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000207f5eed",
         },
         live_history: [
             
@@ -1376,7 +1376,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/0nTn7BrtU9tOcdSdzplysR",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt00000000209bfb94",
         },
         live_history: [
             
@@ -1397,7 +1397,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5OaH7cJm8yIDB6H6PXLocY",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000002176b175",
         },
         live_history: [
             
@@ -1416,7 +1416,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5oLO5hl3wM0MdYv87gSzhs",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021cfc547",
         },
         live_history: [
             { live_id: "live2026_03", position: 14, perf: null, note: "" },
@@ -1435,7 +1435,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1agWIt6R3A5MdpX1L5quLY",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1de",
         },
         live_history: [
             { live_id: "live2026_03", position: 20, perf: null, note: "メドレー" },
@@ -1454,7 +1454,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2DXyFzJwUdq5yoljbyaAXF",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1df",
         },
         live_history: [
             
@@ -1473,7 +1473,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/7x2i2i2JvhqNWALk5jvz6c",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e1",
         },
         live_history: [
             
@@ -1492,7 +1492,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1mPy0egDHMQnbuLVWuHedK",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e2",
         },
         live_history: [
             { live_id: "live2026_03", position: 7, perf: null, note: "" },
@@ -1511,7 +1511,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/5LerS745dIrtRbCysv5igU",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e3",
         },
         live_history: [
             { live_id: "live2026_03", position: 8, perf: null, note: "" },
@@ -1530,7 +1530,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1OLnkhGpRCBkuIad3sbHuZ",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e5",
         },
         live_history: [
             
@@ -1549,7 +1549,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1yfC94XjRlidTGYdxd2Wkc",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e6",
         },
         live_history: [
             { live_id: "live2026_03", position: 25, perf: null, note: "バラードアレンジ" },
@@ -1568,7 +1568,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4uYdHqrUBrf2UkEuF9lkMP",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000023a4ecad",
         },
         live_history: [
             { live_id: "live2026_03", position: 13, perf: null, note: "" },
@@ -1587,7 +1587,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/76B2mLXjdcyifbvuecYCxf",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000023badd9b",
         },
         live_history: [
             
@@ -1606,7 +1606,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4yZrNNeXM7xhLPzQhj1oOH",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000023badd9c",
         },
         live_history: [
             { live_id: "live2026_04", position: 8, perf: null, note: "" },
@@ -1625,7 +1625,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/3raLYsviJFadclJa87w2j0",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000023eb8018",
         },
         live_history: [
             { live_id: "live2026_03", position: 16, perf: 2, note: "日替わり曲" },
@@ -1646,7 +1646,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/4GwMw1iuQv0J0d8Lshz09Y",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt000000002472dc99",
         },
         live_history: [
             { live_id: "live2026_03", position: 16, perf: 1, note: "日替わり曲" },
@@ -1665,7 +1665,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1tq4FHHczdk3metmlrjrkZ",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000024e4fc27",
         },
         live_history: [
             { live_id: "live2026_04", position: 7, perf: null, note: "" },
@@ -1685,7 +1685,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/6idtrXLVnkpgPUWXD30yrE",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000024f58662",
         },
         live_history: [
             { live_id: "live2026_03", position: 11, perf: null, note: "" },
@@ -1704,7 +1704,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/1cKDi4rrpDchhwZirxZ61n",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000024f58663",
         },
         live_history: [
             { live_id: "live2026_03", position: 18, perf: null, note: "メドレー" },
@@ -1723,7 +1723,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/10XffNZUvZ7qY0B6FqWqho",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000024f58664",
         },
         live_history: [
             
@@ -1742,7 +1742,7 @@ export const songsIndex = [
             mv: "",
             spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
             apple_music: "",
-            line_music: "",
+            line_music: "https://music.line.me/webapp/track/mt0000000026273465",
         },
         live_history: [
             { live_id: "live2026_03", position: 10, perf: null, note: "初披露" },
