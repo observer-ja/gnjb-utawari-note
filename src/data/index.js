@@ -31,7 +31,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4x9HfV3Ts78ZHGQsaymmCe",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/voice/1466685903",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22d",
         },
         live_history: [],
@@ -48,7 +48,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5Lbca0cOGt9l3w5mL4VkPq",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/macanas/1466685909",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22e",
         },
         live_history: [],
@@ -65,7 +65,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3IdHdLPu5Bx9f3G8O6jo5z",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/show-time/1466687696",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22f",
         },
         live_history: [],
@@ -82,7 +82,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4kDExms3YDoIi5nXUdIAoE",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/countdown/1466687711",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c231",
         },
         live_history: [],
@@ -99,7 +99,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1qETVMaFM5LkyjLWTfBkZ0",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/burn-burn-bomb/1466687718",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c232",
         },
         live_history: [],
@@ -116,7 +116,7 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/7mFKKSh1CDM6DErmVrmO5m",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/like-a-vampire/1466687722",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c233",
         },
         live_history: [],
@@ -141,7 +141,7 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=-9lpqo83-AA",
             spotify: "https://open.spotify.com/track/4IV4wWIoXASUh61rAI8zlM",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B/1479492330",
             line_music: "https://music.line.me/webapp/track/mt000000000fccf41d",
         },
         live_history: [
@@ -161,7 +161,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/247zj1W13s0A45rLLxq5Bt",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%AE%E3%83%9F%E3%82%AE%E3%83%9F%E3%83%A9%E3%83%96/1480622919",
             line_music: "https://music.line.me/webapp/track/mt000000000fd23028",
         },
         live_history: [
@@ -180,7 +180,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2fjUWC8ty7l00RPA53NHYP",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/up-and-down/1480622921",
             line_music: "https://music.line.me/webapp/track/mt000000000fd23029",
         },
         live_history: [
@@ -202,7 +202,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/08IUfJ5tPNodMLseXpJZZe",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%A9%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC/1480622927",
             line_music: "https://music.line.me/webapp/track/mt000000000fd2302a",
         },
         live_history: [
@@ -226,7 +226,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/77w4zGklhZhsM7pdDf63bU",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%97%9C%E5%A5%BD%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E4%B8%96%E8%AB%96%E8%AA%BF%E6%9F%BB/1490955329",
             line_music: "https://music.line.me/webapp/track/mt00000000105e8133",
         },
         live_history: [
@@ -245,7 +245,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0hgPezCVXVHmqXGXgwiMSS",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/joy-to-the-world/1492703414",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9d",
         },
         live_history: [
@@ -264,7 +264,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/6S11Fpkixsbzk1h709XzPi",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%B8%E3%83%A5%E3%83%88%E3%82%A5%E3%83%96/1492703417",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9e",
         },
         live_history: [
@@ -283,7 +283,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/05IaFhpk0snhDX4UjEoprs",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%99%82%E9%80%9F3km/1492703429",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9f",
         },
         live_history: [
@@ -302,7 +302,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/76w3sWVKL3xdFP5FBOv4fW",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%98%98%E3%81%8B%E3%82%89%E5%A7%8B%E3%81%BE%E3%82%8B%E8%87%AA%E7%A7%B0%E7%B3%BB/1503425540",
             line_music: "https://music.line.me/webapp/track/mt0000000010c2b802",
         },
         live_history: [
@@ -321,7 +321,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0Xvrfpr02t3rvgYsI6ZEZe",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%B7%E3%82%A7%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%94%E3%82%A2%E3%81%AB%E5%AD%A6%E3%81%B6%E6%81%8B%E6%84%9B%E5%AE%9A%E7%90%86/1519384789",
             line_music: "https://music.line.me/webapp/track/mt00000000115e5bec",
         },
         live_history: [
@@ -341,7 +341,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5bOBtSbFMCBG96l7A0mky7",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%B9%BD%E3%81%8B%E3%81%AA%E5%A4%9C%E3%81%AE%E5%A4%A2/1534070866",
             line_music: "https://music.line.me/webapp/track/mt0000000011ec2aeb",
         },
         live_history: [
@@ -360,7 +360,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3iPQiBrNFhXxZZz1fleVdI",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/in-the-nude/1542565718",
             line_music: "https://music.line.me/webapp/track/mt000000001230be85",
         },
         live_history: [
@@ -381,7 +381,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4c1WDszgF2oz1UpGcwxax2",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%B9%E3%83%8E%E3%82%A6%E3%83%80%E3%83%B3%E3%82%B9/1542565719",
             line_music: "https://music.line.me/webapp/track/mt00000000123b011f",
         },
         live_history: [
@@ -400,7 +400,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3QeJKotbyJm2Bf65us2XI2",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%9F%98%E6%A6%B4/1542565381",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54cc",
         },
         live_history: [
@@ -419,7 +419,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5GUVHXaFyEXP9lQEwVocQY",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%A4%A2%E3%81%AB%E5%94%84%E3%81%88%E3%81%B0/1542565721",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d1",
         },
         live_history: [
@@ -438,7 +438,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1vqp3VxbSsPUYul4mIfjGz",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%8D%E3%83%90%E3%83%BC%E3%82%A8%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%AB/1542565725",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d5",
         },
         live_history: [
@@ -457,7 +457,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1qViBt9YSX8YWArUuBLUag",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%8A%AC%E3%81%A8%E7%8C%AB%E3%81%A8%E3%83%9F%E3%83%AB%E3%82%AF%E3%81%AB%E3%82%B7%E3%83%A5%E3%82%AC%E3%83%BC/1562605620",
             line_music: "https://music.line.me/webapp/track/mt0000000013b96d56",
         },
         live_history: [
@@ -476,7 +476,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0GouqJGQE2dtO7wVol4yvr",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E4%BB%A5%E5%91%82%E6%B3%A2-feat-fox-capture-plan/1572217924",
             line_music: "https://music.line.me/webapp/track/mt00000000141d0ede",
         },
         live_history: [
@@ -495,7 +495,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2HQvL3AENi8H6LPbpd58wA",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%81%BC%E3%81%91%E3%82%86%E3%81%8F%E9%9D%92/1580333930",
             line_music: "https://music.line.me/webapp/track/mt000000001474720a",
         },
         live_history: [
@@ -514,7 +514,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1q8uK9dFtc0IOolOki5JfT",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%B1%AA%E9%9B%A8/1589020820",
             line_music: "https://music.line.me/webapp/track/mt0000000014d29bc1",
         },
         live_history: [
@@ -533,7 +533,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3Xj9PZaqPhZUCUqvMVKVpf",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%8D%8A%E5%88%86%E7%9B%B8%E9%80%A2%E5%82%98/1587574654",
             line_music: "https://music.line.me/webapp/track/mt0000000014c3c588",
         },
         live_history: [
@@ -552,7 +552,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3Kn0Df5iSkTl2tcQMatL5T",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E9%BB%84%E6%98%8F%E3%82%88%E3%82%8A%E3%82%82%E6%97%A9%E3%81%8F%E7%96%BE%E8%B5%B0%E3%82%8C/1591870255",
             line_music: "https://music.line.me/webapp/track/mt0000000014eb5845",
         },
         live_history: [
@@ -571,7 +571,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/06q68iQ8DZFpUBmzWe9nuC",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/j-o-k-e-r/1595790434",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dad",
         },
         live_history: [
@@ -590,7 +590,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/636awXV8eDX6gD6fA0WVRx",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/0to1%E3%81%AE%E5%B9%BB%E6%83%B3/1595790435",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dae",
         },
         live_history: [
@@ -609,7 +609,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5r8RkM9tVab347UF2SRQt9",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%A4%9C%E5%A4%8F/1595790436",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3daf",
         },
         live_history: [
@@ -628,7 +628,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0iOXGy6dtAqEuaWhaqkb4R",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%97%8D%E8%89%B2%E9%96%83%E5%85%89/1595790437",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3db0",
         },
         live_history: [
@@ -649,7 +649,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/27uYtluOPiQSRXZdBSY6hO",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E9%9D%92-%E3%81%9D%E3%81%AE%E4%BB%96/1609514119",
             line_music: "https://music.line.me/webapp/track/mt0000000015c8e5b3",
         },
         live_history: [
@@ -668,7 +668,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3cFouDxvTfhHo5OoQoFgGx",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%B5%90%E6%9C%AB%E3%81%AF%E6%AC%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88/1610359971",
             line_music: "https://music.line.me/webapp/track/mt0000000015d84e68",
         },
         live_history: [
@@ -687,7 +687,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5LMJtGDkaOs66dgTCffDss",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%AD%E3%83%9F%E3%83%B2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%86/1613468570",
             line_music: "https://music.line.me/webapp/track/mt000000001611388f",
         },
         live_history: [
@@ -706,7 +706,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5oDvcoDrcYDtiAxjRfcdos",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/545/1620746705",
             line_music: "https://music.line.me/webapp/track/mt000000001687cb73",
         },
         live_history: [
@@ -725,7 +725,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0Aw0obEGgrHcVIXzqWAA29",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E5%90%9B%E3%81%AB%E3%82%82%E3%81%82%E3%82%8B/1628262198",
             line_music: "https://music.line.me/webapp/track/mt0000000017091d88",
         },
         live_history: [
@@ -744,7 +744,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/23xWbjLF0HyuQIgSqKHdEQ",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%81%AB%E6%BA%BA%E3%82%8C%E3%81%A6-%E5%83%95%E3%81%AF%E6%BD%A4%E3%82%93%E3%81%A6/1638250501",
             line_music: "https://music.line.me/webapp/track/mt00000000178dcc22",
         },
         live_history: [
@@ -763,7 +763,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0VvNtK1B7ZBln4L4GTTTHV",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AB%E3%83%BC%E3%83%97/1642197649",
             line_music: "https://music.line.me/webapp/track/mt0000000017c5397a",
         },
         live_history: [
@@ -782,7 +782,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4OzgBpnlznWd72HNLZHOp4",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/q/1648766588",
             line_music: "https://music.line.me/webapp/track/mt000000001826c0bb",
         },
         live_history: [
@@ -803,7 +803,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0aUTgemKnK946bC7DPxRl6",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E9%AD%94%E6%B3%95%E3%82%92%E3%81%8B%E3%81%91%E3%81%A6/1658726617",
             line_music: "https://music.line.me/webapp/track/mt0000000018cf3fc4",
         },
         live_history: [
@@ -822,7 +822,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3RTL8wlZcFh1qpzFYtQ6MX",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%84%A1%E9%99%90%E3%82%B7%E3%83%8B%E3%82%B7%E3%82%BA%E3%83%A0/1661238574",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb0a",
         },
         live_history: [
@@ -841,7 +841,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1MdUS4vrLKIJ81YwThp8WP",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/run-away/1661238580",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb10",
         },
         live_history: [
@@ -860,7 +860,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2Q6XcF8o5eUvEIA1vR8YB1",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/lion/1661238581",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb11",
         },
         live_history: [
@@ -879,7 +879,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0YCL6p4btZjOtOpmo9V2op",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%A1%9Cground/1661239126",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb16",
         },
         live_history: [
@@ -898,7 +898,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/516aKBkovU8TwcBEC0U89k",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%83%95%E3%82%89%E3%81%AE%E4%B8%96%E7%95%8C-%E7%89%A9%E8%AA%9E/1661239127",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb17",
         },
         live_history: [
@@ -917,7 +917,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1j84JRrMRekoSSH2yU1kHP",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/mr-android-feat-izki/1674097167",
             line_music: "https://music.line.me/webapp/track/mt0000000019c894d4",
         },
         live_history: [
@@ -936,7 +936,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2Gcid6LvComOG1Hop2kCf9",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AE%E3%83%A5%E3%83%83%E3%81%A8/1675801831",
             line_music: "https://music.line.me/webapp/track/mt0000000019f312ca",
         },
         live_history: [
@@ -955,7 +955,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5m6PQRk6Y88GkFzK4TgDiO",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/foxy-grape/1687442140",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d5",
         },
         live_history: [
@@ -974,7 +974,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1n19BYXjlCyNFhqoBRrMkc",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E4%BD%99%E7%99%BD%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%98%A1%E8%93%8B%E7%8B%82%E6%83%B3%E6%9B%B2/1687442141",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d6",
         },
         live_history: [
@@ -993,7 +993,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3B0RfZGfuOBVl3llPNTBdT",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/the-empathy/1687442142",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d7",
         },
         live_history: [
@@ -1012,7 +1012,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5yK3dAppqCQYsx7X5h7qoq",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/god-%E9%87%88%E8%BF%A6%E3%81%ABhip-hop/1687442143",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d8",
         },
         live_history: [
@@ -1031,7 +1031,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4uXqD7ooukoGrkx5NhwRAl",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%A4%8F%E3%81%AE%E4%BA%8C%E7%AD%89%E8%BE%BA%E5%A4%A7%E4%B8%89%E8%A7%92%E5%BD%A2/1687442144",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d9",
         },
         live_history: [
@@ -1050,7 +1050,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2S6iuA49Pay71EJv1RCGVX",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E9%B3%B4%E3%82%89%E3%81%97%E3%81%A6-%E3%82%B7%E3%83%B3%E3%83%90%E3%83%AB/1698289577",
             line_music: "https://music.line.me/webapp/track/mt000000001b59dd60",
         },
         live_history: [
@@ -1069,7 +1069,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/01tA7BkMevxSIlWSbJSCPq",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%9D%8B%E7%87%AD/1700211716",
             line_music: "https://music.line.me/webapp/track/mt000000001b82f72d",
         },
         live_history: [
@@ -1088,7 +1088,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/7iXhqF9wwmi2wi5F6fvx5G",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/museum-0/1711147670",
             line_music: "https://music.line.me/webapp/track/mt000000001c6800a2",
         },
         live_history: [
@@ -1109,7 +1109,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/676LDL3TVRJ4UrHQlQmUEi",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%80%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%83%AA%E3%83%BC/1722086601",
             line_music: "https://music.line.me/webapp/track/mt000000001d79bd70",
         },
         live_history: [
@@ -1128,7 +1128,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/73bwO8YNQzVwEld8c0yr1U",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%83%BC%E3%82%B9-%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC/1725299728",
             line_music: "https://music.line.me/webapp/track/mt000000001db66694",
         },
         live_history: [
@@ -1147,7 +1147,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2MI4L9ifebVs6DBpm0kbFW",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%B1%E3%82%A4%E3%82%AB%E3%82%AF%E3%83%89%E3%83%B2%E3%83%AA/1731158288",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f000",
         },
         live_history: [
@@ -1166,7 +1166,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5Jg5SYOaxwymuosRUDfxqR",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%BE%8E%E3%81%97%E3%81%84%E4%BA%BA/1731158295",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f001",
         },
         live_history: [
@@ -1185,7 +1185,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/7ewxrPqF0obZ3PzcX20gH0",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%8E%A8%E8%AB%96%E7%9A%84%E3%81%AB%E5%AE%87%E5%AE%99%E4%BA%BA/1731158296",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f002",
         },
         live_history: [
@@ -1204,7 +1204,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5rqHKMMJ8w397PCeEOai1i",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%AA%B0%E3%82%82%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E6%AD%8C/1731158449",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f004",
         },
         live_history: [
@@ -1223,7 +1223,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/672t5orA6YcHdTM5aGFjUG",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/mania/1739073855",
             line_music: "https://music.line.me/webapp/track/mt000000001ea734eb",
         },
         live_history: [
@@ -1242,7 +1242,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/51B7M78gRDEYzXAtwdj9cM",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/p-p-p-pero/1751439106",
             line_music: "https://music.line.me/webapp/track/mt000000001f349430",
         },
         live_history: [
@@ -1261,7 +1261,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0QurLzmjaPLt2XQ2UEcqyy",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B-%E5%88%A5%E8%A7%A3/1767900848",
             line_music: "https://music.line.me/webapp/track/mt00000000200d0619",
         },
         live_history: [
@@ -1280,7 +1280,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0JnnVhCalDiOo0jXn0ivlc",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%A4%A2%E4%B9%8B%E7%9B%B8-%E3%82%A4%E3%83%A1%E3%83%8E%E3%82%A2%E3%82%A4/1772647934",
             line_music: "https://music.line.me/webapp/track/mt000000002048242f",
         },
         live_history: [
@@ -1299,7 +1299,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/55V3psa2OcuOx5fcDqNKXz",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/operation-ego/1778061348",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eea",
         },
         live_history: [
@@ -1318,7 +1318,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5fZclM8jW0kY7JKEbOIPEi",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E9%81%8A%E6%88%AF%E7%9A%84%E5%8F%8D%E9%80%86%E3%83%8E%E3%82%B9%E3%82%B9%E3%83%A1/1778061829",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eeb",
         },
         live_history: [
@@ -1337,7 +1337,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/46bFnfqjy3nyPKi6GtldSW",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%B0%8F%E8%AA%AC%E3%81%AA%E3%82%89%E3%81%B0/1778061830",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eec",
         },
         live_history: [
@@ -1356,7 +1356,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/go-to-the-moon/1778061831",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eed",
         },
         live_history: [
@@ -1375,7 +1375,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/0nTn7BrtU9tOcdSdzplysR",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%A2%E3%83%93%E3%82%B9%E3%81%A8%E6%B8%85%E3%82%89%E3%81%AA%E9%8A%80%E4%B8%96%E7%95%8C/1781057265",
             line_music: "https://music.line.me/webapp/track/mt00000000209bfb94",
         },
         live_history: [
@@ -1396,7 +1396,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5OaH7cJm8yIDB6H6PXLocY",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/lll/1797438637",
             line_music: "https://music.line.me/webapp/track/mt000000002176b175",
         },
         live_history: [
@@ -1415,7 +1415,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5oLO5hl3wM0MdYv87gSzhs",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%9B%A0%E6%9E%9C%E5%BF%9C%E5%A0%B1%E3%82%A2%E3%83%B3%E3%83%81%E3%83%8E%E3%83%9F%E3%83%BC/1807467620",
             line_music: "https://music.line.me/webapp/track/mt0000000021cfc547",
         },
         live_history: [
@@ -1434,7 +1434,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1agWIt6R3A5MdpX1L5quLY",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%95%E3%82%A3%E3%83%8A%E3%83%BC%E3%83%AC/1807467627",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1de",
         },
         live_history: [
@@ -1453,7 +1453,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2DXyFzJwUdq5yoljbyaAXF",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E6%81%8B%E6%A8%A1%E6%A7%98/1807467628",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1df",
         },
         live_history: [
@@ -1472,7 +1472,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/7x2i2i2JvhqNWALk5jvz6c",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%82%AB%E3%83%A9%E3%83%95%E3%82%8B%E3%83%AF%E3%83%B3%E3%83%80%E3%83%95%E3%83%AB/1807467630",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e1",
         },
         live_history: [
@@ -1491,7 +1491,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1mPy0egDHMQnbuLVWuHedK",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/in-the-fate/1807467633",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e2",
         },
         live_history: [
@@ -1510,7 +1510,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/5LerS745dIrtRbCysv5igU",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/paradox-re-write/1807467636",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e3",
         },
         live_history: [
@@ -1529,7 +1529,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1OLnkhGpRCBkuIad3sbHuZ",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%A4%9A%E5%88%86-%E5%83%95%E3%81%AE%E3%82%BD%E3%83%8D%E3%83%83%E3%83%88/1807467640",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e5",
         },
         live_history: [
@@ -1548,7 +1548,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1yfC94XjRlidTGYdxd2Wkc",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%82%89%E3%81%97%E3%81%8F/1807467642",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e6",
         },
         live_history: [
@@ -1567,7 +1567,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4uYdHqrUBrf2UkEuF9lkMP",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%91%E3%83%A9%E3%83%8E%E3%82%A4%E3%83%89%E3%83%A9%E3%83%B3%E3%83%87%E3%83%96%E3%83%BC/1840593956",
             line_music: "https://music.line.me/webapp/track/mt0000000023a4ecad",
         },
         live_history: [
@@ -1586,7 +1586,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/76B2mLXjdcyifbvuecYCxf",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%93%E3%83%8D%E3%83%83%E3%83%88%E3%83%8D%E3%83%83%E3%83%88/1843294375",
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9b",
         },
         live_history: [
@@ -1605,7 +1605,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4yZrNNeXM7xhLPzQhj1oOH",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E5%B8%8C%E6%9C%9B%E7%9A%84%E8%A6%B3%E6%B8%AC%E3%81%AE%E5%AE%9A%E7%BE%A9/1843294378",
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9c",
         },
         live_history: [
@@ -1624,7 +1624,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3raLYsviJFadclJa87w2j0",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%88%E3%83%AC%E3%83%A2%E3%83%AD/1846971732",
             line_music: "https://music.line.me/webapp/track/mt0000000023eb8018",
         },
         live_history: [
@@ -1645,7 +1645,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/4GwMw1iuQv0J0d8Lshz09Y",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/now/1863847515",
             line_music: "https://music.line.me/webapp/track/mt000000002472dc99",
         },
         live_history: [
@@ -1664,7 +1664,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1tq4FHHczdk3metmlrjrkZ",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E3%83%8B%E3%83%92%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0/1877826343",
             line_music: "https://music.line.me/webapp/track/mt0000000024e4fc27",
         },
         live_history: [
@@ -1684,7 +1684,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/6idtrXLVnkpgPUWXD30yrE",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%96%BE%E8%B5%B0/1880024613",
             line_music: "https://music.line.me/webapp/track/mt0000000024f58662",
         },
         live_history: [
@@ -1703,7 +1703,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1cKDi4rrpDchhwZirxZ61n",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E6%84%9B%E7%84%A1%E5%B8%B8/1880024614",
             line_music: "https://music.line.me/webapp/track/mt0000000024f58663",
         },
         live_history: [
@@ -1722,7 +1722,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/10XffNZUvZ7qY0B6FqWqho",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/silence/1880024616",
             line_music: "https://music.line.me/webapp/track/mt0000000024f58664",
         },
         live_history: [
@@ -1741,7 +1741,7 @@ export const songsIndex = [
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
-            apple_music: "",
+            apple_music: "https://music.apple.com/jp/song/%E7%81%AB%E5%AE%B4/6781905374",
             line_music: "https://music.line.me/webapp/track/mt0000000026273465",
         },
         live_history: [
