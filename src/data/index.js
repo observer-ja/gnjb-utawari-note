@@ -8,7 +8,9 @@ export const songsIndex = [
         title_kana: "zzz_stargazer",
         date: "2018-12-19",
         cds: [{ id: "bs_01", track: 1 },],
+        lyricist: ["SANOJI"],
         composer: ["NAMELESS AKA NL", "J.A.E"],
+        arranger: ["NAMELESS AKA NL"],
         tieup: [],
         call: false,
         links: {
@@ -25,7 +27,9 @@ export const songsIndex = [
         title_kana: "zzz_voice",
         date: "2018-12-19",
         cds: [{ id: "bs_01", track: 2 },],
+        lyricist: ["SANOJI"],
         composer: ["NAMELESS AKA NL", "J.A.E"],
+        arranger: ["NAMELESS AKA NL"],
         tieup: [],
         call: false,
         links: {
@@ -42,7 +46,9 @@ export const songsIndex = [
         title_kana: "zzz_macanas",
         date: "2018-12-19",
         cds: [{ id: "bs_01", track: 3 },],
+        lyricist: ["Yocke"],
         composer: ["Yocke"],
+        arranger: ["Yocke"],
         tieup: [],
         call: false,
         links: {
@@ -59,7 +65,9 @@ export const songsIndex = [
         title_kana: "zzz_showtime",
         date: "2019-06-19",
         cds: [{ id: "bs_02", track: 1 },],
+        lyricist: ["Yocke"],
         composer: ["Yocke"],
+        arranger: ["Yocke"],
         tieup: [],
         call: false,
         links: {
@@ -76,7 +84,9 @@ export const songsIndex = [
         title_kana: "zzz_countdown",
         date: "2019-06-19",
         cds: [{ id: "bs_02", track: 2 },],
+        lyricist: ["森永博志"],
         composer: ["楊慶豪"],
+        arranger: ["楊慶豪"],
         tieup: [],
         call: false,
         links: {
@@ -93,7 +103,9 @@ export const songsIndex = [
         title_kana: "zzz_burnburnbomb",
         date: "2019-06-19",
         cds: [{ id: "bs_02", track: 3 },],
+        lyricist: ["浅利進吾"],
         composer: ["浅利進吾"],
+        arranger: ["浅利進吾"],
         tieup: [],
         call: false,
         links: {
@@ -110,7 +122,9 @@ export const songsIndex = [
         title_kana: "zzz_likeavampire",
         date: "2019-06-19",
         cds: [{ id: "bs_02", track: 4 },],
+        lyricist: ["矢野水音"],
         composer: ["朴優尊"],
+        arranger: ["楊慶豪"],
         tieup: [],
         call: false,
         links: {
@@ -132,7 +146,9 @@ export const songsIndex = [
             { id: "sg_01", track: 1 },
             { id: "al_01", track: 9 },
         ],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [
             "テレビ朝日「お願い！ランキング」9月度EDテーマソング",
             "AbemaTV「Abema Prime」10月度EDテーマソング"
@@ -156,7 +172,9 @@ export const songsIndex = [
         title_kana: "ぎみぎみらぶ",
         date: "2019-10-09",
         cds: [{ id: "sg_01", track: 2 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -177,7 +195,9 @@ export const songsIndex = [
         title_kana: "zzz_upanddown",
         date: "2019-10-09",
         cds: [{ id: "sg_01", track: 3 },],
+        lyricist: ["矢野水音"],
         composer: ["朴優尊"],
+        arranger: ["楊慶豪"],
         tieup: [],
         call: false,
         links: {
@@ -199,7 +219,9 @@ export const songsIndex = [
             { id: "sg_01", track: 4 },
             { id: "al_01", track: 11 },
         ],
+        lyricist: ["矢野水音"],
         composer: ["朴優尊"],
+        arranger: ["楊慶豪"],
         tieup: [],
         call: false,
         links: {
@@ -223,7 +245,9 @@ export const songsIndex = [
             { id: "sg_02", track: 1 },
             { id: "al_01", track: 2 },
         ],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["テレビ朝日系「BREAK OUT」2020年1月度OPテーマソング"],
         call: true,
         links: {
@@ -242,7 +266,9 @@ export const songsIndex = [
         title_kana: "zzz_joytotheworld",
         date: "2020-01-22",
         cds: [{ id: "ag_02", track: 2 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -261,7 +287,9 @@ export const songsIndex = [
         title_kana: "じゅとぅぶ",
         date: "2020-01-22",
         cds: [{ id: "sg_02", track: 3 },],
+        lyricist: ["100回嘔吐", "久下真音"],
         composer: ["100回嘔吐"],
+        arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
         links: {
@@ -280,7 +308,9 @@ export const songsIndex = [
         title_kana: "じそくさんきろ",
         date: "2020-01-22",
         cds: [{ id: "sg_02", track: 4 },],
+        lyricist: ["100回嘔吐"],
         composer: ["100回嘔吐"],
+        arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
         links: {
@@ -299,7 +329,9 @@ export const songsIndex = [
         title_kana: "うそからはじまるじしょうけい",
         date: "2020-04-11",
         cds: [{ id: "al_01", track: 3 },],
+        lyricist: ["AZUKI", "Mayune", "福原健太郎", "山本メーコ"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -318,7 +350,9 @@ export const songsIndex = [
         title_kana: "しぇいくすぴあにまなぶれんあいていり",
         date: "2020-07-12",
         cds: [{ id: "al_01", track: 7 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["MBS／TBS系ドラマ「年の差婚」OPテーマソング"],
         call: false,
         links: {
@@ -338,7 +372,9 @@ export const songsIndex = [
         title_kana: "かすかなよのゆめ",
         date: "2020-10-24",
         cds: [{ id: "al_01", track: 8 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -357,7 +393,9 @@ export const songsIndex = [
         title_kana: "zzz_inthenude",
         date: "2021-12-13",
         cds: [{ id: "al_01", track: 4 },],
+        lyricist: ["nqrse", "久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -378,7 +416,9 @@ export const songsIndex = [
         title_kana: "すのうだんす",
         date: "2021-01-01",
         cds: [{ id: "al_01", track: 5 },],
+        lyricist: ["Ayase"],
         composer: ["Ayase"],
+        arranger: ["Ayase"],
         tieup: [],
         call: false,
         links: {
@@ -397,7 +437,9 @@ export const songsIndex = [
         title_kana: "ざくろ",
         date: "2021-01-13",
         cds: [{ id: "al_01", track: 1 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音", "100回嘔吐"],
         tieup: [],
         call: false,
         links: {
@@ -416,7 +458,9 @@ export const songsIndex = [
         title_kana: "ゆめにうたえば",
         date: "2021-01-13",
         cds: [{ id: "al_01", track: 6 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -435,7 +479,9 @@ export const songsIndex = [
         title_kana: "ねばーえんどろーる",
         date: "2021-01-13",
         cds: [{ id: "al_01", track: 10 },],
+        lyricist: ["100回嘔吐"],
         composer: ["100回嘔吐"],
+        arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
         links: {
@@ -454,7 +500,9 @@ export const songsIndex = [
         title_kana: "いぬとねことみるくにしゅがー",
         date: "2021-05-05",
         cds: [{ id: "al_02", track: 2 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -469,11 +517,13 @@ export const songsIndex = [
     },
     {
         id: "song018",
-        title: "以呂波",
+        title: "以呂波 feat.fox capture plan",
         title_kana: "いろは",
         date: "2021-07-07",
         cds: [{ id: "al_02", track: 4 },],
+        lyricist: ["久下真音"],
         composer: ["岸本亮"],
+        arranger: ["fox capture plan", "久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -492,7 +542,9 @@ export const songsIndex = [
         title_kana: "やけゆくあお",
         date: "2021-09-01",
         cds: [{ id: "al_02", track: 6 },],
+        lyricist: ["吐息"],
         composer: ["吐息"],
+        arranger: ["吐息"],
         tieup: [],
         call: false,
         links: {
@@ -511,7 +563,9 @@ export const songsIndex = [
         title_kana: "ごうう",
         date: "2021-10-19",
         cds: [{ id: "al_02", track: 3 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["テレビ東京系ドラマ「じゃない方の彼女」EDテーマソング"],
         call: false,
         links: {
@@ -530,7 +584,9 @@ export const songsIndex = [
         title_kana: "はんぶんあいあいがさ",
         date: "2021-10-28",
         cds: [{ id: "al_02", track: 5 },],
+        lyricist: ["s-num"],
         composer: ["s-num"],
+        arranger: ["眞塩楓"],
         tieup: [],
         call: false,
         links: {
@@ -549,7 +605,9 @@ export const songsIndex = [
         title_kana: "たそがれよりもはやくはしれ",
         date: "2021-11-20",
         cds: [{ id: "al_02", track: 1 },],
+        lyricist: ["みきとP"],
         composer: ["みきとP"],
+        arranger: ["木下哲", "みきとP"],
         tieup: ["テレビ朝日系「BREAK OUT」2021年12月度OPテーマソング"],
         call: false,
         links: {
@@ -568,7 +626,9 @@ export const songsIndex = [
         title_kana: "zzz_joker",
         date: "2021-12-08",
         cds: [{ id: "al_02", track: 7 },],
+        lyricist: ["ど〜ぱみん"],
         composer: ["ど〜ぱみん"],
+        arranger: ["ど〜ぱみん"],
         tieup: [],
         call: false,
         links: {
@@ -587,7 +647,9 @@ export const songsIndex = [
         title_kana: "0to1のげんそう",
         date: "2021-12-08",
         cds: [{ id: "al_02", track: 8 },],
+        lyricist: ["Bee Goodman"],
         composer: ["Bee Goodman", "ES-PLANT"],
+        arranger: ["Bee Goodman"],
         tieup: [],
         call: false,
         links: {
@@ -606,7 +668,9 @@ export const songsIndex = [
         title_kana: "よか",
         date: "2021-12-08",
         cds: [{ id: "al_02", track: 9 },],
+        lyricist: ["霧エクラ"],
         composer: ["霧エクラ"],
+        arranger: ["霧エクラ"],
         tieup: [],
         call: false,
         links: {
@@ -625,7 +689,9 @@ export const songsIndex = [
         title_kana: "あいいろせんこう",
         date: "2021-12-08",
         cds: [{ id: "al_02", track: 10 },],
+        lyricist: ["Art knows me"],
         composer: ["Art knows me"],
+        arranger: ["村山⭐︎潤"],
         tieup: [],
         call: false,
         links: {
@@ -646,7 +712,9 @@ export const songsIndex = [
         title_kana: "あおそのほか",
         date: "2022-03-12",
         cds: [{ id: "al_03", track: 6 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -665,7 +733,9 @@ export const songsIndex = [
         title_kana: "けつまつはつぎのとらふぃっくらいと",
         date: "2022-03-21",
         cds: [{ id: "al_03", track: 9 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -684,7 +754,9 @@ export const songsIndex = [
         title_kana: "きみをなくして",
         date: "2022-04-06",
         cds: [{ id: "al_03", track: 11 },],
+        lyricist: ["izki"],
         composer: ["izki"],
+        arranger: ["izki"],
         tieup: [],
         call: false,
         links: {
@@ -703,7 +775,9 @@ export const songsIndex = [
         title_kana: "zzz_545",
         date: "2022-05-27",
         cds: [{ id: "al_03", track: 12 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -722,7 +796,9 @@ export const songsIndex = [
         title_kana: "げんいんはきみにもある",
         date: "2022-07-07",
         cds: [{ id: "al_03", track: 2 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -741,7 +817,9 @@ export const songsIndex = [
         title_kana: "あなたにおぼれてぼくはうるんで",
         date: "2022-08-29",
         cds: [{ id: "al_03", track: 5 },],
+        lyricist: ["izki"],
         composer: ["izki"],
+        arranger: ["izki"],
         tieup: [],
         call: false,
         links: {
@@ -760,7 +838,9 @@ export const songsIndex = [
         title_kana: "ちょこるーぷ",
         date: "2022-09-25",
         cds: [{ id: "al_03", track: 10 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -779,7 +859,9 @@ export const songsIndex = [
         title_kana: "zzz_q",
         date: "2022-11-02",
         cds: [{ id: "al_03", track: 4 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -800,7 +882,9 @@ export const songsIndex = [
         title_kana: "まほうをかけて",
         date: "2023-01-07",
         cds: [{ id: "al_03", track: 3 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["TBS「王様のブランチ」2023年1月度エンディングテーマ"],
         call: false,
         links: {
@@ -819,7 +903,9 @@ export const songsIndex = [
         title_kana: "むげんしにしずむ",
         date: "2023-01-25",
         cds: [{ id: "al_03", track: 1 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["フジテレビ系「Love music」 2023年2月度オープニングテーマ"],
         call: false,
         links: {
@@ -838,7 +924,9 @@ export const songsIndex = [
         title_kana: "zzz_runaway",
         date: "2023-01-25",
         cds: [{ id: "al_03", track: 7 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -857,7 +945,9 @@ export const songsIndex = [
         title_kana: "zzz_lion",
         date: "2023-01-25",
         cds: [{ id: "al_03", track: 8 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -876,7 +966,9 @@ export const songsIndex = [
         title_kana: "さくらground",
         date: "2023-01-25",
         cds: [{ id: "al_03", track: 13 },],
+        lyricist: ["竹内雄彦"],
         composer: ["竹内雄彦"],
+        arranger: ["竹内雄彦"],
         tieup: [],
         call: false,
         links: {
@@ -895,7 +987,9 @@ export const songsIndex = [
         title_kana: "ぼくらのせかいものがたり",
         date: "2023-01-25",
         cds: [{ id: "al_03", track: 14 },],
+        lyricist: ["izki"],
         composer: ["izki"],
+        arranger: ["izki"],
         tieup: [],
         call: false,
         links: {
@@ -910,11 +1004,13 @@ export const songsIndex = [
     },
     {
         id: "song041",
-        title: "Mr.Android",
+        title: "Mr.Android (feat. izki)",
         title_kana: "zzz_mrandroid",
         date: "2023-03-15",
         cds: [],
+        lyricist: ["izki"],
         composer: ["izki"],
+        arranger: ["izki"],
         tieup: [],
         call: false,
         links: {
@@ -933,7 +1029,9 @@ export const songsIndex = [
         title_kana: "ほうかごぎゅっと",
         date: "2023-04-03",
         cds: [],
+        lyricist: ["izki"],
         composer: ["izki"],
+        arranger: ["izki"],
         tieup: ["テレビ東京系「デュエル・マスターズ WIN 決闘学園編」エンディングテーマ"],
         call: false,
         links: {
@@ -952,7 +1050,9 @@ export const songsIndex = [
         title_kana: "zzz_foxygrape",
         date: "2023-06-07",
         cds: [{ id: "sg_03", track: 1 },],
+        lyricist: ["Kiyoki"],
         composer: ["あらケン"],
+        arranger: ["あらケン"],
         tieup: [],
         call: false,
         links: {
@@ -971,7 +1071,9 @@ export const songsIndex = [
         title_kana: "よはくのためのかさぶたきょうそうきょく",
         date: "2023-06-07",
         cds: [{ id: "sg_03", track: 2 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -990,7 +1092,9 @@ export const songsIndex = [
         title_kana: "zzz_theenpathy",
         date: "2023-06-07",
         cds: [{ id: "sg_03", track: 3 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1009,7 +1113,9 @@ export const songsIndex = [
         title_kana: "zzz_godしゃかにhiphop",
         date: "2023-06-07",
         cds: [{ id: "sg_03", track: 4 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -1028,7 +1134,9 @@ export const songsIndex = [
         title_kana: "なつのにとうへんだいさんかっけい",
         date: "2023-06-07",
         cds: [{ id: "sg_03", track: 5 },],
+        lyricist: ["吉田司"],
         composer: ["吉田司", "加藤祐平"],
+        arranger: ["加藤祐平"],
         tieup: [],
         call: false,
         links: {
@@ -1047,7 +1155,9 @@ export const songsIndex = [
         title_kana: "ならしてしんばる",
         date: "2023-08-10",
         cds: [],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -1066,7 +1176,9 @@ export const songsIndex = [
         title_kana: "ろうそく",
         date: "2023-08-30",
         cds: [{ id: "al_04", track: 5 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」OPテーマソング"],
         call: false,
         links: {
@@ -1085,7 +1197,9 @@ export const songsIndex = [
         title_kana: "zzz_museum0",
         date: "2023-11-03",
         cds: [{ id: "al_04", track: 12 },],
+        lyricist: ["堀江晶太"],
         composer: ["堀江晶太"],
+        arranger: ["堀江晶太"],
         tieup: [],
         call: false,
         links: {
@@ -1106,7 +1220,9 @@ export const songsIndex = [
         title_kana: "だいやもんどりりー",
         date: "2024-01-10",
         cds: [{ id: "ep_01", track: 5 },],
+        lyricist: ["MIMI"],
         composer: ["MIMI"],
+        arranger: ["MIMI"],
         tieup: [],
         call: false,
         links: {
@@ -1125,7 +1241,9 @@ export const songsIndex = [
         title_kana: "まるちばーすあどべんちゃー",
         date: "2024-02-11",
         cds: [{ id: "ep_01", track: 1 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -1144,7 +1262,9 @@ export const songsIndex = [
         title_kana: "けいかくどをり",
         date: "2024-03-13",
         cds: [{ id: "ep_01", track: 2 },],
-        composer: ["高坂はやしん", "uno biaqio", "Seiji Iwasaki"],
+        lyricist: ["uno biaqio", "高坂はやしん"],
+        composer: ["uno biaqio", "Seiji Iwasaki", "高坂はやしん"],
+        arranger: ["uno biaqio", "Seiji Iwasaki"],
         tieup: [],
         call: true,
         links: {
@@ -1163,7 +1283,9 @@ export const songsIndex = [
         title_kana: "うつくしいひと",
         date: "2024-03-13",
         cds: [{ id: "ep_01", track: 3 },],
+        lyricist: ["南雲ゆうき"],
         composer: ["南雲ゆうき"],
+        arranger: ["南雲ゆうき"],
         tieup: [],
         call: false,
         links: {
@@ -1182,7 +1304,9 @@ export const songsIndex = [
         title_kana: "すいろんてきにうちゅうじん",
         date: "2024-03-13",
         cds: [{ id: "ep_01", track: 4 },],
+        lyricist: ["ナユタン星人"],
         composer: ["ナユタン星人"],
+        arranger: ["ナユタン星人"],
         tieup: [],
         call: true,
         links: {
@@ -1202,7 +1326,9 @@ export const songsIndex = [
         title_kana: "だれもしらないうた",
         date: "2024-03-13",
         cds: [{ id: "ep_01", track: 6 },],
+        lyricist: ["じん"],
         composer: ["じん"],
+        arranger: ["酒井拓也"],
         tieup: [],
         call: true,
         links: {
@@ -1221,7 +1347,9 @@ export const songsIndex = [
         title_kana: "zzz_mania",
         date: "2024-05-03",
         cds: [{ id: "al_04", track: 4 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["読売テレビ ドラマDiVE『シークレット同盟』OPテーマソング"],
         call: false,
         links: {
@@ -1242,7 +1370,9 @@ export const songsIndex = [
         title_kana: "zzz_ppppero",
         date: "2024-07-05",
         cds: [{ id: "al_04", track: 8 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["アニメ『エグミレガシー』主題歌"],
         call: false,
         links: {
@@ -1261,7 +1391,9 @@ export const songsIndex = [
         title_kana: "げんいんはじぶんにあるべっかい",
         date: "2024-10-09",
         cds: [],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1280,7 +1412,9 @@ export const songsIndex = [
         title_kana: "いめのあい",
         date: "2024-11-11",
         cds: [{ id: "al_04", track: 3 },],
+        lyricist: ["堀江晶太"],
         composer: ["堀江晶太"],
+        arranger: ["堀江晶太"],
         tieup: [],
         call: false,
         links: {
@@ -1299,7 +1433,9 @@ export const songsIndex = [
         title_kana: "zzz_operationego",
         date: "2024-11-27",
         cds: [{ id: "ep_02", track: 1 },],
+        lyricist: ["サツキ"],
         composer: ["サツキ"],
+        arranger: ["サツキ"],
         tieup: [],
         call: false,
         links: {
@@ -1318,7 +1454,9 @@ export const songsIndex = [
         title_kana: "ゆうぎてきはんぎゃくのすすめ",
         date: "2024-12-04",
         cds: [{ id: "ep_02", track: 2 },],
+        lyricist: ["Kiyoki"],
         composer: ["B33G", "Kiyoki", "SARVAL"],
+        arranger: ["B33G", "Kiyoki", "KoTaRo", "SARVAL"],
         tieup: [],
         call: true,
         links: {
@@ -1338,7 +1476,9 @@ export const songsIndex = [
         title_kana: "しょうせつならば",
         date: "2024-12-04",
         cds: [{ id: "ep_02", track: 3 },],
+        lyricist: ["竹縄航太"],
         composer: ["竹縄航太", "岩野亨"],
+        arranger: ["竹縄航太"],
         tieup: [],
         call: false,
         links: {
@@ -1357,7 +1497,9 @@ export const songsIndex = [
         title_kana: "zzz_gotothemoon",
         date: "2024-12-04",
         cds: [{ id: "ep_02", track: 4 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1376,7 +1518,9 @@ export const songsIndex = [
         title_kana: "あびすときよらなぎんせかい",
         date: "2024-12-18",
         cds: [],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1397,7 +1541,9 @@ export const songsIndex = [
         title_kana: "zzz_lll",
         date: "2025-03-10",
         cds: [{ id: "al_04", track: 2 },],
+        lyricist: [".ENDRECHERI./堂本剛"],
         composer: [".ENDRECHERI./堂本剛"],
+        arranger: [".ENDRECHERI./堂本剛", "宗本康兵"],
         tieup: [],
         call: false,
         links: {
@@ -1416,7 +1562,9 @@ export const songsIndex = [
         title_kana: "いんがおうほうあんちのみー",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 1 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1437,7 +1585,9 @@ export const songsIndex = [
         title_kana: "ふぃなーれ",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 6 },],
+        lyricist: ["岡田一成"],
         composer: ["岡田一成", "玉谷友輝", "Masaki Tomiyama"],
+        arranger: ["Masaki Tomiyama"],
         tieup: [],
         call: false,
         links: {
@@ -1456,7 +1606,9 @@ export const songsIndex = [
         title_kana: "ほうていしきはこいもよう",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 7 },],
-        composer: ["B33G", "Kiyoki", "SARVAL", "真白あまね", "IKUTO"],
+        lyricist: ["Kiyoki", "村瀬らむ", "SARVAL", "IKUTO", "B33G"],
+        composer: ["IKUTO", "Kiyoki", "真白あまね", "SARVAL", "B33G"],
+        arranger: ["IKUTO", "真白あまね", "SARVAL"],
         tieup: [],
         call: false,
         links: {
@@ -1475,7 +1627,9 @@ export const songsIndex = [
         title_kana: "からふるわんだふる",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 9 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』エンディングソング"],
         call: false,
         links: {
@@ -1492,7 +1646,9 @@ export const songsIndex = [
         title_kana: "zzz_inthefate",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 10 },],
-        composer: ["B33G", "SARVAL", "IKUTO", "Orcaにゃん"],
+        lyricist: ["Orcaにゃん"],
+        composer: ["Orcaにゃん", "IKUTO", "SARVAL", "B33G"],
+        arranger: ["Orcaにゃん", "IKUTO", "SARVAL"],
         tieup: [],
         call: false,
         links: {
@@ -1511,7 +1667,9 @@ export const songsIndex = [
         title_kana: "zzz_paradoxrewrite",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 11 },],
+        lyricist: ["Kiyoki", "SARVAL", "CS4W", "B33G"],
         composer: ["CS4W", "Kiyoki", "SARVAL", "B33G"],
+        arranger: ["CS4W", "SARVAL"],
         tieup: [],
         call: false,
         links: {
@@ -1530,7 +1688,9 @@ export const songsIndex = [
         title_kana: "たぶんぼくのそねっと",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 13 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["読売テレビ ドラマDiVE『あらばしり』エンディング主題歌"],
         call: false,
         links: {
@@ -1549,7 +1709,9 @@ export const songsIndex = [
         title_kana: "あなたらしく",
         date: "2025-04-23",
         cds: [{ id: "al_04", track: 14 },],
+        lyricist: ["花房遊"],
         composer: ["花房遊", "YASU"],
+        arranger: ["YASU"],
         tieup: [],
         call: false,
         links: {
@@ -1568,7 +1730,9 @@ export const songsIndex = [
         title_kana: "ぱらのいどらんでぶー",
         date: "2025-10-15",
         cds: [{ id: "sg_04", track: 1 },],
+        lyricist: ["川谷絵音"],
         composer: ["川谷絵音"],
+        arranger: ["川谷絵音"],
         tieup: [],
         call: false,
         links: {
@@ -1588,7 +1752,9 @@ export const songsIndex = [
         title_kana: "びねっとねっと",
         date: "2025-10-15",
         cds: [{ id: "sg_04", track: 2 },],
+        lyricist: ["笹川真生"],
         composer: ["笹川真生"],
+        arranger: ["笹川真生"],
         tieup: [],
         call: false,
         links: {
@@ -1607,7 +1773,9 @@ export const songsIndex = [
         title_kana: "きぼうてきかんそくのていぎ",
         date: "2025-10-15",
         cds: [{ id: "sg_04", track: 3 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: true,
         links: {
@@ -1626,7 +1794,9 @@ export const songsIndex = [
         title_kana: "とれもろ",
         date: "2025-11-08",
         cds: [{ id: "ep_03", track: 5 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』オープニング曲"],
         call: false,
         links: {
@@ -1649,7 +1819,9 @@ export const songsIndex = [
         title_kana: "zzz_now",
         date: "2026-01-19",
         cds: [{ id: "ep_03", track: 6 },],
+        lyricist: ["Nolzy"],
         composer: ["Nolzy"],
+        arranger: ["Nolzy"],
         tieup: ["読売テレビ ドラマDiVE『親友の「同棲して」に「うん」て言うまで』オープニング主題歌"],
         call: false,
         links: {
@@ -1669,7 +1841,9 @@ export const songsIndex = [
         title_kana: "にひりずむぷりずむ",
         date: "2026-03-02",
         cds: [{ id: "ep_03", track: 1 },],
+        lyricist: ["久下真音"],
         composer: ["久下真音"],
+        arranger: ["久下真音"],
         tieup: [],
         call: false,
         links: {
@@ -1691,7 +1865,9 @@ export const songsIndex = [
         title_kana: "しっそう",
         date: "2026-03-11",
         cds: [{ id: "ep_03", track: 2 },],
+        lyricist: ["B33G", "Kiyoki", "Orcaにゃん", "SARVAL"],
         composer: ["B33G", "Kiyoki", "Orcaにゃん", "SARVAL"],
+        arranger: ["B33G", "Orcaにゃん", "SARVAL"],
         tieup: [],
         call: true,
         links: {
@@ -1712,7 +1888,9 @@ export const songsIndex = [
         title_kana: "あいむじょう",
         date: "2026-03-11",
         cds: [{ id: "ep_03", track: 3 },],
+        lyricist: ["竹縄航太"],
         composer: ["竹縄航太"],
+        arranger: ["竹縄航太"],
         tieup: [],
         call: false,
         links: {
@@ -1732,7 +1910,9 @@ export const songsIndex = [
         title_kana: "zzz_silence",
         date: "2026-03-11",
         cds: [{ id: "ep_03", track: 4 },],
+        lyricist: ["⭐︎Taku Takahashi"],
         composer: ["⭐︎Taku Takahashi"],
+        arranger: ["⭐︎Taku Takahashi"],
         tieup: [],
         call: false,
         links: {
@@ -1751,7 +1931,9 @@ export const songsIndex = [
         title_kana: "かえん",
         date: "2026-07-06",
         cds: [],
+        lyricist: ["Kiyoki"],
         composer: ["SARVAL"],
+        arranger: ["SARVAL", "Orcaにゃん", "真白あまね"],
         tieup: [],
         call: false,
         links: {
@@ -1772,7 +1954,11 @@ export const songsIndex = [
         title_kana: "",
         date: "20",
         cds: [{ id: "", track:  },],
+        lyricist: [""],
+        lyricist: [""],
         composer: [""],
+        arranger: [""],
+        arranger: [""],
         tieup: [],
         call: ,
         links: {
