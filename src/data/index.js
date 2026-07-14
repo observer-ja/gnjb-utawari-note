@@ -1775,6 +1775,6 @@ export const songsIndex = [
     },
     ライブ情報は後でまとめて書く
     外部リンクも
-    { live_id: "live2025_01", position: 10, perf: 1, note: "公演替わり" }
+    { live_id: "", position: , perf: , note: "" }
     */
 ]
