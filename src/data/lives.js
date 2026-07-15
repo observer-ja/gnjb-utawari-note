@@ -66,7 +66,8 @@ export const lives = [
   { id: "live2024_04", name: "エビライ2024", date: "2024-08-17", type: "fes"},
   { id: "live2024_05", name: "白昼夢への招待", date: "2024-11-17", type: "oneman"},
   { id: "live2024_06", name: "Livejack 2024", date: "2024-11-23", type: "fes"},
-  { id: "live2024_07", name: "クリライ2024", date: "2024-12-23", type: "oneman"},
+  { id: "live2024_07", name: "クリライ2024 Twinkle", date: "2024-12-23", type: "oneman"},
+  { id: "live2024_08", name: "クリライ2024 Nightmare", date: "2024-12-23", type: "oneman"},
 
   /* 2025年 */
   { id: "live2025_01", name: "ENDRECHERI FES", date: "2025-02-24", type: "fes"},
