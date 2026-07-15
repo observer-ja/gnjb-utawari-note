@@ -161,17 +161,17 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000fccf41d",
         },
         live_history: [
-            { live_id: "live2026_04", position: 1, perf: null, note: "" },
-            { live_id: "live2026_03", position: 1, perf: null, note: "" },
-            { live_id: "live2026_02", position: 2, perf: null, note: "" },
+            { live_id: "live2026_04", position: 1, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 1, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 2, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 5, perf: null, note: "" },
-            { live_id: "live2025_07", position: 3, perf: null, note: "" },
-            { live_id: "live2025_05", position: 2, perf: null, note: "" },
-            { live_id: "live2025_04", position: 3, perf: null, note: "シャッフル曲" },
-            { live_id: "live2025_02", position: 18, perf: null, note: "メドレー" },
+            { live_id: "live2025_09", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_07", position: 3, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_04", position: 3, perf: null, note: ["シャッフル曲"] },
+            { live_id: "live2025_02", position: 18, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2024_07", position: 13, perf: null, note: "" },
+            { live_id: "live2024_07", position: 13, perf: null, note: [""] },
         ],
     },
     {
@@ -192,14 +192,14 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000fd23028",
         },
         live_history: [
-            { live_id: "live2026_03", position: 5, perf: null, note: "" },
-            { live_id: "live2026_02", position: 5, perf: null, note: "" },
-            { live_id: "live2026_01", position: 8, perf: null, note: "" },
+            { live_id: "live2026_03", position: 5, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 5, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 8, perf: null, note: [""] },
 
-            { live_id: "live2025_03", position: 11, perf: 1, note: "日替わり曲" },
+            { live_id: "live2025_03", position: 11, perf: 1, note: ["日替わり曲"] },
 
-            { live_id: "live2024_07", position: 2, perf: null, note: "" },
-            { live_id: "live2024_06", position: 6, perf: null, note: "" },
+            { live_id: "live2024_07", position: 2, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 6, perf: null, note: [""] },
         ],
     },
     {
@@ -244,9 +244,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000fd2302a",
         },
         live_history: [
-            { live_id: "live2026_03", position: 4, perf: null, note: "Piano ver." },
+            { live_id: "live2026_03", position: 4, perf: null, note: ["Piano ver."] },
             
-            { live_id: "live2025_09", position: 3, perf: 2, note: "日替わり曲" },
+            { live_id: "live2025_09", position: 3, perf: 2, note: ["日替わり曲"] },
         ],
     },
 
@@ -272,11 +272,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000105e8133",
         },
         live_history: [
-            { live_id: "live2026_03", position: 2, perf: null, note: "" },
+            { live_id: "live2026_03", position: 2, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 6, perf: null, note: "" },
-            { live_id: "live2025_02", position: 19, perf: null, note: "メドレー" },
-            { live_id: "live2025_01", position: 5, perf: null, note: "" },
+            { live_id: "live2025_09", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 19, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_01", position: 5, perf: null, note: [""] },
         ],
     },
     {
@@ -297,9 +297,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9d",
         },
         live_history: [
-            { live_id: "live2026_03", position: 3, perf: null, note: "" },
+            { live_id: "live2026_03", position: 3, perf: null, note: [""] },
 
-            { live_id: "live2024_07", position: 1, perf: null, note: "" },
+            { live_id: "live2024_07", position: 1, perf: null, note: [""] },
         ],
     },
     {
@@ -320,7 +320,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9e",
         },
         live_history: [
-            { live_id: "live2025_02", position: 13, perf: 2, note: "日替わり曲" },
+            { live_id: "live2025_02", position: 13, perf: 2, note: ["日替わり曲"] },
         ],
     },
     {
@@ -362,7 +362,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000010c2b802",
         },
         live_history: [
-            { live_id: "live2025_03", position: 5, perf: null, note: "" },
+            { live_id: "live2025_03", position: 5, perf: null, note: [""] },
         ],
     },
     {
@@ -383,15 +383,15 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000115e5bec",
         },
         live_history: [
-            { live_id: "live2026_04", position: 2, perf: null, note: "" },
-            { live_id: "live2026_03", position: 6, perf: null, note: "" },
+            { live_id: "live2026_04", position: 2, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 6, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 7, perf: null, note: "" },
-            { live_id: "live2025_05", position: 4, perf: null, note: "" },
-            { live_id: "live2025_03", position: 11, perf: 2, note: "" },
-            { live_id: "live2025_02", position: 20, perf: null, note: "メドレー" },
+            { live_id: "live2025_09", position: 7, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 11, perf: 2, note: [""] },
+            { live_id: "live2025_02", position: 20, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2024_06", position: 8, perf: null, note: "" },
+            { live_id: "live2024_06", position: 8, perf: null, note: [""] },
         ],
     },
     {
@@ -412,10 +412,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000011ec2aeb",
         },
         live_history: [
-            { live_id: "live2025_09", position: 12, perf: null, note: "" },
+            { live_id: "live2025_09", position: 12, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 7, perf: null, note: "" },
-            { live_id: "live2024_07", position: 7, perf: null, note: "" },
+            { live_id: "live2024_08", position: 7, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 7, perf: null, note: [""] },
         ],
     },
     {
@@ -436,7 +436,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001230be85",
         },
         live_history: [
-            { live_id: "live2025_02", position: 16, perf: null, note: "" },
+            { live_id: "live2025_02", position: 16, perf: null, note: [""] },
         ],
     },
 
@@ -459,9 +459,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000123b011f",
         },
         live_history: [
-            { live_id: "live2026_01", position: 14, perf: null, note: "" },
+            { live_id: "live2026_01", position: 14, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 1, perf: null, note: "" },
+            { live_id: "live2024_08", position: 1, perf: null, note: [""] },
         ],
     },
     {
@@ -482,9 +482,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000124c54cc",
         },
         live_history: [
-            { live_id: "live2026_01", position: 16, perf: 2, note: "" },
+            { live_id: "live2026_01", position: 16, perf: 2, note: [""] },
 
-            { live_id: "live2025_02", position: 2, perf: null, note: "" },
+            { live_id: "live2025_02", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -505,9 +505,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d1",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 1, note: "" },
+            { live_id: "live2026_01", position: 7, perf: 1, note: [""] },
 
-            { live_id: "live2024_07", position: 4, perf: null, note: "" },
+            { live_id: "live2024_07", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -528,11 +528,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d5",
         },
         live_history: [
-            { live_id: "live2026_03", position: 26, perf: null, note: "" },
+            { live_id: "live2026_03", position: 26, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 3, perf: 1, note: "日替わり曲" },
+            { live_id: "live2025_09", position: 3, perf: 1, note: ["日替わり曲"] },
 
-            { live_id: "live2024_07", position: 3, perf: null, note: "" },
+            { live_id: "live2024_07", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -553,7 +553,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000013b96d56",
         },
         live_history: [
-            { live_id: "live2024_08", position: 3, perf: null, note: "" },
+            { live_id: "live2024_08", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -595,10 +595,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001474720a",
         },
         live_history: [
-            { live_id: "live2025_07", position: 9, perf: null, note: "" },
-            { live_id: "live2025_02", position: 17, perf: null, note: "" },
+            { live_id: "live2025_07", position: 9, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 17, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 15, perf: null, note: "" },
+            { live_id: "live2024_08", position: 15, perf: null, note: [""] },
         ],
     },
     {
@@ -619,7 +619,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000014d29bc1",
         },
         live_history: [
-            { live_id: "live2026_04", position: 3, perf: null, note: "" },
+            { live_id: "live2026_04", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -682,7 +682,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dad",
         },
         live_history: [
-            { live_id: "live2024_08", position: 2, perf: null, note: "" },
+            { live_id: "live2024_08", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -703,8 +703,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dae",
         },
         live_history: [
-            { live_id: "live2025_07", position: 5, perf: null, note: "" },
-            { live_id: "live2025_03", position: 4, perf: null, note: "" },
+            { live_id: "live2025_07", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -746,7 +746,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000150e3db0",
         },
         live_history: [
-            { live_id: "live2026_01", position: 1, perf: null, note: "" },
+            { live_id: "live2026_01", position: 1, perf: null, note: [""] },
         ],
     },
 
@@ -769,7 +769,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000015c8e5b3",
         },
         live_history: [
-            { live_id: "live2025_02", position: 6, perf: null, note: "大倉、小泉、杢代のみ" },
+            { live_id: "live2025_02", position: 6, perf: null, note: ["大倉、小泉、杢代のみ"] },
         ],
     },
     {
@@ -790,7 +790,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000015d84e68",
         },
         live_history: [
-            { live_id: "live2025_02", position: 7, perf: null, note: "桜木、長野、武藤。吉澤のみ" },
+            { live_id: "live2025_02", position: 7, perf: null, note: ["桜木、長野、武藤。吉澤のみ"] },
         ],
     },
     {
@@ -811,7 +811,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001611388f",
         },
         live_history: [
-            { live_id: "live2025_09", position: 2, perf: null, note: "" },
+            { live_id: "live2025_09", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -832,7 +832,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001687cb73",
         },
         live_history: [
-            { live_id: "live2025_02", position: 8, perf: null, note: "" },
+            { live_id: "live2025_02", position: 8, perf: null, note: [""] },
         ],
     },
     {
@@ -853,15 +853,15 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000017091d88",
         },
         live_history: [
-            { live_id: "live2026_04", position: 9, perf: null, note: "" },
+            { live_id: "live2026_04", position: 9, perf: null, note: [""] },
 
-            { live_id: "live2025_05", position: 10, perf: null, note: "" },
-            { live_id: "live2025_03", position: 16, perf: null, note: "" },
-            { live_id: "live2025_02", position: 23, perf: null, note: "メドレー" },
+            { live_id: "live2025_05", position: 10, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 16, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 23, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2024_08", position: 17, perf: null, note: "" },
-            { live_id: "live2024_07", position: 17, perf: null, note: "" },
-            { live_id: "live2024_06", position: 9, perf: null, note: "" },
+            { live_id: "live2024_08", position: 17, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 17, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 9, perf: null, note: ["アンコール"] },
         ],
     },
     {
@@ -882,10 +882,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000178dcc22",
         },
         live_history: [
-            { live_id: "live2026_01", position: 10, perf: null, note: "" },
+            { live_id: "live2026_01", position: 10, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 10, perf: null, note: "" },
-            { live_id: "live2024_07", position: 10, perf: null, note: "" },
+            { live_id: "live2024_08", position: 10, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 10, perf: null, note: [""] },
         ],
     },
     {
@@ -906,10 +906,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000017c5397a",
         },
         live_history: [
-            { live_id: "live2026_03", position: 15, perf: 1, note: "日替わり曲" },
+            { live_id: "live2026_03", position: 15, perf: 1, note: ["日替わり曲"] },
 
-            { live_id: "live2025_04", position: 2, perf: null, note: "コーナーで使用された" },
-            { live_id: "live2025_02", position: 10, perf: null, note: "" },
+            { live_id: "live2025_04", position: 2, perf: null, note: ["コーナーで使用された"] },
+            { live_id: "live2025_02", position: 10, perf: null, note: [""] },
         ],
     },
     {
@@ -930,7 +930,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001826c0bb",
         },
         live_history: [
-            { live_id: "live2026_04", position: 4, perf: null, note: "" },
+            { live_id: "live2026_04", position: 4, perf: null, note: [""] },
         ],
     },
 
@@ -953,7 +953,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018cf3fc4",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 2, note: "" },
+            { live_id: "live2026_01", position: 7, perf: 2, note: [""] },
         ],
     },
     {
@@ -974,14 +974,14 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb0a",
         },
         live_history: [
-            { live_id: "live2026_01", position: 18, perf: null, note: "" },
+            { live_id: "live2026_01", position: 18, perf: null, note: [""] },
 
-            { live_id: "live2025_07", position: 2, perf: null, note: "" },
-            { live_id: "live2025_03", position: 1, perf: null, note: "" },
-            { live_id: "live2025_02", position: 25, perf: null, note: "" },
-            { live_id: "live2025_01", position: 4, perf: null, note: "" },
+            { live_id: "live2025_07", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 25, perf: null, note: [""] },
+            { live_id: "live2025_01", position: 4, perf: null, note: [""] },
 
-            { live_id: "live2024_06", position: 3, perf: null, note: "" },
+            { live_id: "live2024_06", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -1023,8 +1023,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb11",
         },
         live_history: [
-            { live_id: "live2024_08", position: 8, perf: null, note: "大倉、武藤、吉澤のみ" },
-            { live_id: "live2024_07", position: 8, perf: null, note: "大倉、武藤、吉澤のみ" },
+            { live_id: "live2024_08", position: 8, perf: null, note: ["大倉、武藤、吉澤のみ"] },
+            { live_id: "live2024_07", position: 8, perf: null, note: ["大倉、武藤、吉澤のみ"] },
         ],
     },
     {
@@ -1045,7 +1045,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb16",
         },
         live_history: [
-            { live_id: "live2026_01", position: 17, perf: null, note: "Remix ver." },
+            { live_id: "live2026_01", position: 17, perf: null, note: ["Remix ver."] },
         ],
     },
     {
@@ -1087,7 +1087,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000019c894d4",
         },
         live_history: [
-            { live_id: "live2025_02", position: 3, perf: null, note: "" },
+            { live_id: "live2025_02", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -1108,7 +1108,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000019f312ca",
         },
         live_history: [
-            { live_id: "live2025_09", position: 4, perf: 2, note: "日替わり曲" },
+            { live_id: "live2025_09", position: 4, perf: 2, note: ["日替わり曲"] },
         ],
     },
     {
@@ -1129,9 +1129,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d5",
         },
         live_history: [
-            { live_id: "live2026_01", position: 4, perf: null, note: "Remix ver." },
+            { live_id: "live2026_01", position: 4, perf: null, note: ["Remix ver."] },
 
-            { live_id: "live2025_02", position: 15, perf: null, note: "" },
+            { live_id: "live2025_02", position: 15, perf: null, note: [""] },
         ],
     },
     {
@@ -1152,13 +1152,13 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d6",
         },
         live_history: [
-            { live_id: "live2026_03", position: 9, perf: null, note: "Aメロでソロダンス" },
+            { live_id: "live2026_03", position: 9, perf: null, note: ["Aメロでソロダンス"] },
 
-            { live_id: "live2025_08", position: 7, perf: null, note: "" },
-            { live_id: "live2025_05", position: 3, perf: null, note: "" },
-            { live_id: "live2025_02", position: 4, perf: null, note: "" },
+            { live_id: "live2025_08", position: 7, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 3, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 4, perf: null, note: [""] },
 
-            { live_id: "live2024_06", position: 4, perf: null, note: "" },
+            { live_id: "live2024_06", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -1200,10 +1200,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d8",
         },
         live_history: [
-            { live_id: "live2026_03", position: 17, perf: null, note: "" },
+            { live_id: "live2026_03", position: 17, perf: null, note: ["アンコール"] },
 
-            { live_id: "live2025_09", position: 18, perf: null, note: "" },
-            { live_id: "live2025_02", position: 12, perf: null, note: "" },
+            { live_id: "live2025_09", position: 18, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 12, perf: null, note: [""] },
         ],
     },
     {
@@ -1224,8 +1224,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d9",
         },
         live_history: [
-            { live_id: "live2025_05", position: 6, perf: null, note: "" },
-            { live_id: "live2025_03", position: 9, perf: null, note: "" },
+            { live_id: "live2025_05", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 9, perf: null, note: [""] },
         ],
     },
     {
@@ -1246,7 +1246,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001b59dd60",
         },
         live_history: [
-            { live_id: "live2025_09", position: 4, perf: 1, note: "日替わり曲" },
+            { live_id: "live2025_09", position: 4, perf: 1, note: ["日替わり曲"] },
         ],
     },
     {
@@ -1267,7 +1267,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001b82f72d",
         },
         live_history: [
-            { live_id: "live2025_03", position: 8, perf: null, note: "" },
+            { live_id: "live2025_03", position: 8, perf: null, note: [""] },
         ],
     },
     {
@@ -1288,13 +1288,13 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001c6800a2",
         },
         live_history: [
-            { live_id: "live2026_03", position: 24, perf: null, note: "" },
+            { live_id: "live2026_03", position: 24, perf: null, note: [""] },
 
-            { live_id: "live2025_08", position: 8, perf: null, note: "" },
-            { live_id: "live2025_03", position: 2, perf: null, note: "" },
-            { live_id: "live2025_02", position: 5, perf: null, note: "" },
+            { live_id: "live2025_08", position: 8, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 5, perf: null, note: [""] },
 
-            { live_id: "live2024_06", position: 5, perf: null, note: "" },
+            { live_id: "live2024_06", position: 5, perf: null, note: [""] },
         ],
     },
     
@@ -1317,10 +1317,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001d79bd70",
         },
         live_history: [
-            { live_id: "live2025_09", position: 11, perf: null, note: "" },
+            { live_id: "live2025_09", position: 11, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 6, perf: null, note: "" },
-            { live_id: "live2024_07", position: 6, perf: null, note: "" },
+            { live_id: "live2024_08", position: 6, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 6, perf: null, note: [""] },
         ],
     },
     {
@@ -1341,10 +1341,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001db66694",
         },
         live_history: [
-            { live_id: "live2026_04", position: 5, perf: null, note: "" },
+            { live_id: "live2026_04", position: 5, perf: null, note: [""] },
 
-            { live_id: "live2025_03", position: 13, perf: null, note: "" },
-            { live_id: "live2025_02", position: 21, perf: null, note: "メドレー" },
+            { live_id: "live2025_03", position: 13, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 21, perf: null, note: ["メドレー"] },
         ],
     },
     {
@@ -1365,11 +1365,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001e02f000",
         },
         live_history: [
-            { live_id: "live2026_03", position: 12, perf: null, note: "" },
-            { live_id: "live2025_02", position: 13, perf: 3, note: "日替わり曲" },
+            { live_id: "live2026_03", position: 12, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 13, perf: 3, note: ["日替わり曲"] },
 
-            { live_id: "live2024_08", position: 11, perf: null, note: "" },
-            { live_id: "live2024_07", position: 11, perf: null, note: "" },
+            { live_id: "live2024_08", position: 11, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 11, perf: null, note: [""] },
         ],
     },
     {
@@ -1390,10 +1390,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001e02f001",
         },
         live_history: [
-            { live_id: "live2026_03", position: 19, perf: null, note: "メドレー" },
+            { live_id: "live2026_03", position: 19, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2024_08", position: 9, perf: null, note: "小泉、桜木、長野、杢代のみ" },
-            { live_id: "live2024_07", position: 9, perf: null, note: "小泉、桜木、長野、杢代のみ" },
+            { live_id: "live2024_08", position: 9, perf: null, note: ["小泉、桜木、長野、杢代のみ"] },
+            { live_id: "live2024_07", position: 9, perf: null, note: ["小泉、桜木、長野、杢代のみ"] },
         ],
     },
     {
@@ -1414,16 +1414,16 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001e02f002",
         },
         live_history: [
-            { live_id: "live2026_03", position: 15, perf: 2, note: "日替わり曲" },
-            { live_id: "live2026_02", position: 4, perf: null, note: "" },
+            { live_id: "live2026_03", position: 15, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2026_02", position: 4, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 8, perf: 2, note: "日替わり曲" },
-            { live_id: "live2025_05", position: 5, perf: null, note: "" },
-            { live_id: "live2025_03", position: 12, perf: null, note: "" },
-            { live_id: "live2025_02", position: 11, perf: null, note: "" },
+            { live_id: "live2025_09", position: 8, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2025_05", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 12, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 11, perf: null, note: [""] },
 
-            { live_id: "live2024_07", position: 15, perf: null, note: "" },
-            { live_id: "live2024_06", position: 7, perf: null, note: "" },
+            { live_id: "live2024_07", position: 15, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 7, perf: null, note: [""] },
         ],
     },
     {
@@ -1444,7 +1444,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001e02f004",
         },
         live_history: [
-            { live_id: "live2025_03", position: 18, perf: null, note: "" },
+            { live_id: "live2025_03", position: 18, perf: null, note: [""] },
         ],
     },
     {
@@ -1465,20 +1465,20 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001ea734eb",
         },
         live_history: [
-            { live_id: "live2026_03", position: 21, perf: null, note: "" },
-            { live_id: "live2026_02", position: 6, perf: null, note: "" },
-            { live_id: "live2026_01", position: 11, perf: null, note: "" },
+            { live_id: "live2026_03", position: 21, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 6, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 11, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 14, perf: null, note: "" },
-            { live_id: "live2025_08", position: 6, perf: null, note: "" },
-            { live_id: "live2025_07", position: 8, perf: null, note: "" },
-            { live_id: "live2025_05", position: 7, perf: null, note: "" },
-            { live_id: "live2025_03", position: 19, perf: null, note: "" },
-            { live_id: "live2025_02", position: 27, perf: null, note: "" },
-            { live_id: "live2025_01", position: 2, perf: null, note: "" },
+            { live_id: "live2025_09", position: 14, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_07", position: 8, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 7, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 19, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 27, perf: null, note: [""] },
+            { live_id: "live2025_01", position: 2, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 4, perf: null, note: "" },
-            { live_id: "live2024_06", position: 2, perf: null, note: "" },
+            { live_id: "live2024_08", position: 4, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -1499,9 +1499,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001f349430",
         },
         live_history: [
-            { live_id: "live2025_09", position: 8, perf: 1, note: "日替わり曲" },
+            { live_id: "live2025_09", position: 8, perf: 1, note: ["日替わり曲"] },
 
-            { live_id: "live2024_07", position: 14, perf: null, note: "" },
+            { live_id: "live2024_07", position: 14, perf: null, note: [""] },
         ],
     },
     {
@@ -1522,11 +1522,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000200d0619",
         },
         live_history: [
-            { live_id: "live2025_02", position: 24, perf: null, note: "メドレー" },
-            { live_id: "live2025_01", position: 1, perf: null, note: "" },
+            { live_id: "live2025_02", position: 24, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_01", position: 1, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 13, perf: null, note: "" },
-            { live_id: "live2024_06", position: 1, perf: null, note: "" },
+            { live_id: "live2024_08", position: 13, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 1, perf: null, note: [""] },
         ],
     },
     {
@@ -1547,7 +1547,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000002048242f",
         },
         live_history: [
-            { live_id: "live2025_07", position: 6, perf: null, note: "" },
+            { live_id: "live2025_07", position: 6, perf: null, note: [""] },
         ],
     },
     {
@@ -1568,11 +1568,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eea",
         },
         live_history: [
-            { live_id: "live2025_07", position: 10, perf: null, note: "" },
-            { live_id: "live2025_03", position: 20, perf: null, note: "" },
-            { live_id: "live2025_02", position: 1, perf: null, note: "" },
+            { live_id: "live2025_07", position: 10, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 20, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 1, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 14, perf: null, note: "" },
+            { live_id: "live2024_08", position: 14, perf: null, note: [""] },
         ],
     },
     {
@@ -1593,17 +1593,17 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eeb",
         },
         live_history: [
-            { live_id: "live2026_03", position: 23, perf: null, note: "" },
-            { live_id: "live2026_02", position: 8, perf: null, note: "" },
+            { live_id: "live2026_03", position: 23, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 8, perf: null, note: [""] },
 
-            { live_id: "live2025_08", position: 1, perf: null, note: "" },
-            { live_id: "live2025_05", position: 9, perf: null, note: "" },
-            { live_id: "live2025_04", position: 1, perf: 2, note: "日替わり曲" },
-            { live_id: "live2025_03", position: 21, perf: null, note: "" },
-            { live_id: "live2025_02", position: 26, perf: null, note: "" },
-            { live_id: "live2025_01", position: 3, perf: null, note: "" },
+            { live_id: "live2025_08", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 9, perf: null, note: [""] },
+            { live_id: "live2025_04", position: 1, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2025_03", position: 21, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 26, perf: null, note: [""] },
+            { live_id: "live2025_01", position: 3, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 16, perf: null, note: "" },
+            { live_id: "live2024_08", position: 16, perf: null, note: [""] },
         ],
     },
     {
@@ -1624,11 +1624,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eec",
         },
         live_history: [
-            { live_id: "live2026_04", position: 6, perf: null, note: "" },
-            { live_id: "live2025_02", position: 13, perf: 1, note: "日替わり曲" },
+            { live_id: "live2026_04", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 13, perf: 1, note: ["日替わり曲"] },
 
-            { live_id: "live2024_08", position: 5, perf: null, note: "" },
-            { live_id: "live2024_07", position: 5, perf: null, note: "" },
+            { live_id: "live2024_08", position: 5, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 5, perf: null, note: [""] },
         ],
     },
     {
@@ -1649,12 +1649,12 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eed",
         },
         live_history: [
-            { live_id: "live2025_08", position: 3, perf: null, note: "" },
+            { live_id: "live2025_08", position: 3, perf: null, note: [""] },
 
-            { live_id: "live2025_03", position: 14, perf: null, note: "" },
-            { live_id: "live2025_02", position: 22, perf: null, note: "メドレー" },
+            { live_id: "live2025_03", position: 14, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 22, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2024_07", position: 16, perf: null, note: "" },
+            { live_id: "live2024_07", position: 16, perf: null, note: [""] },
         ],
     },
     {
@@ -1675,10 +1675,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000209bfb94",
         },
         live_history: [
-            { live_id: "live2025_09", position: 1, perf: null, note: "" },
+            { live_id: "live2025_09", position: 1, perf: null, note: [""] },
 
-            { live_id: "live2024_08", position: 12, perf: null, note: "" },
-            { live_id: "live2024_07", position: 12, perf: null, note: "" },
+            { live_id: "live2024_08", position: 12, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 12, perf: null, note: [""] },
         ],
     },
 
@@ -1701,9 +1701,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000002176b175",
         },
         live_history: [
-            { live_id: "live2025_03", position: 6, perf: null, note: "" },
-            { live_id: "live2025_02", position: 14, perf: null, note: "" },
-            { live_id: "live2025_01", position: 6, perf: null, note: "初披露" },
+            { live_id: "live2025_03", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 14, perf: null, note: [""] },
+            { live_id: "live2025_01", position: 6, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1724,18 +1724,18 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021cfc547",
         },
         live_history: [
-            { live_id: "live2026_03", position: 14, perf: null, note: "" },
-            { live_id: "live2026_02", position: 1, perf: null, note: "" },
-            { live_id: "live2026_01", position: 12, perf: null, note: "" },
+            { live_id: "live2026_03", position: 14, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 1, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 12, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 10, perf: null, note: "" },
-            { live_id: "live2025_08", position: 9, perf: null, note: "" },
-            { live_id: "live2025_07", position: 1, perf: null, note: "" },
-            { live_id: "live2025_06", position: 3, perf: null, note: "" },
-            { live_id: "live2025_05", position: 1, perf: null, note: "" },
-            { live_id: "live2025_04", position: 1, perf: 1, note: "日替わり曲" },
-            { live_id: "live2025_03", position: 23, perf: null, note: "" },
-            { live_id: "live2025_02", position: 28, perf: null, note: "最終公演のみ・初披露" },
+            { live_id: "live2025_09", position: 10, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 9, perf: null, note: [""] },
+            { live_id: "live2025_07", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_06", position: 3, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_04", position: 1, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2025_03", position: 23, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 28, perf: null, note: ["初披露", "最終公演のみ"] },
         ],
     },
     {
@@ -1756,9 +1756,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1de",
         },
         live_history: [
-            { live_id: "live2026_03", position: 20, perf: null, note: "メドレー" },
+            { live_id: "live2026_03", position: 20, perf: null, note: ["メドレー"] },
 
-            { live_id: "live2025_03", position: 7, perf: null, note: "初披露" },
+            { live_id: "live2025_03", position: 7, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1779,8 +1779,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1df",
         },
         live_history: [
-            { live_id: "live2025_04", position: 1, perf: 3, note: "日替わり曲" },
-            { live_id: "live2025_03", position: 10, perf: null, note: "初披露" },
+            { live_id: "live2025_04", position: 1, perf: 3, note: ["日替わり曲"] },
+            { live_id: "live2025_03", position: 10, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1820,11 +1820,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e2",
         },
         live_history: [
-            { live_id: "live2026_03", position: 7, perf: null, note: "" },
+            { live_id: "live2026_03", position: 7, perf: null, note: [""] },
 
-            { live_id: "live2025_06", position: 1, perf: null, note: "" },
-            { live_id: "live2025_05", position: 8, perf: null, note: "" },
-            { live_id: "live2025_03", position: 3, perf: null, note: "初披露" },
+            { live_id: "live2025_06", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 8, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 3, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1845,12 +1845,12 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e3",
         },
         live_history: [
-            { live_id: "live2026_03", position: 8, perf: null, note: "" },
+            { live_id: "live2026_03", position: 8, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 13, perf: null, note: "" },
-            { live_id: "live2025_08", position: 2, perf: null, note: "" },
-            { live_id: "live2025_04", position: 4, perf: null, note: "" },
-            { live_id: "live2025_03", position: 22, perf: null, note: "初披露" },
+            { live_id: "live2025_09", position: 13, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_04", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 22, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1871,8 +1871,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e5",
         },
         live_history: [
-            { live_id: "live2025_03", position: 15, perf: null, note: "" },
-            { live_id: "live2025_02", position: 9, perf: null, note: "初披露" },
+            { live_id: "live2025_03", position: 15, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 9, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1893,9 +1893,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e6",
         },
         live_history: [
-            { live_id: "live2026_03", position: 25, perf: null, note: "Remix ver." },
+            { live_id: "live2026_03", position: 25, perf: null, note: ["Remix ver."] },
 
-            { live_id: "live2025_03", position: 17, perf: null, note: "初披露" },
+            { live_id: "live2025_03", position: 17, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1916,13 +1916,13 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000023a4ecad",
         },
         live_history: [
-            { live_id: "live2026_03", position: 13, perf: null, note: "" },
-            { live_id: "live2026_01", position: 9, perf: null, note: "" },
+            { live_id: "live2026_03", position: 13, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 9, perf: null, note: [""] },
 
-            { live_id: "live2025_09", position: 16, perf: null, note: "" },
-            { live_id: "live2025_08", position: 4, perf: null, note: "" },
-            { live_id: "live2025_07", position: 4, perf: null, note: "" },
-            { live_id: "live2025_06", position: 2, perf: null, note: "初披露" },
+            { live_id: "live2025_09", position: 16, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_07", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_06", position: 2, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1943,11 +1943,11 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9b",
         },
         live_history: [
-            { live_id: "live2026_01", position: 16, perf: 1, note: "" },
+            { live_id: "live2026_01", position: 16, perf: 1, note: [""] },
 
-            { live_id: "live2025_09", position: 15, perf: null, note: "" },
-            { live_id: "live2025_08", position: 5, perf: null, note: "" },
-            { live_id: "live2025_07", position: 7, perf: null, note: "初披露" },
+            { live_id: "live2025_09", position: 15, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_07", position: 7, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1968,9 +1968,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9c",
         },
         live_history: [
-            { live_id: "live2026_04", position: 8, perf: null, note: "" },
+            { live_id: "live2026_04", position: 8, perf: null, note: ["アンコール"] },
 
-            { live_id: "live2025_09", position: 17, perf: null, note: "初披露" },
+            { live_id: "live2025_09", position: 17, perf: null, note: ["初披露", "アンコール"] },
         ],
     },
     {
@@ -1991,9 +1991,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000023eb8018",
         },
         live_history: [
-            { live_id: "live2026_03", position: 16, perf: 2, note: "日替わり曲" },
-            { live_id: "live2026_02", position: 3, perf: null, note: "" },
-            { live_id: "live2026_01", position: 3, perf: null, note: "初披露" },
+            { live_id: "live2026_03", position: 16, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2026_02", position: 3, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 3, perf: null, note: ["初披露"] },
         ],
     },
 
@@ -2016,8 +2016,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000002472dc99",
         },
         live_history: [
-            { live_id: "live2026_03", position: 16, perf: 1, note: "日替わり曲" },
-            { live_id: "live2026_01", position: 2, perf: null, note: "初披露" },
+            { live_id: "live2026_03", position: 16, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2026_01", position: 2, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -2038,10 +2038,10 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000024e4fc27",
         },
         live_history: [
-            { live_id: "live2026_04", position: 7, perf: null, note: "" },
-            { live_id: "live2026_03", position: 22, perf: null, note: "" },
-            { live_id: "live2026_02", position: 9, perf: null, note: "" },
-            { live_id: "live2026_01", position: 15, perf: null, note: "初披露" },
+            { live_id: "live2026_04", position: 7, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 22, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 9, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 15, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -2062,9 +2062,9 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000024f58662",
         },
         live_history: [
-            { live_id: "live2026_03", position: 11, perf: null, note: "" },
-            { live_id: "live2026_02", position: 7, perf: null, note: "" },
-            { live_id: "live2026_01", position: 5, perf: null, note: "初披露" },
+            { live_id: "live2026_03", position: 11, perf: null, note: [""] },
+            { live_id: "live2026_02", position: 7, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 5, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -2085,8 +2085,8 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000024f58663",
         },
         live_history: [
-            { live_id: "live2026_03", position: 18, perf: null, note: "メドレー" },
-            { live_id: "live2026_01", position: 6, perf: null, note: "初披露" },
+            { live_id: "live2026_03", position: 18, perf: null, note: ["メドレー"] },
+            { live_id: "live2026_01", position: 6, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -2107,7 +2107,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000024f58664",
         },
         live_history: [
-            { live_id: "live2026_01", position: 13, perf: null, note: "初披露" },
+            { live_id: "live2026_01", position: 13, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -2128,7 +2128,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000026273465",
         },
         live_history: [
-            { live_id: "live2026_03", position: 10, perf: null, note: "初披露" },
+            { live_id: "live2026_03", position: 10, perf: null, note: ["初披露"] },
         ],
     },
 
@@ -2157,6 +2157,6 @@ export const songsIndex = [
     },
     ライブ情報は後でまとめて書く
     外部リンクも
-    { live_id: "", position: , perf: null, note: "" },
+    { live_id: "", position: , perf: null, note: [""] },
     */
 ]
