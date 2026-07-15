@@ -1670,7 +1670,7 @@ export const songsIndex = [
             { live_id: "live2025_05", position: 1, perf: null, note: "" },
             { live_id: "live2025_04", position: 1, perf: 1, note: "日替わり曲" },
             { live_id: "live2025_03", position: 23, perf: null, note: "" },
-            { live_id: "live2025_02", position: 28, perf: null, note: "最終公演のみ、初披露" },
+            { live_id: "live2025_02", position: 28, perf: null, note: "最終公演のみ・初披露" },
         ],
     },
     {
