@@ -57,17 +57,19 @@ export const lives = [
   { id: "live2023_12", name: "イナロク2023", date: "2023-10-09", type: "fes" },
   { id: "live2023_13", name: "Livejack 2023", date: "2023-11-03", type: "fes" },
   { id: "live2023_14", name: "因果律の逆転", date: "2023-11-05", type: "oneman" },
-  { id: "live2023_15", name: "ゲンゲンゲンジブ", date: "2023-12-22", type: "oneman" },
+  { id: "live2023_15", name: "第3回スポーツマンヒップ", date: "2023-11-11", type: "fes" },
+  { id: "live2023_16", name: "ゲンゲンゲンジブ", date: "2023-12-22", type: "oneman" },
 
   /* 2024年 */
   { id: "live2024_01", name: "架空のアウトライン", date: "2024-03-23", type: "oneman"},
   { id: "live2024_02", name: "NYLON 20TH", date: "2024-04-19", type: "fes"},
   { id: "live2024_03", name: "夢現の続き", date: "2024-07-07", type: "oneman"},
   { id: "live2024_04", name: "エビライ2024", date: "2024-08-17", type: "fes"},
-  { id: "live2024_05", name: "白昼夢への招待", date: "2024-11-17", type: "oneman"},
-  { id: "live2024_06", name: "Livejack 2024", date: "2024-11-23", type: "fes"},
-  { id: "live2024_07", name: "クリライ2024 Twinkle", date: "2024-12-23", type: "oneman"},
-  { id: "live2024_08", name: "クリライ2024 Nightmare", date: "2024-12-23", type: "oneman"},
+  { id: "live2024_05", name: "第4回スポーツマンヒップ", date: "2024-10-14", type: "fes" },
+  { id: "live2024_06", name: "白昼夢への招待", date: "2024-11-17", type: "oneman"},
+  { id: "live2024_07", name: "Livejack 2024", date: "2024-11-23", type: "fes"},
+  { id: "live2024_08", name: "クリライ2024 Twinkle", date: "2024-12-23", type: "oneman"},
+  { id: "live2024_09", name: "クリライ2024 Nightmare", date: "2024-12-23", type: "oneman"},
 
   /* 2025年 */
   { id: "live2025_01", name: "ENDRECHERI FES", date: "2025-02-24", type: "fes"},
