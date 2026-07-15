@@ -3,7 +3,7 @@
 export const cds = [
     /* BATTLE STREET時代 */
     {id: "bs_01", title: "ebidence", date: "2018-12-19", type: "sg"},
-    {id: "bs_01", title: "Show Time!!", date: "2019-06-19", type: "sg"},
+    {id: "bs_02", title: "Show Time!!", date: "2019-06-19", type: "sg"},
 
     /* シングル */
     {id: "sg_01", title: "原因は自分にある。", date: "2019-10-09", type: "sg"},
