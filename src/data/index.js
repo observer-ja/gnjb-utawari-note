@@ -1449,6 +1449,7 @@ export const songsIndex = [
             { live_id: "live2024_08", position: 15, perf: null, note: [""] },
             { live_id: "live2024_07", position: 7, perf: null, note: [""] },
             { live_id: "live2024_06", position: 12, perf: null, note: [""] },
+            { live_id: "live2024_05", position: 1, perf: null, note: [""] },
         ],
     },
     {
