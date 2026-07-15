@@ -85,4 +85,7 @@ export const lives = [
   { id: "live2026_03", name: "仮ノ現", date:"2026-06-27", type: "oneman"},
   { id: "live2026_04", name: "原因は君にもある。", date:"2026-07-07", type: "oneman"},
   { id: "live2026_05", name: "JOIN ALIVE", date:"2026-07-19", type: "fes"},
+  { id: "live2026_06", name: "サマフェス2026", date:"2026-08-07", type: "fes"},
+  { id: "live2026_07", name: "エビライ2026", date:"2026-08-13", type: "fes"},
+  { id: "live2026_08", name: "Laboratory - Ne", date:"2026-12-13", type: "oneman"},
 ]
