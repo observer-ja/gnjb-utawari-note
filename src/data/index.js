@@ -196,6 +196,7 @@ export const songsIndex = [
             { live_id: "live2026_02", position: 5, perf: null, note: [""] },
             { live_id: "live2026_01", position: 8, perf: null, note: [""] },
 
+            { live_id: "live2025_06", position: 1, perf: null, note: ["小泉、長野、武藤のみ"] },
             { live_id: "live2025_03", position: 11, perf: 1, note: ["日替わり曲"] },
 
             { live_id: "live2024_08", position: 2, perf: null, note: [""] },
