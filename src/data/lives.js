@@ -46,7 +46,7 @@ export const lives = [
   { id: "live2023_01", name: "げんじぶ空間:case.5", date: "2023-01-28", type: "oneman" },
   { id: "live2023_02", name: "SMASH BEAT", date: "2023-01-31", type: "fes" },
   { id: "live2023_03", name: "第2回スポーツマンヒップ", date: "2023-03-25", type: "fes" },
-  /* { id: "live2023_04", name: "-Loud&Shuffle- 東京公演", date: "2023-04-14", type: "oneman" }, */
+  { id: "live2023_04", name: "-Loud&Shuffle- 東京公演", date: "2023-04-14", type: "oneman" },
   { id: "live2023_05", name: "エビパレ2023", date: "2023-04-29", type: "fes" },
   { id: "live2023_06", name: "-Loud&Shuffle- 大阪公演", date: "2023-05-28", type: "oneman" },
   { id: "live2023_07", name: "ヘッドフォンを外して vol.3", date: "2023-06-01", type: "fes" },
