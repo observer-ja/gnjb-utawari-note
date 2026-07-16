@@ -1,0 +1,27 @@
+:root {
+    /* カラーパレット */
+    --color-primary: #ffbd84; /* メインカラー */
+    --color-primary-light: #ffe2cc; /* 薄メインカラー */
+    --color-primary-dark: #ff9c4c; /* 濃メインカラー */
+    --color-text: #473c2b; /* 文字色 */
+    --color-text-colored: #ff7603; /* 色付き文字色 */
+    --color-bg: #fffcf6; /* 背景色 */
+    --color-bg-dark: #fff0d3; /* 濃背景色 */
+
+    --color-y-text: #ffe96d; /* 黄色文字色 */
+    --color-w-text: #c3c4c2; /* 白色文字色 */
+    --color-s-text: #f9c5e2; /* 桜色文字色 */
+    --color-b-text: #72adff; /* 青色文字色 */
+    --color-r-text: #ff9191; /* 赤色文字色 */
+    --color-g-text: #7ba56f; /* 緑色文字色 */
+    --color-p-text: #9282a3; /* 紫色文字色 */
+
+    --color-y-bg: #fff4ba; /* 黄色背景色 */
+    --color-w-bg: #f3f4f2; /* 白色背景色 */
+    --color-s-bg: #f9e0ee; /* 桜色背景色 */
+    --color-b-bg: #c8dfff; /* 青色背景色 */
+    --color-r-bg: #ffcece; /* 赤色背景色 */
+    --color-g-bg: #d6f2cd; /* 緑色背景色 */
+    --color-p-bg: #d8cce5; /* 紫色背景色 */
+
+}
