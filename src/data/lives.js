@@ -24,7 +24,7 @@ export const lives = [
   { id: "live2021_01", name: "仮想げんじぶ空間:case.3", date: "2021-01-23", type: "stream" },
   { id: "live2021_02", name: "げんじぶ空間:case.1", date: "2021-04-02", type: "oneman" },
   { id: "live2021_03", name: "BREAK OUT祭", date: "2021-07-09", type: "fes" },
-  { id: "live2021_04", name: "NEOげんじぶ空間：α", date: "2021-07-10", type: "oneman" },
+  { id: "live2021_04", name: "NEOげんじぶ空間：α", date: "2021-07-10", type: "fes" },
   { id: "live2021_05", name: "フェクライ2021 AW", date: "2021-09-11", type: "fes" },
   { id: "live2021_06", name: "第2回スター☆オーディション", date: "2021-11-07", type: "fes" },
   { id: "live2021_07", name: "げんじぶ空間:case.2", date: "2021-12-27", type: "oneman" },
