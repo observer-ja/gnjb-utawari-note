@@ -19,7 +19,9 @@ export const songsIndex = [
             apple_music: "https://music.apple.com/jp/song/stargazer/1466685737",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22c",
         },
-        live_history: [],
+        live_history: [
+            { live_id: "live2019_09", position: 3, perf: null, note: ["メドレー"] },
+        ],
     },
     {
         id: "bs002",
@@ -38,7 +40,9 @@ export const songsIndex = [
             apple_music: "https://music.apple.com/jp/song/voice/1466685903",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22d",
         },
-        live_history: [],
+        live_history: [
+            { live_id: "live2019_09", position: 6, perf: null, note: [""] },
+        ],
     },
     {
         id: "bs003",
@@ -57,7 +61,14 @@ export const songsIndex = [
             apple_music: "https://music.apple.com/jp/song/macanas/1466685909",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22e",
         },
-        live_history: [],
+        live_history: [
+            { live_id: "live2019_10", position: 4, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 9, perf: null, note: ["アンコール", "コラボ"] },
+            { live_id: "live2019_08", position: 3, perf: null, note: [""] },
+            { live_id: "live2019_04", position: 2, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2019_03", position: 2, perf: null, note: [""] },
+            { live_id: "live2019_01", position: 4, perf: null, note: [""] },
+        ],
     },
     {
         id: "bs004",
@@ -78,6 +89,10 @@ export const songsIndex = [
         },
         live_history: [
             { live_id: "live2023_01", position: 17, perf: null, note: ["メドレー"] },
+
+            { live_id: "live2019_09", position: 2, perf: null, note: ["メドレー"] },
+            { live_id: "live2019_03", position: 4, perf: null, note: [""] },
+            { live_id: "live2019_01", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -97,7 +112,11 @@ export const songsIndex = [
             apple_music: "https://music.apple.com/jp/song/countdown/1466687711",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c231",
         },
-        live_history: [],
+        live_history: [
+            { live_id: "live2019_10", position: 2, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 4, perf: null, note: ["メドレー"] },
+            { live_id: "live2019_01", position: 1, perf: null, note: [""] },
+        ],
     },
     {
         id: "bs006",
@@ -118,6 +137,11 @@ export const songsIndex = [
         },
         live_history: [
             { live_id: "live2023_08", position: 3, perf: null, note: [""] },
+
+            { live_id: "live2019_09", position: 7, perf: null, note: [""] },
+            { live_id: "live2019_04", position: 2, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2019_03", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_01", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -137,7 +161,9 @@ export const songsIndex = [
             apple_music: "https://music.apple.com/jp/song/like-a-vampire/1466687722",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c233",
         },
-        live_history: [],
+        live_history: [
+            { live_id: "live2019_03", position: 3, perf: null, note: [""] },
+        ],
     },
 
     /* 2019年 */
@@ -211,6 +237,14 @@ export const songsIndex = [
             { live_id: "live2021_01", position: 3, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 6, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 8, perf: null, note: [""] },
+            { live_id: "live2020_01", position: 1, perf: null, note: [""] },
+
+            { live_id: "live2019_10", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_08", position: 4, perf: null, note: [""] },
+            { live_id: "live2019_07", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_04", position: 1, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -259,6 +293,12 @@ export const songsIndex = [
             { live_id: "live2021_02", position: 12, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 5, perf: null, note: [""] },
+            { live_id: "live2020_01", position: 5, perf: null, note: [""] },
+
+            { live_id: "live2019_10", position: 3, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 8, perf: null, note: [""] },
+            { live_id: "live2019_08", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_07", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -285,6 +325,11 @@ export const songsIndex = [
 
             { live_id: "live2021_04", position: 6, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2021_01", position: 6, perf: null, note: [""] },
+
+            { live_id: "live2020_02", position: 3, perf: null, note: [""] },
+
+            { live_id: "live2019_09", position: 5, perf: null, note: [""] },
+            { live_id: "live2019_07", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -320,6 +365,11 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 20, perf: 3, note: ["日替わり曲"] },
             { live_id: "live2021_01", position: 9, perf: null, note: ["Piano ver."] },
+
+            { live_id: "live2020_01", position: 4, perf: null, note: ["Piano ver."] },
+
+            { live_id: "live2019_08", position: 2, perf: null, note: [""] },
+            { live_id: "live2019_07", position: 2, perf: null, note: [""] },
         ],
     },
 
@@ -377,6 +427,8 @@ export const songsIndex = [
             { live_id: "live2021_01", position: 2, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 1, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 1, perf: null, note: [""] },
+            { live_id: "live2020_01", position: 2, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -412,6 +464,7 @@ export const songsIndex = [
             { live_id: "live2021_04", position: 4, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 4, perf: null, note: [""] },
+            { live_id: "live2020_01", position: 3, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -445,6 +498,7 @@ export const songsIndex = [
             { live_id: "live2021_02", position: 14, perf: null, note: ["アンコール"] },
 
             { live_id: "live2020_05", position: 1, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 5, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -473,6 +527,8 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 21, perf: null, note: [""] },
             { live_id: "live2021_02", position: 7, perf: null, note: [""] },
+
+            { live_id: "live2020_02", position: 7, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -508,6 +564,7 @@ export const songsIndex = [
             { live_id: "live2021_01", position: 8, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 3, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 2, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -565,6 +622,8 @@ export const songsIndex = [
             { live_id: "live2021_01", position: 4, perf: null, note: [""] },
 
             { live_id: "live2020_03", position: 2, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 6, perf: null, note: [""] },
+            { live_id: "live2020_01", position: 6, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -603,7 +662,7 @@ export const songsIndex = [
             { live_id: "live2021_07", position: 8, perf: null, note: [""] },
             { live_id: "live2021_05", position: 2, perf: null, note: [""] },
             { live_id: "live2021_04", position: 8, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 13, perf: null, note: [""] },
+            { live_id: "live2021_02", position: 13, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -638,9 +697,10 @@ export const songsIndex = [
             { live_id: "live2021_07", position: 13, perf: null, note: [""] },
             { live_id: "live2021_04", position: 3, perf: null, note: [""] },
             { live_id: "live2021_02", position: 9, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 7, perf: null, note: ["初披露"] },
+            { live_id: "live2021_01", position: 7, perf: null, note: [""] },
 
             { live_id: "live2020_05", position: 2, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 4, perf: null, note: ["初披露"] },
         ],
     },
 
@@ -2765,5 +2825,8 @@ export const songsIndex = [
     外部リンクも
     { live_id: "", position: , perf: null, note: [""] },
     組長祭2020のセトリがわからない　いんざぬはやってそう
+    組長祭2019のセトリがわからない
+    ABSまつり2019のセトリがわからない
+    SHIBUYA SUMMIT 2019のセトリがわからない
     */
 ]
