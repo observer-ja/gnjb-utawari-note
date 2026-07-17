@@ -2806,7 +2806,6 @@ export const songsIndex = [
         date: "20",
         cds: [{ id: "", track:  },],
         lyricist: [""],
-        lyricist: [""],
         composer: [""],
         arranger: [""],
         tieup: [],
