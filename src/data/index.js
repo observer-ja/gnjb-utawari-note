@@ -206,6 +206,7 @@ export const songsIndex = [
             { live_id: "live2021_06", position: 2, perf: null, note: [""] },
             { live_id: "live2021_05", position: 1, perf: null, note: [""] },
             { live_id: "live2021_04", position: 2, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -276,6 +277,7 @@ export const songsIndex = [
             { live_id: "live2023_09", position: 6, perf: null, note: [""] },
 
             { live_id: "live2021_04", position: 6, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2021_01", position: 6, perf: null, note: [""] },
         ],
     },
     {
@@ -310,6 +312,7 @@ export const songsIndex = [
             { live_id: "live2022_11", position: 6, perf: null, note: ["Piano ver."] },
 
             { live_id: "live2021_07", position: 20, perf: 3, note: ["日替わり曲"] },
+            { live_id: "live2021_01", position: 9, perf: null, note: ["Piano ver."] },
         ],
     },
 
@@ -363,6 +366,7 @@ export const songsIndex = [
             { live_id: "live2021_07", position: 2, perf: null, note: [""] },
             { live_id: "live2021_05", position: 3, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2021_04", position: 11, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -483,6 +487,7 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 10, perf: null, note: [""] },
             { live_id: "live2021_04", position: 5, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 8, perf: null, note: [""] },
         ],
     },
     {
@@ -535,6 +540,7 @@ export const songsIndex = [
             { live_id: "live2021_06", position: 5, perf: null, note: [""] },
             { live_id: "live2021_05", position: 4, perf: null, note: ["シャッフル曲"] },
             { live_id: "live2021_04", position: 7, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -606,6 +612,7 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 13, perf: null, note: [""] },
             { live_id: "live2021_04", position: 3, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 7, perf: null, note: [""] },
         ],
     },
 
@@ -639,6 +646,7 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 6, perf: null, note: [""] },
             { live_id: "live2021_04", position: 6, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2021_01", position: 5, perf: null, note: [""] },
         ],
     },
     {
@@ -678,6 +686,7 @@ export const songsIndex = [
             { live_id: "live2021_07", position: 12, perf: null, note: [""] },
             { live_id: "live2021_05", position: 3, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2021_04", position: 10, perf: null, note: [""] },
+            { live_id: "live2021_01", position: 1, perf: null, note: [""] },
         ],
     },
     {
