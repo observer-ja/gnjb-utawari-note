@@ -209,6 +209,8 @@ export const songsIndex = [
             { live_id: "live2021_03", position: 2, perf: null, note: [""] },
             { live_id: "live2021_02", position: 3, perf: null, note: [""] },
             { live_id: "live2021_01", position: 3, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 6, perf: null, note: [""] },
         ],
     },
     {
@@ -255,6 +257,8 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 15, perf: null, note: [""] },
             { live_id: "live2021_02", position: 12, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 5, perf: null, note: [""] },
         ],
     },
     {
@@ -371,6 +375,8 @@ export const songsIndex = [
             { live_id: "live2021_04", position: 11, perf: null, note: [""] },
             { live_id: "live2021_02", position: 4, perf: null, note: [""] },
             { live_id: "live2021_01", position: 2, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 1, perf: null, note: [""] },
         ],
     },
     {
@@ -404,6 +410,8 @@ export const songsIndex = [
 
             { live_id: "live2021_07", position: 20, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2021_04", position: 4, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 4, perf: null, note: [""] },
         ],
     },
     {
@@ -433,7 +441,10 @@ export const songsIndex = [
 
             { live_id: "live2022_06", position: 20, perf: null, note: ["アンコール"] },
             { live_id: "live2022_03", position: 10, perf: null, note: [""] },
+
             { live_id: "live2021_02", position: 14, perf: null, note: ["アンコール"] },
+
+            { live_id: "live2020_05", position: 1, perf: null, note: [""] },
         ],
     },
     {
@@ -495,6 +506,8 @@ export const songsIndex = [
             { live_id: "live2021_04", position: 5, perf: null, note: [""] },
             { live_id: "live2021_02", position: 1, perf: null, note: [""] },
             { live_id: "live2021_01", position: 8, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 3, perf: null, note: [""] },
         ],
     },
     {
@@ -550,6 +563,8 @@ export const songsIndex = [
             { live_id: "live2021_03", position: 4, perf: null, note: [""] },
             { live_id: "live2021_02", position: 11, perf: null, note: [""] },
             { live_id: "live2021_01", position: 4, perf: null, note: [""] },
+
+            { live_id: "live2020_03", position: 2, perf: null, note: [""] },
         ],
     },
     {
@@ -624,6 +639,8 @@ export const songsIndex = [
             { live_id: "live2021_04", position: 3, perf: null, note: [""] },
             { live_id: "live2021_02", position: 9, perf: null, note: [""] },
             { live_id: "live2021_01", position: 7, perf: null, note: ["初披露"] },
+
+            { live_id: "live2020_05", position: 2, perf: null, note: [""] },
         ],
     },
 
@@ -2747,5 +2764,6 @@ export const songsIndex = [
     ライブ情報は後でまとめて書く
     外部リンクも
     { live_id: "", position: , perf: null, note: [""] },
+    組長祭2020のセトリがわからない　いんざぬはやってそう
     */
 ]
