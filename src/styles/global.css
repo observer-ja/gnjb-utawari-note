@@ -25,7 +25,7 @@
     --color-p-bg: #d8cce5; /* 紫色背景色 */
 
     /* タイポグラフィ */
-    --font-body: 'Zen Maru Gothic', sans-serif;
+    --font-family: 'Zen Maru Gothic', sans-serif;
 
     /* フォントサイズ */
     --font-size-sm: 12px; /* 注釈等 */
@@ -55,4 +55,50 @@
         --font-size-lg: 32px; /* ページタイトル */
         --font-size-xl: 48px; /* トップページタイトル */
     }
+}
+
+h1, h2, h3{
+    margin: 0;
+    font-weight: inherit;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.text-sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--lh-sm);
+    letter-spacing: var(--ls-sm);
+    font-weight: 400;
+}
+
+.text-body {
+    font-size: var(--font-size-body);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    font-weight: 500;
+}
+
+.text-md {
+    font-size: var(--font-size-md);
+    line-height: var(--lh-md);
+    letter-spacing: var(--ls-md);
+    font-weight: 700;
+}
+
+.text-lg {
+    font-size: var(--font-size-lg);
+    line-height: var(--lh-lg);
+    letter-spacing: var(--ls-lg);
+    font-weight: 700;
+}
+
+.text-xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--lh-xl);
+    letter-spacing: var(--ls-xl);
+    font-weight: 700;
 }
