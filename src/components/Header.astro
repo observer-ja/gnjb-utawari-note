@@ -1,0 +1,84 @@
+---
+
+---
+
+<header class="site-header">
+    <div class="header-container">
+        <a class="header-logo" href="/">
+            <img class="header-logo-img" src="/gnjb-utawari-note/logo-hz.svg" />
+        </a>
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+                <li>
+                    <a class="header-nav-link text-body" href="/songs">楽曲を探す</a>
+                </li>
+                <li>
+                    <a class="header-nav-link text-body" href="/news">更新情報</a>
+                </li>
+                <li>
+                    <a class="header-nav-link text-body" href="/guide">使い方</a>
+                </li>
+                <li>
+                    <a class="header-nav-link text-body" href="/about">このサイトについて</a>
+                </li>
+                <li>
+                    <a class="header-nav-link text-body" href="/contact">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .site-header {
+        width: 100%;
+        background-color: var(--color-primary);
+        border-bottom: 1px solid var(--color-bg-dark);
+    }
+
+    .header-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-nav-list li {
+        padding: 0 5px 5px 5px;
+        border-bottom: 1px solid var(--color-text);
+    }
+
+    .header-nav-link {
+        text-decoration: none;
+        color: var(--color-text);
+        transition: opacity 0.2s ease;
+    }
+
+    .header-nav-link:hover {
+        opacity: 0.6;
+    }
+
+    @media (min-width: 768px) {
+        .site-header {
+            height: 80px;
+            width: 100%;
+        }
+
+        .header-container {
+            padding: 5px 48px;
+        }
+
+        .header-nav-list {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+        .header-logo-img {
+            height: 64px;
+            width: auto;
+            display: block;
+        }
+    }
+</style>

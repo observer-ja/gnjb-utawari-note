@@ -63,6 +63,7 @@ h1, h2, h3{
 }
 
 body {
+    margin: 0;
     font-family: var(--font-family);
     background-color: var(--color-bg);
     color: var(--color-text);
