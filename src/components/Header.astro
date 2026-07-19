@@ -7,78 +7,253 @@
         <a class="header-logo" href="/">
             <img class="header-logo-img" src="/gnjb-utawari-note/logo-hz.svg" />
         </a>
+
+        <!-- PC用メニュー -->
         <nav class="header-nav">
             <ul class="header-nav-list">
-                <li>
-                    <a class="header-nav-link text-body" href="/songs">楽曲を探す</a>
-                </li>
-                <li>
-                    <a class="header-nav-link text-body" href="/news">更新情報</a>
-                </li>
-                <li>
-                    <a class="header-nav-link text-body" href="/guide">使い方</a>
-                </li>
-                <li>
-                    <a class="header-nav-link text-body" href="/about">このサイトについて</a>
-                </li>
-                <li>
-                    <a class="header-nav-link text-body" href="/contact">お問い合わせ</a>
-                </li>
+                <li><a class="header-nav-link text-body" href="/songs">楽曲を探す</a></li>
+                <li><a class="header-nav-link text-body" href="/news">更新情報</a></li>
+                <li><a class="header-nav-link text-body" href="/guide">使い方</a></li>
+                <li><a class="header-nav-link text-body" href="/about">このサイトについて</a></li>
+                <li><a class="header-nav-link text-body" href="/contact">お問い合わせ</a></li>
             </ul>
         </nav>
+
+        <!-- ハンバーガーボタン -->
+        <button class="menu-button" id="menuButton" aria-label="メニューを開閉する">
+            <div class="menu-icon-wrp">
+                <img class="menu-icon-note" src="/gnjb-utawari-note/icon-note.svg" alt="" />
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </div>
+            <span class="menu-button-text text-body">MENU</span>
+        </button>
     </div>
+
+    <!-- スマホ用メニュー -->
+    <nav class="mobile-menu-nav">
+        <ul class="menu-row-upper">
+            <li><a class="header-nav-link text-body" href="/songs">楽曲を探す</a></li>
+            <li><a class="header-nav-link text-body" href="/news">更新情報</a></li>
+            <li><a class="header-nav-link text-body" href="/guide">使い方</a></li>
+        </ul>
+        <ul class="menu-row-lower">
+            <li><a class="header-nav-link text-body" href="/about">このサイトについて</a></li>
+            <li><a class="header-nav-link text-body" href="/contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
 </header>
 
 <style>
     .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
         width: 100%;
         background-color: var(--color-primary);
-        border-bottom: 1px solid var(--color-bg-dark);
     }
 
     .header-container {
-        max-width: 1440px;
-        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1440px;
+        height: 64px;
+        padding: 0 24px;
+        margin: 0 auto;
+        border-bottom: 1px solid var(--color-bg-dark);
+        box-sizing: border-box;
+    }
+
+    .header-logo-img {
+        display: block;
+        height: 50px;
+        width: auto;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     .header-nav-list li {
-        padding: 0 5px 5px 5px;
-        border-bottom: 1px solid var(--color-text);
+        padding: 0;
     }
 
     .header-nav-link {
-        text-decoration: none;
         color: var(--color-text);
+        text-decoration: none;
+        padding: 0 5px 5px 5px;
+        border-bottom: 1px solid var(--color-text);
         transition: opacity 0.2s ease;
     }
 
     .header-nav-link:hover {
         opacity: 0.6;
+        color: rgb(var(--color-text) / 0.6);
     }
 
-    @media (min-width: 768px) {
-        .site-header {
-            height: 80px;
-            width: 100%;
-        }
+    .menu-button {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0;
+        background: none;
+        border: none;
+        color: inherit;
+        font-family: inherit;
+        cursor: pointer; 
+    }
 
+    .menu-icon-wrp {
+        position: relative;
+        width: 24px;
+        height: 22px;
+        background-color: var(--color-bg);
+        box-shadow: inset 0 0 0 1px var(--color-bg-dark);
+    }
+
+    .menu-icon-note {
+        position: absolute;
+        top: 8px;
+        left: 11px;
+        z-index: 2;
+        width: 12px;
+        height: 12px;
+        color: var(--color-text);
+        transition: all 0.4s ease;
+    }
+
+    .menu-bar {
+        position: absolute;
+        left: 4px;
+        height: 1px;
+        background-color: var(--color-text);
+        border-radius: 1px;
+        transform-origin: left center;
+        transition: all 0.4s ease;
+    }
+
+    .menu-bar:nth-child(2) {
+        top: 6.22px;
+        width: 16px;
+    }
+
+    .menu-bar:nth-child(3) {
+        top: 11.11px;
+        width: 10.67px;
+    }
+
+    .menu-bar:nth-child(4) {
+        top: 16px;
+        width: 8px;
+    }
+
+    .menu-button.is-active .menu-icon-note {
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none;
+    }
+
+    .menu-button.is-active .menu-bar:nth-child(2) {
+        width: 16px;
+        transform: translate(1px, -0.22px) rotate(30deg);
+    }
+
+    .menu-button.is-active .menu-bar:nth-child(3) {
+        width: 16px;
+        transform: translate(1px, 2.89px) rotate(-30deg);
+    }
+
+    .menu-button.is-active .menu-bar:nth-child(4) {
+        width: 16px;
+    }
+
+    .mobile-menu-nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: var(--color-primary);
+        border-radius: 0 0 20px 20px;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0 30px;
+        transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .mobile-menu-nav.is-open {
+        height: auto;
+        padding: 30px 28px;
+        opacity: 1;
+    }
+
+    .menu-row-upper {
+        list-style: none;
+        display: flex;
+        gap: 12vw;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    .menu-row-lower {
+        list-style: none;
+        display: flex;
+        gap: 10vw;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
         .header-container {
-            padding: 5px 48px;
-        }
-
-        .header-nav-list {
-            list-style: none;
-            display: flex;
-            gap: 36px;
+            height: 80px;
+            padding: 0 48px;
         }
 
         .header-logo-img {
             height: 64px;
-            width: auto;
+        }
+
+        .header-nav {
             display: block;
+        }
+
+        .header-nav-list {
+            display: flex;
+            gap: 36px;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        .mobile-menu-nav {
+            display: none;
         }
     }
 </style>
+
+<script>
+    const menuButton = document.querySelector('#menuButton');
+    const mobileMenu = document.querySelector('.mobile-menu-nav')
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+            menuButton.classList.toggle('is-active');
+            mobileMenu.classList.toggle('is-open')
+        });
+    }
+</script>
