@@ -11,11 +11,11 @@
         <!-- PC用メニュー -->
         <nav class="header-nav">
             <ul class="header-nav-list">
-                <li><a class="header-nav-link text-body" href="/songs">楽曲を探す</a></li>
-                <li><a class="header-nav-link text-body" href="/news">更新情報</a></li>
-                <li><a class="header-nav-link text-body" href="/guide">使い方</a></li>
-                <li><a class="header-nav-link text-body" href="/about">このサイトについて</a></li>
-                <li><a class="header-nav-link text-body" href="/contact">お問い合わせ</a></li>
+                <li><a class="nav-link text-body" href="/songs">楽曲を探す</a></li>
+                <li><a class="nav-link text-body" href="/news">更新情報</a></li>
+                <li><a class="nav-link text-body" href="/guide">使い方</a></li>
+                <li><a class="nav-link text-body" href="/about">このサイトについて</a></li>
+                <li><a class="nav-link text-body" href="/contact">お問い合わせ</a></li>
             </ul>
         </nav>
 
@@ -34,13 +34,13 @@
     <!-- スマホ用メニュー -->
     <nav class="mobile-menu-nav">
         <ul class="menu-row-upper">
-            <li><a class="header-nav-link text-body" href="/songs">楽曲を探す</a></li>
-            <li><a class="header-nav-link text-body" href="/news">更新情報</a></li>
-            <li><a class="header-nav-link text-body" href="/guide">使い方</a></li>
+            <li><a class="nav-link text-body" href="/songs">楽曲を探す</a></li>
+            <li><a class="nav-link text-body" href="/news">更新情報</a></li>
+            <li><a class="nav-link text-body" href="/guide">使い方</a></li>
         </ul>
         <ul class="menu-row-lower">
-            <li><a class="header-nav-link text-body" href="/about">このサイトについて</a></li>
-            <li><a class="header-nav-link text-body" href="/contact">お問い合わせ</a></li>
+            <li><a class="nav-link text-body" href="/about">このサイトについて</a></li>
+            <li><a class="nav-link text-body" href="/contact">お問い合わせ</a></li>
         </ul>
     </nav>
 </header>
@@ -86,7 +86,7 @@
         padding: 0;
     }
 
-    .header-nav-link {
+    .nav-link {
         color: var(--color-text);
         text-decoration: none;
         padding: 0 5px 5px 5px;
@@ -94,7 +94,7 @@
         transition: opacity 0.2s ease;
     }
 
-    .header-nav-link:hover {
+    .nav-link:hover {
         opacity: 0.6;
         color: rgb(var(--color-text) / 0.6);
     }

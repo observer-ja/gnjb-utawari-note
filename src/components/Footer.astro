@@ -1,0 +1,131 @@
+---
+
+---
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="/gnjb-utawari-note/logo-vt.svg" width="1250" height="896" />
+                <img class="footer-logo-img" src="/gnjb-utawari-note/logo.svg" alt="原因は自分にある。歌割りノート" width="512" height="512" />
+            </picture>
+        </div>
+
+        <nav class="footer-nav">
+            <ul class="menu-row-upper">
+                <li><a class="nav-link text-body" href="/songs">楽曲を探す</a></li>
+                <li><a class="nav-link text-body" href="/news">更新情報</a></li>
+                <li><a class="nav-link text-body" href="/guide">使い方</a></li>
+            </ul>
+            <ul class="menu-row-lower">
+                <li><a class="nav-link text-body" href="/about">このサイトについて</a></li>
+                <li><a class="nav-link text-body" href="/contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="footer-notes">
+            <p class="footer-note-text text-sm">JASRAC許諾第 XXXXXXX-XXX 号</p>
+            <p class="footer-note-text text-sm">当サイトは個人が運営する<span class="text-accent">非公式</span>のファンサイトです。<br class="sp-only" />対象のグループおよび所属事務所様とは一切関係ありません。</p>
+            <p class="copyright text-sm">&copy; 2026 原因は自分にある。歌割りノート</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .text-accent {
+        color: var(--color-text-colored);
+    }
+
+    .site-footer {
+        width: 100%;
+        background-color: var(--color-primary);
+    }
+
+    .footer-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 12px 24px;
+        gap: 12px;
+        
+    }
+
+    .footer-logo-img {
+        display: block;
+        height: 68px;
+        width: auto;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .menu-row-upper {
+        list-style: none;
+        display: flex;
+        gap: 12vw;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    .menu-row-lower {
+        list-style: none;
+        display: flex;
+        gap: 10vw;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    .nav-link {
+        color: var(--color-text);
+        text-decoration: none;
+        padding: 0 5px 5px 5px;
+        border-bottom: 1px solid var(--color-text);
+        transition: opacity 0.2s ease;
+    }
+
+    .footer-notes {
+        text-align: center;
+    }
+
+    .footer-note-text,
+    .copyright {
+        margin: 0;
+    }
+
+    .footer-notes p + p {
+        margin-top: 2px;
+    }
+
+    @media (min-width: 1024px) {
+        .sp-only {
+            display: none;
+        }
+
+        .footer-container {
+            padding: 12px 120px;
+        }
+
+        .footer-logo-img {
+            height: 125px;
+        }
+
+        .footer-nav {
+            flex-direction: row;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .menu-row-upper,
+        .menu-row-lower {
+            gap: 36px;
+        }
+    }
+</style>
