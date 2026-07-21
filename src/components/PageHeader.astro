@@ -6,23 +6,67 @@ const { title } = Astro.props;
 ---
 
 <section class="page-header">
-    <div class="page-header-container">
-        <h1 class="text-lg">{title}</h1>
-    </div>
+    <h1 class="page-header-title text-lg">{title}</h1>
 </section>
 
 <style>
     .page-header {
+        position: relative;
         width: 100%;
         height: 200px;
         background-color: var(--color-bg);
         border: 2px solid var(--color-primary);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .page-header-title {
+        position: relative;
+        z-index: 1;
+    }
+
+    .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 60px 80px 0 0;
+        border-color: var(--color-primary) transparent transparent transparent;
+        pointer-events: none;
+    }
+
+    .page-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 60px 80px;
+        border-color: transparent transparent var(--color-primary) transparent;
+        pointer-events: none;
     }
 
     @media (min-width: 1024px) {
         .page-header {
             height: 360px;
             border: 5px solid var(--color-primary);
+        }
+
+        .page-header::before {
+            border-width: 240px 320px 0 0;
+        }
+
+        .page-header::after {
+            border-width: 0 0 240px 320px;
         }
     }
 </style>
