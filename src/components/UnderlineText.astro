@@ -1,0 +1,31 @@
+---
+interface Props {
+    href?: string;
+    class?: string;
+}
+const { href, class: className } = Astro.props;
+const Tag = href ? 'a' : 'span';
+---
+
+<Tag class:list={['underline-text', 'text-body', { 'link': href }, className]} href={href}>
+    <slot />
+</Tag>
+
+<style>
+    .underline-text {
+        display: inline-block;
+        color: var(--color-text);
+        text-decoration: none;
+        padding: 0 5px 5px 5px;
+        border-bottom: 1px solid var(--color-text);
+    }
+
+    .underline-text.link {
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+    }
+
+    .underline-text.link:hover {
+        opacity: 0.6;
+    }
+</style>
