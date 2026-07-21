@@ -2798,7 +2798,7 @@ export const songsIndex = [
         tieup: ["テレビ東京系アニメ『鉄鍋のジャン!』 オープニングテーマソング"],
         call: false,
         links: {
-            mv: null,
+            mv: "https://www.youtube.com/watch?v=REA6cv8IZqc",
             spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
             apple_music: "https://music.apple.com/jp/song/%E7%81%AB%E5%AE%B4/6781905374",
             line_music: "https://music.line.me/webapp/track/mt0000000026273465",
