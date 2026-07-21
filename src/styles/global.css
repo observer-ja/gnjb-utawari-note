@@ -32,32 +32,28 @@
     --font-size-body: 16px; /* 本文 */
     --font-size-md: 20px; /* 小見出し */
     --font-size-lg: 24px; /* ページタイトル */
-    --font-size-xl: 32px; /* トップページタイトル */
 
     /* 行間 */
     --lh-sm: 1.7;
     --lh-body: 1.7;
     --lh-md: 1.5;
     --lh-lg: 1.5;
-    --lh-xl: 1.5;
 
     /* 文字間隔 */
     --ls-sm: 0.00em;
     --ls-body: 0.00em;
     --ls-md: 0.02em;
     --ls-lg: 0.02em;
-    --ls-xl: 0.02em;
 }
 
 @media (min-width: 768px) { /* PC */
     :root {
         --font-size-md: 24px; /* 小見出し */
         --font-size-lg: 32px; /* ページタイトル */
-        --font-size-xl: 48px; /* トップページタイトル */
     }
 }
 
-h1, h2, h3{
+h1, h2 {
     margin: 0;
     font-weight: inherit;
 }
@@ -94,12 +90,5 @@ body {
     font-size: var(--font-size-lg);
     line-height: var(--lh-lg);
     letter-spacing: var(--ls-lg);
-    font-weight: 700;
-}
-
-.text-xl {
-    font-size: var(--font-size-xl);
-    line-height: var(--lh-xl);
-    letter-spacing: var(--ls-xl);
     font-weight: 700;
 }
