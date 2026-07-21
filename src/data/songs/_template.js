@@ -1,27 +1,23 @@
 export const song_template = {
-  id: "song_template" /* idを書く */,
-  note: "" /* 注釈 */,
+    id: "song_template",
+    note: "",
 
-  /* 歌詞全体 */
-  lyrics_blocks: [
-    {
-      /* ブロック分け */
-      rows: [
+    lyrics_blocks: [
         {
-          /* 強制改行 */
-          chunks: [
-            /* 任意改行 */
-            { members: [""], text: [{ lyrics: "歌詞テキスト" }] },
-            {
-              /* コールパターン */ members: [""],
-              text: [
-                { lyrics: "歌詞テキスト" },
-                { lyrics: "歌詞テキスト", call: true },
-              ],
-            },
-          ],
+            rows: [
+                {
+                    chunks: [
+                        { members: [""], text: [{ lyrics: "歌詞テキスト" }] },
+                        {
+                            members: [""],
+                            text: [
+                                { lyrics: "歌詞テキスト" },
+                                { lyrics: "歌詞テキスト", call: true },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
-      ],
-    },
-  ],
+    ],
 };
