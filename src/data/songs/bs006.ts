@@ -8,7 +8,7 @@ export const bs006 = {
                 {
                     chunks: [
                         {
-                            members: [],
+                            members: ["all"],
                             text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }]
                         },
                         {
@@ -20,7 +20,7 @@ export const bs006 = {
                 {
                     chunks: [
                         {
-                            members: [],
+                            members: ["all"],
                             text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }]
                         },
                         {
@@ -80,7 +80,7 @@ export const bs006 = {
                 {
                     chunks: [
                         {
-                            members: [],
+                            members: ["all"],
                             text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }]
                         },
                         {
@@ -92,7 +92,7 @@ export const bs006 = {
                 {
                     chunks: [
                         {
-                            members: [],
+                            members: ["all"],
                             text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }]
                         },
                         {
