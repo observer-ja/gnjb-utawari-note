@@ -1,6 +1,6 @@
 export const bs003 = {
     id: "bs003",
-    note: "",
+    note: "「ハイ！」のコールで右手のひらを右前に突き出す。また、「Carnival」の部分も腕で「C」の形を作る。",
 
     lyrics_blocks: [
         {
