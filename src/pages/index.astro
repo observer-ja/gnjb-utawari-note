@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainVisual from '../components/MainVisual.astro';
-import NewsItem from '../components/NewsItem.astro';
+import NewsSection from '../components/NewsSection.astro';
 ---
 
 <Layout>
     <MainVisual />
-    <h1 class="container">Astro</h1>
-    <ul class="container">
-        <NewsItem date="2026.07.07" text="テスト"></NewsItem>
-    </ul>
+    <div class="container">
+        <NewsSection />
+    </div>
 </Layout>

@@ -1,0 +1,53 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import NewsItem from "./NewsItem.astro";
+import UnderlineText from "./UnderlineText.astro";
+import { newsData } from "../data/news";
+
+const recentNews = newsData.slice(0, 3)
+---
+
+<section class="news-section">
+    <SectionTitle>更新情報</SectionTitle>
+    <ul class="news-list">
+        {
+            recentNews.map((item) => (
+                <NewsItem date={item.date} text={item.text} url={item.url} />
+            ))
+        }
+    </ul>
+    <div class="news-more">
+        <UnderlineText href="/gnjb-utawari-note/news" class="more-link">もっと見る→</UnderlineText>
+    </div>
+    </section>
+
+<style>
+    .news-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .news-list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 12px;
+        margin: 0;
+    }
+    .news-more {
+        text-align: right;
+    }
+
+    :global(.more-link.underline-text) {
+        color: var(--color-primary);
+        border-bottom-color: var(--color-primary);
+    }
+
+    @media (min-width: 1024px) {
+        .news-list {
+            padding: 0 48px;
+        }
+    }
+</style>
