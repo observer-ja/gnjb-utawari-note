@@ -1,0 +1,44 @@
+---
+interface Props {
+    date: string;
+    text: string;
+    url?: string;
+}
+
+const { date, text, url } = Astro.props
+const Tag = url ? 'a' : 'span';
+---
+
+<li class="news-item">
+    <span class="news-date text-body">{date}</span>
+    <Tag class="news-text text-body" href={url}>{text}</Tag>
+</li>
+
+<style>
+    .news-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+        padding: 5px 0 2px 5px;
+        border-bottom: 1px solid var(--color-primary);
+    }
+
+    .news-date {
+        width: 85px;
+        flex-shrink: 0;
+    }
+
+    .news-text {
+        flex: 1;
+        text-decoration: none;
+        color: inherit;
+        word-break: break-all;
+    }
+
+    @media (min-width: 1024px) {
+        .news-item {
+            gap: 5px;
+        }
+    }
+</style>
