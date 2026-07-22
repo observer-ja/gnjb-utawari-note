@@ -123,7 +123,7 @@ export const bs006 = {
                     ],
                 },
                 {
-                    members: ["all"],
+                    members: ["B", "R"],
                     chunks: [
                         { text: [{ lyrics: "初めての恋に" }] },
                         { text: [{ lyrics: "とまどい隠せない" }] },
@@ -135,7 +135,7 @@ export const bs006 = {
                         { text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }] },
                     ],
                 },{
-                    members: ["all"],
+                    members: ["B", "R"],
                     chunks: [
                         { text: [{ lyrics: "この気持ちはナンだ！？" }] },
                     ],
@@ -237,7 +237,7 @@ export const bs006 = {
             ],
         },
         {
-            members: [],
+            members: ["Y"],
             rows: [
                 {
                     chunks: [
@@ -303,7 +303,7 @@ export const bs006 = {
                     ],
                 },
                 {
-                    members: ["all"],
+                    members: ["B", "R"],
                     chunks: [
                         { text: [{ lyrics: "初めての恋に" }] },
                         { text: [{ lyrics: "とまどい隠せない" }] },
@@ -315,7 +315,7 @@ export const bs006 = {
                         { text: [{ lyrics: "Burn Burn Bomb Burn Bomb x 3" }] },
                     ],
                 },{
-                    members: ["all"],
+                    members: ["B", "R"],
                     chunks: [
                         { text: [{ lyrics: "この気持ちはナンだ！？" }] },
                     ],
