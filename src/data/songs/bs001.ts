@@ -93,11 +93,13 @@ export const bs001 = {
                             text: [{ lyrics: "キラキラと輝く空" }]
                         },
                         {
-                            text: [
-                                { lyrics: "手を伸ばせばつかめそう", members: ["R"] },
-                                { lyrics: "On Now", members: [],}
-                            ]
+                            members: ["R"],
+                            text: [{ lyrics: "手を伸ばせばつかめそう" }]
                         },
+                        {
+                            members: [],
+                            text: [{ lyrics: "On Now" }]
+                        }
                     ],
                 },
                 {
@@ -173,11 +175,13 @@ export const bs001 = {
                             text: [{ lyrics: "キラキラと輝く空" }]
                         },
                         {
-                            text: [
-                                { lyrics: "手を伸ばせばつかめそう", members: ["R"] },
-                                { lyrics: "On Now", members: []}
-                            ]
+                            members: ["R"],
+                            text: [{ lyrics: "手を伸ばせばつかめそう" }]
                         },
+                        {
+                            members: [],
+                            text: [{ lyrics: "On Now" }]
+                        }
                     ],
                 },
                 {
@@ -222,10 +226,12 @@ export const bs001 = {
                 {
                     chunks: [
                         {
-                            text: [
-                                { lyrics: "I, I, I, I,", members: [] },
-                                { lyrics: "I'm a GAZER", members: ["B"] }
-                            ]
+                            members: [],
+                            text: [{ lyrics: "I, I, I, I," }]
+                        },
+                        {
+                            members: ["B"],
+                            text: [{ lyrics: "I'm a GAZER" }]
                         },
                         {
                             members: [],

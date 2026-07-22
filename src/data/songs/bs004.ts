@@ -91,11 +91,13 @@ export const bs004 = {
                             text: [{ lyrics: "キミに　会いたい、気持ち高ぶる" }]
                         },
                         {
-                            text: [
-                                { lyrics: "夢だって", members: ["R"] },
-                                { lyrics: "Yeah Yeah", members: [] }
-                            ]
+                            members: ["R"],
+                            text: [{ lyrics: "夢だって" }]
                         },
+                        {
+                            members: [],
+                            text: [{ lyrics: "Yeah Yeah" }]
+                        }
                     ],
                 },
                 {
@@ -112,11 +114,13 @@ export const bs004 = {
                             text: [{ lyrics: "キミに　曖昧な言葉かけて" }]
                         },
                         {
-                            text: [
-                                { lyrics: "おどけた", members: ["B"] },
-                                { lyrics: "Yeah Yeah", members: [] }
-                            ]
+                            members: ["B"],
+                            text: [{ lyrics: "おどけた" }]
                         },
+                        {
+                            members: [],
+                            text: [{ lyrics: "Yeah Yeah" }]
+                        }
                     ],
                 },
                 {
@@ -167,11 +171,13 @@ export const bs004 = {
                             text: [{ lyrics: "One, Two, Step do a dance" }]
                         },
                         {
-                            text: [
-                                { lyrics: "Our BPM", members: ["S"]},
-                                { lyrics: "合わせて", members: ["R"]},
-                            ]
-                        }
+                            members: ["S"],
+                            text: [{ lyrics: "Our BPM" }]
+                        },
+                        {
+                            members: ["R"],
+                            text: [{ lyrics: "合わせて" }]
+                        },
                     ],
                 },
                 {
@@ -232,10 +238,12 @@ export const bs004 = {
                             text: [{ lyrics: "伝えたい　溢れる心" }]
                         },
                         {
-                            text: [
-                                { lyrics: "Accept my love", members: ["B"] },
-                                { lyrics: "Yeah Yeah", members: [] }
-                            ]
+                            members: ["B"],
+                            text: [{ lyrics: "Accept my love" }]
+                        },
+                        {
+                            members: [],
+                            text: [{ lyrics: "Yeah Yeah" }]
                         },
                     ],
                 },
@@ -267,10 +275,12 @@ export const bs004 = {
                             text: [{ lyrics: "キミに　One time　全て捧げる" }]
                         },
                         {
-                            text: [
-                                { lyrics: "夢まで", members: ["R"] },
-                                { lyrics: "Yeah Yeah", members: [] }
-                            ]
+                            members: ["R"],
+                            text: [{ lyrics: "夢まで" }]
+                        },
+                        {
+                            members: [],
+                            text: [{ lyrics: "Yeah Yeah" }]
                         },
                     ],
                 },
@@ -284,27 +294,36 @@ export const bs004 = {
                 {
                     chunks: [
                         {
-                            text: [
-                                { lyrics: "キミに", members: ["W"] },
-                                { lyrics: "曖昧な言葉かけて", members: ["W", "B", "G"] }
-                            ]
+                            members: ["W"],
+                            text: [{ lyrics: "キミに" }]
                         },
                         {
-                            text: [
-                                { lyrics: "おどけた", members: ["W", "B", "G"] },
-                                { lyrics: "Yeah Yeah", members: [] }
-                            ]
+                            members: ["W", "B", "G"],
+                            text: [{ lyrics: "曖昧な言葉かけて" }]
+                        },
+                        {
+                            members: ["W", "B", "G"],
+                            text: [{ lyrics: "おどけた" }]
+                        },
+                        {
+                            members: [],
+                            text: [{ lyrics: "Yeah Yeah" }]
                         },
                     ],
                 },
                 {
                     chunks: [
-                        { text: [{ lyrics: "共にずっと進み続けていこう", members: ["W", "B", "R", "G"] }] },
                         {
-                            text: [
-                                { lyrics: "あの未来へ！", members: ["W", "B", "R", "G"]},
-                                { lyrics: "「一緒にいよう」", members: ["W", "B", "G"] }
-                            ]
+                            members: ["W", "B", "R", "G"],
+                            text: [{ lyrics: "共にずっと進み続けていこう" }]
+                        },
+                        {
+                            members: ["W", "B", "R", "G"],
+                            text: [{ lyrics: "あの未来へ！" }]
+                        },
+                        {
+                            members: ["W", "B", "G"],
+                            text: [{ lyrics: "「一緒にいよう」" }]
                         },
                     ],
                 },
