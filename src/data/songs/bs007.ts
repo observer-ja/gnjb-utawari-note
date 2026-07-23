@@ -1,6 +1,31 @@
-import { z } from "astro/zod";
+export interface LyricText {
+    lyrics: string;
+    call?: boolean;
+    members?: string[];
+}
 
-export const bs007 = {
+export interface LyricChunk {
+    members?: string[];
+    text: LyricText[];
+}
+
+export interface LyricRow {
+    members?: string[];
+    chunks: LyricChunk[];
+}
+
+export interface LyricBlock {
+    members?: string[];
+    rows: LyricRow[];
+}
+
+export interface SongLyrics {
+    id: string;
+    note: string;
+    lyrics_blocks: LyricBlock[];
+}
+
+export const bs007: SongLyrics = {
     id: "bs007",
     note: "",
 

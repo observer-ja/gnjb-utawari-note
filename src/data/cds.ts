@@ -1,6 +1,14 @@
 /* CDデータ */
+export type CdType = "sg" | "al" | "ep" ;
 
-export const cds = [
+export interface Cd {
+    id: string;
+    title: string;
+    date: string;
+    type: CdType;
+}
+
+export const cds: Cd[] = [
     /* BATTLE STREET時代 */
     {id: "bs_01", title: "ebidence", date: "2018-12-19", type: "sg"},
     {id: "bs_02", title: "Show Time!!", date: "2019-06-19", type: "sg"},

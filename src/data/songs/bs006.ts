@@ -1,4 +1,31 @@
-export const bs006 = {
+export interface LyricText {
+    lyrics: string;
+    call?: boolean;
+    members?: string[];
+}
+
+export interface LyricChunk {
+    members?: string[];
+    text: LyricText[];
+}
+
+export interface LyricRow {
+    members?: string[];
+    chunks: LyricChunk[];
+}
+
+export interface LyricBlock {
+    members?: string[];
+    rows: LyricRow[];
+}
+
+export interface SongLyrics {
+    id: string;
+    note: string;
+    lyrics_blocks: LyricBlock[];
+}
+
+export const bs006: SongLyrics = {
     id: "bs006",
     note: "手で銃を作り、「Burn Burn Bomb Burn Bomb」に合わせて撃つ真似をする。",
 

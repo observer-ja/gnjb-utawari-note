@@ -1,6 +1,14 @@
 /* ライブデータ */
+export type LiveType = "fes" | "oneman" | "stream" ;
 
-export const lives = [
+export interface Live {
+  id: string;
+  name: string;
+  date: string;
+  type: LiveType;
+}
+
+export const lives: Live[] = [
   /* 2019年 */
   { id: "live2019_01", name: "バトボライブ2019", date: "2019-07-07", type: "fes" },
   { id: "live2019_02", name: "SHIBUYA SUMMIT 2019", date: "2019-07-15", type: "fes" },

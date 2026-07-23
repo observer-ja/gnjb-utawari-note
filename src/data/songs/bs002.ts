@@ -1,11 +1,38 @@
-export const bs002 = {
+export interface LyricText {
+    lyrics: string;
+    call?: boolean;
+    members?: string[];
+}
+
+export interface LyricChunk {
+    members?: string[];
+    text: LyricText[];
+}
+
+export interface LyricRow {
+    members?: string[];
+    chunks: LyricChunk[];
+}
+
+export interface LyricBlock {
+    members?: string[];
+    rows: LyricRow[];
+}
+
+export interface SongLyrics {
+    id: string;
+    note: string;
+    lyrics_blocks: LyricBlock[];
+}
+
+export const bs002: SongLyrics = {
     id: "bs002",
     note: "",
 
     lyrics_blocks: [
         {
             members: ["B"],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "どんな騒がしいとこでも" }] },
@@ -22,7 +49,7 @@ export const bs002 = {
         },
         {
             members: ["Y"],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "こんな事で落ちる恋なんて" }] },
@@ -39,7 +66,7 @@ export const bs002 = {
             ],
         },
         {
-            row: [
+            rows: [
                 {
                     members: ["B"],
                     chunks: [
@@ -58,7 +85,7 @@ export const bs002 = {
         },
         {
             members: ["R"],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "アナタが囁いた声が" }] },
@@ -75,7 +102,7 @@ export const bs002 = {
         },
         {
             members: ["P"],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "ナニしてても" }] },
@@ -92,7 +119,7 @@ export const bs002 = {
         },
         {
             members: ["R"],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "想う気持ちが深くなるほど" }] },
@@ -107,7 +134,7 @@ export const bs002 = {
             ],
         },
         {
-            row: [
+            rows: [
                 {
                     members: ["B"],
                     chunks: [
@@ -128,7 +155,7 @@ export const bs002 = {
         },
         {
             members: [],
-            row: [
+            rows: [
                 {
                     chunks: [
                         { text: [{ lyrics: "I've lost my voice" }] },
@@ -137,7 +164,7 @@ export const bs002 = {
             ],
         },
         {
-            row: [
+            rows: [
                 {
                     chunks: [
                         {

@@ -1,13 +1,46 @@
 /* 楽曲データ */
+export interface SongCd {
+    id: string;
+    track: number;
+}
 
-export const songsIndex = [
+export interface SongLinks {
+    mv: string | null;
+    spotify: string | null;
+    apple_music: string | null;
+    line_music: string | null;
+}
+
+export interface LiveHistory {
+    live_id: string;
+    position: number;
+    perf: number | null;
+    note: string[];
+}
+
+export interface Song {
+    id: string;
+    title: string;
+    title_kana: string;
+    date: string;
+    cds: SongCd[];
+    lyricist: string[];
+    composer: string[];
+    arranger: string[];
+    tieup: string[];
+    call: boolean;
+    links: SongLinks;
+    live_history: LiveHistory[];
+}
+
+export const songsIndex: Song[] = [
     /* BATTLE STREET時代 */
     {
         id: "bs001",
         title: "STARGAZER",
         title_kana: "zzz_stargazer",
         date: "2018-12-19",
-        cds: [{ id: "bs_01", track: 1 },],
+        cds: [{ id: "bs_01", track: 1 }],
         lyricist: ["SANOJI"],
         composer: ["NAMELESS AKA NL", "J.A.E"],
         arranger: ["NAMELESS AKA NL"],
@@ -20,7 +53,12 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22c",
         },
         live_history: [
-            { live_id: "live2019_09", position: 3, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2019_09",
+                position: 3,
+                perf: null,
+                note: ["メドレー"],
+            },
         ],
     },
     {
@@ -28,7 +66,7 @@ export const songsIndex = [
         title: "Voice",
         title_kana: "zzz_voice",
         date: "2018-12-19",
-        cds: [{ id: "bs_01", track: 2 },],
+        cds: [{ id: "bs_01", track: 2 }],
         lyricist: ["SANOJI"],
         composer: ["NAMELESS AKA NL", "J.A.E"],
         arranger: ["NAMELESS AKA NL"],
@@ -41,7 +79,7 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22d",
         },
         live_history: [
-            { live_id: "live2019_09", position: 6, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 6, perf: null, note: [] },
         ],
     },
     {
@@ -49,7 +87,7 @@ export const songsIndex = [
         title: "Macanas.",
         title_kana: "zzz_macanas",
         date: "2018-12-19",
-        cds: [{ id: "bs_01", track: 3 },],
+        cds: [{ id: "bs_01", track: 3 }],
         lyricist: ["Yocke"],
         composer: ["Yocke"],
         arranger: ["Yocke"],
@@ -62,12 +100,22 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22e",
         },
         live_history: [
-            { live_id: "live2019_10", position: 4, perf: null, note: [""] },
-            { live_id: "live2019_09", position: 9, perf: null, note: ["アンコール", "コラボ"] },
-            { live_id: "live2019_08", position: 3, perf: null, note: [""] },
-            { live_id: "live2019_04", position: 2, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2019_03", position: 2, perf: null, note: [""] },
-            { live_id: "live2019_01", position: 4, perf: null, note: [""] },
+            { live_id: "live2019_10", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2019_09",
+                position: 9,
+                perf: null,
+                note: ["アンコール", "コラボ"],
+            },
+            { live_id: "live2019_08", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2019_04",
+                position: 2,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2019_03", position: 2, perf: null, note: [] },
+            { live_id: "live2019_01", position: 4, perf: null, note: [] },
         ],
     },
     {
@@ -75,7 +123,7 @@ export const songsIndex = [
         title: "Show Time!!",
         title_kana: "zzz_showtime",
         date: "2019-06-19",
-        cds: [{ id: "bs_02", track: 1 },],
+        cds: [{ id: "bs_02", track: 1 }],
         lyricist: ["Yocke"],
         composer: ["Yocke"],
         arranger: ["Yocke"],
@@ -88,11 +136,21 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000f39c22f",
         },
         live_history: [
-            { live_id: "live2023_01", position: 17, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2023_01",
+                position: 17,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2019_09", position: 2, perf: null, note: ["メドレー"] },
-            { live_id: "live2019_03", position: 4, perf: null, note: [""] },
-            { live_id: "live2019_01", position: 2, perf: null, note: [""] },
+            {
+                live_id: "live2019_09",
+                position: 2,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2019_03", position: 4, perf: null, note: [] },
+            { live_id: "live2019_01", position: 2, perf: null, note: [] },
         ],
     },
     {
@@ -100,7 +158,7 @@ export const songsIndex = [
         title: "COUNTDOWN",
         title_kana: "zzz_countdown",
         date: "2019-06-19",
-        cds: [{ id: "bs_02", track: 2 },],
+        cds: [{ id: "bs_02", track: 2 }],
         lyricist: ["森永博志"],
         composer: ["楊慶豪"],
         arranger: ["楊慶豪"],
@@ -113,9 +171,14 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000000f39c231",
         },
         live_history: [
-            { live_id: "live2019_10", position: 2, perf: null, note: [""] },
-            { live_id: "live2019_09", position: 4, perf: null, note: ["メドレー"] },
-            { live_id: "live2019_01", position: 1, perf: null, note: [""] },
+            { live_id: "live2019_10", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2019_09",
+                position: 4,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2019_01", position: 1, perf: null, note: [] },
         ],
     },
     {
@@ -123,7 +186,7 @@ export const songsIndex = [
         title: "Burn Burn Bomb",
         title_kana: "zzz_burnburnbomb",
         date: "2019-06-19",
-        cds: [{ id: "bs_02", track: 3 },],
+        cds: [{ id: "bs_02", track: 3 }],
         lyricist: ["浅利進吾"],
         composer: ["浅利進吾"],
         arranger: ["浅利進吾"],
@@ -132,16 +195,22 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1qETVMaFM5LkyjLWTfBkZ0",
-            apple_music: "https://music.apple.com/jp/song/burn-burn-bomb/1466687718",
+            apple_music:
+                "https://music.apple.com/jp/song/burn-burn-bomb/1466687718",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c232",
         },
         live_history: [
-            { live_id: "live2023_08", position: 3, perf: null, note: [""] },
+            { live_id: "live2023_08", position: 3, perf: null, note: [] },
 
-            { live_id: "live2019_09", position: 7, perf: null, note: [""] },
-            { live_id: "live2019_04", position: 2, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2019_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2019_01", position: 3, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2019_04",
+                position: 2,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2019_03", position: 1, perf: null, note: [] },
+            { live_id: "live2019_01", position: 3, perf: null, note: [] },
         ],
     },
     {
@@ -149,7 +218,7 @@ export const songsIndex = [
         title: "Like a Vampire",
         title_kana: "zzz_likeavampire",
         date: "2019-06-19",
-        cds: [{ id: "bs_02", track: 4 },],
+        cds: [{ id: "bs_02", track: 4 }],
         lyricist: ["矢野水音"],
         composer: ["朴優尊"],
         arranger: ["楊慶豪"],
@@ -158,11 +227,12 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/7mFKKSh1CDM6DErmVrmO5m",
-            apple_music: "https://music.apple.com/jp/song/like-a-vampire/1466687722",
+            apple_music:
+                "https://music.apple.com/jp/song/like-a-vampire/1466687722",
             line_music: "https://music.line.me/webapp/track/mt000000000f39c233",
         },
         live_history: [
-            { live_id: "live2019_03", position: 3, perf: null, note: [""] },
+            { live_id: "live2019_03", position: 3, perf: null, note: [] },
         ],
     },
 
@@ -181,70 +251,116 @@ export const songsIndex = [
         arranger: ["久下真音"],
         tieup: [
             "テレビ朝日「お願い！ランキング」 2019年9月度エンディングテーマソング",
-            "AbemaTV「Abema Prime」 2019年10月度エンディングテーマソング"
+            "AbemaTV「Abema Prime」 2019年10月度エンディングテーマソング",
         ],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=-9lpqo83-AA",
             spotify: "https://open.spotify.com/track/4IV4wWIoXASUh61rAI8zlM",
-            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B/1479492330",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B/1479492330",
             line_music: "https://music.line.me/webapp/track/mt000000000fccf41d",
         },
         live_history: [
-            { live_id: "live2026_04", position: 1, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 2, perf: null, note: [""] },
+            { live_id: "live2026_04", position: 1, perf: null, note: [] },
+            { live_id: "live2026_03", position: 1, perf: null, note: [] },
+            { live_id: "live2026_02", position: 2, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 5, perf: null, note: [""] },
-            { live_id: "live2025_08", position: 3, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2025_04", position: 3, perf: null, note: ["シャッフル曲"] },
-            { live_id: "live2025_02", position: 18, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_10", position: 5, perf: null, note: [] },
+            { live_id: "live2025_08", position: 3, perf: null, note: [] },
+            { live_id: "live2025_05", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2025_04",
+                position: 3,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
+            {
+                live_id: "live2025_02",
+                position: 18,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_08", position: 13, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 11, perf: null, note: [""] },
-            { live_id: "live2024_02", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 23, perf: null, note: [""] },
+            { live_id: "live2024_08", position: 13, perf: null, note: [] },
+            { live_id: "live2024_03", position: 11, perf: null, note: [] },
+            { live_id: "live2024_02", position: 3, perf: null, note: [] },
+            { live_id: "live2024_01", position: 23, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_14", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_13", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_12", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_11", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 18, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 9, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 15, perf: null, note: [""] },
-            { live_id: "live2023_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 4, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_02", position: 10, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_01", position: 5, perf: null, note: ["メドレー"] },
+            { live_id: "live2023_16", position: 3, perf: null, note: [] },
+            { live_id: "live2023_14", position: 1, perf: null, note: [] },
+            { live_id: "live2023_13", position: 1, perf: null, note: [] },
+            { live_id: "live2023_12", position: 1, perf: null, note: [] },
+            { live_id: "live2023_11", position: 3, perf: null, note: [] },
+            { live_id: "live2023_09", position: 18, perf: null, note: [] },
+            { live_id: "live2023_07", position: 9, perf: null, note: [] },
+            { live_id: "live2023_06", position: 15, perf: null, note: [] },
+            { live_id: "live2023_05", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2023_02",
+                position: 4,
+                perf: null,
+                note: ["メドレー"],
+            },
+            {
+                live_id: "live2023_02",
+                position: 10,
+                perf: null,
+                note: ["メドレー"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 5,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_11", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_10", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 18, perf: null, note: [""] },
-            { live_id: "live2022_05", position: 3, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 20, perf: null, note: ["アンコール"] },
-            { live_id: "live2022_02", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_01", position: 5, perf: null, note: ["ONE N' ONLYによる披露"] },
+            { live_id: "live2022_11", position: 1, perf: null, note: [] },
+            { live_id: "live2022_10", position: 3, perf: null, note: [] },
+            { live_id: "live2022_09", position: 3, perf: null, note: [] },
+            { live_id: "live2022_06", position: 18, perf: null, note: [] },
+            {
+                live_id: "live2022_05",
+                position: 3,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2022_03",
+                position: 20,
+                perf: null,
+                note: ["アンコール"],
+            },
+            { live_id: "live2022_02", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2022_01",
+                position: 5,
+                perf: null,
+                note: ["ONE N' ONLYによる披露"],
+            },
 
-            { live_id: "live2021_07", position: 18, perf: null, note: [""] },
-            { live_id: "live2021_06", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_03", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 3, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 3, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 18, perf: null, note: [] },
+            { live_id: "live2021_06", position: 2, perf: null, note: [] },
+            { live_id: "live2021_05", position: 1, perf: null, note: [] },
+            { live_id: "live2021_04", position: 2, perf: null, note: [] },
+            { live_id: "live2021_03", position: 2, perf: null, note: [] },
+            { live_id: "live2021_02", position: 3, perf: null, note: [] },
+            { live_id: "live2021_01", position: 3, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 6, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 8, perf: null, note: [""] },
-            { live_id: "live2020_01", position: 1, perf: null, note: [""] },
+            { live_id: "live2020_03", position: 6, perf: null, note: [] },
+            { live_id: "live2020_02", position: 8, perf: null, note: [] },
+            { live_id: "live2020_01", position: 1, perf: null, note: [] },
 
-            { live_id: "live2019_10", position: 1, perf: null, note: [""] },
-            { live_id: "live2019_09", position: 1, perf: null, note: [""] },
-            { live_id: "live2019_08", position: 4, perf: null, note: [""] },
-            { live_id: "live2019_07", position: 1, perf: null, note: [""] },
-            { live_id: "live2019_04", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2019_10", position: 1, perf: null, note: [] },
+            { live_id: "live2019_09", position: 1, perf: null, note: [] },
+            { live_id: "live2019_08", position: 4, perf: null, note: [] },
+            { live_id: "live2019_07", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2019_04",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -252,7 +368,7 @@ export const songsIndex = [
         title: "ギミギミラブ",
         title_kana: "ぎみぎみらぶ",
         date: "2019-10-09",
-        cds: [{ id: "sg_01", track: 2 },],
+        cds: [{ id: "sg_01", track: 2 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -261,45 +377,71 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/247zj1W13s0A45rLLxq5Bt",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%AE%E3%83%9F%E3%82%AE%E3%83%9F%E3%83%A9%E3%83%96/1480622919",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%AE%E3%83%9F%E3%82%AE%E3%83%9F%E3%83%A9%E3%83%96/1480622919",
             line_music: "https://music.line.me/webapp/track/mt000000000fd23028",
         },
         live_history: [
-            { live_id: "live2026_05", position: 4, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 5, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 5, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 8, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 4, perf: null, note: [] },
+            { live_id: "live2026_03", position: 5, perf: null, note: [] },
+            { live_id: "live2026_02", position: 5, perf: null, note: [] },
+            { live_id: "live2026_01", position: 8, perf: null, note: [] },
 
-            { live_id: "live2025_06", position: 1, perf: null, note: ["小泉、長野、武藤のみ"] },
-            { live_id: "live2025_03", position: 11, perf: 1, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_06",
+                position: 1,
+                perf: null,
+                note: ["小泉、長野、武藤のみ"],
+            },
+            {
+                live_id: "live2025_03",
+                position: 11,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_08", position: 2, perf: null, note: [""] },
-            { live_id: "live2024_07", position: 6, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 19, perf: null, note: [""] },
+            { live_id: "live2024_08", position: 2, perf: null, note: [] },
+            { live_id: "live2024_07", position: 6, perf: null, note: [] },
+            { live_id: "live2024_01", position: 19, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_14", position: 23, perf: null, note: ["アンコール"] },
-            { live_id: "live2023_13", position: 6, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 8, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_05", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 15, perf: null, note: ["メドレー"] },
+            { live_id: "live2023_16", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_14",
+                position: 23,
+                perf: null,
+                note: ["アンコール"],
+            },
+            { live_id: "live2023_13", position: 6, perf: null, note: [] },
+            { live_id: "live2023_10", position: 8, perf: null, note: [] },
+            { live_id: "live2023_06", position: 3, perf: null, note: [] },
+            { live_id: "live2023_05", position: 4, perf: null, note: [] },
+            { live_id: "live2023_04", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 15,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_11", position: 11, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 13, perf: null, note: [""] },
+            { live_id: "live2022_11", position: 11, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 13, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 15, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 12, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 15, perf: null, note: [] },
+            { live_id: "live2021_02", position: 12, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 5, perf: null, note: [""] },
-            { live_id: "live2020_01", position: 5, perf: null, note: [""] },
+            { live_id: "live2020_03", position: 5, perf: null, note: [] },
+            { live_id: "live2020_01", position: 5, perf: null, note: [] },
 
-            { live_id: "live2019_10", position: 3, perf: null, note: [""] },
-            { live_id: "live2019_09", position: 8, perf: null, note: [""] },
-            { live_id: "live2019_08", position: 1, perf: null, note: [""] },
-            { live_id: "live2019_07", position: 4, perf: null, note: [""] },
+            { live_id: "live2019_10", position: 3, perf: null, note: [] },
+            { live_id: "live2019_09", position: 8, perf: null, note: [] },
+            { live_id: "live2019_08", position: 1, perf: null, note: [] },
+            { live_id: "live2019_07", position: 4, perf: null, note: [] },
         ],
     },
     {
@@ -307,7 +449,7 @@ export const songsIndex = [
         title: "Up  and Down",
         title_kana: "zzz_upanddown",
         date: "2019-10-09",
-        cds: [{ id: "sg_01", track: 3 },],
+        cds: [{ id: "sg_01", track: 3 }],
         lyricist: ["矢野水音"],
         composer: ["朴優尊"],
         arranger: ["楊慶豪"],
@@ -316,21 +458,27 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2fjUWC8ty7l00RPA53NHYP",
-            apple_music: "https://music.apple.com/jp/song/up-and-down/1480622921",
+            apple_music:
+                "https://music.apple.com/jp/song/up-and-down/1480622921",
             line_music: "https://music.line.me/webapp/track/mt000000000fd23029",
         },
         live_history: [
-            { live_id: "live2024_03", position: 5, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 5, perf: null, note: [] },
 
-            { live_id: "live2023_09", position: 6, perf: null, note: [""] },
+            { live_id: "live2023_09", position: 6, perf: null, note: [] },
 
-            { live_id: "live2021_04", position: 6, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2021_01", position: 6, perf: null, note: [""] },
+            {
+                live_id: "live2021_04",
+                position: 6,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_01", position: 6, perf: null, note: [] },
 
-            { live_id: "live2020_02", position: 3, perf: null, note: [""] },
+            { live_id: "live2020_02", position: 3, perf: null, note: [] },
 
-            { live_id: "live2019_09", position: 5, perf: null, note: [""] },
-            { live_id: "live2019_07", position: 3, perf: null, note: [""] },
+            { live_id: "live2019_09", position: 5, perf: null, note: [] },
+            { live_id: "live2019_07", position: 3, perf: null, note: [] },
         ],
     },
     {
@@ -350,27 +498,63 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/08IUfJ5tPNodMLseXpJZZe",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%A9%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC/1480622927",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%A9%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC/1480622927",
             line_music: "https://music.line.me/webapp/track/mt000000000fd2302a",
         },
         live_history: [
-            { live_id: "live2026_03", position: 4, perf: null, note: ["Piano ver."] },
-            
-            { live_id: "live2025_10", position: 3, perf: 2, note: ["日替わり曲"] },
+            {
+                live_id: "live2026_03",
+                position: 4,
+                perf: null,
+                note: ["Piano ver."],
+            },
 
-            { live_id: "live2024_01", position: 13, perf: null, note: ["Piano ver."] },
+            {
+                live_id: "live2025_10",
+                position: 3,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2023_04", position: 18, perf: null, note: [""] },
+            {
+                live_id: "live2024_01",
+                position: 13,
+                perf: null,
+                note: ["Piano ver."],
+            },
 
-            { live_id: "live2022_11", position: 6, perf: null, note: ["Piano ver."] },
+            { live_id: "live2023_04", position: 18, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 20, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2021_01", position: 9, perf: null, note: ["Piano ver."] },
+            {
+                live_id: "live2022_11",
+                position: 6,
+                perf: null,
+                note: ["Piano ver."],
+            },
 
-            { live_id: "live2020_01", position: 4, perf: null, note: ["Piano ver."] },
+            {
+                live_id: "live2021_07",
+                position: 20,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2021_01",
+                position: 9,
+                perf: null,
+                note: ["Piano ver."],
+            },
 
-            { live_id: "live2019_08", position: 2, perf: null, note: [""] },
-            { live_id: "live2019_07", position: 2, perf: null, note: [""] },
+            {
+                live_id: "live2020_01",
+                position: 4,
+                perf: null,
+                note: ["Piano ver."],
+            },
+
+            { live_id: "live2019_08", position: 2, perf: null, note: [] },
+            { live_id: "live2019_07", position: 2, perf: null, note: [] },
         ],
     },
 
@@ -387,50 +571,88 @@ export const songsIndex = [
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ朝日系「BREAK OUT」 2020年1月度オープニングテーマソング"],
+        tieup: [
+            "テレビ朝日系「BREAK OUT」 2020年1月度オープニングテーマソング",
+        ],
         call: true,
         links: {
             mv: "https://www.youtube.com/watch?v=hUO_t7h9sKA",
             spotify: "https://open.spotify.com/track/77w4zGklhZhsM7pdDf63bU",
-            apple_music: "https://music.apple.com/jp/song/%E5%97%9C%E5%A5%BD%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E4%B8%96%E8%AB%96%E8%AA%BF%E6%9F%BB/1490955329",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%97%9C%E5%A5%BD%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E4%B8%96%E8%AB%96%E8%AA%BF%E6%9F%BB/1490955329",
             line_music: "https://music.line.me/webapp/track/mt00000000105e8133",
         },
         live_history: [
-            { live_id: "live2026_05", position: 5, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 2, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 5, perf: null, note: [] },
+            { live_id: "live2026_03", position: 2, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 19, perf: null, note: ["メドレー"] },
-            { live_id: "live2025_01", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 19,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2025_01", position: 5, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 5, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 18, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 5, perf: null, note: [] },
+            { live_id: "live2024_01", position: 18, perf: null, note: [] },
 
-            { live_id: "live2023_13", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 9, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 8, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_01", position: 16, perf: null, note: ["メドレー"] },
+            { live_id: "live2023_13", position: 2, perf: null, note: [] },
+            { live_id: "live2023_10", position: 9, perf: null, note: [] },
+            { live_id: "live2023_09", position: 4, perf: null, note: [] },
+            { live_id: "live2023_07", position: 4, perf: null, note: [] },
+            { live_id: "live2023_06", position: 5, perf: null, note: [] },
+            { live_id: "live2023_04", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_02",
+                position: 8,
+                perf: null,
+                note: ["メドレー"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 16,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_10", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 19, perf: null, note: ["アンコール"] },
-            { live_id: "live2022_05", position: 2, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 9, perf: null, note: [""] },
-            { live_id: "live2022_02", position: 6, perf: null, note: [""] },
+            { live_id: "live2022_10", position: 2, perf: null, note: [] },
+            { live_id: "live2022_09", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 19,
+                perf: null,
+                note: ["アンコール"],
+            },
+            {
+                live_id: "live2022_05",
+                position: 2,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 9, perf: null, note: [] },
+            { live_id: "live2022_02", position: 6, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 3, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2021_04", position: 11, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 4, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 2, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2021_05",
+                position: 3,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_04", position: 11, perf: null, note: [] },
+            { live_id: "live2021_02", position: 4, perf: null, note: [] },
+            { live_id: "live2021_01", position: 2, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 1, perf: null, note: [""] },
-            { live_id: "live2020_01", position: 2, perf: null, note: ["初披露"] },
+            { live_id: "live2020_03", position: 1, perf: null, note: [] },
+            { live_id: "live2020_02", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2020_01",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -438,7 +660,7 @@ export const songsIndex = [
         title: "Joy to the world",
         title_kana: "zzz_joytotheworld",
         date: "2020-01-22",
-        cds: [{ id: "ag_02", track: 2 },],
+        cds: [{ id: "ag_02", track: 2 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -447,26 +669,42 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0hgPezCVXVHmqXGXgwiMSS",
-            apple_music: "https://music.apple.com/jp/song/joy-to-the-world/1492703414",
+            apple_music:
+                "https://music.apple.com/jp/song/joy-to-the-world/1492703414",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9d",
         },
         live_history: [
-            { live_id: "live2026_03", position: 3, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 3, perf: null, note: [] },
 
-            { live_id: "live2024_08", position: 1, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 21, perf: null, note: [""] },
+            { live_id: "live2024_08", position: 1, perf: null, note: [] },
+            { live_id: "live2024_06", position: 21, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 8, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 18, perf: null, note: ["メドレー"] },
+            { live_id: "live2023_14", position: 8, perf: null, note: [] },
+            { live_id: "live2023_06", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 18,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_06", position: 8, perf: null, note: [""] },
+            { live_id: "live2022_06", position: 8, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 20, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2021_04", position: 4, perf: null, note: [""] },
+            {
+                live_id: "live2021_07",
+                position: 20,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_04", position: 4, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 4, perf: null, note: [""] },
-            { live_id: "live2020_01", position: 3, perf: null, note: ["初披露"] },
+            { live_id: "live2020_03", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2020_01",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -474,7 +712,7 @@ export const songsIndex = [
         title: "ジュトゥブ",
         title_kana: "じゅとぅぶ",
         date: "2020-01-22",
-        cds: [{ id: "sg_02", track: 3 },],
+        cds: [{ id: "sg_02", track: 3 }],
         lyricist: ["100回嘔吐", "久下真音"],
         composer: ["100回嘔吐"],
         arranger: ["100回嘔吐"],
@@ -483,24 +721,50 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=tFS9kfOxlbw",
             spotify: "https://open.spotify.com/track/6S11Fpkixsbzk1h709XzPi",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%B8%E3%83%A5%E3%83%88%E3%82%A5%E3%83%96/1492703417",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%B8%E3%83%A5%E3%83%88%E3%82%A5%E3%83%96/1492703417",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9e",
         },
         live_history: [
-            { live_id: "live2025_02", position: 13, perf: 2, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_02",
+                position: 13,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_03", position: 4, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 4, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 8, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2023_14", position: 10, perf: null, note: [""] },
+            {
+                live_id: "live2023_16",
+                position: 8,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_14", position: 10, perf: null, note: [] },
 
-            { live_id: "live2022_06", position: 20, perf: null, note: ["アンコール"] },
-            { live_id: "live2022_03", position: 10, perf: null, note: [""] },
+            {
+                live_id: "live2022_06",
+                position: 20,
+                perf: null,
+                note: ["アンコール"],
+            },
+            { live_id: "live2022_03", position: 10, perf: null, note: [] },
 
-            { live_id: "live2021_02", position: 14, perf: null, note: ["アンコール"] },
+            {
+                live_id: "live2021_02",
+                position: 14,
+                perf: null,
+                note: ["アンコール"],
+            },
 
-            { live_id: "live2020_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2020_05", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2020_02",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -508,7 +772,7 @@ export const songsIndex = [
         title: "時速3km",
         title_kana: "じそくさんきろ",
         date: "2020-01-22",
-        cds: [{ id: "sg_02", track: 4 },],
+        cds: [{ id: "sg_02", track: 4 }],
         lyricist: ["100回嘔吐"],
         composer: ["100回嘔吐"],
         arranger: ["100回嘔吐"],
@@ -517,20 +781,31 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/05IaFhpk0snhDX4UjEoprs",
-            apple_music: "https://music.apple.com/jp/song/%E6%99%82%E9%80%9F3km/1492703429",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%99%82%E9%80%9F3km/1492703429",
             line_music: "https://music.line.me/webapp/track/mt0000000010699a9f",
         },
         live_history: [
-            { live_id: "live2024_03", position: 20, perf: 2, note: ["日替わり曲", "アンコール"] },
+            {
+                live_id: "live2024_03",
+                position: 20,
+                perf: 2,
+                note: ["日替わり曲", "アンコール"],
+            },
 
-            { live_id: "live2023_16", position: 13, perf: null, note: [""] },
+            { live_id: "live2023_16", position: 13, perf: null, note: [] },
 
-            { live_id: "live2022_08", position: 5, perf: null, note: [""] },
+            { live_id: "live2022_08", position: 5, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 21, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 7, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 21, perf: null, note: [] },
+            { live_id: "live2021_02", position: 7, perf: null, note: [] },
 
-            { live_id: "live2020_02", position: 7, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2020_02",
+                position: 7,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -538,7 +813,7 @@ export const songsIndex = [
         title: "嘘から始まる自称系",
         title_kana: "うそからはじまるじしょうけい",
         date: "2020-04-11",
-        cds: [{ id: "al_01", track: 3 },],
+        cds: [{ id: "al_01", track: 3 }],
         lyricist: ["AZUKI", "Mayune", "福原健太郎", "山本メーコ"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -547,26 +822,37 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=JSiRJSfHTP4",
             spotify: "https://open.spotify.com/track/76w3sWVKL3xdFP5FBOv4fW",
-            apple_music: "https://music.apple.com/jp/song/%E5%98%98%E3%81%8B%E3%82%89%E5%A7%8B%E3%81%BE%E3%82%8B%E8%87%AA%E7%A7%B0%E7%B3%BB/1503425540",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%98%98%E3%81%8B%E3%82%89%E5%A7%8B%E3%81%BE%E3%82%8B%E8%87%AA%E7%A7%B0%E7%B3%BB/1503425540",
             line_music: "https://music.line.me/webapp/track/mt0000000010c2b802",
         },
         live_history: [
-            { live_id: "live2025_03", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 5, perf: null, note: [] },
 
-            { live_id: "live2024_03", position: 13, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 13, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 9, perf: null, note: ["メドレー", "小泉ソロ"] },
+            { live_id: "live2023_14", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 9,
+                perf: null,
+                note: ["メドレー", "小泉ソロ"],
+            },
 
-            { live_id: "live2022_06", position: 4, perf: null, note: [""] },
+            { live_id: "live2022_06", position: 4, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 10, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 5, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 1, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 8, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 10, perf: null, note: [] },
+            { live_id: "live2021_04", position: 5, perf: null, note: [] },
+            { live_id: "live2021_02", position: 1, perf: null, note: [] },
+            { live_id: "live2021_01", position: 8, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 3, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 2, perf: null, note: ["初披露"] },
+            { live_id: "live2020_03", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2020_02",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -574,7 +860,7 @@ export const songsIndex = [
         title: "シェイクスピアに学ぶ恋愛定理",
         title_kana: "しぇいくすぴあにまなぶれんあいていり",
         date: "2020-07-12",
-        cds: [{ id: "al_01", track: 7 },],
+        cds: [{ id: "al_01", track: 7 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -583,49 +869,105 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=HK8CCSngJHE",
             spotify: "https://open.spotify.com/track/0Xvrfpr02t3rvgYsI6ZEZe",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%B7%E3%82%A7%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%94%E3%82%A2%E3%81%AB%E5%AD%A6%E3%81%B6%E6%81%8B%E6%84%9B%E5%AE%9A%E7%90%86/1519384789",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%B7%E3%82%A7%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%94%E3%82%A2%E3%81%AB%E5%AD%A6%E3%81%B6%E6%81%8B%E6%84%9B%E5%AE%9A%E7%90%86/1519384789",
             line_music: "https://music.line.me/webapp/track/mt00000000115e5bec",
         },
         live_history: [
-            { live_id: "live2026_04", position: 2, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 6, perf: null, note: [""] },
+            { live_id: "live2026_04", position: 2, perf: null, note: [] },
+            { live_id: "live2026_03", position: 6, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 7, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 4, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 11, perf: 2, note: [""] },
-            { live_id: "live2025_02", position: 20, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_10", position: 7, perf: null, note: [] },
+            { live_id: "live2025_05", position: 4, perf: null, note: [] },
+            { live_id: "live2025_03", position: 11, perf: 2, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 20,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_07", position: 8, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 10, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 3, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 8, perf: null, note: [] },
+            { live_id: "live2024_06", position: 10, perf: null, note: [] },
+            { live_id: "live2024_01", position: 3, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 7, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2023_14", position: 22, perf: null, note: ["アンコール"] },
-            { live_id: "live2023_13", position: 7, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 15, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2023_02", position: 9, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_01", position: 25, perf: null, note: [""] },
+            {
+                live_id: "live2023_16",
+                position: 7,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_14",
+                position: 22,
+                perf: null,
+                note: ["アンコール"],
+            },
+            { live_id: "live2023_13", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_02",
+                position: 9,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2023_01", position: 25, perf: null, note: [] },
 
-            { live_id: "live2022_10", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 8, perf: null, note: [""] },
-            { live_id: "live2022_07", position: 1, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2022_06", position: 14, perf: null, note: [""] },
-            { live_id: "live2022_05", position: 2, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_02", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_01", position: 3, perf: null, note: ["シャッフル曲"] },
+            { live_id: "live2022_10", position: 4, perf: null, note: [] },
+            { live_id: "live2022_09", position: 8, perf: null, note: [] },
+            {
+                live_id: "live2022_07",
+                position: 1,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_06", position: 14, perf: null, note: [] },
+            {
+                live_id: "live2022_05",
+                position: 2,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 3, perf: null, note: [] },
+            { live_id: "live2022_02", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2022_01",
+                position: 3,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
 
-            { live_id: "live2021_07", position: 20, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2021_06", position: 5, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 4, perf: null, note: ["シャッフル曲"] },
-            { live_id: "live2021_04", position: 7, perf: null, note: [""] },
-            { live_id: "live2021_03", position: 4, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 11, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 4, perf: null, note: [""] },
+            {
+                live_id: "live2021_07",
+                position: 20,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_06", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2021_05",
+                position: 4,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
+            { live_id: "live2021_04", position: 7, perf: null, note: [] },
+            { live_id: "live2021_03", position: 4, perf: null, note: [] },
+            { live_id: "live2021_02", position: 11, perf: null, note: [] },
+            { live_id: "live2021_01", position: 4, perf: null, note: [] },
 
-            { live_id: "live2020_03", position: 2, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 6, perf: null, note: [""] },
-            { live_id: "live2020_01", position: 6, perf: null, note: ["初披露"] },
+            { live_id: "live2020_03", position: 2, perf: null, note: [] },
+            { live_id: "live2020_02", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2020_01",
+                position: 6,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -633,7 +975,7 @@ export const songsIndex = [
         title: "幽かな夜の夢",
         title_kana: "かすかなよのゆめ",
         date: "2020-10-24",
-        cds: [{ id: "al_01", track: 8 },],
+        cds: [{ id: "al_01", track: 8 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -642,29 +984,50 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=WmXVTocP5DE",
             spotify: "https://open.spotify.com/track/5bOBtSbFMCBG96l7A0mky7",
-            apple_music: "https://music.apple.com/jp/song/%E5%B9%BD%E3%81%8B%E3%81%AA%E5%A4%9C%E3%81%AE%E5%A4%A2/1534070866",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%B9%BD%E3%81%8B%E3%81%AA%E5%A4%9C%E3%81%AE%E5%A4%A2/1534070866",
             line_music: "https://music.line.me/webapp/track/mt0000000011ec2aeb",
         },
         live_history: [
-            { live_id: "live2025_10", position: 12, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 12, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 7, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 7, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 8, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 7, perf: null, note: [] },
+            { live_id: "live2024_08", position: 7, perf: null, note: [] },
+            { live_id: "live2024_03", position: 8, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 8, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2023_09", position: 20, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 11, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 14, perf: null, note: ["メドレー", "長野ソロ"] },
-            
-            { live_id: "live2022_06", position: 12, perf: 7, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 18, perf: null, note: [""] },
-            { live_id: "live2022_02", position: 1, perf: null, note: [""] },
+            {
+                live_id: "live2023_16",
+                position: 8,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_09", position: 20, perf: null, note: [] },
+            { live_id: "live2023_04", position: 11, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 14,
+                perf: null,
+                note: ["メドレー", "長野ソロ"],
+            },
 
-            { live_id: "live2021_07", position: 8, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 8, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 13, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 7,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 18, perf: null, note: [] },
+            { live_id: "live2022_02", position: 1, perf: null, note: [] },
+
+            { live_id: "live2021_07", position: 8, perf: null, note: [] },
+            { live_id: "live2021_05", position: 2, perf: null, note: [] },
+            { live_id: "live2021_04", position: 8, perf: null, note: [] },
+            {
+                live_id: "live2021_02",
+                position: 13,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -672,7 +1035,7 @@ export const songsIndex = [
         title: "In the Nude",
         title_kana: "zzz_inthenude",
         date: "2020-12-13",
-        cds: [{ id: "al_01", track: 4 },],
+        cds: [{ id: "al_01", track: 4 }],
         lyricist: ["nqrse", "久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -681,28 +1044,44 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3iPQiBrNFhXxZZz1fleVdI",
-            apple_music: "https://music.apple.com/jp/song/in-the-nude/1542565718",
+            apple_music:
+                "https://music.apple.com/jp/song/in-the-nude/1542565718",
             line_music: "https://music.line.me/webapp/track/mt000000001230be85",
         },
         live_history: [
-            { live_id: "live2025_02", position: 16, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 16, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 7, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 9, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 7, perf: null, note: [] },
+            { live_id: "live2024_01", position: 9, perf: null, note: [] },
 
-            { live_id: "live2023_06", position: 7, perf: null, note: ["大倉、武藤のみ"] },
-            { live_id: "live2023_04", position: 5, perf: null, note: ["小泉、桜木、吉澤のみ"] },
+            {
+                live_id: "live2023_06",
+                position: 7,
+                perf: null,
+                note: ["大倉、武藤のみ"],
+            },
+            {
+                live_id: "live2023_04",
+                position: 5,
+                perf: null,
+                note: ["小泉、桜木、吉澤のみ"],
+            },
 
-            { live_id: "live2022_11", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 7, perf: null, note: [""] },
+            { live_id: "live2022_11", position: 4, perf: null, note: [] },
+            { live_id: "live2022_06", position: 7, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 13, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 3, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 9, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 7, perf: null, note: [""] },
+            { live_id: "live2021_07", position: 13, perf: null, note: [] },
+            { live_id: "live2021_04", position: 3, perf: null, note: [] },
+            { live_id: "live2021_02", position: 9, perf: null, note: [] },
+            { live_id: "live2021_01", position: 7, perf: null, note: [] },
 
-            { live_id: "live2020_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2020_02", position: 4, perf: null, note: ["初披露"] },
+            { live_id: "live2020_05", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2020_02",
+                position: 4,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -712,7 +1091,7 @@ export const songsIndex = [
         title: "スノウダンス",
         title_kana: "すのうだんす",
         date: "2021-01-01",
-        cds: [{ id: "al_01", track: 5 },],
+        cds: [{ id: "al_01", track: 5 }],
         lyricist: ["Ayase"],
         composer: ["Ayase"],
         arranger: ["Ayase"],
@@ -721,23 +1100,44 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=jmzPBy-9LFs",
             spotify: "https://open.spotify.com/track/4c1WDszgF2oz1UpGcwxax2",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%B9%E3%83%8E%E3%82%A6%E3%83%80%E3%83%B3%E3%82%B9/1542565719",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%B9%E3%83%8E%E3%82%A6%E3%83%80%E3%83%B3%E3%82%B9/1542565719",
             line_music: "https://music.line.me/webapp/track/mt00000000123b011f",
         },
         live_history: [
-            { live_id: "live2026_01", position: 14, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 14, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 1, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 1, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 10, perf: null, note: [""] },
-            { live_id: "live2023_14", position: 12, perf: null, note: ["小泉、桜木、武藤のみ"] },
+            { live_id: "live2023_16", position: 10, perf: null, note: [] },
+            {
+                live_id: "live2023_14",
+                position: 12,
+                perf: null,
+                note: ["小泉、桜木、武藤のみ"],
+            },
 
-            { live_id: "live2022_06", position: 12, perf: 5, note: ["日替わり曲"] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 5,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2021_07", position: 6, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 6, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2021_02", position: 6, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2021_07", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2021_04",
+                position: 6,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_02", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2021_01",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -745,7 +1145,7 @@ export const songsIndex = [
         title: "柘榴",
         title_kana: "ざくろ",
         date: "2021-01-13",
-        cds: [{ id: "al_01", track: 1 },],
+        cds: [{ id: "al_01", track: 1 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音", "100回嘔吐"],
@@ -754,32 +1154,58 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=6CuNydAVO5Q",
             spotify: "https://open.spotify.com/track/3QeJKotbyJm2Bf65us2XI2",
-            apple_music: "https://music.apple.com/jp/song/%E6%9F%98%E6%A6%B4/1542565381",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%9F%98%E6%A6%B4/1542565381",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54cc",
         },
         live_history: [
-            { live_id: "live2026_01", position: 16, perf: 2, note: [""] },
+            { live_id: "live2026_01", position: 16, perf: 2, note: [] },
 
-            { live_id: "live2025_02", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 2, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 24, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 24, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 10, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 5, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_01", position: 24, perf: null, note: [""] },
+            { live_id: "live2023_14", position: 3, perf: null, note: [] },
+            { live_id: "live2023_06", position: 10, perf: null, note: [] },
+            {
+                live_id: "live2023_02",
+                position: 5,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2023_01", position: 24, perf: null, note: [] },
 
-            { live_id: "live2022_08", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2022_05", position: 1, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 5, perf: null, note: [""] },
+            { live_id: "live2022_08", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2022_05",
+                position: 1,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 5, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 12, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 3, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2021_04", position: 10, perf: null, note: [""] },
-            { live_id: "live2021_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 2, perf: null, note: [""] },
-            { live_id: "live2021_01", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2021_07", position: 12, perf: null, note: [] },
+            {
+                live_id: "live2021_05",
+                position: 3,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_04", position: 10, perf: null, note: [] },
+            { live_id: "live2021_03", position: 1, perf: null, note: [] },
+            { live_id: "live2021_02", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2021_01",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -787,7 +1213,7 @@ export const songsIndex = [
         title: "夢に唄えば",
         title_kana: "ゆめにうたえば",
         date: "2021-01-13",
-        cds: [{ id: "al_01", track: 6 },],
+        cds: [{ id: "al_01", track: 6 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -796,24 +1222,40 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5GUVHXaFyEXP9lQEwVocQY",
-            apple_music: "https://music.apple.com/jp/song/%E5%A4%A2%E3%81%AB%E5%94%84%E3%81%88%E3%81%B0/1542565721",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%A4%A2%E3%81%AB%E5%94%84%E3%81%88%E3%81%B0/1542565721",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d1",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 1, note: [""] },
+            { live_id: "live2026_01", position: 7, perf: 1, note: [] },
 
-            { live_id: "live2024_08", position: 4, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 17, perf: null, note: [""] },
+            { live_id: "live2024_08", position: 4, perf: null, note: [] },
+            { live_id: "live2024_01", position: 17, perf: null, note: [] },
 
-            { live_id: "live2023_06", position: 6, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 3, perf: null, note: [""] },
+            { live_id: "live2023_06", position: 6, perf: null, note: [] },
+            { live_id: "live2023_01", position: 3, perf: null, note: [] },
 
-            { live_id: "live2022_07", position: 1, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2022_06", position: 16, perf: null, note: [""] },
-            { live_id: "live2022_05", position: 1, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 8, perf: null, note: [""] },
+            {
+                live_id: "live2022_07",
+                position: 1,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_06", position: 16, perf: null, note: [] },
+            {
+                live_id: "live2022_05",
+                position: 1,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 8, perf: null, note: [] },
 
-            { live_id: "live2021_02", position: 8, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_02",
+                position: 8,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -821,7 +1263,7 @@ export const songsIndex = [
         title: "ネバーエンドロール",
         title_kana: "ねばーえんどろーる",
         date: "2021-01-13",
-        cds: [{ id: "al_01", track: 10 },],
+        cds: [{ id: "al_01", track: 10 }],
         lyricist: ["100回嘔吐"],
         composer: ["100回嘔吐"],
         arranger: ["100回嘔吐"],
@@ -830,31 +1272,52 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1vqp3VxbSsPUYul4mIfjGz",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%8D%E3%83%90%E3%83%BC%E3%82%A8%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%AB/1542565725",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%8D%E3%83%90%E3%83%BC%E3%82%A8%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%AB/1542565725",
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d5",
         },
         live_history: [
-            { live_id: "live2026_03", position: 26, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 26, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 3, perf: 1, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_10",
+                position: 3,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_08", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 20, perf: null, note: [""] },
+            { live_id: "live2024_08", position: 3, perf: null, note: [] },
+            { live_id: "live2024_01", position: 20, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 6, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 10, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 14, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 17, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 29, perf: null, note: ["アンコール"] },
+            { live_id: "live2023_14", position: 6, perf: null, note: [] },
+            { live_id: "live2023_10", position: 10, perf: null, note: [] },
+            { live_id: "live2023_09", position: 14, perf: null, note: [] },
+            { live_id: "live2023_06", position: 17, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 29,
+                perf: null,
+                note: ["アンコール"],
+            },
 
-            { live_id: "live2022_10", position: 6, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 10, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 9, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 16, perf: null, note: [""] },
+            { live_id: "live2022_10", position: 6, perf: null, note: [] },
+            { live_id: "live2022_09", position: 10, perf: null, note: [] },
+            { live_id: "live2022_06", position: 9, perf: null, note: [] },
+            { live_id: "live2022_03", position: 16, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 16, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 10, perf: null, note: ["初披露"] },
-            { live_id: "live2021_02", position: 15, perf: null, note: ["アンコール"] },
+            { live_id: "live2021_07", position: 16, perf: null, note: [] },
+            {
+                live_id: "live2021_02",
+                position: 10,
+                perf: null,
+                note: ["初披露"],
+            },
+            {
+                live_id: "live2021_02",
+                position: 15,
+                perf: null,
+                note: ["アンコール"],
+            },
         ],
     },
     {
@@ -862,7 +1325,7 @@ export const songsIndex = [
         title: "犬と猫とミルクにシュガー",
         title_kana: "いぬとねことみるくにしゅがー",
         date: "2021-05-05",
-        cds: [{ id: "al_02", track: 2 },],
+        cds: [{ id: "al_02", track: 2 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -871,24 +1334,50 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=9ACHYl5SuZg",
             spotify: "https://open.spotify.com/track/1qViBt9YSX8YWArUuBLUag",
-            apple_music: "https://music.apple.com/jp/song/%E7%8A%AC%E3%81%A8%E7%8C%AB%E3%81%A8%E3%83%9F%E3%83%AB%E3%82%AF%E3%81%AB%E3%82%B7%E3%83%A5%E3%82%AC%E3%83%BC/1562605620",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%8A%AC%E3%81%A8%E7%8C%AB%E3%81%A8%E3%83%9F%E3%83%AB%E3%82%AF%E3%81%AB%E3%82%B7%E3%83%A5%E3%82%AC%E3%83%BC/1562605620",
             line_music: "https://music.line.me/webapp/track/mt0000000013b96d56",
         },
         live_history: [
-            { live_id: "live2024_09", position: 3, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 3, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 14, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 8, perf: null, note: ["メドレー", "吉澤ソロ"] },
+            { live_id: "live2023_14", position: 14, perf: null, note: [] },
+            { live_id: "live2023_06", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 8,
+                perf: null,
+                note: ["メドレー", "吉澤ソロ"],
+            },
 
-            { live_id: "live2022_11", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 4, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 21, perf: 1, note: ["日替わり曲", "アンコール"] },
-            { live_id: "live2022_01", position: 4, perf: null, note: ["シャッフル曲"] },
+            { live_id: "live2022_11", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 4,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2022_03",
+                position: 21,
+                perf: 1,
+                note: ["日替わり曲", "アンコール"],
+            },
+            {
+                live_id: "live2022_01",
+                position: 4,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
 
-            { live_id: "live2021_07", position: 11, perf: null, note: [""] },
-            { live_id: "live2021_04", position: 9, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2021_07", position: 11, perf: null, note: [] },
+            { live_id: "live2021_04", position: 9, perf: null, note: [] },
+            {
+                live_id: "live2021_02",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -896,7 +1385,7 @@ export const songsIndex = [
         title: "以呂波 feat.fox capture plan",
         title_kana: "いろは",
         date: "2021-07-07",
-        cds: [{ id: "al_02", track: 4 },],
+        cds: [{ id: "al_02", track: 4 }],
         lyricist: ["久下真音"],
         composer: ["岸本亮"],
         arranger: ["fox capture plan", "久下真音"],
@@ -905,26 +1394,47 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=MXJS3WswkSQ",
             spotify: "https://open.spotify.com/track/0GouqJGQE2dtO7wVol4yvr",
-            apple_music: "https://music.apple.com/jp/song/%E4%BB%A5%E5%91%82%E6%B3%A2-feat-fox-capture-plan/1572217924",
+            apple_music:
+                "https://music.apple.com/jp/song/%E4%BB%A5%E5%91%82%E6%B3%A2-feat-fox-capture-plan/1572217924",
             line_music: "https://music.line.me/webapp/track/mt00000000141d0ede",
         },
         live_history: [
-            { live_id: "live2024_06", position: 2, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 2, perf: null, note: [] },
 
-            { live_id: "live2023_10", position: 7, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 15, perf: 6, note: ["日替わり曲"] },
-            { live_id: "live2023_02", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 21, perf: null, note: [""] },
+            { live_id: "live2023_10", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 6,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_02", position: 3, perf: null, note: [] },
+            { live_id: "live2023_01", position: 21, perf: null, note: [] },
 
-            { live_id: "live2022_09", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 4, perf: null, note: [""] },
+            { live_id: "live2022_09", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 4, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 7, perf: null, note: [""] },
-            { live_id: "live2021_06", position: 4, perf: null, note: [""] },
-            { live_id: "live2021_05", position: 3, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2021_04", position: 1, perf: null, note: [""] },
-            { live_id: "live2021_03", position: 3, perf: null, note: ["初披露"] },
+            { live_id: "live2021_07", position: 7, perf: null, note: [] },
+            { live_id: "live2021_06", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2021_05",
+                position: 3,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2021_04", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2021_03",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -932,7 +1442,7 @@ export const songsIndex = [
         title: "灼けゆく青",
         title_kana: "やけゆくあお",
         date: "2021-09-01",
-        cds: [{ id: "al_02", track: 6 },],
+        cds: [{ id: "al_02", track: 6 }],
         lyricist: ["吐息"],
         composer: ["吐息"],
         arranger: ["吐息"],
@@ -941,22 +1451,28 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=UwBHtKbLcXk",
             spotify: "https://open.spotify.com/track/2HQvL3AENi8H6LPbpd58wA",
-            apple_music: "https://music.apple.com/jp/song/%E7%81%BC%E3%81%91%E3%82%86%E3%81%8F%E9%9D%92/1580333930",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%81%BC%E3%81%91%E3%82%86%E3%81%8F%E9%9D%92/1580333930",
             line_music: "https://music.line.me/webapp/track/mt000000001474720a",
         },
         live_history: [
-            { live_id: "live2025_08", position: 9, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 17, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 9, perf: null, note: [] },
+            { live_id: "live2025_02", position: 17, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 15, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 24, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 15, perf: null, note: [] },
+            { live_id: "live2024_01", position: 24, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 4, perf: null, note: [""] },
+            { live_id: "live2023_14", position: 4, perf: null, note: [] },
 
-            { live_id: "live2022_06", position: 3, perf: null, note: [""] },
+            { live_id: "live2022_06", position: 3, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 4, perf: null, note: [""] },
-            { live_id: "live2021_06", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2021_07", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2021_06",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -964,34 +1480,57 @@ export const songsIndex = [
         title: "豪雨",
         title_kana: "ごうう",
         date: "2021-10-19",
-        cds: [{ id: "al_02", track: 3 },],
+        cds: [{ id: "al_02", track: 3 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ東京系10月クールドラマ「じゃない方の彼女」 エンディングテーマソング"],
+        tieup: [
+            "テレビ東京系10月クールドラマ「じゃない方の彼女」 エンディングテーマソング",
+        ],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=YdA1h6qG6C4",
             spotify: "https://open.spotify.com/track/1q8uK9dFtc0IOolOki5JfT",
-            apple_music: "https://music.apple.com/jp/song/%E8%B1%AA%E9%9B%A8/1589020820",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%B1%AA%E9%9B%A8/1589020820",
             line_music: "https://music.line.me/webapp/track/mt0000000014d29bc1",
         },
         live_history: [
-            { live_id: "live2026_04", position: 3, perf: null, note: [""] },
+            { live_id: "live2026_04", position: 3, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 15, perf: null, note: [""] },
-            
-            { live_id: "live2023_16", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 15, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2023_02", position: 6, perf: null, note: ["メドレー"] },
+            { live_id: "live2024_06", position: 15, perf: null, note: [] },
 
-            { live_id: "live2022_08", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 6, perf: null, note: [""] },
-            { live_id: "live2022_02", position: 3, perf: null, note: [""] },
-            { live_id: "live2022_01", position: 2, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2023_16", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_02",
+                position: 6,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2021_07", position: 5, perf: null, note: [""] },
-            { live_id: "live2021_06", position: 3, perf: null, note: ["初披露"] },
+            { live_id: "live2022_08", position: 3, perf: null, note: [] },
+            { live_id: "live2022_03", position: 6, perf: null, note: [] },
+            { live_id: "live2022_02", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2022_01",
+                position: 2,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+
+            { live_id: "live2021_07", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2021_06",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -999,7 +1538,7 @@ export const songsIndex = [
         title: "半分相逢傘",
         title_kana: "はんぶんあいあいがさ",
         date: "2021-10-28",
-        cds: [{ id: "al_02", track: 5 },],
+        cds: [{ id: "al_02", track: 5 }],
         lyricist: ["s-num"],
         composer: ["s-num"],
         arranger: ["眞塩楓"],
@@ -1008,23 +1547,54 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=BqziR8OHwSQ",
             spotify: "https://open.spotify.com/track/3Xj9PZaqPhZUCUqvMVKVpf",
-            apple_music: "https://music.apple.com/jp/song/%E5%8D%8A%E5%88%86%E7%9B%B8%E9%80%A2%E5%82%98/1587574654",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%8D%8A%E5%88%86%E7%9B%B8%E9%80%A2%E5%82%98/1587574654",
             line_music: "https://music.line.me/webapp/track/mt0000000014c3c588",
         },
         live_history: [
-            { live_id: "live2024_06", position: 6, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 6, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 8, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2023_06", position: 8, perf: null, note: ["桜木、吉澤のみ"] },
-            { live_id: "live2023_04", position: 6, perf: null, note: ["大倉、長野のみ"] },
-            { live_id: "live2023_01", position: 11, perf: null, note: ["メドレー", "杢代ソロ"] },
+            {
+                live_id: "live2023_16",
+                position: 8,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_06",
+                position: 8,
+                perf: null,
+                note: ["桜木、吉澤のみ"],
+            },
+            {
+                live_id: "live2023_04",
+                position: 6,
+                perf: null,
+                note: ["大倉、長野のみ"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 11,
+                perf: null,
+                note: ["メドレー", "杢代ソロ"],
+            },
 
-            { live_id: "live2022_09", position: 6, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 15, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 17, perf: null, note: [""] },
-            { live_id: "live2022_01", position: 2, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2022_09", position: 6, perf: null, note: [] },
+            { live_id: "live2022_06", position: 15, perf: null, note: [] },
+            { live_id: "live2022_03", position: 17, perf: null, note: [] },
+            {
+                live_id: "live2022_01",
+                position: 2,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2021_07", position: 14, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1032,7 +1602,7 @@ export const songsIndex = [
         title: "黄昏よりも早く疾走れ",
         title_kana: "たそがれよりもはやくはしれ",
         date: "2021-11-20",
-        cds: [{ id: "al_02", track: 1 },],
+        cds: [{ id: "al_02", track: 1 }],
         lyricist: ["みきとP"],
         composer: ["みきとP"],
         arranger: ["木下哲", "みきとP"],
@@ -1041,23 +1611,39 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=SnduVH9DPKw",
             spotify: "https://open.spotify.com/track/3Kn0Df5iSkTl2tcQMatL5T",
-            apple_music: "https://music.apple.com/jp/song/%E9%BB%84%E6%98%8F%E3%82%88%E3%82%8A%E3%82%82%E6%97%A9%E3%81%8F%E7%96%BE%E8%B5%B0%E3%82%8C/1591870255",
+            apple_music:
+                "https://music.apple.com/jp/song/%E9%BB%84%E6%98%8F%E3%82%88%E3%82%8A%E3%82%82%E6%97%A9%E3%81%8F%E7%96%BE%E8%B5%B0%E3%82%8C/1591870255",
             line_music: "https://music.line.me/webapp/track/mt0000000014eb5845",
         },
         live_history: [
-            { live_id: "live2024_06", position: 4, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 4, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 6, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2023_09", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 20, perf: null, note: [""] },
+            {
+                live_id: "live2023_16",
+                position: 6,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_09", position: 3, perf: null, note: [] },
+            { live_id: "live2023_01", position: 20, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 13, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 21, perf: 2, note: ["日替わり曲", "アンコール"] },
-            { live_id: "live2022_01", position: 1, perf: null, note: [""] },
+            { live_id: "live2022_11", position: 13, perf: null, note: [] },
+            { live_id: "live2022_09", position: 1, perf: null, note: [] },
+            { live_id: "live2022_06", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2022_03",
+                position: 21,
+                perf: 2,
+                note: ["日替わり曲", "アンコール"],
+            },
+            { live_id: "live2022_01", position: 1, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 1, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1065,7 +1651,7 @@ export const songsIndex = [
         title: "J*O*K*E*R",
         title_kana: "zzz_joker",
         date: "2021-12-08",
-        cds: [{ id: "al_02", track: 7 },],
+        cds: [{ id: "al_02", track: 7 }],
         lyricist: ["ど〜ぱみん"],
         composer: ["ど〜ぱみん"],
         arranger: ["ど〜ぱみん"],
@@ -1078,18 +1664,48 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dad",
         },
         live_history: [
-            { live_id: "live2024_09", position: 2, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 2, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 14, perf: null, note: ["大倉、長野、杢代、吉澤のみ"] },
-            { live_id: "live2023_09", position: 15, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2023_06", position: 9, perf: null, note: ["小泉、長野のみ"] },
-            { live_id: "live2023_01", position: 7, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2023_14",
+                position: 14,
+                perf: null,
+                note: ["大倉、長野、杢代、吉澤のみ"],
+            },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_06",
+                position: 9,
+                perf: null,
+                note: ["小泉、長野のみ"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 7,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_08", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 6, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 7, perf: null, note: [""] },
+            { live_id: "live2022_08", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 6,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 7, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 3, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1097,7 +1713,7 @@ export const songsIndex = [
         title: "0to1の幻想",
         title_kana: "0to1のげんそう",
         date: "2021-12-08",
-        cds: [{ id: "al_02", track: 8 },],
+        cds: [{ id: "al_02", track: 8 }],
         lyricist: ["Bee Goodman"],
         composer: ["Bee Goodman", "ES-PLANT"],
         arranger: ["Bee Goodman"],
@@ -1106,30 +1722,46 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/636awXV8eDX6gD6fA0WVRx",
-            apple_music: "https://music.apple.com/jp/song/0to1%E3%81%AE%E5%B9%BB%E6%83%B3/1595790435",
+            apple_music:
+                "https://music.apple.com/jp/song/0to1%E3%81%AE%E5%B9%BB%E6%83%B3/1595790435",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3dae",
         },
         live_history: [
-            { live_id: "live2025_08", position: 5, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 5, perf: null, note: [] },
+            { live_id: "live2025_03", position: 4, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 27, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 27, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 19, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 12, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 7, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 12, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 22, perf: null, note: [""] },
+            { live_id: "live2023_14", position: 19, perf: null, note: [] },
+            { live_id: "live2023_09", position: 12, perf: null, note: [] },
+            { live_id: "live2023_07", position: 7, perf: null, note: [] },
+            { live_id: "live2023_06", position: 12, perf: null, note: [] },
+            { live_id: "live2023_02", position: 2, perf: null, note: [] },
+            { live_id: "live2023_01", position: 22, perf: null, note: [] },
 
-            { live_id: "live2022_09", position: 7, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_05", position: 3, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 14, perf: null, note: [""] },
-            { live_id: "live2022_02", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_01", position: 2, perf: 3, note: ["日替わり曲"] },
+            { live_id: "live2022_09", position: 7, perf: null, note: [] },
+            { live_id: "live2022_06", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2022_05",
+                position: 3,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 14, perf: null, note: [] },
+            { live_id: "live2022_02", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2022_01",
+                position: 2,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2021_07", position: 9, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 9,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1137,7 +1769,7 @@ export const songsIndex = [
         title: "夜夏",
         title_kana: "よか",
         date: "2021-12-08",
-        cds: [{ id: "al_02", track: 9 },],
+        cds: [{ id: "al_02", track: 9 }],
         lyricist: ["霧エクラ"],
         composer: ["霧エクラ"],
         arranger: ["霧エクラ"],
@@ -1146,16 +1778,22 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5r8RkM9tVab347UF2SRQt9",
-            apple_music: "https://music.apple.com/jp/song/%E5%A4%9C%E5%A4%8F/1595790436",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%A4%9C%E5%A4%8F/1595790436",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3daf",
         },
         live_history: [
-            { live_id: "live2023_09", position: 8, perf: null, note: [""] },
+            { live_id: "live2023_09", position: 8, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 8, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 12, perf: null, note: [""] },
+            { live_id: "live2022_11", position: 8, perf: null, note: [] },
+            { live_id: "live2022_03", position: 12, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 17, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 17,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1163,7 +1801,7 @@ export const songsIndex = [
         title: "藍色閃光",
         title_kana: "あいいろせんこう",
         date: "2021-12-08",
-        cds: [{ id: "al_02", track: 10 },],
+        cds: [{ id: "al_02", track: 10 }],
         lyricist: ["Art knows me"],
         composer: ["Art knows me"],
         arranger: ["村山⭐︎潤"],
@@ -1172,18 +1810,29 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=UEjalJI6GWI",
             spotify: "https://open.spotify.com/track/0iOXGy6dtAqEuaWhaqkb4R",
-            apple_music: "https://music.apple.com/jp/song/%E8%97%8D%E8%89%B2%E9%96%83%E5%85%89/1595790437",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%97%8D%E8%89%B2%E9%96%83%E5%85%89/1595790437",
             line_music: "https://music.line.me/webapp/track/mt00000000150e3db0",
         },
         live_history: [
-            { live_id: "live2026_01", position: 1, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 1, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 20, perf: null, note: [""] },
+            { live_id: "live2023_14", position: 20, perf: null, note: [] },
 
-            { live_id: "live2022_06", position: 12, perf: 9, note: ["日替わり曲"] },
-            { live_id: "live2022_03", position: 15, perf: null, note: [""] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 9,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_03", position: 15, perf: null, note: [] },
 
-            { live_id: "live2021_07", position: 19, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2021_07",
+                position: 19,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -1193,7 +1842,7 @@ export const songsIndex = [
         title: "青、その他",
         title_kana: "あおそのほか",
         date: "2022-03-12",
-        cds: [{ id: "al_03", track: 6 },],
+        cds: [{ id: "al_03", track: 6 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1202,21 +1851,42 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=SBkxJG112dA",
             spotify: "https://open.spotify.com/track/27uYtluOPiQSRXZdBSY6hO",
-            apple_music: "https://music.apple.com/jp/song/%E9%9D%92-%E3%81%9D%E3%81%AE%E4%BB%96/1609514119",
+            apple_music:
+                "https://music.apple.com/jp/song/%E9%9D%92-%E3%81%9D%E3%81%AE%E4%BB%96/1609514119",
             line_music: "https://music.line.me/webapp/track/mt0000000015c8e5b3",
         },
         live_history: [
-            { live_id: "live2025_02", position: 6, perf: null, note: ["大倉、小泉、杢代のみ"] },
+            {
+                live_id: "live2025_02",
+                position: 6,
+                perf: null,
+                note: ["大倉、小泉、杢代のみ"],
+            },
 
-            { live_id: "live2023_16", position: 6, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2023_09", position: 7, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 7, perf: null, note: ["小泉、吉澤のみ"] },
+            {
+                live_id: "live2023_16",
+                position: 6,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_09", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2023_04",
+                position: 7,
+                perf: null,
+                note: ["小泉、吉澤のみ"],
+            },
 
-            { live_id: "live2022_09", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 6, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 19, perf: null, note: ["初披露"] },
+            { live_id: "live2022_09", position: 4, perf: null, note: [] },
+            { live_id: "live2022_06", position: 6, perf: null, note: [] },
+            { live_id: "live2022_04", position: 1, perf: null, note: [] },
+            { live_id: "live2022_03", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2022_03",
+                position: 19,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1224,7 +1894,7 @@ export const songsIndex = [
         title: "結末は次のトラフィックライト",
         title_kana: "けつまつはつぎのとらふぃっくらいと",
         date: "2022-03-21",
-        cds: [{ id: "al_03", track: 9 },],
+        cds: [{ id: "al_03", track: 9 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1233,24 +1903,50 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=DO6GhodQhAQ",
             spotify: "https://open.spotify.com/track/3cFouDxvTfhHo5OoQoFgGx",
-            apple_music: "https://music.apple.com/jp/song/%E7%B5%90%E6%9C%AB%E3%81%AF%E6%AC%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88/1610359971",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%B5%90%E6%9C%AB%E3%81%AF%E6%AC%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88/1610359971",
             line_music: "https://music.line.me/webapp/track/mt0000000015d84e68",
         },
         live_history: [
-            { live_id: "live2025_02", position: 7, perf: null, note: ["桜木、長野、武藤、吉澤のみ"] },
+            {
+                live_id: "live2025_02",
+                position: 7,
+                perf: null,
+                note: ["桜木、長野、武藤、吉澤のみ"],
+            },
 
-            { live_id: "live2024_06", position: 16, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 7, perf: null, note: ["Remix ver."] },
+            { live_id: "live2024_06", position: 16, perf: null, note: [] },
+            {
+                live_id: "live2024_03",
+                position: 7,
+                perf: null,
+                note: ["Remix ver."],
+            },
 
-            { live_id: "live2023_09", position: 9, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 8, perf: null, note: ["武藤、吉澤のみ"] },
-            { live_id: "live2023_01", position: 10, perf: null, note: ["メドレー", "大倉ソロ"] },
+            { live_id: "live2023_09", position: 9, perf: null, note: [] },
+            { live_id: "live2023_07", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2023_04",
+                position: 8,
+                perf: null,
+                note: ["武藤、吉澤のみ"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 10,
+                perf: null,
+                note: ["メドレー", "大倉ソロ"],
+            },
 
-            { live_id: "live2022_11", position: 12, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 13, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 2, perf: null, note: ["初披露"] },
+            { live_id: "live2022_11", position: 12, perf: null, note: [] },
+            { live_id: "live2022_06", position: 13, perf: null, note: [] },
+            { live_id: "live2022_04", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2022_03",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1258,7 +1954,7 @@ export const songsIndex = [
         title: "キミヲナクシテ",
         title_kana: "きみをなくして",
         date: "2022-04-06",
-        cds: [{ id: "al_03", track: 11 },],
+        cds: [{ id: "al_03", track: 11 }],
         lyricist: ["izki"],
         composer: ["izki"],
         arranger: ["izki"],
@@ -1267,21 +1963,37 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=dqbbGJvAsBc",
             spotify: "https://open.spotify.com/track/5LMJtGDkaOs66dgTCffDss",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%AD%E3%83%9F%E3%83%B2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%86/1613468570",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%AD%E3%83%9F%E3%83%B2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%86/1613468570",
             line_music: "https://music.line.me/webapp/track/mt000000001611388f",
         },
         live_history: [
-            { live_id: "live2025_10", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 2, perf: null, note: [] },
 
-            { live_id: "live2024_01", position: 6, perf: null, note: [""] },
+            { live_id: "live2024_01", position: 6, perf: null, note: [] },
 
-            { live_id: "live2023_04", position: 10, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 13, perf: null, note: ["メドレー", "武藤ソロ"] },
+            { live_id: "live2023_04", position: 10, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 13,
+                perf: null,
+                note: ["メドレー", "武藤ソロ"],
+            },
 
-            { live_id: "live2022_11", position: 7, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 12, perf: 8, note: ["日替わり曲"] },
-            { live_id: "live2022_05", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 11, perf: null, note: ["初披露"] },
+            { live_id: "live2022_11", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 12,
+                perf: 8,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2022_05", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2022_03",
+                position: 11,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1289,7 +2001,7 @@ export const songsIndex = [
         title: "545",
         title_kana: "zzz_545",
         date: "2022-05-27",
-        cds: [{ id: "al_03", track: 12 },],
+        cds: [{ id: "al_03", track: 12 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1302,17 +2014,37 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001687cb73",
         },
         live_history: [
-            { live_id: "live2025_02", position: 8, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 8, perf: null, note: [] },
 
-            { live_id: "live2024_01", position: 12, perf: null, note: [""] },
+            { live_id: "live2024_01", position: 12, perf: null, note: [] },
 
-            { live_id: "live2023_09", position: 15, perf: 5, note: ["日替わり曲"] },
-            { live_id: "live2023_04", position: 9, perf: null, note: ["大倉、桜木、長野のみ"] },
-            { live_id: "live2023_01", position: 12, perf: null, note: ["メドレー", "桜木ソロ"] },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 5,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_04",
+                position: 9,
+                perf: null,
+                note: ["大倉、桜木、長野のみ"],
+            },
+            {
+                live_id: "live2023_01",
+                position: 12,
+                perf: null,
+                note: ["メドレー", "桜木ソロ"],
+            },
 
-            { live_id: "live2022_10", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 11, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 3, perf: null, note: ["初披露"] },
+            { live_id: "live2022_10", position: 1, perf: null, note: [] },
+            { live_id: "live2022_06", position: 11, perf: null, note: [] },
+            {
+                live_id: "live2022_04",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1320,7 +2052,7 @@ export const songsIndex = [
         title: "原因は君にもある。",
         title_kana: "げんいんはきみにもある",
         date: "2022-07-07",
-        cds: [{ id: "al_03", track: 2 },],
+        cds: [{ id: "al_03", track: 2 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1329,44 +2061,65 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=8Az4SQczg8s",
             spotify: "https://open.spotify.com/track/0Aw0obEGgrHcVIXzqWAA29",
-            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E5%90%9B%E3%81%AB%E3%82%82%E3%81%82%E3%82%8B/1628262198",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E5%90%9B%E3%81%AB%E3%82%82%E3%81%82%E3%82%8B/1628262198",
             line_music: "https://music.line.me/webapp/track/mt0000000017091d88",
         },
         live_history: [
-            { live_id: "live2026_05", position: 7, perf: null, note: [""] },
-            { live_id: "live2026_04", position: 9, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 7, perf: null, note: [] },
+            { live_id: "live2026_04", position: 9, perf: null, note: [] },
 
-            { live_id: "live2025_05", position: 10, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 16, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 23, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_05", position: 10, perf: null, note: [] },
+            { live_id: "live2025_03", position: 16, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 23,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_09", position: 17, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 17, perf: null, note: [""] },
-            { live_id: "live2024_07", position: 9, perf: null, note: ["アンコール"] },
-            { live_id: "live2024_06", position: 19, perf: null, note: [""] },
-            { live_id: "live2024_04", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_02", position: 1, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 2, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 17, perf: null, note: [] },
+            { live_id: "live2024_08", position: 17, perf: null, note: [] },
+            {
+                live_id: "live2024_07",
+                position: 9,
+                perf: null,
+                note: ["アンコール"],
+            },
+            { live_id: "live2024_06", position: 19, perf: null, note: [] },
+            { live_id: "live2024_04", position: 3, perf: null, note: [] },
+            { live_id: "live2024_02", position: 1, perf: null, note: [] },
+            { live_id: "live2024_01", position: 2, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 9, perf: null, note: ["パートシャッフル"] },
-            { live_id: "live2023_14", position: 21, perf: null, note: [""] },
-            { live_id: "live2023_13", position: 8, perf: null, note: [""] },
-            { live_id: "live2023_12", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 22, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 8, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 14, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 13, perf: null, note: [""] },
-            { live_id: "live2023_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 26, perf: null, note: [""] },
+            {
+                live_id: "live2023_16",
+                position: 9,
+                perf: null,
+                note: ["パートシャッフル"],
+            },
+            { live_id: "live2023_14", position: 21, perf: null, note: [] },
+            { live_id: "live2023_13", position: 8, perf: null, note: [] },
+            { live_id: "live2023_12", position: 3, perf: null, note: [] },
+            { live_id: "live2023_10", position: 3, perf: null, note: [] },
+            { live_id: "live2023_09", position: 22, perf: null, note: [] },
+            { live_id: "live2023_07", position: 8, perf: null, note: [] },
+            { live_id: "live2023_06", position: 14, perf: null, note: [] },
+            { live_id: "live2023_04", position: 13, perf: null, note: [] },
+            { live_id: "live2023_03", position: 1, perf: null, note: [] },
+            { live_id: "live2023_01", position: 26, perf: null, note: [] },
 
-            { live_id: "live2022_10", position: 7, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 11, perf: null, note: [""] },
-            { live_id: "live2022_07", position: 2, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 17, perf: null, note: [""] },
-            { live_id: "live2022_05", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2022_10", position: 7, perf: null, note: [] },
+            { live_id: "live2022_09", position: 11, perf: null, note: [] },
+            { live_id: "live2022_07", position: 2, perf: null, note: [] },
+            { live_id: "live2022_06", position: 17, perf: null, note: [] },
+            { live_id: "live2022_05", position: 5, perf: null, note: [] },
+            { live_id: "live2022_04", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2022_04",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1374,7 +2127,7 @@ export const songsIndex = [
         title: "貴方に溺れて、僕は潤んで。",
         title_kana: "あなたにおぼれてぼくはうるんで",
         date: "2022-08-29",
-        cds: [{ id: "al_03", track: 5 },],
+        cds: [{ id: "al_03", track: 5 }],
         lyricist: ["izki"],
         composer: ["izki"],
         arranger: ["izki"],
@@ -1383,24 +2136,40 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=-VI6kCBu9Cw",
             spotify: "https://open.spotify.com/track/23xWbjLF0HyuQIgSqKHdEQ",
-            apple_music: "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%81%AB%E6%BA%BA%E3%82%8C%E3%81%A6-%E5%83%95%E3%81%AF%E6%BD%A4%E3%82%93%E3%81%A6/1638250501",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%81%AB%E6%BA%BA%E3%82%8C%E3%81%A6-%E5%83%95%E3%81%AF%E6%BD%A4%E3%82%93%E3%81%A6/1638250501",
             line_music: "https://music.line.me/webapp/track/mt00000000178dcc22",
         },
         live_history: [
-            { live_id: "live2026_01", position: 10, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 10, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 10, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 10, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 7, perf: null, note: [""] },
+            { live_id: "live2024_09", position: 10, perf: null, note: [] },
+            { live_id: "live2024_08", position: 10, perf: null, note: [] },
+            { live_id: "live2024_01", position: 7, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 6, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2023_13", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 17, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 3, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 6, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2023_16",
+                position: 6,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_13", position: 3, perf: null, note: [] },
+            { live_id: "live2023_09", position: 17, perf: null, note: [] },
+            { live_id: "live2023_07", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 6,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2022_11", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_06", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2022_11", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2022_06",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1408,7 +2177,7 @@ export const songsIndex = [
         title: "チョコループ",
         title_kana: "ちょこるーぷ",
         date: "2022-09-25",
-        cds: [{ id: "al_03", track: 10 },],
+        cds: [{ id: "al_03", track: 10 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1417,34 +2186,70 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=bLr1uLlbEAk",
             spotify: "https://open.spotify.com/track/0VvNtK1B7ZBln4L4GTTTHV",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AB%E3%83%BC%E3%83%97/1642197649",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AB%E3%83%BC%E3%83%97/1642197649",
             line_music: "https://music.line.me/webapp/track/mt0000000017c5397a",
         },
         live_history: [
-            { live_id: "live2026_03", position: 15, perf: 1, note: ["日替わり曲"] },
+            {
+                live_id: "live2026_03",
+                position: 15,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2025_04", position: 2, perf: null, note: ["コーナーで使用された"] },
-            { live_id: "live2025_02", position: 10, perf: null, note: [""] },
+            {
+                live_id: "live2025_04",
+                position: 2,
+                perf: null,
+                note: ["コーナーで使用された"],
+            },
+            { live_id: "live2025_02", position: 10, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 11, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 11, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 11, perf: null, note: [] },
+            { live_id: "live2024_03", position: 3, perf: null, note: [] },
+            { live_id: "live2024_01", position: 11, perf: null, note: [] },
 
-            { live_id: "live2023_15", position: 1, perf: null, note: ["大倉、小泉、杢代、吉澤のみ"] },
-            { live_id: "live2023_14", position: 7, perf: null, note: [""] },
-            { live_id: "live2023_13", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_11", position: 2, perf: null, note: ["シャッフル曲"] },
-            { live_id: "live2023_05", position: 3, perf: null, note: ["シャッフル曲"] },
-            { live_id: "live2023_04", position: 16, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 12, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 4, perf: null, note: [""] },
+            {
+                live_id: "live2023_15",
+                position: 1,
+                perf: null,
+                note: ["大倉、小泉、杢代、吉澤のみ"],
+            },
+            { live_id: "live2023_14", position: 7, perf: null, note: [] },
+            { live_id: "live2023_13", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2023_11",
+                position: 2,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
+            {
+                live_id: "live2023_05",
+                position: 3,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
+            { live_id: "live2023_04", position: 16, perf: null, note: [] },
+            { live_id: "live2023_02", position: 12, perf: null, note: [] },
+            { live_id: "live2023_01", position: 4, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 10, perf: null, note: [""] },
-            { live_id: "live2022_10", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_09", position: 9, perf: null, note: [""] },
-            { live_id: "live2022_08", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_07", position: 1, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2022_06", position: 10, perf: null, note: ["初披露"] },
+            { live_id: "live2022_11", position: 10, perf: null, note: [] },
+            { live_id: "live2022_10", position: 5, perf: null, note: [] },
+            { live_id: "live2022_09", position: 9, perf: null, note: [] },
+            { live_id: "live2022_08", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2022_07",
+                position: 1,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2022_06",
+                position: 10,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1452,7 +2257,7 @@ export const songsIndex = [
         title: "Q",
         title_kana: "zzz_q",
         date: "2022-11-02",
-        cds: [{ id: "al_03", track: 4 },],
+        cds: [{ id: "al_03", track: 4 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1465,14 +2270,29 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001826c0bb",
         },
         live_history: [
-            { live_id: "live2026_04", position: 4, perf: null, note: [""] },
+            { live_id: "live2026_04", position: 4, perf: null, note: [] },
 
-            { live_id: "live2024_03", position: 19, perf: null, note: ["アンコール"] },
+            {
+                live_id: "live2024_03",
+                position: 19,
+                perf: null,
+                note: ["アンコール"],
+            },
 
-            { live_id: "live2023_02", position: 7, perf: null, note: ["メドレー"] },
-            { live_id: "live2023_01", position: 28, perf: null, note: [""] },
+            {
+                live_id: "live2023_02",
+                position: 7,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2023_01", position: 28, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 14, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2022_11",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -1482,7 +2302,7 @@ export const songsIndex = [
         title: "魔法をかけて",
         title_kana: "まほうをかけて",
         date: "2023-01-07",
-        cds: [{ id: "al_03", track: 3 },],
+        cds: [{ id: "al_03", track: 3 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1491,21 +2311,37 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=ErNj6BgfXvc",
             spotify: "https://open.spotify.com/track/0aUTgemKnK946bC7DPxRl6",
-            apple_music: "https://music.apple.com/jp/song/%E9%AD%94%E6%B3%95%E3%82%92%E3%81%8B%E3%81%91%E3%81%A6/1658726617",
+            apple_music:
+                "https://music.apple.com/jp/song/%E9%AD%94%E6%B3%95%E3%82%92%E3%81%8B%E3%81%91%E3%81%A6/1658726617",
             line_music: "https://music.line.me/webapp/track/mt0000000018cf3fc4",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 2, note: [""] },
+            { live_id: "live2026_01", position: 7, perf: 2, note: [] },
 
-            { live_id: "live2024_03", position: 1, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 1, perf: null, note: [] },
 
-            { live_id: "live2023_11", position: 1, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2023_09", position: 15, perf: 4, note: ["日替わり曲"] },
-            { live_id: "live2023_04", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 11, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 2, perf: null, note: [""] },
+            {
+                live_id: "live2023_11",
+                position: 1,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_09",
+                position: 15,
+                perf: 4,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_04", position: 4, perf: null, note: [] },
+            { live_id: "live2023_02", position: 11, perf: null, note: [] },
+            { live_id: "live2023_01", position: 2, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 9, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2022_11",
+                position: 9,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1513,7 +2349,7 @@ export const songsIndex = [
         title: "無限シニシズム",
         title_kana: "むげんしにしずむ",
         date: "2023-01-25",
-        cds: [{ id: "al_03", track: 1 },],
+        cds: [{ id: "al_03", track: 1 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1522,31 +2358,42 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=6H4HG7G2qnk",
             spotify: "https://open.spotify.com/track/3RTL8wlZcFh1qpzFYtQ6MX",
-            apple_music: "https://music.apple.com/jp/song/%E7%84%A1%E9%99%90%E3%82%B7%E3%83%8B%E3%82%B7%E3%82%BA%E3%83%A0/1661238574",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%84%A1%E9%99%90%E3%82%B7%E3%83%8B%E3%82%B7%E3%82%BA%E3%83%A0/1661238574",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb0a",
         },
         live_history: [
-            { live_id: "live2026_01", position: 18, perf: null, note: [""] },
+            { live_id: "live2026_01", position: 18, perf: null, note: [] },
 
-            { live_id: "live2025_08", position: 2, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 25, perf: null, note: [""] },
-            { live_id: "live2025_01", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 2, perf: null, note: [] },
+            { live_id: "live2025_03", position: 1, perf: null, note: [] },
+            { live_id: "live2025_02", position: 25, perf: null, note: [] },
+            { live_id: "live2025_01", position: 4, perf: null, note: [] },
 
-            { live_id: "live2024_07", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 25, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 14, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 3, perf: null, note: [] },
+            { live_id: "live2024_06", position: 25, perf: null, note: [] },
+            { live_id: "live2024_03", position: 14, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_12", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_11", position: 1, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2023_09", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_08", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 12, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 23, perf: null, note: [""] },
+            { live_id: "live2023_14", position: 5, perf: null, note: [] },
+            { live_id: "live2023_12", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_11",
+                position: 1,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_09", position: 2, perf: null, note: [] },
+            { live_id: "live2023_08", position: 2, perf: null, note: [] },
+            { live_id: "live2023_04", position: 12, perf: null, note: [] },
+            { live_id: "live2023_02", position: 1, perf: null, note: [] },
+            { live_id: "live2023_01", position: 23, perf: null, note: [] },
 
-            { live_id: "live2022_11", position: 2, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2022_11",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1554,7 +2401,7 @@ export const songsIndex = [
         title: "Run away",
         title_kana: "zzz_runaway",
         date: "2023-01-25",
-        cds: [{ id: "al_03", track: 7 },],
+        cds: [{ id: "al_03", track: 7 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1567,10 +2414,20 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb10",
         },
         live_history: [
-            { live_id: "live2024_03", position: 20, perf: 1, note: ["日替わり曲", "アンコール"] },
+            {
+                live_id: "live2024_03",
+                position: 20,
+                perf: 1,
+                note: ["日替わり曲", "アンコール"],
+            },
 
-            { live_id: "live2023_10", position: 6, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 27, perf: null, note: ["初披露"] },
+            { live_id: "live2023_10", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 27,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1578,7 +2435,7 @@ export const songsIndex = [
         title: "Lion",
         title_kana: "zzz_lion",
         date: "2023-01-25",
-        cds: [{ id: "al_03", track: 8 },],
+        cds: [{ id: "al_03", track: 8 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1591,15 +2448,35 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb11",
         },
         live_history: [
-            { live_id: "live2024_09", position: 8, perf: null, note: ["大倉、武藤、吉澤のみ"] },
-            { live_id: "live2024_08", position: 8, perf: null, note: ["大倉、武藤、吉澤のみ"] },
+            {
+                live_id: "live2024_09",
+                position: 8,
+                perf: null,
+                note: ["大倉、武藤、吉澤のみ"],
+            },
+            {
+                live_id: "live2024_08",
+                position: 8,
+                perf: null,
+                note: ["大倉、武藤、吉澤のみ"],
+            },
 
-            { live_id: "live2023_16", position: 7, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2023_14", position: 18, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 13, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 15, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 19, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2023_16",
+                position: 7,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_14", position: 18, perf: null, note: [] },
+            { live_id: "live2023_07", position: 1, perf: null, note: [] },
+            { live_id: "live2023_06", position: 13, perf: null, note: [] },
+            { live_id: "live2023_04", position: 15, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 19,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1607,7 +2484,7 @@ export const songsIndex = [
         title: "桜Ground",
         title_kana: "さくらground",
         date: "2023-01-25",
-        cds: [{ id: "al_03", track: 13 },],
+        cds: [{ id: "al_03", track: 13 }],
         lyricist: ["竹内雄彦"],
         composer: ["竹内雄彦"],
         arranger: ["竹内雄彦"],
@@ -1616,17 +2493,28 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0YCL6p4btZjOtOpmo9V2op",
-            apple_music: "https://music.apple.com/jp/song/%E6%A1%9Cground/1661239126",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%A1%9Cground/1661239126",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb16",
         },
         live_history: [
-            { live_id: "live2026_01", position: 17, perf: null, note: ["Remix ver."] },
+            {
+                live_id: "live2026_01",
+                position: 17,
+                perf: null,
+                note: ["Remix ver."],
+            },
 
-            { live_id: "live2024_01", position: 21, perf: null, note: [""] },
+            { live_id: "live2024_01", position: 21, perf: null, note: [] },
 
-            { live_id: "live2023_04", position: 17, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 13, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 30, perf: null, note: ["初披露", "アンコール"] },
+            { live_id: "live2023_04", position: 17, perf: null, note: [] },
+            { live_id: "live2023_02", position: 13, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 30,
+                perf: null,
+                note: ["初披露", "アンコール"],
+            },
         ],
     },
     {
@@ -1634,7 +2522,7 @@ export const songsIndex = [
         title: "僕らの世界・物語",
         title_kana: "ぼくらのせかいものがたり",
         date: "2023-01-25",
-        cds: [{ id: "al_03", track: 14 },],
+        cds: [{ id: "al_03", track: 14 }],
         lyricist: ["izki"],
         composer: ["izki"],
         arranger: ["izki"],
@@ -1643,14 +2531,20 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/516aKBkovU8TwcBEC0U89k",
-            apple_music: "https://music.apple.com/jp/song/%E5%83%95%E3%82%89%E3%81%AE%E4%B8%96%E7%95%8C-%E7%89%A9%E8%AA%9E/1661239127",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%83%95%E3%82%89%E3%81%AE%E4%B8%96%E7%95%8C-%E7%89%A9%E8%AA%9E/1661239127",
             line_music: "https://music.line.me/webapp/track/mt0000000018f8eb17",
         },
         live_history: [
-            { live_id: "live2024_06", position: 17, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 17, perf: null, note: [] },
 
-            { live_id: "live2023_09", position: 19, perf: null, note: [""] },
-            { live_id: "live2023_01", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2023_09", position: 19, perf: null, note: [] },
+            {
+                live_id: "live2023_01",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1667,17 +2561,23 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=kMQq49UB8Vg",
             spotify: "https://open.spotify.com/track/1j84JRrMRekoSSH2yU1kHP",
-            apple_music: "https://music.apple.com/jp/song/mr-android-feat-izki/1674097167",
+            apple_music:
+                "https://music.apple.com/jp/song/mr-android-feat-izki/1674097167",
             line_music: "https://music.line.me/webapp/track/mt0000000019c894d4",
         },
         live_history: [
-            { live_id: "live2025_02", position: 3, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 3, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 15, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 16, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 6, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2023_14", position: 15, perf: null, note: [] },
+            { live_id: "live2023_09", position: 16, perf: null, note: [] },
+            { live_id: "live2023_07", position: 6, perf: null, note: [] },
+            { live_id: "live2023_06", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2023_04",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1689,23 +2589,36 @@ export const songsIndex = [
         lyricist: ["izki"],
         composer: ["izki"],
         arranger: ["izki"],
-        tieup: ["テレビ東京系アニメ「デュエル・マスターズ WIN 決闘学園編」 エンディングテーマソング"],
+        tieup: [
+            "テレビ東京系アニメ「デュエル・マスターズ WIN 決闘学園編」 エンディングテーマソング",
+        ],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=SgIjog093T8",
             spotify: "https://open.spotify.com/track/2Gcid6LvComOG1Hop2kCf9",
-            apple_music: "https://music.apple.com/jp/song/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AE%E3%83%A5%E3%83%83%E3%81%A8/1675801831",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%82%AE%E3%83%A5%E3%83%83%E3%81%A8/1675801831",
             line_music: "https://music.line.me/webapp/track/mt0000000019f312ca",
         },
         live_history: [
-            { live_id: "live2025_10", position: 4, perf: 2, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_10",
+                position: 4,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2023_16", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 13, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 16, perf: null, note: [""] },
-            { live_id: "live2023_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_04", position: 14, perf: null, note: ["初披露"] },
+            { live_id: "live2023_16", position: 1, perf: null, note: [] },
+            { live_id: "live2023_10", position: 5, perf: null, note: [] },
+            { live_id: "live2023_09", position: 13, perf: null, note: [] },
+            { live_id: "live2023_06", position: 16, perf: null, note: [] },
+            { live_id: "live2023_05", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_04",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1713,7 +2626,7 @@ export const songsIndex = [
         title: "Foxy Grape",
         title_kana: "zzz_foxygrape",
         date: "2023-06-07",
-        cds: [{ id: "sg_03", track: 1 },],
+        cds: [{ id: "sg_03", track: 1 }],
         lyricist: ["Kiyoki"],
         composer: ["あらケン"],
         arranger: ["あらケン"],
@@ -1722,19 +2635,30 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=Sv8s19VXzAI",
             spotify: "https://open.spotify.com/track/5m6PQRk6Y88GkFzK4TgDiO",
-            apple_music: "https://music.apple.com/jp/song/foxy-grape/1687442140",
+            apple_music:
+                "https://music.apple.com/jp/song/foxy-grape/1687442140",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d5",
         },
         live_history: [
-            { live_id: "live2026_01", position: 4, perf: null, note: ["Remix ver."] },
+            {
+                live_id: "live2026_01",
+                position: 4,
+                perf: null,
+                note: ["Remix ver."],
+            },
 
-            { live_id: "live2025_02", position: 15, perf: null, note: [""] },
+            { live_id: "live2025_02", position: 15, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 11, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_07", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_06", position: 11, perf: null, note: ["初披露"] },
+            { live_id: "live2023_16", position: 11, perf: null, note: [] },
+            { live_id: "live2023_10", position: 1, perf: null, note: [] },
+            { live_id: "live2023_09", position: 1, perf: null, note: [] },
+            { live_id: "live2023_07", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_06",
+                position: 11,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1742,7 +2666,7 @@ export const songsIndex = [
         title: "余白のための瘡蓋狂想曲",
         title_kana: "よはくのためのかさぶたきょうそうきょく",
         date: "2023-06-07",
-        cds: [{ id: "sg_03", track: 2 },],
+        cds: [{ id: "sg_03", track: 2 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1751,24 +2675,35 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1n19BYXjlCyNFhqoBRrMkc",
-            apple_music: "https://music.apple.com/jp/song/%E4%BD%99%E7%99%BD%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%98%A1%E8%93%8B%E7%8B%82%E6%83%B3%E6%9B%B2/1687442141",
+            apple_music:
+                "https://music.apple.com/jp/song/%E4%BD%99%E7%99%BD%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%98%A1%E8%93%8B%E7%8B%82%E6%83%B3%E6%9B%B2/1687442141",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d6",
         },
         live_history: [
-            { live_id: "live2026_03", position: 9, perf: null, note: ["Aメロでソロダンス"] },
+            {
+                live_id: "live2026_03",
+                position: 9,
+                perf: null,
+                note: ["Aメロでソロダンス"],
+            },
 
-            { live_id: "live2025_09", position: 7, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 3, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 4, perf: null, note: [""] },
+            { live_id: "live2025_09", position: 7, perf: null, note: [] },
+            { live_id: "live2025_05", position: 3, perf: null, note: [] },
+            { live_id: "live2025_02", position: 4, perf: null, note: [] },
 
-            { live_id: "live2024_07", position: 4, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 3, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 12, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 4, perf: null, note: [] },
+            { live_id: "live2024_06", position: 3, perf: null, note: [] },
+            { live_id: "live2024_03", position: 12, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 17, perf: null, note: [""] },
-            { live_id: "live2023_13", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_10", position: 2, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 11, perf: null, note: ["初披露"] },
+            { live_id: "live2023_14", position: 17, perf: null, note: [] },
+            { live_id: "live2023_13", position: 4, perf: null, note: [] },
+            { live_id: "live2023_10", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2023_09",
+                position: 11,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1776,7 +2711,7 @@ export const songsIndex = [
         title: "THE EMPATHY",
         title_kana: "zzz_theenpathy",
         date: "2023-06-07",
-        cds: [{ id: "sg_03", track: 3 },],
+        cds: [{ id: "sg_03", track: 3 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1785,16 +2720,27 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3B0RfZGfuOBVl3llPNTBdT",
-            apple_music: "https://music.apple.com/jp/song/the-empathy/1687442142",
+            apple_music:
+                "https://music.apple.com/jp/song/the-empathy/1687442142",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d7",
         },
         live_history: [
-            { live_id: "live2024_06", position: 23, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 16, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 22, perf: null, note: [""] },
+            { live_id: "live2024_06", position: 23, perf: null, note: [] },
+            { live_id: "live2024_03", position: 16, perf: null, note: [] },
+            { live_id: "live2024_01", position: 22, perf: null, note: [] },
 
-            { live_id: "live2023_14", position: 23, perf: null, note: ["アンコール"] },
-            { live_id: "live2023_09", position: 23, perf: null, note: ["初披露", "最終公演のみ"] },
+            {
+                live_id: "live2023_14",
+                position: 23,
+                perf: null,
+                note: ["アンコール"],
+            },
+            {
+                live_id: "live2023_09",
+                position: 23,
+                perf: null,
+                note: ["初披露", "最終公演のみ"],
+            },
         ],
     },
     {
@@ -1802,7 +2748,7 @@ export const songsIndex = [
         title: "GOD 釈迦にHip-Hop",
         title_kana: "zzz_godしゃかにhiphop",
         date: "2023-06-07",
-        cds: [{ id: "sg_03", track: 4 },],
+        cds: [{ id: "sg_03", track: 4 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1811,23 +2757,39 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=NHSHisdfwfw",
             spotify: "https://open.spotify.com/track/5yK3dAppqCQYsx7X5h7qoq",
-            apple_music: "https://music.apple.com/jp/song/god-%E9%87%88%E8%BF%A6%E3%81%ABhip-hop/1687442143",
+            apple_music:
+                "https://music.apple.com/jp/song/god-%E9%87%88%E8%BF%A6%E3%81%ABhip-hop/1687442143",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d8",
         },
         live_history: [
-            { live_id: "live2026_03", position: 17, perf: null, note: ["アンコール"] },
+            {
+                live_id: "live2026_03",
+                position: 17,
+                perf: null,
+                note: ["アンコール"],
+            },
 
-            { live_id: "live2025_10", position: 18, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 12, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 18, perf: null, note: [] },
+            { live_id: "live2025_02", position: 12, perf: null, note: [] },
 
-            { live_id: "live2024_03", position: 17, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 4, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 17, perf: null, note: [] },
+            { live_id: "live2024_01", position: 4, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_14", position: 9, perf: null, note: [""] },
-            { live_id: "live2023_11", position: 1, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2023_10", position: 4, perf: null, note: [""] },
-            { live_id: "live2023_09", position: 21, perf: null, note: ["初披露", "アンコール"] },
+            { live_id: "live2023_16", position: 5, perf: null, note: [] },
+            { live_id: "live2023_14", position: 9, perf: null, note: [] },
+            {
+                live_id: "live2023_11",
+                position: 1,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2023_10", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2023_09",
+                position: 21,
+                perf: null,
+                note: ["初披露", "アンコール"],
+            },
         ],
     },
     {
@@ -1835,7 +2797,7 @@ export const songsIndex = [
         title: "夏の二等辺大三角形",
         title_kana: "なつのにとうへんだいさんかっけい",
         date: "2023-06-07",
-        cds: [{ id: "sg_03", track: 5 },],
+        cds: [{ id: "sg_03", track: 5 }],
         lyricist: ["吉田司"],
         composer: ["吉田司", "加藤祐平"],
         arranger: ["加藤祐平"],
@@ -1844,17 +2806,23 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4uXqD7ooukoGrkx5NhwRAl",
-            apple_music: "https://music.apple.com/jp/song/%E5%A4%8F%E3%81%AE%E4%BA%8C%E7%AD%89%E8%BE%BA%E5%A4%A7%E4%B8%89%E8%A7%92%E5%BD%A2/1687442144",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%A4%8F%E3%81%AE%E4%BA%8C%E7%AD%89%E8%BE%BA%E5%A4%A7%E4%B8%89%E8%A7%92%E5%BD%A2/1687442144",
             line_music: "https://music.line.me/webapp/track/mt000000001abab0d9",
         },
         live_history: [
-            { live_id: "live2025_05", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 9, perf: null, note: [""] },
+            { live_id: "live2025_05", position: 6, perf: null, note: [] },
+            { live_id: "live2025_03", position: 9, perf: null, note: [] },
 
-            { live_id: "live2024_03", position: 9, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 9, perf: null, note: [] },
 
-            { live_id: "live2023_09", position: 10, perf: null, note: [""] },
-            { live_id: "live2023_08", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2023_09", position: 10, perf: null, note: [] },
+            {
+                live_id: "live2023_08",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1871,13 +2839,24 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2S6iuA49Pay71EJv1RCGVX",
-            apple_music: "https://music.apple.com/jp/song/%E9%B3%B4%E3%82%89%E3%81%97%E3%81%A6-%E3%82%B7%E3%83%B3%E3%83%90%E3%83%AB/1698289577",
+            apple_music:
+                "https://music.apple.com/jp/song/%E9%B3%B4%E3%82%89%E3%81%97%E3%81%A6-%E3%82%B7%E3%83%B3%E3%83%90%E3%83%AB/1698289577",
             line_music: "https://music.line.me/webapp/track/mt000000001b59dd60",
         },
         live_history: [
-            { live_id: "live2025_10", position: 4, perf: 1, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_10",
+                position: 4,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2023_09", position: 5, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2023_09",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1885,25 +2864,38 @@ export const songsIndex = [
         title: "蝋燭",
         title_kana: "ろうそく",
         date: "2023-08-30",
-        cds: [{ id: "al_04", track: 5 },],
+        cds: [{ id: "al_04", track: 5 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」 オープニングテーマソング"],
+        tieup: [
+            "テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」 オープニングテーマソング",
+        ],
         call: false,
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/01tA7BkMevxSIlWSbJSCPq",
-            apple_music: "https://music.apple.com/jp/song/%E8%9D%8B%E7%87%AD/1700211716",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%9D%8B%E7%87%AD/1700211716",
             line_music: "https://music.line.me/webapp/track/mt000000001b82f72d",
         },
         live_history: [
-            { live_id: "live2025_03", position: 8, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 8, perf: null, note: [] },
 
-            { live_id: "live2024_03", position: 6, perf: null, note: [""] },
+            { live_id: "live2024_03", position: 6, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 7, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2023_14", position: 11, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2023_16",
+                position: 7,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2023_14",
+                position: 11,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1911,7 +2903,7 @@ export const songsIndex = [
         title: "Museum:0",
         title_kana: "zzz_museum0",
         date: "2023-11-03",
-        cds: [{ id: "al_04", track: 12 },],
+        cds: [{ id: "al_04", track: 12 }],
         lyricist: ["堀江晶太"],
         composer: ["堀江晶太"],
         arranger: ["堀江晶太"],
@@ -1924,31 +2916,41 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001c6800a2",
         },
         live_history: [
-            { live_id: "live2026_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 24, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 2, perf: null, note: [] },
+            { live_id: "live2026_03", position: 24, perf: null, note: [] },
 
-            { live_id: "live2025_09", position: 8, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 2, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 5, perf: null, note: [""] },
+            { live_id: "live2025_09", position: 8, perf: null, note: [] },
+            { live_id: "live2025_03", position: 2, perf: null, note: [] },
+            { live_id: "live2025_02", position: 5, perf: null, note: [] },
 
-            { live_id: "live2024_07", position: 5, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 26, perf: null, note: [""] },
-            { live_id: "live2024_04", position: 1, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2024_02", position: 4, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 15, perf: null, note: [""] },
+            { live_id: "live2024_07", position: 5, perf: null, note: [] },
+            { live_id: "live2024_06", position: 26, perf: null, note: [] },
+            {
+                live_id: "live2024_04",
+                position: 1,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2024_02", position: 4, perf: null, note: [] },
+            { live_id: "live2024_01", position: 15, perf: null, note: [] },
 
-            { live_id: "live2023_16", position: 12, perf: null, note: [""] },
-            { live_id: "live2023_14", position: 16, perf: null, note: ["初披露"] },
+            { live_id: "live2023_16", position: 12, perf: null, note: [] },
+            {
+                live_id: "live2023_14",
+                position: 16,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
-    
+
     /* 2024年 */
     {
         id: "song051",
         title: "ダイヤモンドリリー",
         title_kana: "だいやもんどりりー",
         date: "2024-01-10",
-        cds: [{ id: "ep_01", track: 5 },],
+        cds: [{ id: "ep_01", track: 5 }],
         lyricist: ["MIMI"],
         composer: ["MIMI"],
         arranger: ["MIMI"],
@@ -1957,15 +2959,21 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=o51I-_MrasQ",
             spotify: "https://open.spotify.com/track/676LDL3TVRJ4UrHQlQmUEi",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%80%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%83%AA%E3%83%BC/1722086601",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%80%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%83%AA%E3%83%BC/1722086601",
             line_music: "https://music.line.me/webapp/track/mt000000001d79bd70",
         },
         live_history: [
-            { live_id: "live2025_10", position: 11, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 11, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 6, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 6, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 6, perf: null, note: [] },
+            { live_id: "live2024_08", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2024_01",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -1973,7 +2981,7 @@ export const songsIndex = [
         title: "マルチバース・アドベンチャー",
         title_kana: "まるちばーすあどべんちゃー",
         date: "2024-02-11",
-        cds: [{ id: "ep_01", track: 1 },],
+        cds: [{ id: "ep_01", track: 1 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -1982,18 +2990,29 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=lrE3HUI-PpY",
             spotify: "https://open.spotify.com/track/73bwO8YNQzVwEld8c0yr1U",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%83%BC%E3%82%B9-%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC/1725299728",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%83%BC%E3%82%B9-%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC/1725299728",
             line_music: "https://music.line.me/webapp/track/mt000000001db66694",
         },
         live_history: [
-            { live_id: "live2026_04", position: 5, perf: null, note: [""] },
+            { live_id: "live2026_04", position: 5, perf: null, note: [] },
 
-            { live_id: "live2025_03", position: 13, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 21, perf: null, note: ["メドレー"] },
+            { live_id: "live2025_03", position: 13, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 21,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_06", position: 22, perf: null, note: [""] },
-            { live_id: "live2024_03", position: 18, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 1, perf: null, note: ["初披露"] },
+            { live_id: "live2024_06", position: 22, perf: null, note: [] },
+            { live_id: "live2024_03", position: 18, perf: null, note: [] },
+            {
+                live_id: "live2024_01",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2001,7 +3020,7 @@ export const songsIndex = [
         title: "ケイカクドヲリ",
         title_kana: "けいかくどをり",
         date: "2024-03-13",
-        cds: [{ id: "ep_01", track: 2 },],
+        cds: [{ id: "ep_01", track: 2 }],
         lyricist: ["uno biaqio", "高坂はやしん"],
         composer: ["uno biaqio", "Seiji Iwasaki", "高坂はやしん"],
         arranger: ["uno biaqio", "Seiji Iwasaki"],
@@ -2010,18 +3029,29 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=-G6Tpub-LZE",
             spotify: "https://open.spotify.com/track/2MI4L9ifebVs6DBpm0kbFW",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%B1%E3%82%A4%E3%82%AB%E3%82%AF%E3%83%89%E3%83%B2%E3%83%AA/1731158288",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%B1%E3%82%A4%E3%82%AB%E3%82%AF%E3%83%89%E3%83%B2%E3%83%AA/1731158288",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f000",
         },
         live_history: [
-            { live_id: "live2026_05", position: 3, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 12, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 13, perf: 3, note: ["日替わり曲"] },
+            { live_id: "live2026_05", position: 3, perf: null, note: [] },
+            { live_id: "live2026_03", position: 12, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 13,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_09", position: 11, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 11, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 20, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 14, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 11, perf: null, note: [] },
+            { live_id: "live2024_08", position: 11, perf: null, note: [] },
+            { live_id: "live2024_06", position: 20, perf: null, note: [] },
+            {
+                live_id: "live2024_01",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2029,7 +3059,7 @@ export const songsIndex = [
         title: "美しい人",
         title_kana: "うつくしいひと",
         date: "2024-03-13",
-        cds: [{ id: "ep_01", track: 3 },],
+        cds: [{ id: "ep_01", track: 3 }],
         lyricist: ["南雲ゆうき"],
         composer: ["南雲ゆうき"],
         arranger: ["南雲ゆうき"],
@@ -2038,16 +3068,37 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5Jg5SYOaxwymuosRUDfxqR",
-            apple_music: "https://music.apple.com/jp/song/%E7%BE%8E%E3%81%97%E3%81%84%E4%BA%BA/1731158295",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%BE%8E%E3%81%97%E3%81%84%E4%BA%BA/1731158295",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f001",
         },
         live_history: [
-            { live_id: "live2026_03", position: 19, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2026_03",
+                position: 19,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_09", position: 9, perf: null, note: ["小泉、桜木、長野、杢代のみ"] },
-            { live_id: "live2024_08", position: 9, perf: null, note: ["小泉、桜木、長野、杢代のみ"] },
-            { live_id: "live2024_06", position: 8, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 8, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2024_09",
+                position: 9,
+                perf: null,
+                note: ["小泉、桜木、長野、杢代のみ"],
+            },
+            {
+                live_id: "live2024_08",
+                position: 9,
+                perf: null,
+                note: ["小泉、桜木、長野、杢代のみ"],
+            },
+            { live_id: "live2024_06", position: 8, perf: null, note: [] },
+            {
+                live_id: "live2024_01",
+                position: 8,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2055,7 +3106,7 @@ export const songsIndex = [
         title: "推論的に宇宙人",
         title_kana: "すいろんてきにうちゅうじん",
         date: "2024-03-13",
-        cds: [{ id: "ep_01", track: 4 },],
+        cds: [{ id: "ep_01", track: 4 }],
         lyricist: ["ナユタン星人"],
         composer: ["ナユタン星人"],
         arranger: ["ナユタン星人"],
@@ -2064,26 +3115,47 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=JDsDIf8wsaQ",
             spotify: "https://open.spotify.com/track/7ewxrPqF0obZ3PzcX20gH0",
-            apple_music: "https://music.apple.com/jp/song/%E6%8E%A8%E8%AB%96%E7%9A%84%E3%81%AB%E5%AE%87%E5%AE%99%E4%BA%BA/1731158296",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%8E%A8%E8%AB%96%E7%9A%84%E3%81%AB%E5%AE%87%E5%AE%99%E4%BA%BA/1731158296",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f002",
         },
         live_history: [
-            { live_id: "live2026_03", position: 15, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2026_02", position: 4, perf: null, note: [""] },
+            {
+                live_id: "live2026_03",
+                position: 15,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2026_02", position: 4, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 8, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2025_05", position: 5, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 12, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 11, perf: null, note: [""] },
+            {
+                live_id: "live2025_10",
+                position: 8,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2025_05", position: 5, perf: null, note: [] },
+            { live_id: "live2025_03", position: 12, perf: null, note: [] },
+            { live_id: "live2025_02", position: 11, perf: null, note: [] },
 
-            { live_id: "live2024_08", position: 15, perf: null, note: [""] },
-            { live_id: "live2024_07", position: 7, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 12, perf: null, note: [""] },
-            { live_id: "live2024_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2024_04", position: 2, perf: null, note: ["シャッフル曲"] },
-            { live_id: "live2024_03", position: 10, perf: null, note: [""] },
-            { live_id: "live2024_02", position: 2, perf: null, note: [""] },
-            { live_id: "live2024_01", position: 10, perf: null, note: ["初披露"] },
+            { live_id: "live2024_08", position: 15, perf: null, note: [] },
+            { live_id: "live2024_07", position: 7, perf: null, note: [] },
+            { live_id: "live2024_06", position: 12, perf: null, note: [] },
+            { live_id: "live2024_05", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2024_04",
+                position: 2,
+                perf: null,
+                note: ["シャッフル曲"],
+            },
+            { live_id: "live2024_03", position: 10, perf: null, note: [] },
+            { live_id: "live2024_02", position: 2, perf: null, note: [] },
+            {
+                live_id: "live2024_01",
+                position: 10,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2091,7 +3163,7 @@ export const songsIndex = [
         title: "『誰も知らない歌』",
         title_kana: "だれもしらないうた",
         date: "2024-03-13",
-        cds: [{ id: "ep_01", track: 6 },],
+        cds: [{ id: "ep_01", track: 6 }],
         lyricist: ["じん"],
         composer: ["じん"],
         arranger: ["酒井拓也"],
@@ -2100,13 +3172,19 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=n91y4BtpOio",
             spotify: "https://open.spotify.com/track/5rqHKMMJ8w397PCeEOai1i",
-            apple_music: "https://music.apple.com/jp/song/%E8%AA%B0%E3%82%82%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E6%AD%8C/1731158449",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%AA%B0%E3%82%82%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E6%AD%8C/1731158449",
             line_music: "https://music.line.me/webapp/track/mt000000001e02f004",
         },
         live_history: [
-            { live_id: "live2025_03", position: 18, perf: null, note: [""] },
+            { live_id: "live2025_03", position: 18, perf: null, note: [] },
 
-            { live_id: "live2024_01", position: 16, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2024_01",
+                position: 16,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2114,11 +3192,13 @@ export const songsIndex = [
         title: "Mania",
         title_kana: "zzz_mania",
         date: "2024-05-03",
-        cds: [{ id: "al_04", track: 4 },],
+        cds: [{ id: "al_04", track: 4 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["読売テレビ・ドラマDiVE『シークレット同盟』 オープニングテーマソング"],
+        tieup: [
+            "読売テレビ・ドラマDiVE『シークレット同盟』 オープニングテーマソング",
+        ],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=_kbBYjpHKvw",
@@ -2127,23 +3207,33 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000001ea734eb",
         },
         live_history: [
-            { live_id: "live2026_03", position: 21, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 6, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 11, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 21, perf: null, note: [] },
+            { live_id: "live2026_02", position: 6, perf: null, note: [] },
+            { live_id: "live2026_01", position: 11, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 14, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_08", position: 8, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 7, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 19, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 27, perf: null, note: [""] },
-            { live_id: "live2025_01", position: 2, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 14, perf: null, note: [] },
+            { live_id: "live2025_09", position: 6, perf: null, note: [] },
+            { live_id: "live2025_08", position: 8, perf: null, note: [] },
+            { live_id: "live2025_05", position: 7, perf: null, note: [] },
+            { live_id: "live2025_03", position: 19, perf: null, note: [] },
+            { live_id: "live2025_02", position: 27, perf: null, note: [] },
+            { live_id: "live2025_01", position: 2, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 4, perf: null, note: [""] },
-            { live_id: "live2024_07", position: 2, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 9, perf: null, note: [""] },
-            { live_id: "live2024_04", position: 1, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2024_03", position: 15, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 4, perf: null, note: [] },
+            { live_id: "live2024_07", position: 2, perf: null, note: [] },
+            { live_id: "live2024_06", position: 9, perf: null, note: [] },
+            {
+                live_id: "live2024_04",
+                position: 1,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2024_03",
+                position: 15,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2151,7 +3241,7 @@ export const songsIndex = [
         title: "P-P-P-PERO",
         title_kana: "zzz_ppppero",
         date: "2024-07-05",
-        cds: [{ id: "al_04", track: 8 },],
+        cds: [{ id: "al_04", track: 8 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -2160,16 +3250,32 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=KVw0gdH_wPI",
             spotify: "https://open.spotify.com/track/51B7M78gRDEYzXAtwdj9cM",
-            apple_music: "https://music.apple.com/jp/song/p-p-p-pero/1751439106",
+            apple_music:
+                "https://music.apple.com/jp/song/p-p-p-pero/1751439106",
             line_music: "https://music.line.me/webapp/track/mt000000001f349430",
         },
         live_history: [
-            { live_id: "live2025_10", position: 8, perf: 1, note: ["日替わり曲"] },
+            {
+                live_id: "live2025_10",
+                position: 8,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_08", position: 14, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 13, perf: null, note: [""] },
-            { live_id: "live2024_04", position: 1, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2024_03", position: 2, perf: null, note: ["初披露"] },
+            { live_id: "live2024_08", position: 14, perf: null, note: [] },
+            { live_id: "live2024_06", position: 13, perf: null, note: [] },
+            {
+                live_id: "live2024_04",
+                position: 1,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2024_03",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2186,16 +3292,27 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0QurLzmjaPLt2XQ2UEcqyy",
-            apple_music: "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B-%E5%88%A5%E8%A7%A3/1767900848",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B-%E5%88%A5%E8%A7%A3/1767900848",
             line_music: "https://music.line.me/webapp/track/mt00000000200d0619",
         },
         live_history: [
-            { live_id: "live2025_02", position: 24, perf: null, note: ["メドレー"] },
-            { live_id: "live2025_01", position: 1, perf: null, note: [""] },
+            {
+                live_id: "live2025_02",
+                position: 24,
+                perf: null,
+                note: ["メドレー"],
+            },
+            { live_id: "live2025_01", position: 1, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 13, perf: null, note: [""] },
-            { live_id: "live2024_07", position: 1, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 18, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 13, perf: null, note: [] },
+            { live_id: "live2024_07", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2024_06",
+                position: 18,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2203,7 +3320,7 @@ export const songsIndex = [
         title: "夢之相 - イメノアイ",
         title_kana: "いめのあい",
         date: "2024-11-11",
-        cds: [{ id: "al_04", track: 3 },],
+        cds: [{ id: "al_04", track: 3 }],
         lyricist: ["堀江晶太"],
         composer: ["堀江晶太"],
         arranger: ["堀江晶太"],
@@ -2212,13 +3329,19 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=so6NgDJ0mjE",
             spotify: "https://open.spotify.com/track/0JnnVhCalDiOo0jXn0ivlc",
-            apple_music: "https://music.apple.com/jp/song/%E5%A4%A2%E4%B9%8B%E7%9B%B8-%E3%82%A4%E3%83%A1%E3%83%8E%E3%82%A2%E3%82%A4/1772647934",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%A4%A2%E4%B9%8B%E7%9B%B8-%E3%82%A4%E3%83%A1%E3%83%8E%E3%82%A2%E3%82%A4/1772647934",
             line_music: "https://music.line.me/webapp/track/mt000000002048242f",
         },
         live_history: [
-            { live_id: "live2025_08", position: 6, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 6, perf: null, note: [] },
 
-            { live_id: "live2024_06", position: 1, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2024_06",
+                position: 1,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2226,7 +3349,7 @@ export const songsIndex = [
         title: "Operation Ego",
         title_kana: "zzz_operationego",
         date: "2024-11-27",
-        cds: [{ id: "ep_02", track: 1 },],
+        cds: [{ id: "ep_02", track: 1 }],
         lyricist: ["サツキ"],
         composer: ["サツキ"],
         arranger: ["サツキ"],
@@ -2235,15 +3358,21 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=LNwcs8Vc-wI",
             spotify: "https://open.spotify.com/track/55V3psa2OcuOx5fcDqNKXz",
-            apple_music: "https://music.apple.com/jp/song/operation-ego/1778061348",
+            apple_music:
+                "https://music.apple.com/jp/song/operation-ego/1778061348",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eea",
         },
         live_history: [
-            { live_id: "live2025_08", position: 10, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 20, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_08", position: 10, perf: null, note: [] },
+            { live_id: "live2025_03", position: 20, perf: null, note: [] },
+            { live_id: "live2025_02", position: 1, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 14, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2024_09",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2251,7 +3380,7 @@ export const songsIndex = [
         title: "遊戯的反逆ノススメ",
         title_kana: "ゆうぎてきはんぎゃくのすすめ",
         date: "2024-12-04",
-        cds: [{ id: "ep_02", track: 2 },],
+        cds: [{ id: "ep_02", track: 2 }],
         lyricist: ["Kiyoki"],
         composer: ["B33G", "Kiyoki", "SARVAL"],
         arranger: ["B33G", "Kiyoki", "KoTaRo", "SARVAL"],
@@ -2260,22 +3389,33 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=-kSjzzc-IkQ",
             spotify: "https://open.spotify.com/track/5fZclM8jW0kY7JKEbOIPEi",
-            apple_music: "https://music.apple.com/jp/song/%E9%81%8A%E6%88%AF%E7%9A%84%E5%8F%8D%E9%80%86%E3%83%8E%E3%82%B9%E3%82%B9%E3%83%A1/1778061829",
+            apple_music:
+                "https://music.apple.com/jp/song/%E9%81%8A%E6%88%AF%E7%9A%84%E5%8F%8D%E9%80%86%E3%83%8E%E3%82%B9%E3%82%B9%E3%83%A1/1778061829",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eeb",
         },
         live_history: [
-            { live_id: "live2026_05", position: 10, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 23, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 8, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 10, perf: null, note: [] },
+            { live_id: "live2026_03", position: 23, perf: null, note: [] },
+            { live_id: "live2026_02", position: 8, perf: null, note: [] },
 
-            { live_id: "live2025_09", position: 1, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 9, perf: null, note: [""] },
-            { live_id: "live2025_04", position: 1, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2025_03", position: 21, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 26, perf: null, note: [""] },
-            { live_id: "live2025_01", position: 3, perf: null, note: [""] },
+            { live_id: "live2025_09", position: 1, perf: null, note: [] },
+            { live_id: "live2025_05", position: 9, perf: null, note: [] },
+            {
+                live_id: "live2025_04",
+                position: 1,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2025_03", position: 21, perf: null, note: [] },
+            { live_id: "live2025_02", position: 26, perf: null, note: [] },
+            { live_id: "live2025_01", position: 3, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 16, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2024_09",
+                position: 16,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2283,7 +3423,7 @@ export const songsIndex = [
         title: "小説ならば",
         title_kana: "しょうせつならば",
         date: "2024-12-04",
-        cds: [{ id: "ep_02", track: 3 },],
+        cds: [{ id: "ep_02", track: 3 }],
         lyricist: ["竹縄航太"],
         composer: ["竹縄航太", "岩野亨"],
         arranger: ["竹縄航太"],
@@ -2292,15 +3432,26 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=p2RhRskf73E",
             spotify: "https://open.spotify.com/track/46bFnfqjy3nyPKi6GtldSW",
-            apple_music: "https://music.apple.com/jp/song/%E5%B0%8F%E8%AA%AC%E3%81%AA%E3%82%89%E3%81%B0/1778061830",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%B0%8F%E8%AA%AC%E3%81%AA%E3%82%89%E3%81%B0/1778061830",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eec",
         },
         live_history: [
-            { live_id: "live2026_04", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 13, perf: 1, note: ["日替わり曲"] },
+            { live_id: "live2026_04", position: 6, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 13,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
 
-            { live_id: "live2024_09", position: 5, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2024_08",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2308,7 +3459,7 @@ export const songsIndex = [
         title: "Go to the Moon",
         title_kana: "zzz_gotothemoon",
         date: "2024-12-04",
-        cds: [{ id: "ep_02", track: 4 },],
+        cds: [{ id: "ep_02", track: 4 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -2317,17 +3468,28 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=HDCtD4YmllQ",
             spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
-            apple_music: "https://music.apple.com/jp/song/go-to-the-moon/1778061831",
+            apple_music:
+                "https://music.apple.com/jp/song/go-to-the-moon/1778061831",
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eed",
         },
         live_history: [
-            { live_id: "live2026_05", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 3, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 14, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 22, perf: null, note: ["メドレー"] },
+            { live_id: "live2026_05", position: 6, perf: null, note: [] },
+            { live_id: "live2025_09", position: 3, perf: null, note: [] },
+            { live_id: "live2025_03", position: 14, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 22,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2024_08", position: 16, perf: null, note: [""] },
-            { live_id: "live2024_06", position: 14, perf: null, note: ["初披露"] },
+            { live_id: "live2024_08", position: 16, perf: null, note: [] },
+            {
+                live_id: "live2024_06",
+                position: 14,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2344,14 +3506,20 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0nTn7BrtU9tOcdSdzplysR",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%A2%E3%83%93%E3%82%B9%E3%81%A8%E6%B8%85%E3%82%89%E3%81%AA%E9%8A%80%E4%B8%96%E7%95%8C/1781057265",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%A2%E3%83%93%E3%82%B9%E3%81%A8%E6%B8%85%E3%82%89%E3%81%AA%E9%8A%80%E4%B8%96%E7%95%8C/1781057265",
             line_music: "https://music.line.me/webapp/track/mt00000000209bfb94",
         },
         live_history: [
-            { live_id: "live2025_10", position: 1, perf: null, note: [""] },
+            { live_id: "live2025_10", position: 1, perf: null, note: [] },
 
-            { live_id: "live2024_09", position: 12, perf: null, note: [""] },
-            { live_id: "live2024_08", position: 12, perf: null, note: ["初披露"] },
+            { live_id: "live2024_09", position: 12, perf: null, note: [] },
+            {
+                live_id: "live2024_08",
+                position: 12,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -2361,7 +3529,7 @@ export const songsIndex = [
         title: "LLL",
         title_kana: "zzz_lll",
         date: "2025-03-10",
-        cds: [{ id: "al_04", track: 2 },],
+        cds: [{ id: "al_04", track: 2 }],
         lyricist: [".ENDRECHERI./堂本剛"],
         composer: [".ENDRECHERI./堂本剛"],
         arranger: [".ENDRECHERI./堂本剛", "宗本康兵"],
@@ -2374,9 +3542,14 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000002176b175",
         },
         live_history: [
-            { live_id: "live2025_03", position: 6, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 14, perf: null, note: [""] },
-            { live_id: "live2025_01", position: 6, perf: null, note: ["初披露"] },
+            { live_id: "live2025_03", position: 6, perf: null, note: [] },
+            { live_id: "live2025_02", position: 14, perf: null, note: [] },
+            {
+                live_id: "live2025_01",
+                position: 6,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2384,7 +3557,7 @@ export const songsIndex = [
         title: "因果応報アンチノミー",
         title_kana: "いんがおうほうあんちのみー",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 1 },],
+        cds: [{ id: "al_04", track: 1 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -2393,23 +3566,34 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=6LoJ4GVvNDM",
             spotify: "https://open.spotify.com/track/5oLO5hl3wM0MdYv87gSzhs",
-            apple_music: "https://music.apple.com/jp/song/%E5%9B%A0%E6%9E%9C%E5%BF%9C%E5%A0%B1%E3%82%A2%E3%83%B3%E3%83%81%E3%83%8E%E3%83%9F%E3%83%BC/1807467620",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%9B%A0%E6%9E%9C%E5%BF%9C%E5%A0%B1%E3%82%A2%E3%83%B3%E3%83%81%E3%83%8E%E3%83%9F%E3%83%BC/1807467620",
             line_music: "https://music.line.me/webapp/track/mt0000000021cfc547",
         },
         live_history: [
-            { live_id: "live2026_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 14, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 1, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 12, perf: null, note: [""] },
+            { live_id: "live2026_05", position: 1, perf: null, note: [] },
+            { live_id: "live2026_03", position: 14, perf: null, note: [] },
+            { live_id: "live2026_02", position: 1, perf: null, note: [] },
+            { live_id: "live2026_01", position: 12, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 10, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 9, perf: null, note: [""] },
-            { live_id: "live2025_08", position: 1, perf: null, note: [""] },
-            { live_id: "live2025_07", position: 3, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2025_04", position: 1, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2025_03", position: 23, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 28, perf: null, note: ["初披露", "最終公演のみ"] },
+            { live_id: "live2025_10", position: 10, perf: null, note: [] },
+            { live_id: "live2025_09", position: 9, perf: null, note: [] },
+            { live_id: "live2025_08", position: 1, perf: null, note: [] },
+            { live_id: "live2025_07", position: 3, perf: null, note: [] },
+            { live_id: "live2025_05", position: 1, perf: null, note: [] },
+            {
+                live_id: "live2025_04",
+                position: 1,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2025_03", position: 23, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 28,
+                perf: null,
+                note: ["初披露", "最終公演のみ"],
+            },
         ],
     },
     {
@@ -2417,7 +3601,7 @@ export const songsIndex = [
         title: "フィナーレ",
         title_kana: "ふぃなーれ",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 6 },],
+        cds: [{ id: "al_04", track: 6 }],
         lyricist: ["岡田一成"],
         composer: ["岡田一成", "玉谷友輝", "Masaki Tomiyama"],
         arranger: ["Masaki Tomiyama"],
@@ -2426,13 +3610,24 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1agWIt6R3A5MdpX1L5quLY",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%95%E3%82%A3%E3%83%8A%E3%83%BC%E3%83%AC/1807467627",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%95%E3%82%A3%E3%83%8A%E3%83%BC%E3%83%AC/1807467627",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1de",
         },
         live_history: [
-            { live_id: "live2026_03", position: 20, perf: null, note: ["メドレー"] },
+            {
+                live_id: "live2026_03",
+                position: 20,
+                perf: null,
+                note: ["メドレー"],
+            },
 
-            { live_id: "live2025_03", position: 7, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2025_03",
+                position: 7,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2440,7 +3635,7 @@ export const songsIndex = [
         title: "方程式は恋模様",
         title_kana: "ほうていしきはこいもよう",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 7 },],
+        cds: [{ id: "al_04", track: 7 }],
         lyricist: ["Kiyoki", "村瀬らむ", "SARVAL", "IKUTO", "B33G"],
         composer: ["IKUTO", "Kiyoki", "真白あまね", "SARVAL", "B33G"],
         arranger: ["IKUTO", "真白あまね", "SARVAL"],
@@ -2449,12 +3644,23 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2DXyFzJwUdq5yoljbyaAXF",
-            apple_music: "https://music.apple.com/jp/song/%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E6%81%8B%E6%A8%A1%E6%A7%98/1807467628",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E6%81%8B%E6%A8%A1%E6%A7%98/1807467628",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1df",
         },
         live_history: [
-            { live_id: "live2025_04", position: 1, perf: 3, note: ["日替わり曲"] },
-            { live_id: "live2025_03", position: 10, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2025_04",
+                position: 1,
+                perf: 3,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2025_03",
+                position: 10,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2462,16 +3668,19 @@ export const songsIndex = [
         title: "カラフるワンダフル",
         title_kana: "からふるわんだふる",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 9 },],
+        cds: [{ id: "al_04", track: 9 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』 エンディングテーマソング"],
+        tieup: [
+            "フジテレビ系アニメ『GO!GO!チャギントン』 エンディングテーマソング",
+        ],
         call: false,
         links: {
             mv: "https://www.youtube.com/watch?v=aSM59ANCgXA",
             spotify: "https://open.spotify.com/track/7x2i2i2JvhqNWALk5jvz6c",
-            apple_music: "https://music.apple.com/jp/song/%E3%82%AB%E3%83%A9%E3%83%95%E3%82%8B%E3%83%AF%E3%83%B3%E3%83%80%E3%83%95%E3%83%AB/1807467630",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%82%AB%E3%83%A9%E3%83%95%E3%82%8B%E3%83%AF%E3%83%B3%E3%83%80%E3%83%95%E3%83%AB/1807467630",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e1",
         },
         live_history: [],
@@ -2481,7 +3690,7 @@ export const songsIndex = [
         title: "in the Fate",
         title_kana: "zzz_inthefate",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 10 },],
+        cds: [{ id: "al_04", track: 10 }],
         lyricist: ["Orcaにゃん"],
         composer: ["Orcaにゃん", "IKUTO", "SARVAL", "B33G"],
         arranger: ["Orcaにゃん", "IKUTO", "SARVAL"],
@@ -2490,15 +3699,21 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1mPy0egDHMQnbuLVWuHedK",
-            apple_music: "https://music.apple.com/jp/song/in-the-fate/1807467633",
+            apple_music:
+                "https://music.apple.com/jp/song/in-the-fate/1807467633",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e2",
         },
         live_history: [
-            { live_id: "live2026_03", position: 7, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 7, perf: null, note: [] },
 
-            { live_id: "live2025_07", position: 1, perf: null, note: [""] },
-            { live_id: "live2025_05", position: 8, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 3, perf: null, note: ["初披露"] },
+            { live_id: "live2025_07", position: 1, perf: null, note: [] },
+            { live_id: "live2025_05", position: 8, perf: null, note: [] },
+            {
+                live_id: "live2025_03",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2506,7 +3721,7 @@ export const songsIndex = [
         title: "Paradox Re:Write",
         title_kana: "zzz_paradoxrewrite",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 11 },],
+        cds: [{ id: "al_04", track: 11 }],
         lyricist: ["Kiyoki", "SARVAL", "CS4W", "B33G"],
         composer: ["CS4W", "Kiyoki", "SARVAL", "B33G"],
         arranger: ["CS4W", "SARVAL"],
@@ -2515,16 +3730,22 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5LerS745dIrtRbCysv5igU",
-            apple_music: "https://music.apple.com/jp/song/paradox-re-write/1807467636",
+            apple_music:
+                "https://music.apple.com/jp/song/paradox-re-write/1807467636",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e3",
         },
         live_history: [
-            { live_id: "live2026_03", position: 8, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 8, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 13, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 2, perf: null, note: [""] },
-            { live_id: "live2025_04", position: 4, perf: null, note: [""] },
-            { live_id: "live2025_03", position: 22, perf: null, note: ["初披露"] },
+            { live_id: "live2025_10", position: 13, perf: null, note: [] },
+            { live_id: "live2025_09", position: 2, perf: null, note: [] },
+            { live_id: "live2025_04", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2025_03",
+                position: 22,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2532,21 +3753,29 @@ export const songsIndex = [
         title: "多分、僕のソネット",
         title_kana: "たぶんぼくのそねっと",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 13 },],
+        cds: [{ id: "al_04", track: 13 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["読売テレビ・ドラマDiVE「あらばしり」 エンディングテーマソング"],
+        tieup: [
+            "読売テレビ・ドラマDiVE「あらばしり」 エンディングテーマソング",
+        ],
         call: false,
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1OLnkhGpRCBkuIad3sbHuZ",
-            apple_music: "https://music.apple.com/jp/song/%E5%A4%9A%E5%88%86-%E5%83%95%E3%81%AE%E3%82%BD%E3%83%8D%E3%83%83%E3%83%88/1807467640",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%A4%9A%E5%88%86-%E5%83%95%E3%81%AE%E3%82%BD%E3%83%8D%E3%83%83%E3%83%88/1807467640",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e5",
         },
         live_history: [
-            { live_id: "live2025_03", position: 15, perf: null, note: [""] },
-            { live_id: "live2025_02", position: 9, perf: null, note: ["初披露"] },
+            { live_id: "live2025_03", position: 15, perf: null, note: [] },
+            {
+                live_id: "live2025_02",
+                position: 9,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2554,7 +3783,7 @@ export const songsIndex = [
         title: "貴方らしく",
         title_kana: "あなたらしく",
         date: "2025-04-23",
-        cds: [{ id: "al_04", track: 14 },],
+        cds: [{ id: "al_04", track: 14 }],
         lyricist: ["花房遊"],
         composer: ["花房遊", "YASU"],
         arranger: ["YASU"],
@@ -2563,13 +3792,24 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=8WM4cH7aYM8",
             spotify: "https://open.spotify.com/track/1yfC94XjRlidTGYdxd2Wkc",
-            apple_music: "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%82%89%E3%81%97%E3%81%8F/1807467642",
+            apple_music:
+                "https://music.apple.com/jp/song/%E8%B2%B4%E6%96%B9%E3%82%89%E3%81%97%E3%81%8F/1807467642",
             line_music: "https://music.line.me/webapp/track/mt0000000021e4b1e6",
         },
         live_history: [
-            { live_id: "live2026_03", position: 25, perf: null, note: ["Remix ver."] },
+            {
+                live_id: "live2026_03",
+                position: 25,
+                perf: null,
+                note: ["Remix ver."],
+            },
 
-            { live_id: "live2025_03", position: 17, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2025_03",
+                position: 17,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2577,7 +3817,7 @@ export const songsIndex = [
         title: "パラノイドランデブー",
         title_kana: "ぱらのいどらんでぶー",
         date: "2025-10-15",
-        cds: [{ id: "sg_04", track: 1 },],
+        cds: [{ id: "sg_04", track: 1 }],
         lyricist: ["川谷絵音"],
         composer: ["川谷絵音"],
         arranger: ["川谷絵音"],
@@ -2586,17 +3826,23 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=N3E6f_cLdI0",
             spotify: "https://open.spotify.com/track/4uYdHqrUBrf2UkEuF9lkMP",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%91%E3%83%A9%E3%83%8E%E3%82%A4%E3%83%89%E3%83%A9%E3%83%B3%E3%83%87%E3%83%96%E3%83%BC/1840593956",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%91%E3%83%A9%E3%83%8E%E3%82%A4%E3%83%89%E3%83%A9%E3%83%B3%E3%83%87%E3%83%96%E3%83%BC/1840593956",
             line_music: "https://music.line.me/webapp/track/mt0000000023a4ecad",
         },
         live_history: [
-            { live_id: "live2026_03", position: 13, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 9, perf: null, note: [""] },
+            { live_id: "live2026_03", position: 13, perf: null, note: [] },
+            { live_id: "live2026_01", position: 9, perf: null, note: [] },
 
-            { live_id: "live2025_10", position: 16, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 4, perf: null, note: [""] },
-            { live_id: "live2025_08", position: 4, perf: null, note: [""] },
-            { live_id: "live2025_07", position: 2, perf: null, note: ["初披露"] },
+            { live_id: "live2025_10", position: 16, perf: null, note: [] },
+            { live_id: "live2025_09", position: 4, perf: null, note: [] },
+            { live_id: "live2025_08", position: 4, perf: null, note: [] },
+            {
+                live_id: "live2025_07",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2604,7 +3850,7 @@ export const songsIndex = [
         title: "ビネットネット",
         title_kana: "びねっとねっと",
         date: "2025-10-15",
-        cds: [{ id: "sg_04", track: 2 },],
+        cds: [{ id: "sg_04", track: 2 }],
         lyricist: ["笹川真生"],
         composer: ["笹川真生"],
         arranger: ["笹川真生"],
@@ -2613,15 +3859,21 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=3h8iVVPlc9A",
             spotify: "https://open.spotify.com/track/76B2mLXjdcyifbvuecYCxf",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%93%E3%83%8D%E3%83%83%E3%83%88%E3%83%8D%E3%83%83%E3%83%88/1843294375",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%93%E3%83%8D%E3%83%83%E3%83%88%E3%83%8D%E3%83%83%E3%83%88/1843294375",
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9b",
         },
         live_history: [
-            { live_id: "live2026_01", position: 16, perf: 1, note: [""] },
+            { live_id: "live2026_01", position: 16, perf: 1, note: [] },
 
-            { live_id: "live2025_10", position: 15, perf: null, note: [""] },
-            { live_id: "live2025_09", position: 5, perf: null, note: [""] },
-            { live_id: "live2025_08", position: 7, perf: null, note: ["初披露"] },
+            { live_id: "live2025_10", position: 15, perf: null, note: [] },
+            { live_id: "live2025_09", position: 5, perf: null, note: [] },
+            {
+                live_id: "live2025_08",
+                position: 7,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2629,7 +3881,7 @@ export const songsIndex = [
         title: "希望的観測の定義",
         title_kana: "きぼうてきかんそくのていぎ",
         date: "2025-10-15",
-        cds: [{ id: "sg_04", track: 3 },],
+        cds: [{ id: "sg_04", track: 3 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -2638,13 +3890,24 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4yZrNNeXM7xhLPzQhj1oOH",
-            apple_music: "https://music.apple.com/jp/song/%E5%B8%8C%E6%9C%9B%E7%9A%84%E8%A6%B3%E6%B8%AC%E3%81%AE%E5%AE%9A%E7%BE%A9/1843294378",
+            apple_music:
+                "https://music.apple.com/jp/song/%E5%B8%8C%E6%9C%9B%E7%9A%84%E8%A6%B3%E6%B8%AC%E3%81%AE%E5%AE%9A%E7%BE%A9/1843294378",
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9c",
         },
         live_history: [
-            { live_id: "live2026_04", position: 8, perf: null, note: ["アンコール"] },
+            {
+                live_id: "live2026_04",
+                position: 8,
+                perf: null,
+                note: ["アンコール"],
+            },
 
-            { live_id: "live2025_10", position: 17, perf: null, note: ["初披露", "アンコール"] },
+            {
+                live_id: "live2025_10",
+                position: 17,
+                perf: null,
+                note: ["初披露", "アンコール"],
+            },
         ],
     },
     {
@@ -2652,22 +3915,35 @@ export const songsIndex = [
         title: "トレモロ",
         title_kana: "とれもろ",
         date: "2025-11-08",
-        cds: [{ id: "ep_03", track: 5 },],
+        cds: [{ id: "ep_03", track: 5 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
-        tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』 オープニングテーマソング"],
+        tieup: [
+            "ABCテレビドラマ『修学旅行で仲良くないグループに入りました』 オープニングテーマソング",
+        ],
         call: false,
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3raLYsviJFadclJa87w2j0",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%88%E3%83%AC%E3%83%A2%E3%83%AD/1846971732",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%88%E3%83%AC%E3%83%A2%E3%83%AD/1846971732",
             line_music: "https://music.line.me/webapp/track/mt0000000023eb8018",
         },
         live_history: [
-            { live_id: "live2026_03", position: 16, perf: 2, note: ["日替わり曲"] },
-            { live_id: "live2026_02", position: 3, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 3, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2026_03",
+                position: 16,
+                perf: 2,
+                note: ["日替わり曲"],
+            },
+            { live_id: "live2026_02", position: 3, perf: null, note: [] },
+            {
+                live_id: "live2026_01",
+                position: 3,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -2677,11 +3953,13 @@ export const songsIndex = [
         title: "NOW",
         title_kana: "zzz_now",
         date: "2026-01-19",
-        cds: [{ id: "ep_03", track: 6 },],
+        cds: [{ id: "ep_03", track: 6 }],
         lyricist: ["Nolzy"],
         composer: ["Nolzy"],
         arranger: ["Nolzy"],
-        tieup: ["読売テレビ・ドラマDiVE『親友の「同棲して」に「うん」て言うまで』 オープニングテーマソング"],
+        tieup: [
+            "読売テレビ・ドラマDiVE『親友の「同棲して」に「うん」て言うまで』 オープニングテーマソング",
+        ],
         call: false,
         links: {
             mv: null,
@@ -2690,8 +3968,18 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt000000002472dc99",
         },
         live_history: [
-            { live_id: "live2026_03", position: 16, perf: 1, note: ["日替わり曲"] },
-            { live_id: "live2026_01", position: 2, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2026_03",
+                position: 16,
+                perf: 1,
+                note: ["日替わり曲"],
+            },
+            {
+                live_id: "live2026_01",
+                position: 2,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2699,7 +3987,7 @@ export const songsIndex = [
         title: "ニヒリズムプリズム",
         title_kana: "にひりずむぷりずむ",
         date: "2026-03-02",
-        cds: [{ id: "ep_03", track: 1 },],
+        cds: [{ id: "ep_03", track: 1 }],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],
@@ -2708,15 +3996,21 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=zUMKlxFPUyU",
             spotify: "https://open.spotify.com/track/1tq4FHHczdk3metmlrjrkZ",
-            apple_music: "https://music.apple.com/jp/song/%E3%83%8B%E3%83%92%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0/1877826343",
+            apple_music:
+                "https://music.apple.com/jp/song/%E3%83%8B%E3%83%92%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0/1877826343",
             line_music: "https://music.line.me/webapp/track/mt0000000024e4fc27",
         },
         live_history: [
-            { live_id: "live2026_05", position: 11, perf: null, note: [""] },
-            { live_id: "live2026_04", position: 7, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 22, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 9, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 15, perf: null, note: ["初披露"] },
+            { live_id: "live2026_05", position: 11, perf: null, note: [] },
+            { live_id: "live2026_04", position: 7, perf: null, note: [] },
+            { live_id: "live2026_03", position: 22, perf: null, note: [] },
+            { live_id: "live2026_02", position: 9, perf: null, note: [] },
+            {
+                live_id: "live2026_01",
+                position: 15,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2724,7 +4018,7 @@ export const songsIndex = [
         title: "疾走",
         title_kana: "しっそう",
         date: "2026-03-11",
-        cds: [{ id: "ep_03", track: 2 },],
+        cds: [{ id: "ep_03", track: 2 }],
         lyricist: ["B33G", "Kiyoki", "Orcaにゃん", "SARVAL"],
         composer: ["B33G", "Kiyoki", "Orcaにゃん", "SARVAL"],
         arranger: ["B33G", "Orcaにゃん", "SARVAL"],
@@ -2733,14 +4027,20 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/6idtrXLVnkpgPUWXD30yrE",
-            apple_music: "https://music.apple.com/jp/song/%E7%96%BE%E8%B5%B0/1880024613",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%96%BE%E8%B5%B0/1880024613",
             line_music: "https://music.line.me/webapp/track/mt0000000024f58662",
         },
         live_history: [
-            { live_id: "live2026_05", position: 9, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 11, perf: null, note: [""] },
-            { live_id: "live2026_02", position: 7, perf: null, note: [""] },
-            { live_id: "live2026_01", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2026_05", position: 9, perf: null, note: [] },
+            { live_id: "live2026_03", position: 11, perf: null, note: [] },
+            { live_id: "live2026_02", position: 7, perf: null, note: [] },
+            {
+                live_id: "live2026_01",
+                position: 5,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2748,7 +4048,7 @@ export const songsIndex = [
         title: "愛無常",
         title_kana: "あいむじょう",
         date: "2026-03-11",
-        cds: [{ id: "ep_03", track: 3 },],
+        cds: [{ id: "ep_03", track: 3 }],
         lyricist: ["竹縄航太"],
         composer: ["竹縄航太"],
         arranger: ["竹縄航太"],
@@ -2757,12 +4057,23 @@ export const songsIndex = [
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1cKDi4rrpDchhwZirxZ61n",
-            apple_music: "https://music.apple.com/jp/song/%E6%84%9B%E7%84%A1%E5%B8%B8/1880024614",
+            apple_music:
+                "https://music.apple.com/jp/song/%E6%84%9B%E7%84%A1%E5%B8%B8/1880024614",
             line_music: "https://music.line.me/webapp/track/mt0000000024f58663",
         },
         live_history: [
-            { live_id: "live2026_03", position: 18, perf: null, note: ["メドレー"] },
-            { live_id: "live2026_01", position: 6, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2026_03",
+                position: 18,
+                perf: null,
+                note: ["メドレー"],
+            },
+            {
+                live_id: "live2026_01",
+                position: 6,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2770,7 +4081,7 @@ export const songsIndex = [
         title: "Silence",
         title_kana: "zzz_silence",
         date: "2026-03-11",
-        cds: [{ id: "ep_03", track: 4 },],
+        cds: [{ id: "ep_03", track: 4 }],
         lyricist: ["⭐︎Taku Takahashi"],
         composer: ["⭐︎Taku Takahashi"],
         arranger: ["⭐︎Taku Takahashi"],
@@ -2783,7 +4094,12 @@ export const songsIndex = [
             line_music: "https://music.line.me/webapp/track/mt0000000024f58664",
         },
         live_history: [
-            { live_id: "live2026_01", position: 13, perf: null, note: ["初披露"] },
+            {
+                live_id: "live2026_01",
+                position: 13,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
     {
@@ -2800,12 +4116,18 @@ export const songsIndex = [
         links: {
             mv: "https://www.youtube.com/watch?v=REA6cv8IZqc",
             spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
-            apple_music: "https://music.apple.com/jp/song/%E7%81%AB%E5%AE%B4/6781905374",
+            apple_music:
+                "https://music.apple.com/jp/song/%E7%81%AB%E5%AE%B4/6781905374",
             line_music: "https://music.line.me/webapp/track/mt0000000026273465",
         },
         live_history: [
-            { live_id: "live2026_05", position: 8, perf: null, note: [""] },
-            { live_id: "live2026_03", position: 10, perf: null, note: ["初披露"] },
+            { live_id: "live2026_05", position: 8, perf: null, note: [] },
+            {
+                live_id: "live2026_03",
+                position: 10,
+                perf: null,
+                note: ["初披露"],
+            },
         ],
     },
 
@@ -2833,10 +4155,10 @@ export const songsIndex = [
     },
     ライブ情報は後でまとめて書く
     外部リンクも
-    { live_id: "", position: , perf: null, note: [""] },
+    { live_id: "", position: , perf: null, note: [] },
     組長祭2020のセトリがわからない　いんざぬはやってそう
     組長祭2019のセトリがわからない
     ABSまつり2019のセトリがわからない
     SHIBUYA SUMMIT 2019のセトリがわからない
     */
-]
+];

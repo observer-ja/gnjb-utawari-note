@@ -1,6 +1,32 @@
 /* 原因は自分にある。 */
+export interface LyricText {
+    lyrics: string;
+    call?: boolean;
+    members?: string[];
+}
 
-export const song001 = {
+export interface LyricChunk {
+    members?: string[];
+    text: LyricText[];
+}
+
+export interface LyricRow {
+    members?: string[];
+    chunks: LyricChunk[];
+}
+
+export interface LyricBlock {
+    members?: string[];
+    rows: LyricRow[];
+}
+
+export interface SongLyrics {
+    id: string;
+    note: string;
+    lyrics_blocks: LyricBlock[];
+}
+
+export const song001: SongLyrics = {
     id: "song001",
     note: "デビュー曲。",
 
