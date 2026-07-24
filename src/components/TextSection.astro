@@ -1,0 +1,39 @@
+---
+import SectionTitle from '../components/SectionTitle.astro';
+
+interface Props {
+    title: string
+}
+
+const { title } = Astro.props
+---
+
+<section class="text-section">
+    <SectionTitle>{title}</SectionTitle>
+    <p class="text-section-text text-body">
+        <slot />
+    </p>
+</section>
+
+<style>
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .text-section-text {
+        padding: 0 20px;
+    }
+
+    @media (min-width: 1024px) {
+        .text-section {
+            gap: 12px;
+        }
+
+        .text-section-text {
+            padding: 0 48px;
+        }
+    }
+</style>

@@ -26,7 +26,7 @@ const recentNews = newsData.slice(0, 3)
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 12px;
+        gap: 8px;
     }
 
     .news-list {
@@ -37,6 +37,7 @@ const recentNews = newsData.slice(0, 3)
         margin: 0;
         list-style: none;
     }
+
     .news-more {
         text-align: right;
     }
@@ -47,6 +48,10 @@ const recentNews = newsData.slice(0, 3)
     }
 
     @media (min-width: 1024px) {
+        .news-section {
+            gap: 12px;
+        }
+
         .news-list {
             padding: 0 48px;
         }

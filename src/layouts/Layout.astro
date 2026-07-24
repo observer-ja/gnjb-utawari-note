@@ -46,6 +46,10 @@ const pageTitle = title ? `${title} | ${siteName}` : siteName;
         gap: 16px;
     }
 
+    :global(.color-text) {
+        color: var(--color-text-colored);
+    }
+
     @media (min-width: 1024px) {
         :global(.container) {
             padding: 60px 120px;

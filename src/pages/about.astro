@@ -1,9 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
+import TextSection from '../components/TextSection.astro';
 ---
 
 <Layout title='このサイトについて'>
     <PageHeader title="このサイトについて" />
-    <h1 class="container">Astro</h1>
+    <div class="container">
+        <TextSection title='当サイトの目的'>
+            当サイトは原因は自分にある。の楽曲における歌割りを個人がまとめた<span class="color-text">非公式</span>のファンサイトです。観測者の皆様が楽曲の歌割りを把握される際の負担の軽減を主な目的としております。
+        </TextSection>
+        <TextSection title='運営者について'>
+            原因は自分にある。のファンが個人で運営しております。
+        </TextSection>
+    </div>
 </Layout>
