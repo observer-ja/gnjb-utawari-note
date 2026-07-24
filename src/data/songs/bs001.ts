@@ -21,13 +21,12 @@ export interface LyricBlock {
 
 export interface SongLyrics {
     id: string;
-    note: string;
+    note?: string;
     lyrics_blocks: LyricBlock[];
 }
 
 export const bs001: SongLyrics = {
     id: "bs001",
-    note: "",
 
     lyrics_blocks: [
         {
