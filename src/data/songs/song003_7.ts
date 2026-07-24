@@ -1,3 +1,4 @@
+/* Up and Down 7人ver.*/
 export interface LyricText {
     lyrics: string;
     call?: boolean;
