@@ -2,11 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import MainVisual from '../components/MainVisual.astro';
 import NewsSection from '../components/NewsSection.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Layout>
     <MainVisual />
     <div class="container">
         <NewsSection />
+        <div class="btn-wrapper">
+            <Button text="楽曲を探す→" href="/gnjb-utawari-note/search"/>
+        </div>
     </div>
 </Layout>
+
+<style>
+    .btn-wrapper {
+        text-align: center;
+    }
+</style>

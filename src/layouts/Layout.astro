@@ -41,11 +41,15 @@ const pageTitle = title ? `${title} | ${siteName}` : siteName;
         max-width: 1200px;
         margin: 0 auto;
         padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
     @media (min-width: 1024px) {
         :global(.container) {
             padding: 60px 120px;
+            gap: 32px;
         }
     }
 </style>

@@ -1,10 +1,33 @@
 ---
 interface Props {
     text: string;
+    href: string;
+    class?: string;
 }
-const { text } = Astro.props
+const { text, href, class: className } = Astro.props
 ---
 
-<a class="button">
-    <p class="button-text">{text}</p>
+<a class:list={["btn", className]} href={href}>
+    <span class="btn-text text-body">{text}</span>
 </a>
+
+<style>
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 60px;
+        background-color: var(--color-primary);
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: var(--color-primary-dark);
+    }
+
+    .btn-text {
+        color: var(--color-bg);
+    }
+</style>
