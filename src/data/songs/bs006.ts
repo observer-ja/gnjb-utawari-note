@@ -1,7 +1,7 @@
+/* Burn Burn Bomb */
 export interface LyricText {
     lyrics: string;
     call?: boolean;
-    members?: string[];
 }
 
 export interface LyricChunk {
