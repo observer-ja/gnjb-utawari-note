@@ -1,9 +1,83 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+import TextSection from '../components/TextSection.astro';
 ---
 
 <Layout title='お問い合わせ'>
     <PageHeader title="お問い合わせ" />
-    <h1 class="container">Astro</h1>
+    <div class="container">
+        <div class="form-link-area">
+            <p class="form-link-text text-body">
+                歌割りの修正・追加箇所の報告、サイトの感想、質問等ございましたら下のフォームよりお問い合わせください。
+            </p>
+            <Button text="お問い合わせフォーム" href="#"/>
+        </div>
+        <div class="concern-section">
+            <TextSection title="悩み事">
+                以下のスペースには、サイトを運営・制作するにあたって、どのようにすべきか運営者が決めかねている項目が記されております。その項目につきましては、皆様からの意見をお集めしたいを考えておりますので、お問い合わせフォームより意見を送信いただけますと幸いです。
+                <br/>当サイトをより良いものにするために、皆様のお力をお貸しください。
+            </TextSection>
+            <div class="concern-panel">
+                <ol class="concern-list text-body">
+                    <li>
+                        並び替えの順番として「セトリ順」を実装するか
+                    </li>
+                    <li>
+                        BATTLE STREET時代の出演ライブ・イベントでのセトリ
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .form-link-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .form-link-text {
+        margin: 0;
+        padding: 0;
+    }
+
+    .concern-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .concern-panel {
+        background-color: var(--color-bg-dark);
+        border-radius: 20px;
+        border: 1px solid var(--color-primary);
+        padding: 20px 32px;
+    }
+
+    .concern-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin: 0;
+        padding: 0 0 0 20px;
+    }
+
+    @media (min-width: 1024px) {
+        .concern-section {
+            gap: 24px;
+        }
+
+        .concern-panel {
+            padding: 32px 48px;
+        }
+
+        .concern-list {
+            gap: 8px;
+        }
+    }
+</style>
