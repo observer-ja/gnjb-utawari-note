@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FilterChip from '../components/FilterChip.astro';
 
 import iconOneman from '/public/icon-oneman.svg?raw';
+import DatePicker from '../components/DatePicker.astro';
 ---
 
 <Layout title='楽曲を探す'>
@@ -11,6 +12,7 @@ import iconOneman from '/public/icon-oneman.svg?raw';
     <div class="container">
         <div>
             <FilterChip label='原因は君にもある。' name='live' value='test' icon={iconOneman}/>
+            <DatePicker name='startDate' />
         </div>
     </div>
 </Layout>

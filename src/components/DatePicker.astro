@@ -1,0 +1,34 @@
+---
+interface Props {
+    name: 'startDate' | 'endDate';
+    value?: string;
+}
+
+const { name, value } = Astro.props
+---
+
+<label class="date-picker">
+    <input type="date" name={name} value={value} class="date-input text-body" />
+</label>
+
+<style>
+    .date-picker {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+        width: auto;
+        padding: 2px 12px;
+        border-radius: 20px;
+        border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
+        box-sizing: border-box;
+        background-color: var(--color-bg);
+        cursor: pointer;
+    }
+
+    @media (hover: hover) {
+        .date-picker:hover {
+            background-color: var(--color-bg-dark);
+        }
+    }
+</style>
