@@ -2,12 +2,11 @@
 interface Props {
     text: string;
     href: string;
-    class?: string;
 }
-const { text, href, class: className } = Astro.props
+const { text, href, } = Astro.props
 ---
 
-<a class:list={["btn", className]} href={href}>
+<a class="btn" href={href}>
     <span class="btn-text text-body">{text}</span>
 </a>
 

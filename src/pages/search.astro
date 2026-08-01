@@ -1,37 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
-import FilterChip from '../components/FilterChip.astro';
-import DatePicker from '../components/DatePicker.astro';
-import SelectChip from '../components/SelectChip.astro';
-import SearchInput from '../components/SearchInput.astro';
-
-import iconOneman from '/public/icon-oneman.svg?raw';
-import { cds } from '../data/cds';
-
-const cdOptions = cds.map((cd) => ({
-    label: cd.title,
-    value: cd.id, // または cd.title など値にしたいプロパティ
-}));
+import FilterPanel from '../components/FilterPanel.astro';
 ---
 
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
-        <div class="filter-group">
-            <FilterChip label='原因は君にもある。' name='live' value='test' icon={iconOneman}/>
-            <DatePicker text='開始日' name='startDate' />
-            <SelectChip name='cd' options={cdOptions} placeholder='収録CDを選択'></SelectChip>
-            <SearchInput />
-        </div>
+        <FilterPanel/>
     </div>
 </Layout>
-
-<style>
-    .filter-group {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-</style>

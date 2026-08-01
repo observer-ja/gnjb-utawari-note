@@ -1,0 +1,181 @@
+---
+import FilterChip from '../components/FilterChip.astro';
+import DatePicker from '../components/DatePicker.astro';
+import SelectChip from '../components/SelectChip.astro';
+import SearchInput from '../components/SearchInput.astro';
+import Button from './Button.astro';
+
+import { lives } from '../data/lives';
+const recentLives = lives.slice(-3).reverse().map((live) => ({
+    label: live.name,
+    value: live.id,
+}));
+
+import { cds } from '../data/cds';
+const cdOptions = cds.map((cd) => ({
+    label: cd.title,
+    value: cd.id, // または cd.title など値にしたいプロパティ
+}));
+
+import { songsIndex } from '../data/index'
+import type { Song } from '../data/index';
+const allCreators: string[] = (songsIndex || []).flatMap((song: Song) => [
+    ...(song.lyricist || []),
+    ...(song.composer || []),
+    ...(song.arranger || [])
+]);
+const uniqueCreators = [...new Set(allCreators)]
+    .filter(Boolean) // 空文字やnull/undefinedがあれば除外
+    .sort((a, b) => a.localeCompare(b, 'ja'));
+const creatorOptions = uniqueCreators.map(creator => ({
+    label: creator,
+    value: creator,
+}));
+---
+
+<section class="filter-panel">
+    <div class="filter-panel__header">
+        <h2 class="filter-panel__title text-md">絞り込み条件</h2>
+    </div>
+    <div class="filter-panel__body">
+        <div class="filter-group">
+            <p class="filter-group__label text-body">ライブ</p>
+            <div class="filter-group__content">
+                {recentLives.map((live) => (
+                    <FilterChip 
+                        label={live.label} 
+                        name="live" 
+                        value={live.value} 
+                    />
+                ))}
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">リリース日</p>
+            <div class="filter-group__content">
+                <DatePicker text='開始日' name='startDate'></DatePicker>
+                <span>〜</span>
+                <DatePicker text='終了日' name='endDate'></DatePicker>
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">収録CD</p>
+            <div class="filter-group__content">
+                <SelectChip 
+                    name='cd'
+                    placeholder='収録CDを選択'
+                    options={cdOptions}
+                />
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">クリエイター</p>
+            <div class="filter-group__content">
+                <SelectChip 
+                    name='creator'
+                    placeholder='クリエイターを選択'
+                    options={creatorOptions}
+                />
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">タイアップ</p>
+            <div class="filter-group__content">
+                <FilterChip label="あり" name="tieup" value="true" type='radio' />
+                <FilterChip label="なし" name="tieup" value="false" type='radio'/>
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">MV</p>
+            <div class="filter-group__content">
+                <FilterChip label="あり" name="mv" value="true" type='radio'/>
+                <FilterChip label="なし" name="mv" value="false" type='radio'/>
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">コール</p>
+            <div class="filter-group__content">
+                <FilterChip label="あり" name="call" value="true" type='radio'/>
+                <FilterChip label="なし" name="call" value="false" type='radio'/>
+            </div>
+        </div>
+        <div class="filter-group">
+            <p class="filter-group__label text-body">曲名検索</p>
+            <div class="filter-group__content">
+                <SearchInput/>
+            </div>
+        </div>
+    </div>
+    <div class="filter-panel__action">
+        <Button text='この条件で検索する' href='#'/>
+    </div>
+</section>
+
+<style>
+    .filter-panel {
+        background-color: var(--color-bg-dark);
+        border: 1px solid var(--color-primary);
+        box-sizing: border-box;
+        border-radius: 12px;
+        padding: 24px 24px 12px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-panel__title {
+        margin: 0;
+        padding: 0 5px 5px 5px;
+    }
+
+    .filter-panel__body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-group__label {
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-group__content {
+        padding: 0 5px;
+        gap: 8px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .filter-panel__action {
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+    }
+</style>
+
+<script>
+    ['tieup', 'mv', 'call'].forEach((name) => {
+        const chips = document.querySelectorAll(`input[name="${name}"]`);
+        
+        chips.forEach((chip) => {
+            chip.addEventListener('click', (e) => {
+                const target = e.target as HTMLInputElement;
+                
+                if (target.dataset.wasChecked === 'true') {
+                    target.checked = false;
+                    target.dataset.wasChecked = 'false';
+                } else {
+                    chips.forEach((c) => ((c as HTMLInputElement).dataset.wasChecked = 'false'));
+                    target.dataset.wasChecked = 'true';
+                }
+            });
+        });
+    });
+</script>
