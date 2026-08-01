@@ -1,23 +1,32 @@
 ---
 interface Props {
+    text: string;
     name: 'startDate' | 'endDate';
     value?: string;
 }
 
-const { name, value } = Astro.props
+const { text, name, value } = Astro.props;
 ---
 
 <label class="date-picker">
-    <input type="date" name={name} value={value} class="date-input text-body" />
+    <input 
+        type={value ? "date" : "text"} 
+        name={name} 
+        value={value} 
+        placeholder={text} 
+        class="date-input text-body"
+        onfocus="this.type='date'; this.showPicker?.();"
+        onblur="if(!this.value) this.type='text';"
+    />
 </label>
 
 <style>
     .date-picker {
-        position: relative;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         height: 32px;
-        width: auto;
+        width: 130px;
         padding: 2px 12px;
         border-radius: 20px;
         border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
@@ -30,5 +39,29 @@ const { name, value } = Astro.props
         .date-picker:hover {
             background-color: var(--color-bg-dark);
         }
+    }
+
+    .date-input {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: inherit;
+        text-align: center;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+    }
+
+    .date-input::placeholder {
+        color: var(--color-text);
+        opacity: 0.25;
+    }
+
+    .date-input::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+
+    .date-picker:has(.date-input[type="date"]) {
+        border-color: var(--color-text);
     }
 </style>

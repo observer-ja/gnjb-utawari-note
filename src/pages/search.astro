@@ -10,9 +10,17 @@ import DatePicker from '../components/DatePicker.astro';
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
-        <div>
+        <div class="filter-group">
             <FilterChip label='原因は君にもある。' name='live' value='test' icon={iconOneman}/>
-            <DatePicker name='startDate' />
+            <DatePicker text='開始日' name='startDate' />
         </div>
     </div>
 </Layout>
+
+<style>
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* チップ同士の間隔（お好みで調整してください） */
+    }
+</style>
