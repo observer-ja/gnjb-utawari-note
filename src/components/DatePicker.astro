@@ -27,12 +27,14 @@ const { text, name, value } = Astro.props;
         justify-content: center;
         height: 32px;
         width: 130px;
+        max-width: 100%;
         padding: 2px 12px;
         border-radius: 20px;
         border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
         box-sizing: border-box;
         background-color: var(--color-bg);
         cursor: pointer;
+        overflow: hidden;
     }
 
     @media (hover: hover) {
@@ -50,6 +52,9 @@ const { text, name, value } = Astro.props;
         cursor: pointer;
         padding: 0;
         margin: 0;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
     .date-input::placeholder {

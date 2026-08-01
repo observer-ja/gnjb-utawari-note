@@ -1,0 +1,84 @@
+---
+interface Option {
+    label: string;
+    value: string;
+}
+
+interface Props {
+    name: string;
+    placeholder?: string;
+    options: Option[];
+    defaultValue?: string;
+}
+
+const {
+    name,
+    placeholder = '選択してください',
+    options,
+    defaultValue = ''
+} = Astro.props
+---
+
+<label class="select-chip">
+    <select name={name} class="select-input text-body">
+        <option value="" selected={!defaultValue}>{placeholder}</option>
+        {options.map((opt) => (
+            <option value={opt.value} selected={opt.value === defaultValue}>
+                {opt.label}
+            </option>
+        ))}
+    </select>
+    <img src="/gnjb-utawari-note/icon-select.svg" alt="" class="select-icon">
+</label>
+
+<style>
+    .select-chip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        height: 32px;
+        width: fit-content;
+        border-radius: 5px;
+        border: 1px solid var(--color-text);
+        box-sizing: border-box;
+        background-color: var(--color-bg);
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    @media (hover: hover) {
+        .select-chip:hover {
+            background-color: var(--color-bg-dark);
+        }
+    }
+
+    .select-input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: inherit;
+        color: var(--color-text);
+        cursor: pointer;
+        padding: 2px 32px 2px 12px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .select-icon {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        transform: scaleY(-1);
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        z-index: 0;
+    }
+</style>
