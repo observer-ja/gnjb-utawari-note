@@ -1,0 +1,111 @@
+---
+interface Props {
+    expandText: string;
+}
+
+const { expandText } = Astro.props
+---
+
+<button type="button" class="expand-toggle-chip" data-expanded="false">
+    <span class="expand-toggle-chip__icon">
+        <span class="expand-toggle-chip__line"></span>
+        <span class="expand-toggle-chip__line"></span>
+    </span>
+    <span class="expand-toggle-chip__text text-body">{expandText}</span>
+</button>
+
+<style>
+    .expand-toggle-chip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+        width: auto;
+        padding: 2px 12px;
+        gap: 6px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: var(--color-primary);
+        font-family: inherit;
+
+        transition: 
+            background-color 0.4s ease,
+            border-color 0.4s ease,
+            color 0.4s ease,
+            transform 0.4s ease;
+    }
+
+    .expand-toggle-chip[data-expanded="false"] {
+        border: 1px dashed var(--color-primary);
+        background-color: var(--color-bg);
+        color: var(--color-primary);
+    }
+
+    .expand-toggle-chip[data-expanded="true"] {
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+    }
+
+    @media (hover: hover) {
+        .expand-toggle-chip[data-expanded="false"]:hover {
+            background-color: var(--color-bg-dark);
+        }
+
+        .expand-toggle-chip[data-expanded="true"]:hover {
+            border: 1px solid var(--color-text);
+        }
+    }
+
+
+    .expand-toggle-chip__icon {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+    }
+
+    .expand-toggle-chip__line {
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        left: 0;
+        height: 1px;
+        background-color: var(--color-primary);
+        border-radius: 1px;
+        transform-origin: left center;
+        transition: all 0.4s ease;
+    }
+
+    .expand-toggle-chip[data-expanded="true"] .expand-toggle-chip__line {
+        background-color: var(--color-bg);
+    }
+
+    .expand-toggle-chip__line:nth-child(2){
+        transform: rotate(90deg);
+        transform-origin: center center;
+    }
+
+    .expand-toggle-chip[data-expanded="true"] .expand-toggle-chip__line:nth-child(2) {
+        transform: rotate(0deg);
+    }
+</style>
+
+<script>
+    const COLLAPSE_TEXT = '閉じる';
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.expand-toggle-chip');
+
+    buttons.forEach((btn) => {
+        const textEl = btn.querySelector('.expand-toggle-chip__text');
+        const originalText = textEl?.textContent || '';
+
+        btn.addEventListener('click', () => {
+            const isExpanded = btn.dataset.expanded === 'true';
+            const nextState = !isExpanded;
+            btn.dataset.expanded = String(nextState);
+            if (textEl) {
+                textEl.textContent = nextState ? COLLAPSE_TEXT : originalText;
+            }
+        });
+    });
+</script>
