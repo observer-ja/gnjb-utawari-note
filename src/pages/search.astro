@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FilterChip from '../components/FilterChip.astro';
 import DatePicker from '../components/DatePicker.astro';
 import SelectChip from '../components/SelectChip.astro';
+import SearchInput from '../components/SearchInput.astro';
 
 import iconOneman from '/public/icon-oneman.svg?raw';
 import { cds } from '../data/cds';
@@ -21,6 +22,7 @@ const cdOptions = cds.map((cd) => ({
             <FilterChip label='原因は君にもある。' name='live' value='test' icon={iconOneman}/>
             <DatePicker text='開始日' name='startDate' />
             <SelectChip name='cd' options={cdOptions} placeholder='収録CDを選択'></SelectChip>
+            <SearchInput />
         </div>
     </div>
 </Layout>

@@ -1,0 +1,55 @@
+---
+interface Props {
+    name?: string;
+    placeholder?: string;
+    defaultValue?: string;
+}
+
+const {
+    name = 'keyword',
+    placeholder = '曲名で検索',
+    defaultValue = ''
+} = Astro.props;
+---
+
+<label class="search-input-chip">
+    <input type="text" name={name} placeholder={placeholder} value={defaultValue} class="search-input text-body" />
+</label>
+
+<style>
+    .search-input-chip {
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+        width: auto;
+        max-width: 400px;
+        border-radius: 20px;
+        border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
+        box-sizing: border-box;
+        background-color: var(--color-bg);
+        cursor: text;
+        padding: 2px 12px;
+    }
+
+    .search-input-chip:focus-within,
+    .search-input-chip:has(.search-input:not(:placeholder-shown)) {
+        border-color: var(--color-text);
+    }
+
+    .search-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var(--color-text);
+        font-family: inherit;
+        padding: 0;
+        margin: 0;
+    }
+
+    .search-input::placeholder {
+        color: var(--color-text);
+        opacity: 0.25;
+    }
+</style>
