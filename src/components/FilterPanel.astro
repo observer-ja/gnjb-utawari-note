@@ -1,6 +1,7 @@
 ---
-import FilterChip from '../components/FilterChip.astro';
 import ExpandToggleChip from './ExpandToggleChip.astro';
+import FilterChip from '../components/FilterChip.astro';
+import LiveFilter from '../components/LiveFilter.astro';
 import DatePicker from '../components/DatePicker.astro';
 import SelectChip from '../components/SelectChip.astro';
 import SearchInput from '../components/SearchInput.astro';
@@ -46,14 +47,19 @@ const creatorOptions = uniqueCreators.map(creator => ({
             <div class="filter-group">
                 <p class="filter-group__label text-body">ライブ</p>
                 <div class="filter-group__content">
-                    {recentLives.map((live) => (
-                        <FilterChip 
-                            label={live.label} 
-                            name="live" 
-                            value={live.value} 
-                        />
-                    ))}
-                    <ExpandToggleChip expandText='すべてのライブを見る'/>
+                    <div class="default-live-chips">
+                        {recentLives.map((live) => (
+                            <FilterChip 
+                                label={live.label} 
+                                name="live" 
+                                value={live.value} 
+                            />
+                        ))}
+                        <ExpandToggleChip expandText='すべてのライブを見る'/>
+                    </div>
+                    <div class="expandable-live-filter">
+                        <LiveFilter/>
+                    </div>
                 </div>
             </div>
             <div class="filter-group">
@@ -185,6 +191,23 @@ const creatorOptions = uniqueCreators.map(creator => ({
         align-items: center;
     }
 
+    .default-live-chips {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 12px;
+    }
+
+    .expandable-live-filter {
+        display: none;
+        width: 100%;
+    }
+
+    .filter-group:has(.expand-toggle-chip[data-expanded="true"]) .expandable-live-filter {
+        display: block;
+        margin-top: 12px;
+    }
+
     .filter-row {
         display: flex;
         flex-direction: column;
@@ -220,7 +243,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
 
         .filter-group {
             flex: 1;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: row;
             gap: 6px;
         }
@@ -228,6 +251,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
         .filter-group__label {
             width: 120px;
             flex-shrink: 0;
+            padding-top: 10px;
         }
 
         .filter-group__content {

@@ -1,10 +1,16 @@
 ---
+import type { LiveType } from '../data/lives'
+
+import OnemanIcon from '/icon-oneman.svg?raw';
+import FesIcon from '/icon-fes.svg?raw';
+import StreamIcon from '/icon-stream.svg?raw';
+
 interface Props {
     label: string; /* チップの文字 */
     name: 'live' | 'mv' | 'call' | 'tieup' | 'other'; /* チップの種類 */
     value: string; /*　チップによる情報　*/
     type?: 'checkbox' | 'radio';
-    icon?: string;
+    icon?: LiveType;
 }
 
 const {
@@ -14,13 +20,21 @@ const {
     type = 'checkbox',
     icon,
 } = Astro.props;
+
+const ICON_MAP = {
+    oneman: OnemanIcon,
+    fes: FesIcon,
+    stream: StreamIcon,
+};
+
+const IconObj = icon ? ICON_MAP[icon] : null;
 ---
 
 <label class="filter-chip">
     <input type={type} name={name} value={value} class="chip-input" />
-    {icon && (
+    {IconObj && (
         <span class="chip-icon">
-            <Fragment set:html={icon} />
+            <Fragment set:html={IconObj} />
         </span>
     )}
     <span class="chip-label text-body">{label}</span>
