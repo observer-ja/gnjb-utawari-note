@@ -16,7 +16,7 @@ const recentLives = lives.slice(-3).reverse().map((live) => ({
 import { cds } from '../data/cds';
 const cdOptions = cds.map((cd) => ({
     label: cd.title,
-    value: cd.id, // または cd.title など値にしたいプロパティ
+    value: cd.id,
 }));
 
 import { songsIndex } from '../data/index'
@@ -27,7 +27,6 @@ const allCreators: string[] = (songsIndex || []).flatMap((song: Song) => [
     ...(song.arranger || [])
 ]);
 const uniqueCreators = [...new Set(allCreators)]
-    .filter(Boolean) // 空文字やnull/undefinedがあれば除外
     .sort((a, b) => a.localeCompare(b, 'ja'));
 const creatorOptions = uniqueCreators.map(creator => ({
     label: creator,
