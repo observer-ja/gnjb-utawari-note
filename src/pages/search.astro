@@ -4,6 +4,8 @@ import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
 import ActiveFilter from '../components/ActiveFilter.astro';
 import UnderlineText from '../components/UnderlineText.astro';
+import FeatureBadge from '../components/FeatureBadge.astro';
+import NoteBadge from '../components/NoteBadge.astro';
 ---
 
 <Layout title='楽曲を探す'>
@@ -14,5 +16,15 @@ import UnderlineText from '../components/UnderlineText.astro';
         <div class="search-result__count">
             <UnderlineText>全８曲</UnderlineText>
         </div>
+        <div class="a">
+            <FeatureBadge type='mv'/>
+            <NoteBadge note='初披露'/>
+        </div>
     </div>
 </Layout>
+
+<style>
+    .a {
+        display: flex;
+    }
+</style>
