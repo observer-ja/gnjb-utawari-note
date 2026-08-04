@@ -1,0 +1,220 @@
+---
+import ActiveFilterChip from "./ActiveFilterChip.astro";
+import UnderlineText from "./UnderlineText.astro";
+---
+
+<section class="active-filters">
+    <div class="active-filters__header">
+        <UnderlineText>選択中の条件</UnderlineText>
+    </div>
+    <div class="active-chips-list" id="js-active-chips"></div>
+    <button type="button" class="reset-button text-body" id="js-reset-btn">条件をリセット</button>
+</section>
+
+<div style="display: none;">
+    <ActiveFilterChip label="" name="" value="" />
+</div>
+
+<style>
+    .active-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .active-chips-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 12px;
+        padding: 0 5px;
+    }
+
+    .reset-button {
+        background: none;
+        border: none;
+        width: fit-content;
+        padding: 0;
+        color: var(--color-primary);
+        font-family: inherit;
+        text-decoration: underline;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    @media (hover:hover) {
+        .reset-button:hover {
+            opacity: 0.6;
+        }
+    }
+</style>
+
+<script>
+    const form = document.querySelector<HTMLFormElement>('.filter-panel');
+    const activeChipsContainer = document.getElementById('js-active-chips');
+    const resetButton = document.getElementById('js-reset-btn');
+
+    const GROUP_NAME_MAP: Record<string, string> = {
+        tieup: 'タイアップ：',
+        call: 'コール：',
+        mv: 'MV：'
+    };
+
+    // 確定された現在の検索条件から ActiveChips 一覧をレンダリングする関数
+    function renderActiveChips() {
+        if (!form || !activeChipsContainer) return;
+        activeChipsContainer.innerHTML = '';
+
+        const inputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
+        const processedLives = new Set<string>();
+
+        let startDate = '';
+        let endDate = '';
+
+        inputs.forEach((input) => {
+            // テキスト入力（曲名検索など）
+            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
+                const val = input.value.trim();
+                if (val) addChipHTML(`「${val}」を含む`, input.name, val);
+                return;
+            }
+
+            if (input instanceof HTMLInputElement && (input.name === 'startDate' || input.name === 'endDate')) {
+                const val = input.value.trim();
+                if (val) {
+                    if (input.name === 'startDate') startDate = val;
+                    if (input.name === 'endDate') endDate = val;
+                }
+                return;
+            }
+
+            // セレクトボックス（収録CD、クリエイター）
+            if (input instanceof HTMLSelectElement) {
+                if (input.value) {
+                    const text = input.options[input.selectedIndex].text;
+                    addChipHTML(text, input.name, input.value);
+                }
+                return;
+            }
+
+            // チェックボックス・ラジオボタン（checked のもの）
+            if (input instanceof HTMLInputElement && input.checked) {
+                if (input.name === 'live') {
+                    if (processedLives.has(input.value)) return;
+                    processedLives.add(input.value);
+                }
+
+                let labelText = input.closest('label')?.textContent?.trim() || input.value;
+                if (GROUP_NAME_MAP[input.name]) {
+                    // 「MV：あり」のように結合
+                    labelText = `${GROUP_NAME_MAP[input.name]}${labelText}`;
+                }
+
+                addChipHTML(labelText, input.name, input.value, input.type);
+            }
+        });
+
+        if (startDate && endDate) {
+            addChipHTML(`リリース日：${startDate} 〜 ${endDate}`, 'startDate,endDate', `${startDate}_${endDate}`);
+        } else if (startDate) {
+            addChipHTML(`リリース日：${startDate} 〜`, 'startDate', startDate);
+        } else if (endDate) {
+            addChipHTML(`リリース日：〜 ${endDate}`, 'endDate', endDate);
+        }
+    }
+
+    function addChipHTML(label: string, name: string, value: string, type: string = 'checkbox') {
+        if (!activeChipsContainer) return;
+
+        const chipWrapper = document.createElement('div');
+        chipWrapper.innerHTML = `
+            <label class="active-filter-chip">
+                <input type="${type}" name="${name}" value="${value}" class="active-chip-input" />
+                <span class="active-chip-label text-sm">${label}</span>
+                <span class="active-chip-close text-sm">×</span>
+            </label>
+        `;
+
+        const chipElement = chipWrapper.firstElementChild as HTMLLabelElement;
+        const chipInput = chipElement.querySelector<HTMLInputElement>('.active-chip-input');
+        
+        // 最初は active なので checked = true
+        if (chipInput) chipInput.checked = true;
+
+        // --------------------------------------------------
+        // 👇 activechip を押した時の処理
+        // 即座に消すのではなく、checked を外して白背景にし、パネル側も連動解除する
+        // --------------------------------------------------
+        chipElement.addEventListener('click', (e) => {
+            e.preventDefault(); // labelのデフォルト動作防止
+
+            if (chipInput) {
+                // チェック状態を反転（白背景 ↔ オレンジ背景）
+                chipInput.checked = !chipInput.checked;
+
+                // 対応する FilterPanel 側の input / select の選択状態も合わせる
+                if (form) {
+                    const names = name.split(',');
+                    const selector = names.map(n => `[name="${n}"]`).join(',');
+                    const panelInputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>(selector);
+                    panelInputs.forEach((panelInput) => {
+                        if (panelInput instanceof HTMLSelectElement) {
+                            if (!chipInput.checked) panelInput.value = '';
+                        } else if (panelInput instanceof HTMLInputElement) {
+                            if (panelInput.type === 'text' || panelInput.type === 'search' || panelInput.name.includes('Date')) {
+                                if (!chipInput.checked) panelInput.value = '';
+                            } else if (panelInput.value === value || panelInput.type === 'radio') {
+                                panelInput.checked = chipInput.checked;
+                                panelInput.dataset.wasChecked = chipInput.checked ? 'true' : 'false';
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
+        activeChipsContainer.appendChild(chipElement);
+    }
+
+    // --------------------------------------------------
+    // イベント監視の設定
+    // --------------------------------------------------
+
+    // 💡 form の change / input イベントでの即時再描画は行わない！
+    // 検索実行（submit）時にチップ一覧を最新状態に確定更新する
+    form?.addEventListener('submit', (e) => {
+        // 👇 ページ遷移（404エラー）を防止して画面上でプレビューする
+        e.preventDefault();
+
+        // 1. 選択されている最新の条件で ActiveFilter Chips を確定・更新
+        renderActiveChips();
+
+        // 2. (任意) 検索結果のデータ絞り込みや件数更新などのプレビュー処理をここに追加できます
+        console.log('検索プレビューを実行しました');
+    });
+
+    // 「条件をリセット」ボタンの処理
+    resetButton?.addEventListener('click', () => {
+        if (!form) return;
+        
+        // フォーム全体の入力状態をリセット
+        form.reset();
+
+        const inputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
+        inputs.forEach((input) => {
+            if (input instanceof HTMLInputElement) input.dataset.wasChecked = 'false';
+        });
+
+        // 生成済みの ActiveChip 内の input の checked をすべて false にして非active（白背景）にする
+        if (activeChipsContainer) {
+            const chipInputs = activeChipsContainer.querySelectorAll<HTMLInputElement>('.active-chip-input');
+            chipInputs.forEach((chipInput) => {
+                chipInput.checked = false;
+            });
+        }
+    });
+
+    // 初期表示時に現在の条件で描画（URLパラメータ等から復元された初期状態を反映）
+    renderActiveChips();
+</script>

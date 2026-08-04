@@ -2,11 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
+import ActiveFilter from '../components/ActiveFilter.astro';
+import UnderlineText from '../components/UnderlineText.astro';
 ---
 
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
         <FilterPanel/>
+        <ActiveFilter/>
+        <div class="search-result__count">
+            <UnderlineText>全８曲</UnderlineText>
+        </div>
     </div>
 </Layout>
