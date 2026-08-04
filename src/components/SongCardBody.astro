@@ -1,0 +1,71 @@
+---
+import FeatureBadge from "./FeatureBadge.astro";
+import type { Song } from '../data/index'
+import { cds } from "../data/cds";
+interface Props {
+    song: Song;
+    displayMode?: 'default' | 'setlist';
+    liveId?: string;
+}
+
+const { song, displayMode = 'default', liveId } = Astro.props
+
+const meta = {
+    composer:
+        song.composer.length === 0
+        ? 'ー'
+        : song.composer.length === 1
+            ? song.composer[0]
+            : `${song.composer[0]}　他`,
+    cd: song.cds
+        .map(c => cds.find(cd => cd.id === c.id)?.title)
+        .filter(Boolean)
+        .join('、') || 'ー',
+    date: song.date ? song.date.replaceAll('-', '.') : 'ー',
+}
+---
+
+<div class="song-card-body text-sm">
+    <div class="song-card-body__row">
+        <span class="song-card-body__label">作曲：</span>
+        <span class="song-card-body__value">{meta.composer}</span>
+    </div>
+    <div class="song-card-body__row">
+        <span class="song-card-body__label">収録：</span>
+        <span class="song-card-body__value">{meta.cd}</span>
+    </div>
+    <div class="song-card-body__row">
+        <span class="song-card-body__label">リリース日：</span>
+        <span class="song-card-body__value">{meta.date}</span>
+    </div>
+</div>
+
+<style>
+    .song-card-body {
+        height: 86px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8px 12px;
+        gap: 0;
+        background-color: var(--color-bg);
+        border: 0.5px dashed var(--color-primary);
+        box-sizing: border-box;
+    }
+
+    .song-card-body__row {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .song-card-body__label {
+        flex-shrink: 0;
+    }
+
+    .song-card-body__value {
+        flex-shrink: 1;
+    }
+</style>

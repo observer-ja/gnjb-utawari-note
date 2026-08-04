@@ -6,6 +6,10 @@ import ActiveFilter from '../components/ActiveFilter.astro';
 import UnderlineText from '../components/UnderlineText.astro';
 import FeatureBadge from '../components/FeatureBadge.astro';
 import NoteBadge from '../components/NoteBadge.astro';
+
+import SongCardBody from '../components/SongCardBody.astro';
+import { songsIndex } from '../data/index'
+const song = songsIndex;
 ---
 
 <Layout title='楽曲を探す'>
@@ -19,6 +23,7 @@ import NoteBadge from '../components/NoteBadge.astro';
         <div class="a">
             <FeatureBadge type='mv'/>
             <NoteBadge note='初披露'/>
+            <SongCardBody song={song[0]}/>
         </div>
     </div>
 </Layout>
