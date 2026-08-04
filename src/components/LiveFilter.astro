@@ -18,23 +18,6 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
 <div class="live-filter">
-    <div class="live-filter__yearly">
-        {years.map((year) => (
-            <div class="live-filter__year-group">
-                <p class="live-filter__year-title text-body">{year}年</p>
-                <div class="live-filter__year-content">
-                    {livesByYear[year].toReversed().map((live) => (
-                        <FilterChip 
-                            label={live.name} 
-                            name="live" 
-                            value={live.id} 
-                            icon={live.type} 
-                        />
-                    ))}
-                </div>
-            </div>
-        ))}
-    </div>
     <div class="live-filter__legend">
         <div class="live-filter__legend-item">
             <span class="live-filter__legend-icon">
@@ -55,12 +38,31 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
             <span class="text-caption"> ＝ 配信ライブ</span>
         </div>
     </div>
+    <div class="live-filter__yearly">
+        {years.map((year) => (
+            <div class="live-filter__year-group">
+                <p class="live-filter__year-title text-body">{year}年</p>
+                <div class="live-filter__year-content">
+                    {livesByYear[year].toReversed().map((live) => (
+                        <FilterChip 
+                            label={live.name} 
+                            name="live" 
+                            value={live.id} 
+                            icon={live.type} 
+                        />
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
 </div>
 
 <style>
     .live-filter {
         width: auto;
         height: auto;
+        max-height: 320px;
+        overflow-y: auto;
         background-color: var(--color-bg);
         padding: 12px;
         border: 1px dashed var(--color-primary);
@@ -68,6 +70,7 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
         display: flex;
         flex-direction: column;
         gap: 16px;
+        
     }
 
     .live-filter__yearly {
@@ -79,13 +82,18 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
     .live-filter__year-group {
         display: flex;
         flex-direction: column;
-        gap: 2px;
+        gap: 4px;
     }
 
     .live-filter__year-title {
+        position: sticky;
+        top: 0;
+        background-color: var(--color-bg);
+        z-index: 1;
         padding: 0;
         margin: 0;
         color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
     }
 
     .live-filter__year-content {
@@ -131,10 +139,6 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
 
         .live-filter__yearly {
             gap: 12px;
-        }
-
-        .live-filter__year-group {
-            gap: 4px;
         }
 
         .live-filter__year-content {

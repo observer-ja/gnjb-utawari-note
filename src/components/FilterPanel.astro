@@ -35,7 +35,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
 }));
 ---
 
-<section class="filter-panel">
+<form action="/search" method="GET" class="filter-panel">
     <div class="filter-panel__header">
         <h2 class="filter-panel__title text-md">絞り込み条件</h2>
         <div class="filter-panel__toggle">
@@ -123,10 +123,10 @@ const creatorOptions = uniqueCreators.map(creator => ({
             </div>
         </div>
         <div class="filter-panel__action">
-            <Button text='この条件で検索する' href='#'/>
+            <Button text='この条件で検索する' />
         </div>
     </div>
-</section>
+</form>
 
 <style>
     .filter-panel__header {
@@ -285,6 +285,23 @@ const creatorOptions = uniqueCreators.map(creator => ({
                     chips.forEach((c) => ((c as HTMLInputElement).dataset.wasChecked = 'false'));
                     target.dataset.wasChecked = 'true';
                 }
+            });
+        });
+    });
+
+    const liveInputs = document.querySelectorAll<HTMLInputElement>('input[name="live"]');
+
+    liveInputs.forEach((input) => {
+        input.addEventListener('change', (e) => {
+            const target = e.target as HTMLInputElement;
+            const targetValue = target.value;
+            const isChecked = target.checked;
+            const matchingInputs = document.querySelectorAll<HTMLInputElement>(
+                `input[name="live"][value="${targetValue}"]`
+            );
+
+            matchingInputs.forEach((matchingInput) => {
+                matchingInput.checked = isChecked;
             });
         });
     });
