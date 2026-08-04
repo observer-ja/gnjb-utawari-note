@@ -58,9 +58,12 @@ import UnderlineText from "./UnderlineText.astro";
     const GROUP_NAME_MAP: Record<string, string> = {
         tieup: 'タイアップ：',
         call: 'コール：',
-        mv: 'MV：'
+        mv: 'MV：',
+        live: 'ライブ：',
+        cd: 'CD：',
+        creator: 'クリエイター：'
     };
-
+    
     // 確定された現在の検索条件から ActiveChips 一覧をレンダリングする関数
     function renderActiveChips() {
         if (!form || !activeChipsContainer) return;
@@ -92,7 +95,11 @@ import UnderlineText from "./UnderlineText.astro";
             // セレクトボックス（収録CD、クリエイター）
             if (input instanceof HTMLSelectElement) {
                 if (input.value) {
-                    const text = input.options[input.selectedIndex].text;
+                    let text = input.options[input.selectedIndex].text;
+                    // 👇 追加：GROUP_NAME_MAP に定義があれば接頭辞を付ける
+                    if (GROUP_NAME_MAP[input.name]) {
+                        text = `${GROUP_NAME_MAP[input.name]}${text}`;
+                    }
                     addChipHTML(text, input.name, input.value);
                 }
                 return;
