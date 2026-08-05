@@ -33,7 +33,7 @@ export interface Song {
     live_history: LiveHistory[];
 }
 
-export const songsIndex = [
+export const songsIndex: Song[] = [
     /* BATTLE STREET時代 */
     {
         id: "bs001",

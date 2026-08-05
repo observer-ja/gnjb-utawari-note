@@ -4,10 +4,8 @@ import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
 import ActiveFilter from '../components/ActiveFilter.astro';
 import UnderlineText from '../components/UnderlineText.astro';
-import FeatureBadge from '../components/FeatureBadge.astro';
-import NoteBadge from '../components/NoteBadge.astro';
 
-import SongCardBody from '../components/SongCardBody.astro';
+import SongCard from '../components/SongCard.astro';
 import { songsIndex } from '../data/index'
 const song = songsIndex;
 ---
@@ -17,13 +15,8 @@ const song = songsIndex;
     <div class="container">
         <FilterPanel/>
         <ActiveFilter/>
-        <div class="search-result__count">
-            <UnderlineText>全８曲</UnderlineText>
-        </div>
         <div class="a">
-            <FeatureBadge type='mv'/>
-            <NoteBadge note='初披露'/>
-            <SongCardBody song={song[7]} displayMode='setlist' liveId='live2025_04'/>
+            <SongCard song={song[32]} liveId='live2025_04'/>
         </div>
     </div>
 </Layout>
