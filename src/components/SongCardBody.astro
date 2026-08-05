@@ -1,7 +1,8 @@
 ---
-import FeatureBadge from "./FeatureBadge.astro";
+import NoteBadge from './NoteBadge.astro';
 import type { Song } from '../data/index'
 import { cds } from "../data/cds";
+import { lives } from "../data/lives";
 interface Props {
     song: Song;
     displayMode?: 'default' | 'setlist';
@@ -23,21 +24,47 @@ const meta = {
         .join('、') || 'ー',
     date: song.date ? song.date.replaceAll('-', '.') : 'ー',
 }
+
+const ALLOWED_NOTES = ['初披露', 'シャッフル曲', '日替わり曲', 'メドレー'] as const;
+type ValidNote = typeof ALLOWED_NOTES[number];
+const currentHistory = song.live_history.find(h => h.live_id === liveId);
+const validNote = currentHistory?.note?.find(n => ALLOWED_NOTES.includes(n as ValidNote)) as ValidNote | undefined;
+
+
+const setlistMeta = {
+    liveName: lives.find(live => live.id === liveId)?.name || 'ー',
+    position: currentHistory?.position,
+    note: validNote || null,
+}
 ---
 
-<div class="song-card-body text-sm">
-    <div class="song-card-body__row">
-        <span class="song-card-body__label">作曲：</span>
-        <span class="song-card-body__value">{meta.composer}</span>
-    </div>
-    <div class="song-card-body__row">
-        <span class="song-card-body__label">収録：</span>
-        <span class="song-card-body__value">{meta.cd}</span>
-    </div>
-    <div class="song-card-body__row">
-        <span class="song-card-body__label">リリース日：</span>
-        <span class="song-card-body__value">{meta.date}</span>
-    </div>
+<div class={`song-card-body text-sm ${displayMode === 'setlist' ? 'song-card-body--setlist' : ''}`}>
+    {displayMode === 'default' && (
+        <>
+            <div class="song-card-body__row">
+                <span class="song-card-body__label">作曲：</span>
+                <span class="song-card-body__value">{meta.composer}</span>
+            </div>
+            <div class="song-card-body__row">
+                <span class="song-card-body__label">収録：</span>
+                <span class="song-card-body__value">{meta.cd}</span>
+            </div>
+            <div class="song-card-body__row">
+                <span class="song-card-body__label">リリース日：</span>
+                <span class="song-card-body__value">{meta.date}</span>
+            </div>
+        </>
+    )}
+
+    {displayMode === 'setlist' && (
+        <>
+            <div class="song-card-body__live-name">{setlistMeta.liveName}</div>
+            <div class="song-card-body__setlist-meta">
+                <span class="song-card-body__position text-body">M{setlistMeta.position}</span>
+                {setlistMeta.note && <NoteBadge note={setlistMeta.note} />}
+            </div>
+        </>
+    )}
 </div>
 
 <style>
@@ -55,6 +82,10 @@ const meta = {
         box-sizing: border-box;
     }
 
+    .song-card-body--setlist {
+        align-items: center;
+    }
+
     .song-card-body__row {
         display: flex;
         flex-direction: row;
@@ -67,5 +98,19 @@ const meta = {
 
     .song-card-body__value {
         flex-shrink: 1;
+    }
+
+    .song-card-body__line-name {
+        text-align: center;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .song-card-body__setlist-meta {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
     }
 </style>
