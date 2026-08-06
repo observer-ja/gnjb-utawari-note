@@ -67,7 +67,6 @@ const creatorOptions = uniqueCreators.map(creator => ({
 ---
 
 <div class="filter-panel">
-    <input type="hidden" name="sort" value={filters.sortOrder} />
     <div class="filter-panel__header">
         <h2 class="filter-panel__title text-md">絞り込み条件</h2>
         <div class="filter-panel__toggle">
@@ -348,4 +347,30 @@ const creatorOptions = uniqueCreators.map(creator => ({
             });
         });
     });
+
+    const searchForm = document.querySelector('.search-form') as HTMLFormElement;
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            const recentChips = document.querySelectorAll<HTMLInputElement>('.default-live-chips input[name="live"]');
+            const expandableChips = document.querySelectorAll<HTMLInputElement>('.expandable-live-filter input[name="live"]');
+
+            recentChips.forEach((recentInput) => {
+                if (recentInput.checked) {
+                    expandableChips.forEach((expandableInput) => {
+                        if (expandableInput.value === recentInput.value && expandableInput.checked) {
+                            recentInput.disabled = true;
+                        }
+                    });
+                }
+            });
+
+            const isSelectChange = e.submitter && e.submitter.tagName === 'SELECT';
+            if (!isSelectChange) {
+                const sortSelect = searchForm.querySelector<HTMLSelectElement>('select[name="sort"]');
+                if (sortSelect) {
+                    sortSelect.disabled = true; // ✨ これにより検索実行時は ?sort= が送信されずリセットされる！
+                }
+            }
+        });
+    }
 </script>

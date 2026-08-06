@@ -4,27 +4,18 @@ import SelectChip from "./SelectChip.astro";
 import SongCard from "./SongCard.astro";
 
 import type { Song } from "../data/index";
-interface Props {
-    sortedSongs: Song[];
-    isSetlistSortable?: boolean;
-    currentSort?: string;
-}
-const { sortedSongs, isSetlistSortable = false, currentSort } = Astro.props
-
 interface Option {
     label: string;
     value: string;
 }
 
-const baseSortOptions = [
-    { label: 'リリース日が新しい順', value: 'date-desc' },
-    { label: 'リリース日が古い順', value: 'date-asc' },
-    { label: '曲名順（五十音順）', value: 'title-asc' },
-];
+interface Props {
+    sortedSongs: Song[];
+    sortOptions: Option[];
+    currentSort: string;
+}
 
-const sortOptions = isSetlistSortable
-    ? [{ label: 'セットリスト順', value: 'setlist' }, ...baseSortOptions]
-    : baseSortOptions;
+const { sortedSongs, sortOptions, currentSort } = Astro.props;
 ---
 
 <div class="search-result-section">
@@ -32,7 +23,8 @@ const sortOptions = isSetlistSortable
     <SelectChip 
         name="sort" 
         options={sortOptions} 
-        defaultValue={currentSort || sortOptions[0].value}
+        defaultValue={currentSort}
+        submitOnChange={true}
     />
 </div>
 

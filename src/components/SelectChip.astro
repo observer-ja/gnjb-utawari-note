@@ -9,19 +9,23 @@ interface Props {
     placeholder?: string;
     options: Option[];
     defaultValue?: string;
+    submitOnChange?: boolean;
 }
 
 const {
     name,
-    placeholder = '選択してください',
+    placeholder,
     options,
-    defaultValue = ''
+    defaultValue = '',
+    submitOnChange = false
 } = Astro.props
 ---
 
 <label class="select-chip">
-    <select name={name} class="select-input text-body">
-        <option value="" selected={!defaultValue}>{placeholder}</option>
+    <select name={name} class="select-input text-body" onchange={submitOnChange ? "this.closest('form')?.submit()" : undefined}>
+        {placeholder && (
+            <option value="" selected={!defaultValue}>{placeholder}</option>
+        )}
         {options.map((opt) => (
             <option value={opt.value} selected={opt.value === defaultValue}>
                 {opt.label}

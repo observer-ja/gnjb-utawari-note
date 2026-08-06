@@ -11,23 +11,47 @@ import SearchResultSection from '../components/SearchResultSection.astro';
 import { songsIndex } from '../data/index';
 
 const searchParams = Astro.url.searchParams;
-const filters = {
-    selectedLives: [...new Set(searchParams.getAll('live'))].filter(Boolean),
-    startDate: searchParams.get('startDate') || '',
-    endDate: searchParams.get('endDate') || '',
-    cd: searchParams.get('cd') || '',
-    creator: searchParams.get('creator') || '',
-    tieup: searchParams.get('tieup') || '',
-    call: searchParams.get('call') || '',
-    mv: searchParams.get('mv') || '',
-    query: searchParams.get('keyword') || '',
-    sortOrder: searchParams.get('sort') || 'date-desc',
-
-    expanded: searchParams.get('expanded') === 'true',
-};
+const selectedLives = [...new Set(searchParams.getAll('live'))].filter(Boolean);
+const startDate = searchParams.get('startDate') || '';
+const endDate = searchParams.get('endDate') || '';
+const cd = searchParams.get('cd') || '';
+const creator = searchParams.get('creator') || '';
+const tieup = searchParams.get('tieup') || '';
+const call = searchParams.get('call') || '';
+const mv = searchParams.get('mv') || '';
+const query = searchParams.get('keyword') || '';
 
 const isSetlistSortable =
-    filters.selectedLives.length === 1 && !filters.startDate && !filters.endDate && !filters.cd && !filters.creator && !filters.tieup && !filters.call && !filters.mv && !filters.query
+    selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+
+
+const baseSortOptions = [
+    { label: 'リリース日が新しい順', value: 'date-desc' },
+    { label: 'リリース日が古い順', value: 'date-asc' },
+    { label: '曲名順（五十音順）', value: 'title-asc' },
+];
+
+const sortOptions = isSetlistSortable
+    ? [{ label: 'セットリスト順', value: 'setlist' }, ...baseSortOptions]
+    : baseSortOptions;
+
+const rawSort = searchParams.get('sort');
+
+const sortOrder = rawSort || sortOptions[0].value;
+
+const filters = {
+    selectedLives,
+    startDate,
+    endDate,
+    cd,
+    creator,
+    tieup,
+    call,
+    mv,
+    query,
+    sortOrder,
+    expanded: searchParams.get('expanded') === 'true',
+};
 
 const filteredSongs = (songsIndex || []).filter(song => {
     if (filters.selectedLives.length > 0) {
@@ -100,7 +124,11 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
             <div class="search-form__action">
                 <Button text='この条件で検索する' />
             </div>
-            <SearchResultSection sortedSongs={sortedSongs}/>
+            <SearchResultSection 
+                sortedSongs={sortedSongs} 
+                sortOptions={sortOptions} 
+                currentSort={filters.sortOrder}
+            />
         </form>
     </div>
 </Layout>
