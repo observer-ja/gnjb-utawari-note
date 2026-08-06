@@ -5,7 +5,6 @@ import FilterPanel from '../components/FilterPanel.astro';
 import ActiveFilter from '../components/ActiveFilter.astro';
 
 import { songsIndex } from '../data/index';
-import type { Song } from '../data/index';
 
 const searchParams = Astro.url.searchParams;
 const selectedLives = searchParams.getAll('live').filter(Boolean);
@@ -32,7 +31,7 @@ const filteredSongs = (songsIndex || []).filter(song => {
     if (startDate && song.date < startDate) return false;
     if (endDate && song.date > endDate) return false;
 
-    if (cd && song.cds?.some((c) => c.id === cd)) return false;
+    if (cd && !song.cds?.some((c) => c.id === cd)) return false;
     if (creator) {
         const hasCreator =
             song.lyricist?.includes(creator) ||
@@ -42,11 +41,47 @@ const filteredSongs = (songsIndex || []).filter(song => {
         if(!hasCreator) return false;
     }
 
-    if (tieup === 'true' && !song.tieup) return false;
-    if (tieup === 'false' && song.tieup) return false;
+    if (tieup === 'true' && !((song.tieup?.length ?? 0) > 0)) return false;
+    if (tieup === 'false' && ((song.tieup?.length ?? 0) > 0)) return false;
 
-    
+    if (mv === "true" && !song.links?.mv) return false;
+    if (mv === "false" && song.links?.mv) return false;
+
+    if (call === "true" && !song.call) return false;
+    if (call === "false" && song.call) return false;
+
+    if (query && !song.title?.includes(query) && !song.title_kana?.includes(query)) return false;
+
+    return true;
 })
+
+const sortedSongs = [...filteredSongs].sort((a, b) => {
+    if (sortOrder === 'date-desc') {
+        return (b.date || '').localeCompare(a.date || '');
+    }
+
+    if (sortOrder === 'date-asc') {
+        return (a.date || '').localeCompare(b.date || '');
+    }
+
+    if (sortOrder === 'title-asc') {
+        return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
+    }
+
+    if (sortOrder === 'setlist') {
+        const liveId = selectedLives[0];
+        const posA = a.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
+        const posB = b.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
+        if (posA == posB) {
+            const perfA = a.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
+            const perfB = b.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
+            return perfA - perfB;
+        }
+        return posA - posB;
+    }
+
+    return 0;
+});
 ---
 
 <Layout title='楽曲を探す'>
@@ -56,32 +91,3 @@ const filteredSongs = (songsIndex || []).filter(song => {
         <ActiveFilter/>
     </div>
 </Layout>
-
-<!--
-1. データのインポート
-全楽曲データ（songsIndex）と、型定義（Song）を読み込みます。
-
-2. URLパラメータ（クエリ）の取得
-Astro.url.searchParams を使って、URLに付与されているパラメータをすべて変数に取得します。
-
-絞り込み用: live, startDate, endDate, cd, creator, tieup, call, mv, q（曲名）など
-
-並び替え用: sort（未指定の場合はデフォルト値、例: 'date-desc' を設定）
-
-3. 「セトリ順ソート可否（isSetlistSortable）」の判定
-プルダウンに「セトリ順」を出すかどうかを決める boolean フラグを作ります。
-
-条件: live パラメータが「1つだけ指定されている」かつ「他の絞り込みパラメータが一切存在しない」こと。
-
-4. 配列の絞り込み（filter）
-全楽曲データに対して .filter() を実行します。
-
-各パラメータが存在する場合のみ、条件に合致するかチェックして弾く（false を返す）処理を書きます。
-
-例: tieup が 'true' なのに song.tieup が空なら除外
-
-5. 配列の並び替え（sort）
-絞り込んだ配列をコピー（[...filtered]）し、.sort() で並び替えます。
-
-sort パラメータの値（date-desc, date-asc, title-asc, setlist）に応じて、比較関数（localeCompare や日付比較など）を分岐させます。
--->
