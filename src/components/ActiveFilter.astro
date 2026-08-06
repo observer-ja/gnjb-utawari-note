@@ -144,7 +144,7 @@ import UnderlineText from "./UnderlineText.astro";
         const chipWrapper = document.createElement('div');
         chipWrapper.innerHTML = `
             <label class="active-filter-chip">
-                <input type="${type}" data-name="${name}" value="${value}" class="active-chip-input" />
+                <input type="${type}" data-name="${name}" value="${value}" data-value="${value}" class="active-chip-input" />
                 <span class="active-chip-label text-sm">${label}</span>
                 <span class="active-chip-close text-sm">×</span>
             </label>
@@ -167,7 +167,7 @@ import UnderlineText from "./UnderlineText.astro";
                     const panelInputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>(selector);
                     panelInputs.forEach((panelInput) => {
                         if (panelInput instanceof HTMLSelectElement) {
-                            if (!chipInput.checked) panelInput.value = '';
+                            panelInput.value = chipInput.checked ? (chipInput.dataset.value || value) : '';
                         } else if (panelInput instanceof HTMLInputElement) {
                             if (panelInput.type === 'text' || panelInput.type === 'search' || panelInput.name.includes('Date')) {
                                 if (!chipInput.checked) panelInput.value = '';
@@ -192,12 +192,22 @@ import UnderlineText from "./UnderlineText.astro";
         const target = e.target as HTMLInputElement | HTMLSelectElement;
         if (!target || !activeChipsContainer) return;
 
-        const activeInput = activeChipsContainer.querySelector<HTMLInputElement>(
-            `.active-chip-input[data-name="${target.name}"][value="${target.value}"]`
-        );
+        if (target instanceof HTMLInputElement) {
+            const activeInput = activeChipsContainer.querySelector<HTMLInputElement>(
+                `.active-chip-input[data-name="${target.name}"][value="${target.value}"]`
+            );
+            if (activeInput) {
+                activeInput.checked = target.checked;
+            }
+        }
 
-        if (activeInput && target instanceof HTMLInputElement) {
-            activeInput.checked = target.checked;
+        if (target instanceof HTMLSelectElement) {
+            const activeInput = activeChipsContainer.querySelector<HTMLInputElement>(
+                `.active-chip-input[data-name="${target.name}"]`
+            );
+            if (activeInput) {
+                activeInput.checked = target.value !== '';
+            }
         }
     });
 
