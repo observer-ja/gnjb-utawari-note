@@ -80,6 +80,8 @@ import UnderlineText from "./UnderlineText.astro";
             if (input.closest('#js-template-chip')) return;
             if (input instanceof HTMLInputElement && input.type === 'hidden') return;
 
+            if (input.name === 'sort') return;
+
             if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
                 const val = input.value.trim();
                 if (val) addChipHTML(`「${val}」を含む`, input.name, val);

@@ -6,6 +6,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
 import Button from '../components/Button.astro';
 import ActiveFilter from '../components/ActiveFilter.astro';
+import SearchResultSection from '../components/SearchResultSection.astro';
 
 import { songsIndex } from '../data/index';
 
@@ -99,7 +100,7 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
             <div class="search-form__action">
                 <Button text='この条件で検索する' />
             </div>
-            
+            <SearchResultSection sortedSongs={sortedSongs}/>
         </form>
     </div>
 </Layout>

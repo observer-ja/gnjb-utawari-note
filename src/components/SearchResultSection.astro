@@ -1,0 +1,44 @@
+---
+import UnderlineText from "./UnderlineText.astro";
+import SelectChip from "./SelectChip.astro";
+import SongCard from "./SongCard.astro";
+
+import type { Song } from "../data/index";
+interface Props {
+    sortedSongs: Song[];
+    isSetlistSortable?: boolean;
+    currentSort?: string;
+}
+const { sortedSongs, isSetlistSortable = false, currentSort } = Astro.props
+
+interface Option {
+    label: string;
+    value: string;
+}
+
+const baseSortOptions = [
+    { label: 'リリース日が新しい順', value: 'date-desc' },
+    { label: 'リリース日が古い順', value: 'date-asc' },
+    { label: '曲名順（五十音順）', value: 'title-asc' },
+];
+
+const sortOptions = isSetlistSortable
+    ? [{ label: 'セットリスト順', value: 'setlist' }, ...baseSortOptions]
+    : baseSortOptions;
+---
+
+<div class="search-result-section">
+    <UnderlineText>全 {sortedSongs.length} 曲</UnderlineText>
+    <SelectChip 
+        name="sort" 
+        options={sortOptions} 
+        defaultValue={currentSort || sortOptions[0].value}
+    />
+</div>
+
+<style>
+    .search-result-section {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
