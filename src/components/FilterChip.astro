@@ -11,6 +11,7 @@ interface Props {
     value: string; /*　チップによる情報　*/
     type?: 'checkbox' | 'radio';
     icon?: LiveType;
+    checked?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
     value,
     type = 'checkbox',
     icon,
+    checked = false,
 } = Astro.props;
 
 const ICON_MAP = {
@@ -31,7 +33,7 @@ const IconObj = icon ? ICON_MAP[icon] : null;
 ---
 
 <label class="filter-chip">
-    <input type={type} name={name} value={value} class="chip-input" />
+    <input type={type} name={name} value={value} class="chip-input" checked={checked} data-was-checked={checked ? "true" : "false"}/>
     {IconObj && (
         <span class="chip-icon">
             <Fragment set:html={IconObj} />

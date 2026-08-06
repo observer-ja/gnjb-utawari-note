@@ -6,6 +6,12 @@ import OnemanIcon from '/icon-oneman.svg?raw';
 import FesIcon from '/icon-fes.svg?raw';
 import StreamIcon from '/icon-stream.svg?raw';
 
+interface Props {
+    selectedLives?: string[];
+}
+
+const { selectedLives = [] } = Astro.props;
+
 const livesByYear = lives.reduce<Record<string, Live[]>>((acc, live) => {
     const year = live.date.substring(0, 4);
     if (!acc[year]) {
@@ -48,7 +54,8 @@ const years = Object.keys(livesByYear).sort((a, b) => Number(b) - Number(a));
                             label={live.name} 
                             name="live" 
                             value={live.id} 
-                            icon={live.type} 
+                            icon={live.type}
+                            checked={selectedLives.includes(live.id)} 
                         />
                     ))}
                 </div>

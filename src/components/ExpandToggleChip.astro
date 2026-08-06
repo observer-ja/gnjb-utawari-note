@@ -1,12 +1,13 @@
 ---
 interface Props {
     expandText: string;
+    isExpanded?: boolean;
 }
 
-const { expandText } = Astro.props
+const { expandText, isExpanded = false } = Astro.props
 ---
 
-<button type="button" class="expand-toggle-chip" data-expanded="false">
+<button type="button" class="expand-toggle-chip" data-expanded="false" data-expanded={isExpanded ? "true" : "false"}>
     <span class="expand-toggle-chip__icon">
         <span class="expand-toggle-chip__line"></span>
         <span class="expand-toggle-chip__line"></span>
@@ -97,7 +98,10 @@ const { expandText } = Astro.props
 
     buttons.forEach((btn) => {
         const textEl = btn.querySelector('.expand-toggle-chip__text');
-        const originalText = textEl?.textContent || '';
+        const isInitialExpanded = btn.dataset.expanded === 'true';
+        const originalText = isInitialExpanded 
+            ? (textEl?.textContent === COLLAPSE_TEXT ? '開く' : textEl?.textContent || '')
+            : (textEl?.textContent || '');
 
         btn.addEventListener('click', () => {
             const isExpanded = btn.dataset.expanded === 'true';

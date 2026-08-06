@@ -8,10 +8,10 @@ import UnderlineText from "./UnderlineText.astro";
         <UnderlineText>選択中の条件</UnderlineText>
     </div>
     <div class="active-chips-list" id="js-active-chips"></div>
-    <button type="button" class="reset-button text-body" id="js-reset-btn">条件をリセット</button>
+    <a href="/gnjb-utawari-note/search" class="reset-button text-body" id="js-reset-btn">条件をリセット</a>
 </section>
 
-<div style="display: none;">
+<div id="js-template-chip" style="display: none;">
     <ActiveFilterChip label="" name="" value="" />
 </div>
 
@@ -51,7 +51,8 @@ import UnderlineText from "./UnderlineText.astro";
 </style>
 
 <script>
-    const form = document.querySelector<HTMLFormElement>('.filter-panel');
+    const form = document.querySelector<HTMLFormElement>('.search-form');
+    
     const activeChipsContainer = document.getElementById('js-active-chips');
     const resetButton = document.getElementById('js-reset-btn');
 
@@ -73,8 +74,18 @@ import UnderlineText from "./UnderlineText.astro";
 
         let startDate = '';
         let endDate = '';
-
+        
+        
         inputs.forEach((input) => {
+            if (input.closest('#js-template-chip')) return;
+            if (input instanceof HTMLInputElement && input.type === 'hidden') return;
+
+            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
+                const val = input.value.trim();
+                if (val) addChipHTML(`「${val}」を含む`, input.name, val);
+                return;
+            }
+
             if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
                 const val = input.value.trim();
                 if (val) addChipHTML(`「${val}」を含む`, input.name, val);
@@ -133,7 +144,7 @@ import UnderlineText from "./UnderlineText.astro";
         const chipWrapper = document.createElement('div');
         chipWrapper.innerHTML = `
             <label class="active-filter-chip">
-                <input type="${type}" name="${name}" value="${value}" class="active-chip-input" />
+                <input type="${type}" data-name="${name}" value="${value}" class="active-chip-input" />
                 <span class="active-chip-label text-sm">${label}</span>
                 <span class="active-chip-close text-sm">×</span>
             </label>
@@ -174,31 +185,19 @@ import UnderlineText from "./UnderlineText.astro";
     }
 
     form?.addEventListener('submit', (e) => {
-        // 👇 ページ遷移（404エラー）を防止して画面上でプレビューする
-        e.preventDefault();
-
-        // 1. 選択されている最新の条件で ActiveFilter Chips を確定・更新
         renderActiveChips();
-
-        // 2. (任意) 検索結果のデータ絞り込みや件数更新などのプレビュー処理をここに追加できます
-        console.log('検索プレビューを実行しました');
     });
 
-    resetButton?.addEventListener('click', () => {
-        if (!form) return;
-        
-        form.reset();
+    form?.addEventListener('change', (e) => {
+        const target = e.target as HTMLInputElement | HTMLSelectElement;
+        if (!target || !activeChipsContainer) return;
 
-        const inputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
-        inputs.forEach((input) => {
-            if (input instanceof HTMLInputElement) input.dataset.wasChecked = 'false';
-        });
+        const activeInput = activeChipsContainer.querySelector<HTMLInputElement>(
+            `.active-chip-input[data-name="${target.name}"][value="${target.value}"]`
+        );
 
-        if (activeChipsContainer) {
-            const chipInputs = activeChipsContainer.querySelectorAll<HTMLInputElement>('.active-chip-input');
-            chipInputs.forEach((chipInput) => {
-                chipInput.checked = false;
-            });
+        if (activeInput && target instanceof HTMLInputElement) {
+            activeInput.checked = target.checked;
         }
     });
 
