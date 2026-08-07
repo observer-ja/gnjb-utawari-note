@@ -33,7 +33,7 @@ export interface Song {
     live_history: LiveHistory[];
 }
 
-export const songsIndex = [
+export const songsIndex: Song[] = [
     /* BATTLE STREET時代 */
     {
         id: "bs001",
@@ -471,7 +471,7 @@ export const songsIndex = [
         title: "Joy to the world",
         title_kana: "zzz_joytotheworld",
         date: "2020-01-22",
-        cds: [{ id: "ag_02", track: 2 },],
+        cds: [{ id: "sg_02", track: 2 },],
         lyricist: ["久下真音"],
         composer: ["久下真音"],
         arranger: ["久下真音"],

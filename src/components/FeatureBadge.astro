@@ -1,0 +1,42 @@
+---
+interface Props {
+    type: 'tieup' | 'call' | 'mv';
+}
+
+const { type } = Astro.props;
+
+const badgeConfig = {
+    tieup: { label: 'タイアップあり', icon: '/gnjb-utawari-note/icon-tieup.svg'},
+    call: { label: 'コールあり', icon: '/gnjb-utawari-note/icon-call.svg'},
+    mv: { label: 'MVあり', icon: '/gnjb-utawari-note/icon-mv.svg'},
+};
+
+const { label, icon } = badgeConfig[type]
+---
+
+<span class="feature-badge">
+    <img src={icon} alt="" class="feature-badge__icon" />
+    <span class="text-sm">{label}</span>
+</span>
+
+<style>
+    .feature-badge {
+        height: 20px;
+        width: fit-content;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        background-color: var(--color-primary);
+        border: 1px solid var(--color-text);
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 0 4px;
+    }
+
+    .feature-badge__icon {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+</style>

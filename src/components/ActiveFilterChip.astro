@@ -1,0 +1,62 @@
+---
+interface Props {
+    label: string;
+    name: string;
+    value: string;
+    type?: 'checkbox' | 'radio';
+}
+
+const {
+    label,
+    name,
+    value,
+    type = 'checkbox'
+} = Astro.props;
+---
+
+<label class="active-filter-chip">
+    <input type={type} date-name={name} value={value} class="active-chip-input" checked />
+    <span class="active-chip-label text-sm">{label}</span>
+    <span class="active-chip-close text-sm">×</span>
+</label>
+
+<style is:global>
+    .active-filter-chip {
+        display: inline-flex;
+        align-items: center;
+        height: 26px;
+        width: fit-content;
+        padding: 2px 12px;
+        gap: 2px;
+        border-radius: 20px;
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+        user-select: none;
+        border: 1px solid var(--color-primary);
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (hover:hover) {
+        .active-filter-chip:hover {
+            border: 1px solid var(--color-text);
+            box-sizing: border-box;
+        }
+    }
+
+    .active-filter-chip:has(.active-chip-input:not(:checked)) {
+        background-color: var(--color-bg);
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+    }
+
+    @media (hover:hover) {
+        .active-filter-chip:has(.active-chip-input:not(:checked)):hover {
+            background-color: var(--color-bg-dark);
+        }
+    }
+
+    .active-chip-input {
+        display: none;
+    }
+</style>

@@ -28,7 +28,13 @@ const Tag = href ? 'a' : 'button';
         line-height: 1;
     }
 
-    .btn:hover {
+    @media (hover:hover) {
+        .btn:hover {
+            background-color: var(--color-primary-dark);
+        }
+    }
+
+    .btn:active {
         background-color: var(--color-primary-dark);
     }
 

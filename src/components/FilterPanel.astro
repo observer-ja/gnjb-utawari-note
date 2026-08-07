@@ -7,6 +7,38 @@ import SelectChip from '../components/SelectChip.astro';
 import SearchInput from '../components/SearchInput.astro';
 import Button from './Button.astro';
 
+interface FilterState {
+    selectedLives: string[];
+    startDate: string;
+    endDate: string;
+    cd: string;
+    creator: string;
+    tieup: string;
+    call: string;
+    mv: string;
+    query: string;
+    sortOrder: string;
+    expanded?: boolean;
+}
+
+interface Props {
+    filters?: FilterState;
+}
+
+const { filters = {
+    selectedLives: [],
+    startDate: '',
+    endDate: '',
+    cd: '',
+    creator: '',
+    tieup: '',
+    call: '',
+    mv: '',
+    query: '',
+    sortOrder: ' ',
+    expanded: false,
+} } = Astro.props;
+
 import { lives } from '../data/lives';
 const recentLives = lives.slice(-3).reverse().map((live) => ({
     label: live.name,
@@ -16,7 +48,7 @@ const recentLives = lives.slice(-3).reverse().map((live) => ({
 import { cds } from '../data/cds';
 const cdOptions = cds.map((cd) => ({
     label: cd.title,
-    value: cd.id, // または cd.title など値にしたいプロパティ
+    value: cd.id,
 }));
 
 import { songsIndex } from '../data/index'
@@ -27,7 +59,6 @@ const allCreators: string[] = (songsIndex || []).flatMap((song: Song) => [
     ...(song.arranger || [])
 ]);
 const uniqueCreators = [...new Set(allCreators)]
-    .filter(Boolean) // 空文字やnull/undefinedがあれば除外
     .sort((a, b) => a.localeCompare(b, 'ja'));
 const creatorOptions = uniqueCreators.map(creator => ({
     label: creator,
@@ -35,11 +66,11 @@ const creatorOptions = uniqueCreators.map(creator => ({
 }));
 ---
 
-<form action="/search" method="GET" class="filter-panel">
+<div class="filter-panel">
     <div class="filter-panel__header">
         <h2 class="filter-panel__title text-md">絞り込み条件</h2>
         <div class="filter-panel__toggle">
-            <ExpandToggleChip expandText='開く'/>
+            <ExpandToggleChip expandText='開く' isExpanded={filters.expanded}/>
         </div>
     </div>
     <div class="filter-panel__content">
@@ -52,22 +83,23 @@ const creatorOptions = uniqueCreators.map(creator => ({
                             <FilterChip 
                                 label={live.label} 
                                 name="live" 
-                                value={live.value} 
+                                value={live.value}
+                                checked={filters.selectedLives.includes(live.value)} 
                             />
                         ))}
                         <ExpandToggleChip expandText='すべてのライブを見る'/>
                     </div>
                     <div class="expandable-live-filter">
-                        <LiveFilter/>
+                        <LiveFilter selectedLives={filters.selectedLives}/>
                     </div>
                 </div>
             </div>
             <div class="filter-group">
                 <p class="filter-group__label text-body">リリース日</p>
                 <div class="filter-group__content">
-                    <DatePicker text='開始日' name='startDate'></DatePicker>
+                    <DatePicker text='開始日' name='startDate' value={filters.startDate}></DatePicker>
                     <span>〜</span>
-                    <DatePicker text='終了日' name='endDate'></DatePicker>
+                    <DatePicker text='終了日' name='endDate' value={filters.endDate}></DatePicker>
                 </div>
             </div>
             <div class="filter-row">
@@ -78,6 +110,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
                             name='cd'
                             placeholder='収録CDを選択'
                             options={cdOptions}
+                            defaultValue={filters.cd}
                         />
                     </div>
                 </div>
@@ -88,6 +121,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
                             name='creator'
                             placeholder='クリエイターを選択'
                             options={creatorOptions}
+                            defaultValue={filters.creator}
                         />
                     </div>
                 </div>
@@ -96,37 +130,34 @@ const creatorOptions = uniqueCreators.map(creator => ({
                 <div class="filter-group">
                     <p class="filter-group__label text-body">タイアップ</p>
                     <div class="filter-group__content">
-                        <FilterChip label="あり" name="tieup" value="true" type='radio' />
-                        <FilterChip label="なし" name="tieup" value="false" type='radio'/>
+                        <FilterChip label="あり" name="tieup" value="true" type='radio' checked={filters.tieup === 'true'} />
+                        <FilterChip label="なし" name="tieup" value="false" type='radio' checked={filters.tieup === 'false'}/>
                     </div>
                 </div>
                 <div class="filter-group">
                     <p class="filter-group__label text-body">コール</p>
                     <div class="filter-group__content">
-                        <FilterChip label="あり" name="call" value="true" type='radio'/>
-                        <FilterChip label="なし" name="call" value="false" type='radio'/>
+                        <FilterChip label="あり" name="call" value="true" type='radio' checked={filters.call === 'true'}/>
+                        <FilterChip label="なし" name="call" value="false" type='radio' checked={filters.call === 'false'}/>
                     </div>
                 </div>
                 <div class="filter-group">
                     <p class="filter-group__label text-body">MV</p>
                     <div class="filter-group__content">
-                        <FilterChip label="あり" name="mv" value="true" type='radio'/>
-                        <FilterChip label="なし" name="mv" value="false" type='radio'/>
+                        <FilterChip label="あり" name="mv" value="true" type='radio' checked={filters.mv === 'true'}/>
+                        <FilterChip label="なし" name="mv" value="false" type='radio' checked={filters.mv === 'false'}/>
                     </div>
                 </div>
             </div>
             <div class="filter-group filter-group--search">
                 <p class="filter-group__label text-body">曲名検索</p>
                 <div class="filter-group__content">
-                    <SearchInput/>
+                    <SearchInput defaultValue={filters.query}/>
                 </div>
             </div>
         </div>
-        <div class="filter-panel__action">
-            <Button text='この条件で検索する' />
-        </div>
     </div>
-</form>
+</div>
 
 <style>
     .filter-panel__header {
@@ -271,6 +302,17 @@ const creatorOptions = uniqueCreators.map(creator => ({
 </style>
 
 <script>
+    const toggleChip = document.querySelector('.filter-panel__toggle .expand-toggle-chip');
+    const expandedInput = document.getElementById('expanded-input') as HTMLInputElement;
+
+    if (toggleChip && expandedInput) {
+        toggleChip.addEventListener('click', () => {
+            // トグル後の状態（CSS側で data-expanded が切り替わるタイミング）を反転させてセット
+            const isExpanded = toggleChip.getAttribute('data-expanded') === 'true';
+            expandedInput.value = isExpanded ? 'true' : 'false';
+        });
+    }
+
     ['tieup', 'mv', 'call'].forEach((name) => {
         const chips = document.querySelectorAll(`input[name="${name}"]`);
         
@@ -305,4 +347,30 @@ const creatorOptions = uniqueCreators.map(creator => ({
             });
         });
     });
+
+    const searchForm = document.querySelector('.search-form') as HTMLFormElement;
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            const recentChips = document.querySelectorAll<HTMLInputElement>('.default-live-chips input[name="live"]');
+            const expandableChips = document.querySelectorAll<HTMLInputElement>('.expandable-live-filter input[name="live"]');
+
+            recentChips.forEach((recentInput) => {
+                if (recentInput.checked) {
+                    expandableChips.forEach((expandableInput) => {
+                        if (expandableInput.value === recentInput.value && expandableInput.checked) {
+                            recentInput.disabled = true;
+                        }
+                    });
+                }
+            });
+
+            const isSelectChange = e.submitter && e.submitter.tagName === 'SELECT';
+            if (!isSelectChange) {
+                const sortSelect = searchForm.querySelector<HTMLSelectElement>('select[name="sort"]');
+                if (sortSelect) {
+                    sortSelect.disabled = true;
+                }
+            }
+        });
+    }
 </script>

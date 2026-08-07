@@ -1,12 +1,156 @@
 ---
+export const prerender = false;
+
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
+import Button from '../components/Button.astro';
+import ActiveFilter from '../components/ActiveFilter.astro';
+import SearchResultSection from '../components/SearchResultSection.astro';
+
+import { songsIndex } from '../data/index';
+
+const searchParams = Astro.url.searchParams;
+const selectedLives = [...new Set(searchParams.getAll('live'))].filter(Boolean);
+const startDate = searchParams.get('startDate') || '';
+const endDate = searchParams.get('endDate') || '';
+const cd = searchParams.get('cd') || '';
+const creator = searchParams.get('creator') || '';
+const tieup = searchParams.get('tieup') || '';
+const call = searchParams.get('call') || '';
+const mv = searchParams.get('mv') || '';
+const query = searchParams.get('keyword') || '';
+
+const isSetlistSortable =
+    selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+
+
+const baseSortOptions = [
+    { label: 'リリース日が新しい順', value: 'date-desc' },
+    { label: 'リリース日が古い順', value: 'date-asc' },
+    { label: '曲名順（五十音順）', value: 'title-asc' },
+];
+
+const sortOptions = isSetlistSortable
+    ? [{ label: 'セットリスト順', value: 'setlist' }, ...baseSortOptions]
+    : baseSortOptions;
+
+const rawSort = searchParams.get('sort');
+
+const sortOrder = rawSort || sortOptions[0].value;
+
+const filters = {
+    selectedLives,
+    startDate,
+    endDate,
+    cd,
+    creator,
+    tieup,
+    call,
+    mv,
+    query,
+    sortOrder,
+    expanded: searchParams.get('expanded') === 'true',
+};
+
+const filteredSongs = (songsIndex || []).filter(song => {
+    if (filters.selectedLives.length > 0) {
+        const hasLive = song.live_history?.some((live) => filters.selectedLives.includes(live.live_id));
+        if (!hasLive) return false;
+    }
+
+    if (filters.startDate && song.date < filters.startDate) return false;
+    if (filters.endDate && song.date > filters.endDate) return false;
+
+    if (filters.cd && !song.cds?.some((c) => c.id === filters.cd)) return false;
+    if (filters.creator) {
+        const hasCreator =
+            song.lyricist?.includes(filters.creator) ||
+            song.composer?.includes(filters.creator) ||
+            song.arranger?.includes(filters.creator);
+
+        if(!hasCreator) return false;
+    }
+
+    if (filters.tieup === 'true' && !((song.tieup?.length ?? 0) > 0)) return false;
+    if (filters.tieup === 'false' && ((song.tieup?.length ?? 0) > 0)) return false;
+
+    if (filters.mv === "true" && !song.links?.mv) return false;
+    if (filters.mv === "false" && song.links?.mv) return false;
+
+    if (filters.call === "true" && !song.call) return false;
+    if (filters.call === "false" && song.call) return false;
+
+    if (filters.query && !song.title?.includes(filters.query) && !song.title_kana?.includes(filters.query)) return false;
+
+    return true;
+})
+
+const sortedSongs = [...filteredSongs].sort((a, b) => {
+    if (filters.sortOrder === 'date-desc') {
+        return (b.date || '').localeCompare(a.date || '');
+    }
+
+    if (filters.sortOrder === 'date-asc') {
+        return (a.date || '').localeCompare(b.date || '');
+    }
+
+    if (filters.sortOrder === 'title-asc') {
+        return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
+    }
+
+    if (filters.sortOrder === 'setlist') {
+        const liveId = filters.selectedLives[0];
+        const posA = a.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
+        const posB = b.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
+        if (posA === posB) {
+            const perfA = a.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
+            const perfB = b.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
+            return perfA - perfB;
+        }
+        return posA - posB;
+    }
+
+    return 0;
+});
 ---
 
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
-        <FilterPanel/>
+        <form action="/gnjb-utawari-note/search" method="GET" class="search-form">
+            <FilterPanel filters={filters}/>
+            <ActiveFilter/>
+            <div class="search-form__action">
+                <Button text='この条件で検索する' />
+            </div>
+            <SearchResultSection 
+                sortedSongs={sortedSongs} 
+                sortOptions={sortOptions} 
+                currentSort={filters.sortOrder}
+                liveId={filters.selectedLives[0]}
+            />
+        </form>
     </div>
 </Layout>
+
+<style>
+    .search-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .search-form__action {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        .search-form {
+            gap: 32px;
+        }
+    }
+</style>
