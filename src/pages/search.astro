@@ -103,7 +103,9 @@ const sortOptions = defaultSortOptions;
             selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
 
         const rawSort = searchParams.get('sort');
-        const sortOrder = rawSort || (isSetlistSortable ? 'setlist' : 'date-desc');
+        const sortOrder = (rawSort && (rawSort !== 'setlist' || isSetlistSortable))
+            ? rawSort
+            : (isSetlistSortable ? 'setlist' : 'date-desc');
 
         restoreFormState(searchParams);
 
@@ -140,7 +142,7 @@ const sortOptions = defaultSortOptions;
         filtered.sort((a: Song, b: Song) => {
             if (sortOrder === 'date-desc') return (b.date || '').localeCompare(a.date || '');
             if (sortOrder === 'date-asc') return (a.date || '').localeCompare(b.date || '');
-            if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(a.title_kana || '', 'ja');
+            if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
             if (sortOrder === 'setlist') {
                 const liveId = selectedLives[0];
                 const posA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
