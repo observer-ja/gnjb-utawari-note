@@ -85,7 +85,7 @@ export const lives: Live[] = [
   { id: "live2025_03", name: "序破急", date: "2025-07-12", type: "oneman"},
   { id: "live2025_04", name: "エビライ2025", date: "2025-08-15", type: "fes"},
   { id: "live2025_05", name: "アスパ2025", date: "2025-08-30", type: "fes"},
-  { id: "live2024_06", name: "第5回スポーツマンヒップ", date: "2025-10-13", type: "fes" },
+  { id: "live2025_06", name: "第5回スポーツマンヒップ", date: "2025-10-13", type: "fes" },
   { id: "live2025_07", name: "ガルアワ2025AW", date: "2025-10-18", type: "fes"},
   { id: "live2025_08", name: "バズリズムLIVE 2025", date: "2025-11-02", type: "fes"},
   { id: "live2025_09", name: "GFEST.2025", date: "2025-11-23", type: "fes"},

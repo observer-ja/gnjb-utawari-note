@@ -13,24 +13,94 @@ interface Props {
     sortedSongs: Song[];
     sortOptions: Option[];
     currentSort: string;
+    liveId: string;
 }
 
-const { sortedSongs, sortOptions, currentSort } = Astro.props;
+const { sortedSongs, sortOptions, currentSort, liveId } = Astro.props;
+
+const displayMode = currentSort === 'setlist' ? 'setlist' : 'default';
 ---
 
 <div class="search-result-section">
-    <UnderlineText>全 {sortedSongs.length} 曲</UnderlineText>
-    <SelectChip 
-        name="sort" 
-        options={sortOptions} 
-        defaultValue={currentSort}
-        submitOnChange={true}
-    />
+    <div class="search-result-section__header">
+        <UnderlineText>全 {sortedSongs.length} 曲</UnderlineText>
+    </div>
+    {sortedSongs.length > 0 &&
+        <SelectChip 
+            name="sort" 
+            options={sortOptions} 
+            defaultValue={currentSort}
+            submitOnChange={true}
+        />
+    }
+    {sortedSongs.length > 0 &&
+        <div class="song-card-list">
+            {sortedSongs.map((s) =>
+                <SongCard song={s} displayMode={displayMode} liveId={liveId}/>
+            )}
+        </div>
+    }
+    {sortedSongs.length === 0 &&
+        <div class="no-result">
+            <span class="text-body">条件に合う曲が見つかりませんでした。</span>
+            <a href="/gnjb-utawari-note/search" class="reset-button text-body" id="js-reset-btn">絞り込み条件をリセットする</a>
+        </div>
+    }
 </div>
 
 <style>
     .search-result-section {
         display: flex;
         flex-direction: column;
+        gap: 16px;
+    }
+
+    .search-result-section :global(.underline-text) {
+        align-self: flex-start;
+    }
+
+    .search-result-section :global(.select-chip) {
+        align-self: flex-end;
+    }
+
+    .song-card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 12px;
+        width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        .search-result-section {
+            gap: 32px;
+        }
+
+        .song-card-list {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 32px;
+        }
+    }
+
+    .no-result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        background-color: var(--color-bg-dark);
+        border: 1px solid var(--color-primary);
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 32px 12px;
+    }
+
+    .reset-button {
+        background: none;
+        border: none;
+        padding: 0 5px;
+        color: var(--color-primary);
+        font-family: inherit;
+        text-decoration: underline;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
     }
 </style>

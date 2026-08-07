@@ -368,7 +368,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
             if (!isSelectChange) {
                 const sortSelect = searchForm.querySelector<HTMLSelectElement>('select[name="sort"]');
                 if (sortSelect) {
-                    sortSelect.disabled = true; // ✨ これにより検索実行時は ?sort= が送信されずリセットされる！
+                    sortSelect.disabled = true;
                 }
             }
         });

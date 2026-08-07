@@ -28,8 +28,8 @@ const { song, displayMode = 'default', liveId } = Astro.props
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
         height: fit-content;
-        width: auto;
-        min-width: 170px;
+        width: 100%;
+        min-width: 0;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -60,7 +60,7 @@ const { song, displayMode = 'default', liveId } = Astro.props
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
-        height: 60px;
+        height: 56px;
         padding: 2px;
         gap: 2px;
         background-color: var(--color-bg-dark);

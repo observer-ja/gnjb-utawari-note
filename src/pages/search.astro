@@ -103,7 +103,7 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
         const liveId = filters.selectedLives[0];
         const posA = a.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
         const posB = b.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
-        if (posA == posB) {
+        if (posA === posB) {
             const perfA = a.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
             const perfB = b.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
             return perfA - perfB;
@@ -128,6 +128,7 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
                 sortedSongs={sortedSongs} 
                 sortOptions={sortOptions} 
                 currentSort={filters.sortOrder}
+                liveId={filters.selectedLives[0]}
             />
         </form>
     </div>
