@@ -17,8 +17,6 @@ interface Props {
 }
 
 const { sortedSongs, sortOptions, currentSort, liveId } = Astro.props;
-
-const displayMode = currentSort === 'setlist' ? 'setlist' : 'default';
 ---
 
 <div class="search-result-section">
@@ -32,11 +30,18 @@ const displayMode = currentSort === 'setlist' ? 'setlist' : 'default';
         submitOnChange={true}
     />
     <div class="song-card-list" id="js-song-card-list">
-        {sortedSongs.map((s) =>
+        {sortedSongs.map((s) => (
             <div class="js-song-card-wrapper" data-song-id={s.id}>
-                <SongCard song={s} displayMode={displayMode} liveId={liveId}/>
+                <div class="js-card-mode js-card-mode--default">
+                    <SongCard song={s} displayMode="default" />
+                </div>
+                {s.live_history?.map((h) => (
+                    <div class="js-card-mode js-card-mode--setlist" data-live-id={h.live_id} style="display: none;">
+                        <SongCard song={s} displayMode="setlist" liveId={h.live_id} />
+                    </div>
+                ))}
             </div>
-        )}
+        ))}
     </div>
     <div class="no-result" id="js-no-result" style="display: none;">
         <span class="text-body">条件に合う曲が見つかりませんでした。</span>
