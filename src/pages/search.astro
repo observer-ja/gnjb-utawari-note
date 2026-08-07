@@ -140,7 +140,7 @@ const sortOptions = defaultSortOptions;
         filtered.sort((a: Song, b: Song) => {
             if (sortOrder === 'date-desc') return (b.date || '').localeCompare(a.date || '');
             if (sortOrder === 'date-asc') return (a.date || '').localeCompare(b.date || '');
-            if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
+            if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(a.title_kana || '', 'ja');
             if (sortOrder === 'setlist') {
                 const liveId = selectedLives[0];
                 const posA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
@@ -238,9 +238,28 @@ const sortOptions = defaultSortOptions;
 
         cardList.innerHTML = '';
 
+        const isSetlist = sortOrder === 'setlist';
+        const searchParams = new URLSearchParams(window.location.search);
+        const liveId = searchParams.get('live') || '';
+
         filteredSongs.forEach(song => {
             const wrapper = wrapperMap.get(song.id);
             if (wrapper) {
+                const defaultCard = wrapper.querySelector<HTMLElement>('.js-card-mode--default');
+                const setlistCards = Array.from(wrapper.querySelectorAll<HTMLElement>('.js-card-mode--setlist'));
+
+                if (isSetlist && liveId) {
+                    if (defaultCard) defaultCard.style.display = 'none';
+                    setlistCards.forEach(card => {
+                        card.style.display = card.dataset.liveId === liveId ? 'block' : 'none';
+                    });
+                } else {
+                    if (defaultCard) defaultCard.style.display = 'block';
+                    setlistCards.forEach(card => {
+                        card.style.display = 'none';
+                    });
+                }
+
                 cardList.appendChild(wrapper);
             }
         });
