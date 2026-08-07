@@ -1,6 +1,4 @@
 ---
-export const prerender = false;
-
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import FilterPanel from '../components/FilterPanel.astro';
@@ -10,116 +8,35 @@ import SearchResultSection from '../components/SearchResultSection.astro';
 
 import { songsIndex } from '../data/index';
 
-const searchParams = Astro.url.searchParams;
-const selectedLives = [...new Set(searchParams.getAll('live'))].filter(Boolean);
-const startDate = searchParams.get('startDate') || '';
-const endDate = searchParams.get('endDate') || '';
-const cd = searchParams.get('cd') || '';
-const creator = searchParams.get('creator') || '';
-const tieup = searchParams.get('tieup') || '';
-const call = searchParams.get('call') || '';
-const mv = searchParams.get('mv') || '';
-const query = searchParams.get('keyword') || '';
-
-const isSetlistSortable =
-    selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
-
-
-const baseSortOptions = [
+const defaultSortOptions = [
     { label: 'リリース日が新しい順', value: 'date-desc' },
     { label: 'リリース日が古い順', value: 'date-asc' },
     { label: '曲名順（五十音順）', value: 'title-asc' },
 ];
 
-const sortOptions = isSetlistSortable
-    ? [{ label: 'セットリスト順', value: 'setlist' }, ...baseSortOptions]
-    : baseSortOptions;
-
-const rawSort = searchParams.get('sort');
-
-const sortOrder = rawSort || sortOptions[0].value;
-
-const filters = {
-    selectedLives,
-    startDate,
-    endDate,
-    cd,
-    creator,
-    tieup,
-    call,
-    mv,
-    query,
-    sortOrder,
-    expanded: searchParams.get('expanded') === 'true',
+const initialFilters = {
+    selectedLives: [],
+    startDate: '',
+    endDate: '',
+    cd: '',
+    creator: '',
+    tieup: '',
+    call: '',
+    mv: '',
+    query: '',
+    sortOrder: 'date-desc',
+    expanded: false,
 };
 
-const filteredSongs = (songsIndex || []).filter(song => {
-    if (filters.selectedLives.length > 0) {
-        const hasLive = song.live_history?.some((live) => filters.selectedLives.includes(live.live_id));
-        if (!hasLive) return false;
-    }
-
-    if (filters.startDate && song.date < filters.startDate) return false;
-    if (filters.endDate && song.date > filters.endDate) return false;
-
-    if (filters.cd && !song.cds?.some((c) => c.id === filters.cd)) return false;
-    if (filters.creator) {
-        const hasCreator =
-            song.lyricist?.includes(filters.creator) ||
-            song.composer?.includes(filters.creator) ||
-            song.arranger?.includes(filters.creator);
-
-        if(!hasCreator) return false;
-    }
-
-    if (filters.tieup === 'true' && !((song.tieup?.length ?? 0) > 0)) return false;
-    if (filters.tieup === 'false' && ((song.tieup?.length ?? 0) > 0)) return false;
-
-    if (filters.mv === "true" && !song.links?.mv) return false;
-    if (filters.mv === "false" && song.links?.mv) return false;
-
-    if (filters.call === "true" && !song.call) return false;
-    if (filters.call === "false" && song.call) return false;
-
-    if (filters.query && !song.title?.includes(filters.query) && !song.title_kana?.includes(filters.query)) return false;
-
-    return true;
-})
-
-const sortedSongs = [...filteredSongs].sort((a, b) => {
-    if (filters.sortOrder === 'date-desc') {
-        return (b.date || '').localeCompare(a.date || '');
-    }
-
-    if (filters.sortOrder === 'date-asc') {
-        return (a.date || '').localeCompare(b.date || '');
-    }
-
-    if (filters.sortOrder === 'title-asc') {
-        return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
-    }
-
-    if (filters.sortOrder === 'setlist') {
-        const liveId = filters.selectedLives[0];
-        const posA = a.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
-        const posB = b.live_history?.find(l => l.live_id === liveId)?.position ?? 999;
-        if (posA === posB) {
-            const perfA = a.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
-            const perfB = b.live_history?.find(l => l.live_id === liveId)?.perf ?? 999;
-            return perfA - perfB;
-        }
-        return posA - posB;
-    }
-
-    return 0;
-});
+const sortedSongs = songsIndex || [];
+const sortOptions = defaultSortOptions;
 ---
 
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
-        <form action="/gnjb-utawari-note/search" method="GET" class="search-form">
-            <FilterPanel filters={filters}/>
+        <form action="/gnjb-utawari-note/search" method="GET" class="search-form" id="js-search-form">
+            <FilterPanel filters={initialFilters}/>
             <ActiveFilter/>
             <div class="search-form__action">
                 <Button text='この条件で検索する' />
@@ -127,8 +44,8 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
             <SearchResultSection 
                 sortedSongs={sortedSongs} 
                 sortOptions={sortOptions} 
-                currentSort={filters.sortOrder}
-                liveId={filters.selectedLives[0]}
+                currentSort={initialFilters.sortOrder}
+                liveId=""
             />
         </form>
     </div>
@@ -154,3 +71,178 @@ const sortedSongs = [...filteredSongs].sort((a, b) => {
         }
     }
 </style>
+
+<script is:inline define:vars={{ ALL_SONGS: songsIndex }}>
+    window.__ALL_SONGS__ = ALL_SONGS;
+</script>
+
+<script>
+    import type { Song } from '../data/index';
+
+    declare global {
+        interface Window {
+            __ALL_SONGS__?: Song[];
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const songs: Song[] = window.__ALL_SONGS__ || [];
+        const searchParams = new URLSearchParams(window.location.search);
+
+        const selectedLives = [...new Set(searchParams.getAll('live'))].filter(Boolean);
+        const startDate = searchParams.get('startDate') || '';
+        const endDate = searchParams.get('endDate') || '';
+        const cd = searchParams.get('cd') || '';
+        const creator = searchParams.get('creator') || '';
+        const tieup = searchParams.get('tieup') || '';
+        const call = searchParams.get('call') || '';
+        const mv = searchParams.get('mv') || '';
+        const query = searchParams.get('keyword') || '';
+
+        const isSetlistSortable =
+            selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+
+        const rawSort = searchParams.get('sort');
+        const sortOrder = rawSort || (isSetlistSortable ? 'setlist' : 'date-desc');
+
+        restoreFormState(searchParams);
+
+        if (typeof (window as any).renderActiveChips === 'function') {
+            (window as any).renderActiveChips();
+        }
+
+        const filtered = songs.filter((song: Song) => {
+            if (selectedLives.length > 0) {
+                const hasLive = song.live_history?.some((live: { live_id: string }) => selectedLives.includes(live.live_id));
+                if (!hasLive) return false;
+            }
+            if (startDate && song.date < startDate) return false;
+            if (endDate && song.date > endDate) return false;
+            if (cd && !song.cds?.some((c: { id: string }) => c.id === cd)) return false;
+            if (creator) {
+                const hasCreator =
+                    song.lyricist?.includes(creator) ||
+                    song.composer?.includes(creator) ||
+                    song.arranger?.includes(creator);
+                if (!hasCreator) return false;
+            }
+            if (tieup === 'true' && !((song.tieup?.length ?? 0) > 0)) return false;
+            if (tieup === 'false' && ((song.tieup?.length ?? 0) > 0)) return false;
+            if (mv === "true" && !song.links?.mv) return false;
+            if (mv === "false" && song.links?.mv) return false;
+            if (call === "true" && !song.call) return false;
+            if (call === "false" && song.call) return false;
+            if (query && !song.title?.includes(query) && !song.title_kana?.includes(query)) return false;
+
+            return true;
+        });
+
+        filtered.sort((a: Song, b: Song) => {
+            if (sortOrder === 'date-desc') return (b.date || '').localeCompare(a.date || '');
+            if (sortOrder === 'date-asc') return (a.date || '').localeCompare(b.date || '');
+            if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
+            if (sortOrder === 'setlist') {
+                const liveId = selectedLives[0];
+                const posA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
+                const posB = b.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
+                if (posA === posB) {
+                    const perfA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.perf ?? 999;
+                    const perfB = b.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.perf ?? 999;
+                    return perfA - perfB;
+                }
+                return posA - posB;
+            }
+            return 0;
+        });
+
+        updateDOM(filtered, sortOrder, isSetlistSortable);
+    });
+
+    function restoreFormState(params: URLSearchParams) {
+        const form = document.getElementById('js-search-form') as HTMLFormElement | null;
+        if (!form) return;
+
+        const inputs = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select'));
+
+        inputs.forEach((input) => {
+            if (!input.name) return;
+
+            if (input.type === 'checkbox' || input.type === 'radio') {
+                const checkbox = input as HTMLInputElement;
+                const values = params.getAll(checkbox.name);
+                const isChecked = values.includes(checkbox.value);
+                checkbox.checked = isChecked;
+                checkbox.dataset.wasChecked = isChecked ? 'true' : 'false';
+            } else {
+                const value = params.get(input.name);
+                if (value !== null) {
+                    input.value = value;
+                }
+            }
+        });
+
+        const expanded = params.get('expanded') === 'true';
+        const toggleChips = form.querySelectorAll<HTMLElement>('.expand-toggle-chip');
+        if (expanded) {
+            toggleChips.forEach((chip) => {
+                chip.dataset.expanded = 'true';
+            });
+        }
+    }
+
+    function updateDOM(filteredSongs: Song[], sortOrder: string, isSetlistSortable: boolean) {
+        const cardList = document.getElementById('js-song-card-list');
+        const songCountEl = document.getElementById('js-song-count');
+        const noResultEl = document.getElementById('js-no-result');
+        const sortSelect = document.querySelector<HTMLSelectElement>('select[name="sort"]');
+
+        if (songCountEl) {
+            songCountEl.textContent = `全 ${filteredSongs.length} 曲`;
+        }
+
+        if (sortSelect) {
+            sortSelect.innerHTML = '';
+            const options = [
+                ...(isSetlistSortable ? [{ label: 'セットリスト順', value: 'setlist' }] : []),
+                { label: 'リリース日が新しい順', value: 'date-desc' },
+                { label: 'リリース日が古い順', value: 'date-asc' },
+                { label: '曲名順（五十音順）', value: 'title-asc' },
+            ];
+            options.forEach((opt) => {
+                const optionEl = document.createElement('option');
+                optionEl.value = opt.value;
+                optionEl.textContent = opt.label;
+                if (opt.value === sortOrder) optionEl.selected = true;
+                sortSelect.appendChild(optionEl);
+            });
+        }
+
+        if (filteredSongs.length === 0) {
+            if (cardList) cardList.style.display = 'none';
+            if (noResultEl) noResultEl.style.display = 'flex';
+            return;
+        }
+
+        if (cardList) cardList.style.display = 'grid';
+        if (noResultEl) noResultEl.style.display = 'none';
+
+        if (!cardList) return;
+
+        const existingWrappers = Array.from(cardList.querySelectorAll<HTMLElement>('.js-song-card-wrapper'));
+        const wrapperMap = new Map<string, HTMLElement>();
+
+        existingWrappers.forEach(wrapper => {
+            const id = wrapper.dataset.songId;
+            if (id) wrapperMap.set(id, wrapper);
+        });
+
+        cardList.innerHTML = '';
+
+        filteredSongs.forEach(song => {
+            const wrapper = wrapperMap.get(song.id);
+            if (wrapper) {
+                cardList.appendChild(wrapper);
+            }
+        });
+    }
+</script>

@@ -23,29 +23,25 @@ const displayMode = currentSort === 'setlist' ? 'setlist' : 'default';
 
 <div class="search-result-section">
     <div class="search-result-section__header">
-        <UnderlineText>全 {sortedSongs.length} 曲</UnderlineText>
+        <UnderlineText id="js-song-count">全 {sortedSongs.length} 曲</UnderlineText>
     </div>
-    {sortedSongs.length > 0 &&
-        <SelectChip 
-            name="sort" 
-            options={sortOptions} 
-            defaultValue={currentSort}
-            submitOnChange={true}
-        />
-    }
-    {sortedSongs.length > 0 &&
-        <div class="song-card-list">
-            {sortedSongs.map((s) =>
+    <SelectChip 
+        name="sort" 
+        options={sortOptions} 
+        defaultValue={currentSort}
+        submitOnChange={true}
+    />
+    <div class="song-card-list" id="js-song-card-list">
+        {sortedSongs.map((s) =>
+            <div class="js-song-card-wrapper" data-song-id={s.id}>
                 <SongCard song={s} displayMode={displayMode} liveId={liveId}/>
-            )}
-        </div>
-    }
-    {sortedSongs.length === 0 &&
-        <div class="no-result">
-            <span class="text-body">条件に合う曲が見つかりませんでした。</span>
-            <a href="/gnjb-utawari-note/search" class="reset-button text-body" id="js-reset-btn">絞り込み条件をリセットする</a>
-        </div>
-    }
+            </div>
+        )}
+    </div>
+    <div class="no-result" id="js-no-result" style="display: none;">
+        <span class="text-body">条件に合う曲が見つかりませんでした。</span>
+        <a href="/gnjb-utawari-note/search" class="reset-button text-body" id="js-reset-btn">絞り込み条件をリセットする</a>
+    </div>
 </div>
 
 <style>
