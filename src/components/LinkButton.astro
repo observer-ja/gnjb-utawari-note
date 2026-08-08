@@ -1,0 +1,100 @@
+---
+import MvIcon from '/icon-arrow-right.svg?raw';
+import OtherIcon from '/icon-note.svg?raw';
+
+interface Props {
+    type: 'mv' | 'spotify' | 'apple_music' | 'line_music';
+    href: string | null | undefined;
+}
+
+const { type, href } = Astro.props
+
+const LINK_CONFIG = {
+    mv: {
+        label: 'MVを見る',
+        icon: MvIcon,
+        color: '#FF0000',
+    },
+    spotify: {
+        label: 'Spotifyで聴く',
+        icon: OtherIcon,
+        color: '#1ED760',
+    },
+    'apple_music': {
+        label: 'Apple Musicで聴く',
+        icon: OtherIcon,
+        color: '#FA2D48',
+    },
+    'line_music': {
+        label: 'LINE MUSICで聴く',
+        icon: OtherIcon,
+        color: '#0EE071',
+    },
+} as const;
+
+const config = LINK_CONFIG[type];
+---
+
+{ href &&
+    <a class="link-button" href={href} target="_blank" rel="noopener noreferrer" style={`--btn-color: ${config.color};`}>
+        <span class="link-button-icon" data-type={type}>
+            <Fragment set:html={config.icon} />
+        </span>
+        <span class="link-button-label text-body">{config.label}</span>
+    </a>
+}
+
+<style>
+    .link-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: fit-content;
+        padding: 2px 12px;
+        gap: 4px;
+        border-radius: 20px;
+        border: 1px solid var(--btn-color);
+        box-sizing: border-box;
+        background-color: var(--color-bg);
+        color: var(--btn-color);
+        text-decoration: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .link-button-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    .link-button-icon[data-type="mv"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .link-button-icon :global(svg) {
+        width: 100%;
+        height: 100%;
+    }
+
+    .link-button-icon :global(svg *) {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    @media (hover: hover) {
+        .link-button:hover {
+            background-color: var(--color-bg-dark);
+        }
+    }
+
+    .link-button:active {
+        background-color: var(--btn-color);
+        color: var(--color-bg);
+    }
+</style>
