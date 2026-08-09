@@ -535,7 +535,7 @@ export const song005: SongLyrics = {
                             text: [{ lyrics: "ラララ" }]
                         },
                         {
-                            members: ["W", "P"],
+                            members: ["W", "S"],
                             text: [{ lyrics: "ラララ" }]
                         },
                     ],

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SongMetaSection from '../../components/SongMetaSection.astro';
+import SongLyricsSection from '../../components/SongLyricsSection.astro';
 
 import { songsIndex } from '../../data/index';
 import type { SongLyrics } from '../../data/songs/_template'; // 歌詞の型定義
@@ -33,5 +34,6 @@ const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P', 'all', 'call'] as const;
 <Layout title={song.title}>
     <div class="container">
         <SongMetaSection song={song} note={lyricsData?.note} />
+        <SongLyricsSection lyricsData={lyricsData}/>
     </div>
 </Layout>

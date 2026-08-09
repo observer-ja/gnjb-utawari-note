@@ -1,7 +1,7 @@
 :root {
     /* カラーパレット */
     --color-primary: #ffbd84; /* メインカラー */
-    --color-primary-light: #ffe2cc; /* 薄メインカラー */
+    --color-primary-light: #ffe9d8; /* 薄メインカラー */
     --color-primary-dark: #ff9c4c; /* 濃メインカラー */
     --color-text: #473c2b; /* 文字色 */
     --color-text-colored: #ff7603; /* 色付き文字色 */

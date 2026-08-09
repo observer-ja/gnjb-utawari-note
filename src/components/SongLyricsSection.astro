@@ -1,0 +1,157 @@
+---
+import MemberChip from "./MemberChip.astro";
+import type { SongLyrics } from "../data/songs/_template";
+
+interface Props {
+    lyricsData: SongLyrics | null;
+}
+
+const { lyricsData } = Astro.props
+
+const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P', 'all'] as const;
+const hasCall = lyricsData?.lyrics_blocks.some((block) =>
+    block.rows.some((row) =>
+        row.chunks.some((chunk) =>
+            chunk.text.some((t) => t.call === true)
+        )
+    )
+);
+
+const MEMBER_KEY_MAP: Record<string, string> = {
+    Y: 'y',
+    W: 'w',
+    S: 's',
+    B: 'b',
+    R: 'r',
+    G: 'g',
+    P: 'p',
+};
+
+function getChunkStyle(members?: string[]) {
+    if (!members || members.length === 0) {
+        return '';
+    }
+
+    if (members.includes('all')) {
+        return `background-color: var(--color-primary-light);`;
+    }
+
+    if (members.length === 1) {
+        const key = MEMBER_KEY_MAP[members[0]];
+        if (!key) return '';
+        return `background-color: var(--color-${key}-bg);`;
+    }
+
+    const n = members.length;
+    const stops = members
+        .map((m) => MEMBER_KEY_MAP[m])
+        .filter(Boolean)
+        .map((key, index) => {
+            const start = (index / n) * 100;
+            const end = ((index + 1) / n) * 100;
+            return `var(--color-${key}-bg) ${start}% ${end}%`;
+        });
+
+    return `background: linear-gradient(180deg, ${stops.join(', ')});`;
+}
+---
+
+<div class="song-lyrics-section">
+    <div class="song-lyrics__filter">
+        {MEMBERS.map(m =>
+            <MemberChip member={m}/>
+        )}
+        {hasCall && 
+            <MemberChip member="call"/>
+        }
+    </div>
+    <div class="song-lyrics__container text-body">
+        {lyricsData ? (
+            lyricsData.lyrics_blocks.map((block) => (
+                <div class="song-lyrics__block">
+                    {block.rows.map((row) => (
+                        <div class="song-lyrics__row">
+                            {row.chunks.map((chunk) => {
+                                const activeMembers = chunk.members || row.members || block.members;
+                                return (
+                                    <div class="song-lyrics__chunk" style={getChunkStyle(activeMembers)}>
+                                        {chunk.text.map((t) => (
+                                            <span class={t.call ? "is_call" : ""}>{t.lyrics}</span>
+                                        ))}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ))}
+                </div>
+            ))
+        ) : (
+                <p class="song-lyrics__empty">歌詞データは準備中です。</p>
+        )}
+    </div>
+</div>
+
+<style>
+    .song-lyrics-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .song-lyrics__filter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .song-lyrics__container {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 16px;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .song-lyrics__block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .song-lyrics__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .song-lyrics__chunk {
+        height: fit-content;
+        width: fit-content;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .is_call {
+        color: var(--color-text-colored);
+    }
+
+    @media (min-width: 1024px) {
+        .song-lyrics__filter {
+            gap: 16px;
+        }
+
+        .song-lyrics__container {
+            gap: 24px;
+        }
+
+        .song-lyrics__block,
+        .song-lyrics__row {
+            gap: 8px;
+        }
+    }
+</style>
