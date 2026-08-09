@@ -8,13 +8,15 @@ interface Props {
 
 const { lyricsData } = Astro.props
 
-const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P'] as const;
-const hasAll = lyricsData?.lyrics_blocks.some((block) =>
-    block.members?.includes('all') ||
-    block.rows.some((row) =>
-        row.members?.includes('all') ||
-        row.chunks.some((chunk) =>
-            chunk.members?.includes('all')
+const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P', 'all'] as const;
+const activeMembersList = MEMBERS.filter((member) =>
+    lyricsData?.lyrics_blocks.some((block) =>
+        block.members?.includes(member) ||
+        block.rows.some((row) =>
+            row.members?.includes(member) ||
+            row.chunks.some((chunk) =>
+                chunk.members?.includes(member)
+            )
         )
     )
 );
@@ -42,13 +44,13 @@ function getChunkStyle(members?: string[]) {
     }
 
     if (members.includes('all')) {
-        return `background-color: var(--color-primary-light);`;
+        return `--bg-color: var(--color-primary-light);`;
     }
 
     if (members.length === 1) {
         const key = MEMBER_KEY_MAP[members[0]];
         if (!key) return '';
-        return `background-color: var(--color-${key}-bg);`;
+        return `--bg-color: var(--color-${key}-bg);`;
     }
 
     const n = members.length;
@@ -61,18 +63,24 @@ function getChunkStyle(members?: string[]) {
             return `var(--color-${key}-bg) ${start}% ${end}%`;
         });
 
-    return `background: linear-gradient(180deg, ${stops.join(', ')});`;
+    const dimStops = members
+        .map((m) => MEMBER_KEY_MAP[m])
+        .filter(Boolean)
+        .map((key, index) => {
+            const start = (index / n) * 100;
+            const end = ((index + 1) / n) * 100;
+            return `color-mix(in srgb, var(--color-${key}-bg) 25%, transparent) ${start}% ${end}%`;
+        });
+
+    return `--bg-grad: linear-gradient(180deg, ${stops.join(', ')}); --bg-grad-dim: linear-gradient(180deg, ${dimStops.join(', ')});`;
 }
 ---
 
 <div class="song-lyrics-section">
     <div class="song-lyrics__filter">
-        {MEMBERS.map(m =>
+        {activeMembersList.map(m =>
             <MemberChip member={m}/>
         )}
-        {hasAll &&
-            <MemberChip member="all"/>
-        }
         {hasCall && 
             <MemberChip member="call"/>
         }
@@ -85,13 +93,11 @@ function getChunkStyle(members?: string[]) {
                         <div class="song-lyrics__row">
                             {row.chunks.map((chunk) => {
                                 const activeMembers = chunk.members || row.members || block.members;
-                                const hasCallInChunk = chunk.text.some((t) => t.call === true);
                                 return (
                                     <div 
                                         class="song-lyrics__chunk" 
                                         style={getChunkStyle(activeMembers)}
                                         data-members={activeMembers?.join(',')}
-                                        data-has-call={hasCallInChunk ? "true" : "false"}
                                     >
                                         {chunk.text.map((t) => (
                                             <span class={t.call ? "is_call" : ""}>{t.lyrics}</span>
@@ -152,6 +158,7 @@ function getChunkStyle(members?: string[]) {
         width: fit-content;
         padding: 5px 10px;
         border-radius: 5px;
+        background: var(--bg-grad, var(--bg-color));
     }
 
     .is_call {
@@ -173,19 +180,14 @@ function getChunkStyle(members?: string[]) {
         }
     }
 
-    /* コール選択時：コールを含まないchunk全体（背景＋文字）を 0.25 に */
-    .song-lyrics__chunk.is-call-dimmed {
-        opacity: 0.25 !important;
+    .song-lyrics__chunk.is-call-mode {
+        background: var(--bg-grad-dim, color-mix(in srgb, var(--bg-color, transparent) 25%, transparent));
+        color: color-mix(in srgb, currentColor 25%, transparent);
     }
 
-    /* コールを含むchunk：背景と通常文字を薄く見せるための処理 */
-    .song-lyrics__chunk.has-call-span span:not(.is_call) {
-        opacity: 0.25 !important;
-    }
-
-    /* コール選択時に、コールを含むchunkの背景も薄く見せるための重ね合わせ */
-    .song-lyrics__chunk.has-call-span {
-        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.75);
+    .song-lyrics__chunk.is-call-mode .is_call {
+        color: var(--color-text-colored);
+        opacity: 1;
     }
 </style>
 
@@ -196,41 +198,23 @@ function getChunkStyle(members?: string[]) {
 
         function filterChunks(selectedMember: string | null) {
             chunks.forEach((chunk) => {
-                const spans = chunk.querySelectorAll<HTMLElement>('span');
-
-                // 1. すべてのクラスとスタイルを初期状態にリセット
                 chunk.style.opacity = '1';
-                chunk.classList.remove('is-call-dimmed', 'has-call-span');
-                spans.forEach((span) => (span.style.opacity = '1'));
+                chunk.classList.remove('is-call-mode');
+            });
 
-                // 未選択（トグル解除）時はここで処理終了
-                if (!selectedMember) return;
+            if (!selectedMember) return;
 
-                if (selectedMember === 'call') {
-                    const hasCall = chunk.dataset.hasCall === 'true';
-
-                    if (hasCall) {
-                        // コールを含むchunk: 
-                        // JSはクラス付与のみ行い、CSS側で通常文字と背景の白重ね（0.25相当）を行う
-                        chunk.classList.add('has-call-span');
-                        spans.forEach((span) => {
-                            const isCall = span.classList.contains('is_call');
-                            span.style.opacity = isCall ? '1' : '0.25';
-                        });
-                    } else {
-                        // コールを含まないchunk: 全体を 0.25 に
-                        chunk.classList.add('is-call-dimmed');
-                    }
-                } else {
-                    // メンバー/all 選択時: 該当しない chunk 全体を 0.25 に
+            if (selectedMember === 'call') {
+                chunks.forEach((chunk) => {
+                    chunk.classList.add('is-call-mode');
+                });
+            } else {
+                chunks.forEach((chunk) => {
                     const members = chunk.dataset.members ? chunk.dataset.members.split(',') : [];
                     const isMatched = members.includes(selectedMember) || members.includes('all');
-                    
-                    if (!isMatched) {
-                        chunk.style.opacity = '0.25';
-                    }
-                }
-            });
+                    chunk.style.opacity = isMatched ? '1' : '0.25';
+                });
+            }
         }
 
         radios.forEach((radio) => {

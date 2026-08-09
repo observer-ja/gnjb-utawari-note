@@ -87,7 +87,7 @@ export const songsIndex: Song[] = [
         composer: ["Yocke"],
         arranger: ["Yocke"],
         tieup: [],
-        call: false,
+        call: true,
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5Lbca0cOGt9l3w5mL4VkPq",
