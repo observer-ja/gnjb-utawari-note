@@ -1,0 +1,175 @@
+---
+import LinkButton from "./LinkButton.astro";
+import type { Song } from "../data/index";
+import { cds } from "../data/cds";
+
+interface Props {
+    song: Song;
+    note?: string;
+}
+
+const { song, note } = Astro.props;
+
+const lyricists = song.lyricist.join('・');
+const composers = song.composer.join('・');
+const arrangers = song.arranger.join('・');
+const cdTitles = song.cds
+    .map(c => cds.find(cd => cd.id === c.id)?.title)
+    .filter(Boolean)
+    .join(' / ') || 'ー';
+const date = song.date ? song.date.replaceAll('-', '.') : 'ー';
+
+const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
+---
+
+<section class="song-meta-section">
+    <h1 class="song-title text-lg">{song.title}</h1>
+    <div class="song-meta text-body">
+        <div class="song-meta__credits">
+            <div class="song-meta__row">
+                <span class="song-meta__label">作詞：</span>
+                <span class="song-meta__value">{lyricists}</span>
+            </div>
+            <div class="song-meta__row">
+                <span class="song-meta__label">作曲：</span>
+                <span class="song-meta__value">{composers}</span>
+            </div>
+            <div class="song-meta__row">
+                <span class="song-meta__label">編曲：</span>
+                <span class="song-meta__value">{arrangers}</span>
+            </div>
+            <div class="song-meta__row song-meta__row--group">
+                <div class="song-meta__cd">
+                    <span class="song-meta__label">収録：</span>
+                    <span class="song-meta__value">{cdTitles}</span>
+                </div>
+                <div class="song-meta__date">
+                    <span class="song-meta__label">リリース日：</span>
+                    <span class="song-meta__value">{date}</span>
+                </div>
+            </div>
+            {song.tieup.length>0 &&
+                <div class="song-meta__tieup">
+                    <span class="song-meta__label">タイアップ：</span>
+                    {song.tieup.length>1 ?
+                        <ul class="song-meta__tieup-list">
+                            {song.tieup.map(t =>
+                                <li>{t}</li>
+                            )}
+                        </ul>:
+                        <span class="song-meta__value">{song.tieup[0]}</span>
+                    }
+                </div>
+            }
+        </div>
+        <div class="song-meta__links">
+            {LINKS.map((link) => 
+                <LinkButton type={link} href={song.links[link]}/>
+            )}
+        </div>
+    </div>
+    <p class="song-meta__note text-sm">{note}</p>
+</section>
+
+<style>
+    .song-meta-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .song-title {
+        width: fit-content;
+        padding: 0 5px 5px 5px;
+        border-bottom: 2px solid var(--color-primary);
+    }
+
+    .song-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 24px;
+        background-color: var(--color-bg-dark);
+        border: 1px solid var(--color-primary);
+        border-radius: 12px;
+    }
+
+    .song-meta__credits {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .song-meta__row {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .song-meta__label {
+        flex-shrink: 0;
+    }
+
+    .song-meta__value {
+        flex-shrink: 1;
+    }
+
+    .song-meta__row--group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 24px;
+    }
+
+    .song-meta__cd,
+    .song-meta__date {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .song-meta__tieup {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .song-meta__tieup .song-meta__value {
+        flex-shrink: 1;
+    }
+
+    .song-meta__tieup:has(.song-meta__tieup-list) {
+        flex-direction: column; 
+    }
+
+    .song-meta__tieup-list {
+        margin: 0;
+        padding-left: 32px;
+    }
+
+    .song-meta__links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .song-meta__note {
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    @media (min-width: 1024px) {
+        .song-meta-section {
+            gap: 12px;
+        }
+
+        .song-meta {
+            padding: 24px 48px;
+            gap: 16px;
+        }
+
+        .song-meta__links {
+            gap: 12px;
+        }
+    }
+</style>

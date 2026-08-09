@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SongMetaSection from '../../components/SongMetaSection.astro';
+
+import { songsIndex } from '../../data/index';
+import type { SongLyrics } from '../../data/songs/_template'; // 歌詞の型定義
+
+export async function getStaticPaths() {
+    return songsIndex.map((song) => ({
+        params: { id: song.id },
+    }));
+}
+
+const { id } = Astro.params;
+
+const song = songsIndex.find((s) => s.id === id);
+
+if (!song) {
+    throw new Error(`Song with id "${id}" not found.`);
+}
+
+let lyricsData: SongLyrics | null = null;
+try {
+    const lyricsModule = await import(`../../data/songs/${id}.ts`);
+    lyricsData = lyricsModule.default || lyricsModule[Object.keys(lyricsModule)[0]];
+} catch (e) {
+    console.warn(`Lyrics data for ${id} was not found.`);
+}
+
+const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P', 'all', 'call'] as const;
+---
+
+<Layout title={song.title}>
+    <div class="container">
+        <SongMetaSection song={song} note={lyricsData?.note} />
+    </div>
+</Layout>

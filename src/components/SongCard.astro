@@ -11,7 +11,7 @@ interface Props {
 
 const { song, displayMode = 'default', liveId } = Astro.props
 ---
-<a class="song-card" href={`/songs/${song.id}`}>
+<a class="song-card" href={`/gnjb-utawari-note/songs/${song.id}`}>
     <div class="song-card__header text-body">{song.title}</div>
     <SongCardBody song={song} displayMode={displayMode} liveId={liveId} />
     <div class="song-card__footer">

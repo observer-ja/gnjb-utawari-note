@@ -87,6 +87,10 @@ const config = LINK_CONFIG[type];
         stroke: currentColor;
     }
 
+    .link-button-icon[data-type="mv"] :global(svg *) {
+        stroke: none;
+    }
+
     @media (hover: hover) {
         .link-button:hover {
             background-color: var(--color-bg-dark);
