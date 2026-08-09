@@ -1,0 +1,105 @@
+---
+import { lives } from "../data/lives";
+import type { LiveHistory } from "../data/index";
+
+interface Props {
+    live_history: LiveHistory[];
+}
+
+const { live_history = [] } = Astro.props
+
+const songLiveHistory = live_history.map((live) => ({
+    year: live.live_id.slice(4, 8),
+    liveName: lives.find((l) => l.id === live.live_id)?.name || '',
+    position: `M${live.position}`,
+    note: live.note.join('/') || '',
+}));
+---
+
+<div class="song-live-history text-body">
+    {songLiveHistory.length > 0 ? (
+        <table class="song-live-history__table">
+            <thead class="song-live-history__head">
+                <tr class="song-live-history__row">
+                    <th class="song-live-history__cell song-live-history__cell--head song-live-history__cell--year">年</th>
+                    <th class="song-live-history__cell song-live-history__cell--head song-live-history__cell--name">ライブ名</th>
+                    <th class="song-live-history__cell song-live-history__cell--head song-live-history__cell--position">順番</th>
+                    <th class="song-live-history__cell song-live-history__cell--head song-live-history__cell--note">備考</th>
+                </tr>
+            </thead>
+            <tbody class="song-live-history__body">
+                {songLiveHistory.map((live) => (
+                <tr class="song-live-history__row">
+                    <td class="song-live-history__cell song-live-history__cell--year">{live.year}</td>
+                    <td class="song-live-history__cell song-live-history__cell--name">{live.liveName}</td>
+                    <td class="song-live-history__cell song-live-history__cell--position">{live.position}</td>
+                    <td class="song-live-history__cell song-live-history__cell--note">{live.note}</td>
+                </tr>
+                ))}
+            </tbody>
+        </table>
+    ) : (
+        <p class="song-live-history__empty">ライブでの披露実績はまだありません。</p>
+    )}
+</div>
+
+<style>
+.song-live-history {
+    width: 100%;
+}
+
+.song-live-history__table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--color-bg);
+}
+
+.song-live-history__head {
+  background-color: var(--color-bg-dark); /* 見出し行の薄いオレンジ背景 */
+}
+
+.song-live-history__cell {
+    padding: 5px 10px;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    vertical-align: middle;
+}
+
+.song-live-history__cell:last-child {
+    border-right: none;
+}
+
+.song-live-history__body .song-live-history__row:last-child .song-live-history__cell {
+    border-bottom: none;
+}
+
+.song-live-history__cell--head {
+    font-weight: bold;
+    text-align: center;
+}
+
+.song-live-history__cell--year {
+    text-align: center;
+    width: 40px;
+}
+
+.song-live-history__cell--name {
+    text-align: left;
+    width: 70%;
+}
+
+.song-live-history__cell--position {
+    text-align: center;
+    width: 40px;
+}
+
+.song-live-history__cell--note {
+    text-align: left;
+    width: 30%;
+}
+</style>
