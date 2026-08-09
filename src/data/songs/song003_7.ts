@@ -27,7 +27,7 @@ export interface SongLyrics {
 
 export const song003_7: SongLyrics = {
     id: "song003_7",
-    note: "5th Anniversary LIVE 夢現の続きでのみ披露された。",
+    note: "7人ver.は5th Anniversary LIVE 夢現の続きでのみ披露された。",
 
     lyrics_blocks: [
         {

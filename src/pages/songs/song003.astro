@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SongMetaSection from '../../components/SongMetaSection.astro';
+import SongLyricsSection from '../../components/SongLyricsSection.astro';
+import SongLiveHistoryTable from '../../components/SongLiveHistoryTable.astro';
+
+import { songsIndex } from '../../data/index';
+
+import { song003_3 } from '../../data/songs/song003_3';
+import { song003_7 } from '../../data/songs/song003_7';
+
+const song = songsIndex.find((s) => s.id === 'song003');
+
+if (!song) {
+    throw new Error('Song not found.');
+}
+---
+
+<Layout title={song.title}>
+    <div class="container">
+        <SongMetaSection song={song} note={song003_7.note}/>
+        <div class="toggle-container text-body">
+            <span class="toggle-label toggle-label--left active" id="label-3">3人ver.</span>
+            
+            <label class="toggle-switch">
+                <input type="checkbox" id="pattern-toggle-input" />
+                <span class="slider"></span>
+            </label>
+            
+            <span class="toggle-label toggle-label--right" id="label-7">7人ver.</span>
+        </div>
+        <hr class="section-divider" />
+        <div id="pattern-3" class="lyrics-pattern active">
+            <SongLyricsSection lyricsData={song003_3} />
+        </div>
+        <div id="pattern-7" class="lyrics-pattern">
+            <SongLyricsSection lyricsData={song003_7} />
+        </div>
+        <hr class="section-divider" />
+        <SongLiveHistoryTable live_history={song.live_history}/>
+    </div>
+</Layout>
+
+<style>
+    .section-divider {
+        border: none;
+        border-top: 1px solid var(--color-primary);
+        height: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .toggle-label {
+        color: color-mix(in srgb, var(--color-text) 25%, transparent);
+    }
+
+    .toggle-label.active {
+        color: var(--color-primary);
+        font-weight: bold;
+    }
+    
+    .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+    }
+
+    .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-primary);
+        border-radius: 20px;
+        transition: 0.2s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        transition: 0.2s;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    .lyrics-pattern {
+        display: none;
+    }
+
+    .lyrics-pattern.active {
+        display: block;
+    }
+</style>
+
+<script>
+    const toggleInput = document.getElementById('pattern-toggle-input') as HTMLInputElement;
+    const pattern3 = document.getElementById('pattern-3');
+    const pattern7 = document.getElementById('pattern-7');
+    const label3 = document.getElementById('label-3');
+    const label7 = document.getElementById('label-7');
+
+    toggleInput?.addEventListener('change', () => {
+        const isChecked = toggleInput.checked;
+
+        if (isChecked) {
+            pattern3?.classList.remove('active');
+            pattern7?.classList.add('active');
+            label3?.classList.remove('active');
+            label7?.classList.add('active');
+        } else {
+            pattern3?.classList.add('active');
+            pattern7?.classList.remove('active');
+            label3?.classList.add('active');
+            label7?.classList.remove('active');
+        }
+    });
+</script>
