@@ -307,7 +307,6 @@ const creatorOptions = uniqueCreators.map(creator => ({
 
     if (toggleChip && expandedInput) {
         toggleChip.addEventListener('click', () => {
-            // トグル後の状態（CSS側で data-expanded が切り替わるタイミング）を反転させてセット
             const isExpanded = toggleChip.getAttribute('data-expanded') === 'true';
             expandedInput.value = isExpanded ? 'true' : 'false';
         });
