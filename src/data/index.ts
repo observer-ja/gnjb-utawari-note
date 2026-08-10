@@ -249,8 +249,8 @@ export const songsIndex: Song[] = [
             { live_id: "live2023_07", position: 9, perf: null, note: [""] },
             { live_id: "live2023_06", position: 15, perf: null, note: [""] },
             { live_id: "live2023_05", position: 1, perf: null, note: [""] },
-            { live_id: "live2023_02", position: 4, perf: null, note: ["メドレー"] },
             { live_id: "live2023_02", position: 10, perf: null, note: ["メドレー"] },
+            { live_id: "live2023_02", position: 4, perf: null, note: ["メドレー"] },
             { live_id: "live2023_01", position: 5, perf: null, note: ["メドレー"] },
 
             { live_id: "live2022_11", position: 1, perf: null, note: [""] },
@@ -888,8 +888,8 @@ export const songsIndex: Song[] = [
             { live_id: "live2022_03", position: 16, perf: null, note: [""] },
 
             { live_id: "live2021_07", position: 16, perf: null, note: [""] },
-            { live_id: "live2021_02", position: 10, perf: null, note: ["初披露"] },
             { live_id: "live2021_02", position: 15, perf: null, note: ["アンコール"] },
+            { live_id: "live2021_02", position: 10, perf: null, note: ["初披露"] },
         ],
     },
     {
@@ -1400,8 +1400,8 @@ export const songsIndex: Song[] = [
             { live_id: "live2022_07", position: 2, perf: null, note: [""] },
             { live_id: "live2022_06", position: 17, perf: null, note: [""] },
             { live_id: "live2022_05", position: 5, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 4, perf: null, note: [""] },
-            { live_id: "live2022_04", position: 5, perf: null, note: ["初披露"] },
+            { live_id: "live2022_04", position: 5, perf: null, note: [""] },
+            { live_id: "live2022_04", position: 4, perf: null, note: ["初披露"] },
         ],
     },
     {
