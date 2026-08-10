@@ -25,7 +25,7 @@ export interface SongLyrics {
     lyrics_blocks: LyricBlock[];
 }
 
-export const song_template: SongLyrics = {
+export const song009: SongLyrics = {
     id: "song009",
     note: "",
 
