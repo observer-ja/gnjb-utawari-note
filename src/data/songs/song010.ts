@@ -27,7 +27,7 @@ export interface SongLyrics {
 
 export const song010: SongLyrics = {
     id: "song010",
-    note: "サビの手振りを真似する人も多い。",
+    note: "サビの手振りを真似する人も多い。元々3rdSGの表題曲になる予定だった。",
 
     lyrics_blocks: [
         {
