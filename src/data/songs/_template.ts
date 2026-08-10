@@ -33,7 +33,7 @@ export const song_template: SongLyrics = {
             rows: [
                 {
                     chunks: [
-                        { members: [""], text: [{ lyrics: "歌詞テキスト" }] },
+                        { text: [{ lyrics: "歌詞テキスト" }] },
                         {
                             members: [""],
                             text: [
