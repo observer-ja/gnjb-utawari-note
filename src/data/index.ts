@@ -1250,8 +1250,8 @@ export const songsIndex: Song[] = [
             { live_id: "live2022_09", position: 4, perf: null, note: [""] },
             { live_id: "live2022_06", position: 6, perf: null, note: [""] },
             { live_id: "live2022_04", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 1, perf: null, note: [""] },
-            { live_id: "live2022_03", position: 19, perf: null, note: ["初披露"] },
+            { live_id: "live2022_03", position: 19, perf: null, note: [""] },
+            { live_id: "live2022_03", position: 1, perf: null, note: ["初披露"] },
         ],
     },
     {
