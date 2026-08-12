@@ -197,7 +197,7 @@ export const song025: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["R"],
+                            members: ["W"],
                             text: [{ lyrics: "まだ見ぬ世界が見れるような気がしてた" }]
                         },
                         {
