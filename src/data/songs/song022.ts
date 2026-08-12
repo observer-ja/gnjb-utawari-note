@@ -56,10 +56,15 @@ export const song022: SongLyrics = {
                     ],
                 },
                 {
-                    members: ["R"],
                     chunks: [
-                        { text: [{ lyrics: "化けの皮 剥がしてしまえば" }] },
-                        { text: [{ lyrics: "見える少年少女の戯言" }] },
+                        {
+                            members: ["R", "P"],
+                            text: [{ lyrics: "化けの皮 剥がしてしまえば" }]
+                        },
+                        {
+                            members: ["R"],
+                            text: [{ lyrics: "見える少年少女の戯言" }]
+                        },
                     ],
                 },
                 {
