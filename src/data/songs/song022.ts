@@ -244,7 +244,7 @@ export const song022: SongLyrics = {
         {
             rows: [
                 {
-                    members: ["P"],
+                    members: ["R"],
                     chunks: [
                         { text: [{ lyrics: "紫外線も気にせずに" }] },
                         { text: [{ lyrics: "僕らの夏は過ぎてった" }] },
