@@ -27,7 +27,7 @@ export interface SongLyrics {
 
 export const song019: SongLyrics = {
     id: "song019",
-    note: "",
+    note: "ポエトリーリーディングが特徴の楽曲。",
 
     lyrics_blocks: [
         {
