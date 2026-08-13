@@ -1,3 +1,4 @@
+/* 青、その他 */
 export interface LyricText {
     lyrics: string;
     call?: boolean;
@@ -26,7 +27,7 @@ export interface SongLyrics {
 
 export const song027: SongLyrics = {
     id: "song027",
-    note: "",
+    note: "三部作の内の一曲。",
 
     lyrics_blocks: [
         {
