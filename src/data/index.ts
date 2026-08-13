@@ -232,7 +232,7 @@ export const songsIndex: Song[] = [
             { live_id: "live2025_10", position: 5, perf: null, note: [""] },
             { live_id: "live2025_08", position: 3, perf: null, note: [""] },
             { live_id: "live2025_05", position: 2, perf: null, note: [""] },
-            { live_id: "live2025_04", position: 3, perf: null, note: ["シャッフル曲"] },
+            { live_id: "live2025_04", position: 3, perf: null, note: ["シャッフル曲", "1公演目"] },
             { live_id: "live2025_02", position: 18, perf: null, note: ["メドレー"] },
 
             { live_id: "live2024_08", position: 13, perf: null, note: [""] },
@@ -1468,7 +1468,7 @@ export const songsIndex: Song[] = [
             { live_id: "live2023_15", position: 1, perf: null, note: ["大倉、小泉、杢代、吉澤のみ"] },
             { live_id: "live2023_14", position: 7, perf: null, note: [""] },
             { live_id: "live2023_13", position: 5, perf: null, note: [""] },
-            { live_id: "live2023_11", position: 2, perf: null, note: ["シャッフル曲"] },
+            { live_id: "live2023_11", position: 2, perf: null, note: ["シャッフル曲", "3公演目"] },
             { live_id: "live2023_05", position: 3, perf: null, note: ["シャッフル曲"] },
             { live_id: "live2023_04", position: 16, perf: null, note: [""] },
             { live_id: "live2023_02", position: 12, perf: null, note: [""] },
@@ -2109,7 +2109,7 @@ export const songsIndex: Song[] = [
             { live_id: "live2026_03", position: 15, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2026_02", position: 4, perf: null, note: [""] },
 
-            { live_id: "live2025_10", position: 8, perf: 2, note: ["日替わり曲"] },
+            { live_id: "live2025_10", position: 8, perf: 2, note: ["日替わり曲", "1公演目"] },
             { live_id: "live2025_05", position: 5, perf: null, note: [""] },
             { live_id: "live2025_03", position: 12, perf: null, note: [""] },
             { live_id: "live2025_02", position: 11, perf: null, note: [""] },
