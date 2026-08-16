@@ -22,8 +22,14 @@ import UnderlineText from "./UnderlineText.astro"
                 <li><UnderlineText href="/gnjb-utawari-note/contact">お問い合わせ</UnderlineText></li>
             </ul>
         </nav>
+        <div class="permission-section">
+            <span class="permission-text text-sm">当サイトはJASRACによる音楽著作物利用許諾を得て運営しております。</span>
+            <a href="https://www.jasrac.or.jp/" target="_blank" rel="noopener noreferrer">
+                <img class="permission-img" src="/gnjb-utawari-note/jasrac.png" alt="JASRAC許諾マーク" />
+            </a>
+            <span class="permission-number text-sm">JASRAC許諾第J260843631号</span>
+        </div>
         <div class="footer-notes">
-            <p class="footer-note-text text-sm">JASRAC許諾第 XXXXXXX-XXX 号</p>
             <p class="footer-note-text text-sm">当サイトは個人が運営する<span class="color-text">非公式</span>のファンサイトです。<br class="sp-only" />対象のグループおよび所属事務所様とは一切関係ありません。</p>
             <p class="copyright text-sm">&copy; 2026 原因は自分にある。歌割りノート</p>
         </div>
@@ -79,6 +85,22 @@ import UnderlineText from "./UnderlineText.astro"
         margin: 0;
         padding: 0;
         white-space: nowrap;
+    }
+
+    .permission-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .permission-text {
+        text-align: center;
+    }
+
+    .permission-img {
+        width: 40px;
+        height: auto;
     }
 
     .footer-notes {

@@ -6,7 +6,7 @@ export interface NewsItemType {
 
 export const newsData: NewsItemType[] = [
     {
-        date: "2026.08.??",
+        date: "2026.08.16",
         text: "サイトをオープンしました。"
     },
 ];

@@ -27,7 +27,7 @@ export interface SongLyrics {
 
 export const song005: SongLyrics = {
     id: "song005",
-    note: "2番後の感想で2択コールをする。サビは推しに合わせて同じ振り付けをいている人も多い。",
+    note: "2番後の間奏で2択コールをする。サビは推しに合わせて同じ振り付けをいている人も多い。",
 
     lyrics_blocks: [
         {
@@ -535,7 +535,7 @@ export const song005: SongLyrics = {
                             text: [{ lyrics: "ラララ" }]
                         },
                         {
-                            members: ["W", "P"],
+                            members: ["W", "S"],
                             text: [{ lyrics: "ラララ" }]
                         },
                     ],

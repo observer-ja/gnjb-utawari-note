@@ -1,0 +1,239 @@
+---
+import MemberChip from "./MemberChip.astro";
+import type { SongLyrics } from "../data/songs/_template";
+
+interface Props {
+    lyricsData: SongLyrics | null;
+}
+
+const { lyricsData } = Astro.props
+
+const MEMBERS = ['Y', 'W', 'S', 'B', 'R', 'G', 'P', 'all'] as const;
+const activeMembersList = MEMBERS.filter((member) =>
+    lyricsData?.lyrics_blocks.some((block) =>
+        block.members?.includes(member) ||
+        block.rows.some((row) =>
+            row.members?.includes(member) ||
+            row.chunks.some((chunk) =>
+                chunk.members?.includes(member)
+            )
+        )
+    )
+);
+const hasCall = lyricsData?.lyrics_blocks.some((block) =>
+    block.rows.some((row) =>
+        row.chunks.some((chunk) =>
+            chunk.text.some((t) => t.call === true)
+        )
+    )
+);
+
+const MEMBER_KEY_MAP: Record<string, string> = {
+    Y: 'y',
+    W: 'w',
+    S: 's',
+    B: 'b',
+    R: 'r',
+    G: 'g',
+    P: 'p',
+};
+
+function getChunkStyle(members?: string[]) {
+    if (!members || members.length === 0) {
+        return '';
+    }
+
+    if (members.includes('all')) {
+        return `--bg-color: var(--color-primary-light);`;
+    }
+
+    if (members.length === 1) {
+        const key = MEMBER_KEY_MAP[members[0]];
+        if (!key) return '';
+        return `--bg-color: var(--color-${key}-bg);`;
+    }
+
+    const n = members.length;
+    const stops = members
+        .map((m) => MEMBER_KEY_MAP[m])
+        .filter(Boolean)
+        .map((key, index) => {
+            const start = (index / n) * 100;
+            const end = ((index + 1) / n) * 100;
+            return `var(--color-${key}-bg) ${start}% ${end}%`;
+        });
+
+    const dimStops = members
+        .map((m) => MEMBER_KEY_MAP[m])
+        .filter(Boolean)
+        .map((key, index) => {
+            const start = (index / n) * 100;
+            const end = ((index + 1) / n) * 100;
+            return `color-mix(in srgb, var(--color-${key}-bg) 25%, transparent) ${start}% ${end}%`;
+        });
+
+    return `--bg-grad: linear-gradient(180deg, ${stops.join(', ')}); --bg-grad-dim: linear-gradient(180deg, ${dimStops.join(', ')});`;
+}
+---
+
+<div class="song-lyrics-section">
+    <div class="song-lyrics__filter">
+        {activeMembersList.map(m =>
+            <MemberChip member={m}/>
+        )}
+        {hasCall && 
+            <MemberChip member="call"/>
+        }
+    </div>
+    <div class="song-lyrics__container text-body">
+        {lyricsData ? (
+            lyricsData.lyrics_blocks.map((block) => (
+                <div class="song-lyrics__block">
+                    {block.rows.map((row) => (
+                        <div class="song-lyrics__row">
+                            {row.chunks.map((chunk) => {
+                                const activeMembers = chunk.members || row.members || block.members;
+                                return (
+                                    <div 
+                                        class="song-lyrics__chunk" 
+                                        style={getChunkStyle(activeMembers)}
+                                        data-members={activeMembers?.join(',')}
+                                    >
+                                        {chunk.text.map((t) => (
+                                            <span class={t.call ? "is_call" : ""}>{t.lyrics}</span>
+                                        ))}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ))}
+                </div>
+            ))
+        ) : (
+                <p class="song-lyrics__empty">歌詞データは準備中です。</p>
+        )}
+    </div>
+</div>
+
+<style>
+    .song-lyrics-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .song-lyrics__filter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .song-lyrics__container {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 16px;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .song-lyrics__block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .song-lyrics__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .song-lyrics__chunk {
+        height: fit-content;
+        width: fit-content;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: var(--bg-grad, var(--bg-color));
+    }
+
+    .is_call {
+        color: var(--color-text-colored);
+    }
+
+    @media (min-width: 1024px) {
+        .song-lyrics__filter {
+            gap: 16px;
+        }
+
+        .song-lyrics__container {
+            gap: 24px;
+        }
+
+        .song-lyrics__block,
+        .song-lyrics__row {
+            gap: 8px;
+        }
+    }
+
+    .song-lyrics__chunk.is-call-mode {
+        background: var(--bg-grad-dim, color-mix(in srgb, var(--bg-color, transparent) 25%, transparent));
+        color: color-mix(in srgb, currentColor 25%, transparent);
+    }
+
+    .song-lyrics__chunk.is-call-mode .is_call {
+        color: var(--color-text-colored);
+        opacity: 1;
+    }
+</style>
+
+<script>
+    function setupMemberFilter() {
+        const radios = document.querySelectorAll<HTMLInputElement>('.song-lyrics__filter .chip-input');
+        const chunks = document.querySelectorAll<HTMLElement>('.song-lyrics__chunk');
+
+        function filterChunks(selectedMember: string | null) {
+            chunks.forEach((chunk) => {
+                chunk.style.opacity = '1';
+                chunk.classList.remove('is-call-mode');
+            });
+
+            if (!selectedMember) return;
+
+            if (selectedMember === 'call') {
+                chunks.forEach((chunk) => {
+                    chunk.classList.add('is-call-mode');
+                });
+            } else {
+                chunks.forEach((chunk) => {
+                    const members = chunk.dataset.members ? chunk.dataset.members.split(',') : [];
+                    const isMatched = members.includes(selectedMember) || members.includes('all');
+                    chunk.style.opacity = isMatched ? '1' : '0.25';
+                });
+            }
+        }
+
+        radios.forEach((radio) => {
+            radio.addEventListener('click', (e) => {
+                const target = e.currentTarget as HTMLInputElement;
+                const wasChecked = target.dataset.wasChecked === 'true';
+
+                if (wasChecked) {
+                    target.checked = false;
+                    target.dataset.wasChecked = 'false';
+                    filterChunks(null);
+                } else {
+                    radios.forEach((r) => (r.dataset.wasChecked = 'false'));
+                    target.dataset.wasChecked = 'true';
+                    filterChunks(target.value);
+                }
+            });
+        });
+    }
+
+    setupMemberFilter();
+</script>

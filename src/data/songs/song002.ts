@@ -60,6 +60,7 @@ export const song002: SongLyrics = {
                     ],
                 },
                 {
+                    members: ["Y"],
                     chunks: [
                         { text: [{ lyrics: "突き抜ける光　心躍る" }] },
                         { text: [{ lyrics: "壊れそうになるペットボトル" }] },

@@ -21,7 +21,7 @@ const meta = {
     cd: song.cds
         .map(c => cds.find(cd => cd.id === c.id)?.title)
         .filter(Boolean)
-        .join(' ') || 'ー',
+        .join('/') || 'ー',
     date: song.date ? song.date.replaceAll('-', '.') : 'ー',
 }
 

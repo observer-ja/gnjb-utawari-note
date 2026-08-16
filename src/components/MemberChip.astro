@@ -1,0 +1,139 @@
+---
+interface Props {
+    member: 'Y' | 'W' | 'S' | 'B' | 'R' | 'G' | 'P' | 'all' | 'call';
+    checked?: boolean;
+}
+
+const { member, checked = false } = Astro.props
+
+const MEMBER_CHIP_CONFIG = {
+    Y: {
+        shortLabel: '大倉',
+        fullLabel: '大倉空人',
+        textColor: 'var(--color-y-text)',
+        bgColor: 'var(--color-y-bg)',
+    },
+    W: {
+        shortLabel: '小泉',
+        fullLabel: '小泉光咲',
+        textColor: 'var(--color-w-text)',
+        bgColor: 'var(--color-w-bg)',
+    },
+    S: {
+        shortLabel: '桜木',
+        fullLabel: '桜木雅哉',
+        textColor: 'var(--color-s-text)',
+        bgColor: 'var(--color-s-bg)',
+    },
+    B: {
+        shortLabel: '長野',
+        fullLabel: '長野凌大',
+        textColor: 'var(--color-b-text)',
+        bgColor: 'var(--color-b-bg)',
+    },
+    R: {
+        shortLabel: '武藤',
+        fullLabel: '武藤潤',
+        textColor: 'var(--color-r-text)',
+        bgColor: 'var(--color-r-bg)',
+    },
+    G: {
+        shortLabel: '杢代',
+        fullLabel: '杢代和人',
+        textColor: 'var(--color-g-text)',
+        bgColor: 'var(--color-g-bg)',
+    },
+    P: {
+        shortLabel: '吉澤',
+        fullLabel: '吉澤要人',
+        textColor: 'var(--color-p-text)',
+        bgColor: 'var(--color-p-bg)',
+    },
+    all: {
+        shortLabel: '全員パート',
+        fullLabel: '全員パート',
+        textColor: 'var(--color-primary)',
+        bgColor: 'var(--color-primary-light)',
+    },
+    call: {
+        shortLabel: 'コール',
+        fullLabel: 'コール',
+        textColor: 'var(--color-text-colored)',
+        bgColor: 'var(--color-bg-dark)',
+    },
+} as const;
+
+const config = MEMBER_CHIP_CONFIG[member];
+---
+
+<label
+    class="member-chip"
+    data-member={member}
+    style={`--chip-text-color: ${config.textColor}; --chip-bg-color: ${config.bgColor};`}
+>
+    <input type='radio' name="member" value={member} class="chip-input" checked={checked} data-was-checked={checked ? "true" : "false"}/>
+    <span class="chip-label chip-label--short text-body">{config.shortLabel}</span>
+    <span class="chip-label chip-label--full text-body">{config.fullLabel}</span>
+</label>
+
+
+<style>
+    .member-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: fit-content;
+        min-width: 58px;
+        padding: 2px 12px;
+        border-radius: 20px;
+        border: 1px solid var(--chip-text-color);
+        box-sizing: border-box;
+        background-color: var(--color-bg);
+        color: var(--chip-text-color);
+        user-select: none;
+        white-space: nowrap;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .member-chip:has(.chip-input:checked) {
+        background-color: var(--chip-text-color);
+        color: var(--color-bg);
+    }
+
+    @media (hover:hover) {
+        .member-chip:hover {
+            background-color: var(--chip-bg-color);
+        }
+
+        .member-chip:has(.chip-input:checked):hover {
+            border: 1px solid var(--color-text);
+        }
+    }
+
+    .chip-input {
+        display: none;
+    }
+
+    .chip-label--short {
+        display: inline;
+    }
+
+    .chip-label--full {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        .member-chip {
+            width: 90px;
+        }
+
+        .chip-label--short {
+            display: none;
+        }
+
+        .chip-label--full {
+            display: inline;
+        }
+    }
+</style>
