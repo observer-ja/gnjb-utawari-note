@@ -2,13 +2,20 @@
 interface Props {
     text: string;
     href?: string;
-    type?: 'submit';
+    type?: 'submit'
+    isExternal?: boolean;
 }
-const { text, href, type = 'submit'} = Astro.props;
+const { text, href, type = 'submit', isExternal = false } = Astro.props;
 const Tag = href ? 'a' : 'button';
 ---
 
-<Tag class="btn" href={href} type={!href ? type : undefined}>
+<Tag
+    class="btn"
+    href={href}
+    type={!href ? type : undefined}
+    target={href && isExternal ? '_blank' : undefined}
+    rel={href && isExternal ? 'noopener noreferrer' : undefined}
+>
     <span class="btn-text text-body">{text}</span>
 </Tag>
 
