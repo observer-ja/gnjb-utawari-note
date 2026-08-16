@@ -2105,6 +2105,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt000000001e02f002",
         },
         live_history: [
+            { live_id: "live2026_07", position: 5, perf: null, note: [""] },
             { live_id: "live2026_06", position: 1, perf: null, note: [""] },
             { live_id: "live2026_03", position: 15, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2026_02", position: 4, perf: null, note: [""] },
@@ -2165,6 +2166,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt000000001ea734eb",
         },
         live_history: [
+            { live_id: "live2026_07", position: 1, perf: null, note: ["シャッフル曲", "3公演目"] },
             { live_id: "live2026_03", position: 21, perf: null, note: [""] },
             { live_id: "live2026_02", position: 6, perf: null, note: [""] },
             { live_id: "live2026_01", position: 11, perf: null, note: [""] },
@@ -2335,6 +2337,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt00000000207f5eec",
         },
         live_history: [
+            { live_id: "live2026_07", position: 2, perf: null, note: ["田中雅功、TETTAによる披露", "4公演目"] },
             { live_id: "live2026_06", position: 8, perf: null, note: [""] },
             { live_id: "live2026_04", position: 6, perf: null, note: [""] },
             { live_id: "live2025_02", position: 13, perf: 1, note: ["日替わり曲"] },
@@ -2437,6 +2440,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000021cfc547",
         },
         live_history: [
+            { live_id: "live2026_07", position: 4, perf: 4, note: ["日替わり曲"] },
             { live_id: "live2026_06", position: 4, perf: null, note: [""] },
             { live_id: "live2026_05", position: 1, perf: null, note: [""] },
             { live_id: "live2026_03", position: 14, perf: null, note: [""] },
@@ -2658,6 +2662,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000023badd9b",
         },
         live_history: [
+            { live_id: "live2026_07", position: 4, perf: 3, note: ["日替わり曲"] },
             { live_id: "live2026_06", position: 9, perf: null, note: [""] },
             { live_id: "live2026_01", position: 16, perf: 1, note: [""] },
 
@@ -2707,6 +2712,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000023eb8018",
         },
         live_history: [
+            { live_id: "live2026_07", position: 4, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2026_03", position: 16, perf: 2, note: ["日替わり曲"] },
             { live_id: "live2026_02", position: 3, perf: null, note: [""] },
             { live_id: "live2026_01", position: 3, perf: null, note: ["初披露"] },
@@ -2755,6 +2761,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000024e4fc27",
         },
         live_history: [
+            { live_id: "live2026_07", position: 3, perf: null, note: [""] },
             { live_id: "live2026_06", position: 5, perf: null, note: [""] },
             { live_id: "live2026_05", position: 11, perf: null, note: [""] },
             { live_id: "live2026_04", position: 7, perf: null, note: [""] },
@@ -2848,6 +2855,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000026273465",
         },
         live_history: [
+            { live_id: "live2026_07", position: 4, perf: 1, note: ["日替わり曲"] },
             { live_id: "live2026_06", position: 6, perf: null, note: [""] },
             { live_id: "live2026_05", position: 8, perf: null, note: [""] },
             { live_id: "live2026_03", position: 10, perf: null, note: ["初披露"] },
