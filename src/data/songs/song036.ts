@@ -168,11 +168,13 @@ export const song036: SongLyrics = {
         {
             rows: [
                 {
+                    members: ["P"],
                     chunks: [
-                        {
-                            members: ["P"],
-                            text: [{ lyrics: "あいも変わらず充電中かい？" }]
-                        },
+                        { text: [{ lyrics: "あいも変わらず充電中かい？" }] },
+                    ],
+                },
+                {
+                    chunks: [
                         {
                             members: [],
                             text: [{ lyrics: "（それは" }]
