@@ -52,9 +52,7 @@ import UnderlineText from "./UnderlineText.astro";
 
 <script>
     const form = document.querySelector<HTMLFormElement>('.search-form');
-    
     const activeChipsContainer = document.getElementById('js-active-chips');
-    const resetButton = document.getElementById('js-reset-btn');
 
     const GROUP_NAME_MAP: Record<string, string> = {
         tieup: 'タイアップ：',
@@ -64,6 +62,8 @@ import UnderlineText from "./UnderlineText.astro";
         cd: 'CD：',
         creator: 'クリエイター：'
     };
+
+    const formatDate = (val: string) => val.replace(/-/g, '/');
     
     function renderActiveChips() {
         if (!form || !activeChipsContainer) return;
@@ -75,24 +75,10 @@ import UnderlineText from "./UnderlineText.astro";
         let startDate = '';
         let endDate = '';
         
-        
         inputs.forEach((input) => {
             if (input.closest('#js-template-chip')) return;
-            if (input instanceof HTMLInputElement && input.type === 'hidden') return;
-
             if (input.name === 'sort') return;
-
-            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
-                const val = input.value.trim();
-                if (val) addChipHTML(`「${val}」を含む`, input.name, val);
-                return;
-            }
-
-            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
-                const val = input.value.trim();
-                if (val) addChipHTML(`「${val}」を含む`, input.name, val);
-                return;
-            }
+            if (input instanceof HTMLInputElement && input.type === 'hidden') return;
 
             if (input instanceof HTMLInputElement && (input.name === 'startDate' || input.name === 'endDate')) {
                 const val = input.value.trim();
@@ -103,10 +89,15 @@ import UnderlineText from "./UnderlineText.astro";
                 return;
             }
 
+            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
+                const val = input.value.trim();
+                if (val) addChipHTML(`「${val}」を含む`, input.name, val);
+                return;
+            }
+
             if (input instanceof HTMLSelectElement) {
                 if (input.value) {
                     let text = input.options[input.selectedIndex].text;
-                    // 👇 追加：GROUP_NAME_MAP に定義があれば接頭辞を付ける
                     if (GROUP_NAME_MAP[input.name]) {
                         text = `${GROUP_NAME_MAP[input.name]}${text}`;
                     }
@@ -123,7 +114,6 @@ import UnderlineText from "./UnderlineText.astro";
 
                 let labelText = input.closest('label')?.textContent?.trim() || input.value;
                 if (GROUP_NAME_MAP[input.name]) {
-                    // 「MV：あり」のように結合
                     labelText = `${GROUP_NAME_MAP[input.name]}${labelText}`;
                 }
 
@@ -132,11 +122,11 @@ import UnderlineText from "./UnderlineText.astro";
         });
 
         if (startDate && endDate) {
-            addChipHTML(`リリース日：${startDate} 〜 ${endDate}`, 'startDate,endDate', `${startDate}_${endDate}`);
+            addChipHTML(`リリース日：${formatDate(startDate)} 〜 ${formatDate(endDate)}`, 'startDate,endDate', `${startDate}_${endDate}`);
         } else if (startDate) {
-            addChipHTML(`リリース日：${startDate} 〜`, 'startDate', startDate);
+            addChipHTML(`リリース日：${formatDate(startDate)} 〜`, 'startDate', startDate);
         } else if (endDate) {
-            addChipHTML(`リリース日：〜 ${endDate}`, 'endDate', endDate);
+            addChipHTML(`リリース日：〜 ${formatDate(endDate)}`, 'endDate', endDate);
         }
     }
 
@@ -171,7 +161,7 @@ import UnderlineText from "./UnderlineText.astro";
                         if (panelInput instanceof HTMLSelectElement) {
                             panelInput.value = chipInput.checked ? (chipInput.dataset.value || value) : '';
                         } else if (panelInput instanceof HTMLInputElement) {
-                            if (panelInput.type === 'text' || panelInput.type === 'search' || panelInput.name.includes('Date')) {
+                            if (panelInput.type === 'text' || panelInput.type === 'search' || panelInput.type === 'date' || panelInput.name.includes('Date')) {
                                 if (!chipInput.checked) panelInput.value = '';
                             } else if (panelInput.value === value || panelInput.type === 'radio') {
                                 panelInput.checked = chipInput.checked;
@@ -186,7 +176,7 @@ import UnderlineText from "./UnderlineText.astro";
         activeChipsContainer.appendChild(chipElement);
     }
 
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener('submit', () => {
         renderActiveChips();
     });
 
