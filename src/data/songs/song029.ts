@@ -161,7 +161,7 @@ export const song029: SongLyrics = {
                         },
                         {
                             members: ["P"],
-                            text: [{ lyrics: "少しづつ黑く濁っていく" }]
+                            text: [{ lyrics: "少しづつ黒く濁っていく" }]
                         },
                     ],
                 },
