@@ -2356,7 +2356,7 @@ export const songsIndex: Song[] = [
         composer: ["久下真音"],
         arranger: ["久下真音"],
         tieup: [],
-        call: false,
+        call: true,
         links: {
             mv: "https://www.youtube.com/watch?v=HDCtD4YmllQ",
             spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
