@@ -138,6 +138,16 @@ function getChunkStyle(members?: string[]) {
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    .song-lyrics__container * {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
     }
 
     .song-lyrics__block {
@@ -236,4 +246,16 @@ function getChunkStyle(members?: string[]) {
     }
 
     setupMemberFilter();
+
+    function disableLyricsCopy() {
+        const container = document.querySelector('.song-lyrics__container');
+        if (!container) return;
+
+        container.addEventListener('copy', (e) => e.preventDefault());
+        container.addEventListener('selectstart', (e) => e.preventDefault());
+        container.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
+
+    setupMemberFilter();
+    disableLyricsCopy();
 </script>
