@@ -210,7 +210,7 @@ export const song062: SongLyrics = {
                         },
                         {
                             members: ["Y", "P"],
-                            text: [{ lyrics: "1,2 飛び込む we just gew in" }]
+                            text: [{ lyrics: "1,2 飛び込む we just get in" }]
                         },
                     ],
                 },
