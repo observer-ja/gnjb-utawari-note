@@ -11,13 +11,13 @@ export interface Live {
 export const lives: Live[] = [
   /* 2019年 */
   { id: "live2019_01", name: "バトボライブ2019", date: "2019-07-07", type: "fes" },
-  { id: "live2019_02", name: "SHIBUYA SUMMIT 2019", date: "2019-07-15", type: "fes" },
+  /* { id: "live2019_02", name: "SHIBUYA SUMMIT 2019", date: "2019-07-15", type: "fes" }, */
   { id: "live2019_03", name: "CBCラジオ夏まつり2019", date: "2019-07-28", type: "fes" },
   { id: "live2019_04", name: "エビライ2019", date: "2019-08-28", type: "fes" },
   { id: "live2019_05", name: "2019RABまつり", date: "2019-09-07", type: "fes" },
-  { id: "live2019_06", name: "組長祭2019", date: "2019-09-08", type: "fes" },
+  /* { id: "live2019_06", name: "組長祭2019", date: "2019-09-08", type: "fes" }, */
   { id: "live2019_07", name: "BOYS-ZONE Fes.2019", date: "2019-09-22", type: "fes" },
-  { id: "live2019_08", name: "ABSまつり2019", date: "2019-10-05", type: "fes" },
+  /* { id: "live2019_08", name: "ABSまつり2019", date: "2019-10-05", type: "fes" }, */
   { id: "live2019_09", name: "げんじぶ物語", date: "2019-10-29", type: "oneman" },
   { id: "live2019_10", name: "だんぜん!!FES extra", date: "2019-11-16", type: "fes" },
 
@@ -25,7 +25,7 @@ export const lives: Live[] = [
   { id: "live2020_01", name: "仮想げんじぶ空間", date: "2020-07-12", type: "stream" },
   { id: "live2020_02", name: "仮想げんじぶ空間:case.2", date: "2020_08_16", type: "stream" },
   { id: "live2020_03", name: "a-nation online 2020", date: "2020-08-29", type: "fes" },
-  { id: "live2020_04", name: "組長祭2020", date: "2020-09-22", type: "fes" },
+  /* { id: "live2020_04", name: "組長祭2020", date: "2020-09-22", type: "fes" }, */
   { id: "live2020_05", name: "仮装げんじぶ空間", date: "2020_10-24", type: "stream" },
 
   /* 2021年 */

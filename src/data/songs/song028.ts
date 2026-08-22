@@ -174,7 +174,7 @@ export const song028: SongLyrics = {
                     chunks: [
                         { text: [{ lyrics: "気取らない君が好き" }] },
                         { text: [{ lyrics: "見透かされちゃうような" }] },
-                        { text: [{ lyrics: "瞳の奥の黑くて深い色 " }] },
+                        { text: [{ lyrics: "瞳の奥の黒くて深い色 " }] },
                     ],
                 },
                 {
