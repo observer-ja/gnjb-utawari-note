@@ -245,14 +245,12 @@ function getChunkStyle(members?: string[]) {
         });
     }
 
-    setupMemberFilter();
-
     function disableLyricsCopy() {
         const container = document.querySelector('.song-lyrics__container');
         if (!container) return;
 
         container.addEventListener('copy', (e) => e.preventDefault());
-        container.addEventListener('selectstart', (e) => e.preventDefault());
+        container.addEventListener('cut', (e) => e.preventDefault());
         container.addEventListener('contextmenu', (e) => e.preventDefault());
     }
 
