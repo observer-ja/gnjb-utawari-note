@@ -186,24 +186,6 @@ export const song080: SongLyrics = {
         {
             rows: [
                 {
-                    members: ["B"],
-                    chunks: [
-                        { text: [{ lyrics: "アイムソーリー　バイバイ　運命に期待" }] },
-                        { text: [{ lyrics: "表裏一体　もういいかい？まだ足りない？" }] },
-                    ],
-                },
-                {
-                    members: ["R"],
-                    chunks: [
-                        { text: [{ lyrics: "やめないで　蒼穹のスポットライト" }] },
-                        { text: [{ lyrics: "何度だって信じたっていいんじゃない！" }] },
-                    ],
-                },
-            ],
-        },
-        {
-            rows: [
-                {
                     members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "DaDaDaDa 誰が DaDaDaDa 駄目だ？" }] },
@@ -382,24 +364,6 @@ export const song080: SongLyrics = {
                     members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "「急に、晴れたね」" }] },
-                    ],
-                },
-            ],
-        },
-        {
-            rows: [
-                {
-                    members: ["B"],
-                    chunks: [
-                        { text: [{ lyrics: "アイムソーリー　バイバイ　運命に期待" }] },
-                        { text: [{ lyrics: "表裏一体　もういいかい？まだ足りない？" }] },
-                    ],
-                },
-                {
-                    members: ["R"],
-                    chunks: [
-                        { text: [{ lyrics: "やめないで　蒼穹のスポットライト" }] },
-                        { text: [{ lyrics: "何度だって信じたっていいんじゃない！" }] },
                     ],
                 },
             ],
