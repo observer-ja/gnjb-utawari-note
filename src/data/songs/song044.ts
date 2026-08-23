@@ -264,7 +264,6 @@ export const song044: SongLyrics = {
                 {
                     members: ["G"],
                     chunks: [
-                        { text: [{ lyrics: "知恵熱すぐ出るそんな脳レベル" }] },
                         { text: [{ lyrics: "結局どうしたいの？" }] },
                     ],
                 },
