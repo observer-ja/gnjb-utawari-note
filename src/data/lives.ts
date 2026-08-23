@@ -17,7 +17,7 @@ export const lives: Live[] = [
   { id: "live2019_05", name: "2019RABまつり", date: "2019-09-07", type: "fes" },
   /* { id: "live2019_06", name: "組長祭2019", date: "2019-09-08", type: "fes" }, */
   { id: "live2019_07", name: "BOYS-ZONE Fes.2019", date: "2019-09-22", type: "fes" },
-  /* { id: "live2019_08", name: "ABSまつり2019", date: "2019-10-05", type: "fes" }, */
+  { id: "live2019_08", name: "ABSまつり2019", date: "2019-10-05", type: "fes" },
   { id: "live2019_09", name: "げんじぶ物語", date: "2019-10-29", type: "oneman" },
   { id: "live2019_10", name: "だんぜん!!FES extra", date: "2019-11-16", type: "fes" },
 
