@@ -276,7 +276,6 @@ export const song056: SongLyrics = {
                 {
                     chunks: [
                         { text: [{ lyrics: "Lalala…" , call: true }] },
-                        { text: [{ lyrics: "Lalala…" , call: true }] },
                     ],
                 },
             ],
