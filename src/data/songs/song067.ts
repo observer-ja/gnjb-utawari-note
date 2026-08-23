@@ -269,11 +269,11 @@ export const song067: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["P"],
+                            members: ["G"],
                             text: [{ lyrics: "審判はどっち" }]
                         },
                         {
-                            members: ["G"],
+                            members: ["Y"],
                             text: [{ lyrics: "（どっち）" }]
                         },
                         {
@@ -316,7 +316,7 @@ export const song067: SongLyrics = {
                             text: [{ lyrics: "サイレント自己啓蒙" }]
                         },
                         {
-                            members: ["G"],
+                            members: ["Y"],
                             text: [{ lyrics: "止まらんボルケーノ" }]
                         },
                         {
