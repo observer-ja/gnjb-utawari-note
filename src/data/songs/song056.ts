@@ -261,6 +261,16 @@ export const song056: SongLyrics = {
             ],
         },
         {
+            members: ["R"],
+            rows: [
+                {
+                    chunks: [
+                        { text: [{ lyrics: "『誰も知らない歌』を　歌おう" }] },
+                    ],
+                },
+            ],
+        },
+        {
             members: ["all"],
             rows: [
                 {

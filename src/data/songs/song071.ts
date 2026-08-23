@@ -425,7 +425,7 @@ export const song071: SongLyrics = {
                         },
                         {
                             members: ["R"],
-                            text: [{ lyrics: "過去を捨て願う paranoia" }]
+                            text: [{ lyrics: "過去も全て愛す paranoia" }]
                         },
                         {
                             members: ["B"],
