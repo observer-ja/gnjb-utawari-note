@@ -220,7 +220,7 @@ export const song044: SongLyrics = {
                     ],
                 },
                 {
-                    members: ["S"],
+                    members: ["Y"],
                     chunks: [
                         { text: [{ lyrics: "大暴走の妄想" }] },
                         { text: [{ lyrics: "それでもちょっと痛いよ猛勉強" }] },
