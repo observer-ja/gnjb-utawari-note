@@ -33,7 +33,50 @@ const { title, date } = Astro.props
         padding: 0;
     }
 
-    @media (min-width: 1024px) {
+    :global(.article-container) {
+        display: flex;
+        flex-direction: column;
         gap: 12px;
+    }
+
+    :global(.article-lead) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-section) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    :global(.article-heading) {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-text) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-list) {
+        margin: 0;
+        padding: 0 0 0 40px;
+    }
+
+    :global(.article-note) {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (min-width: 1024px) {
+        .news-header {
+            gap: 12px
+        }
+
+        :global(.article-container) {
+            gap: 24px;
+        }
     }
 </style>
