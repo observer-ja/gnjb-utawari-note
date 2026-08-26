@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+
+interface Props {
+    title: string;
+    date: string;
+}
+
+const { title, date } = Astro.props
+---
+
+<Layout title = {title}>
+    <div class="container">
+        <div class="news-header">
+            <p class="news-date text-body">{date}</p>
+            <SectionTitle>{title}</SectionTitle>
+        </div>
+        <slot/>
+    </div>
+</Layout>

@@ -18,7 +18,7 @@ const { page } = Astro.props
         <ul class="news-list">
             {
                 page.data.map((item) => (
-                    <NewsItem date={item.date} text={item.text} url={item.url} />
+                    <NewsItem item={item} />
                 ))
             }
         </ul>
