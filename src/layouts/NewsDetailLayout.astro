@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import UnderlineText from "../components/UnderlineText.astro";
 
 interface Props {
     title: string;
@@ -19,3 +20,20 @@ const { title, date } = Astro.props
         <slot/>
     </div>
 </Layout>
+
+<style>
+    .news-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .news-date {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (min-width: 1024px) {
+        gap: 12px;
+    }
+</style>
