@@ -35,6 +35,12 @@ const { item } = Astro.props
         word-break: break-all;
     }
 
+    @media (hover:hover) {
+        .news-text:hover {
+            opacity: 0.6;
+        }
+    }
+
     @media (min-width: 1024px) {
         .news-item {
             gap: 5px;
