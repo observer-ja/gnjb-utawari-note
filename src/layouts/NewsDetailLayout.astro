@@ -17,7 +17,9 @@ const { title, date } = Astro.props
             <p class="news-date text-body">{date}</p>
             <SectionTitle>{title}</SectionTitle>
         </div>
-        <slot/>
+        <div class="article-container text-body">
+            <slot/>
+        </div>
     </div>
 </Layout>
 
@@ -33,7 +35,7 @@ const { title, date } = Astro.props
         padding: 0;
     }
 
-    :global(.article-container) {
+    .article-container {
         display: flex;
         flex-direction: column;
         gap: 12px;
