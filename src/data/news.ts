@@ -12,7 +12,7 @@ export const newsData: NewsItemType[] = [
     },
     {
         date: "2026.08.30" ,
-        text: "一部楽曲の歌割りの修正を行いました。",
+        text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
         slug: "2026-08-30-lyrics-fix"
     },
     {
@@ -22,7 +22,7 @@ export const newsData: NewsItemType[] = [
     },
     {
         date: "2026.08.23" ,
-        text: "一部楽曲の歌割りの修正を行いました。",
+        text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
         slug: "2026-08-23-lyrics-fix"
     },
     {
