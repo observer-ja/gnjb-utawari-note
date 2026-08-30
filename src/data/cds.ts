@@ -18,6 +18,7 @@ export const cds: Cd[] = [
     {id: "sg_02", title: "嗜好に関する世論調査", date: "2020-01-22", type: "sg"},
     {id: "sg_03", title: "Foxy Grape", date: "2023-06-07", type: "sg"},
     {id: "sg_04", title: "パラノイドランデブー", date: "2025-10-15", type: "sg"},
+    /* {id: "sg_05", title: "ラブリーズン", date: "2026-11-11", type: "sg"}, */
 
     /* アルバム */
     {id: "al_01", title: "多世界解釈", date: "2021-01-13", type: "al"},
