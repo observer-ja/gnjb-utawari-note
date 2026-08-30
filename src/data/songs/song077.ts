@@ -672,11 +672,11 @@ export const song077: SongLyrics = {
                     chunks: [
                         {
                             members: ["Y"],
-                            text: [{ lyrics: "愛です愛です愛です愛です" }]
+                            text: [{ lyrics: "やっぱりやっぱりやっぱりやっぱり" }]
                         },
                         {
                             members: ["Y"],
-                            text: [{ lyrics: "愛です愛です愛愛愛" }]
+                            text: [{ lyrics: "やっぱりやっぱり愛愛愛" }]
                         },
                         {
                             members: [],
