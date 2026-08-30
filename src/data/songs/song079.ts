@@ -261,7 +261,7 @@ export const song079: SongLyrics = {
                 {
                     members: ["S"],
                     chunks: [
-                        { text: [{ lyrics: "走り出した空の先にピント合わせたって" }] },
+                        { text: [{ lyrics: "走り出した空の先にピント合わなくって" }] },
                         { text: [{ lyrics: "レンズ越しに君を追いかけたんだ" }] },
                     ],
                 },

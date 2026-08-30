@@ -12,14 +12,14 @@ const recentNews = newsData.slice(0, 3)
     <ul class="news-list">
         {
             recentNews.map((item) => (
-                <NewsItem date={item.date} text={item.text} url={item.url} />
+                <NewsItem item={item} />
             ))
         }
     </ul>
     <div class="news-more">
         <UnderlineText href="/gnjb-utawari-note/news/1" class="more-link">もっと見る→</UnderlineText>
     </div>
-    </section>
+</section>
 
 <style>
     .news-section {

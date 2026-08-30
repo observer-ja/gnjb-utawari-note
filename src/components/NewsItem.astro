@@ -1,17 +1,16 @@
 ---
+import type { NewsItemType } from '../data/news';
+
 interface Props {
-    date: string;
-    text: string;
-    url?: string;
+    item: NewsItemType;
 }
 
-const { date, text, url } = Astro.props
-const Tag = url ? 'a' : 'span';
+const { item } = Astro.props
 ---
 
 <li class="news-item">
-    <span class="news-date text-body">{date}</span>
-    <Tag class="news-text text-body" href={url}>{text}</Tag>
+    <span class="news-date text-body">{item.date}</span>
+    <a class="news-text text-body" href={`/gnjb-utawari-note/news/detail/${item.slug}/`}>{item.text}</a>
 </li>
 
 <style>
@@ -34,6 +33,13 @@ const Tag = url ? 'a' : 'span';
         text-decoration: none;
         color: inherit;
         word-break: break-all;
+        transition: opacity 0.2s ease;
+    }
+
+    @media (hover:hover) {
+        .news-text:hover {
+            opacity: 0.6;
+        }
     }
 
     @media (min-width: 1024px) {

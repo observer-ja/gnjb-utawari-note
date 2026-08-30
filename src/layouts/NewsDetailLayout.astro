@@ -1,0 +1,102 @@
+---
+import Layout from "./Layout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+
+interface Props {
+    title: string;
+    date: string;
+}
+
+const { title, date } = Astro.props
+---
+
+<Layout title = {title}>
+    <div class="container">
+        <div class="news-header">
+            <p class="news-date text-body">{date}</p>
+            <h1 class="news-title text-lg">{title}</h1>
+        </div>
+        <div class="article-container text-body">
+            <slot/>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .news-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .news-date {
+        margin: 0;
+        padding: 0;
+    }
+
+    .news-title {
+        width: fit-content;
+        padding: 0 5px 5px 5px;
+        border-bottom: 2px solid var(--color-primary);
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    :global(.article-lead) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-section) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    :global(.article-heading) {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-text) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-list) {
+        margin: 0;
+        padding: 0 0 0 40px;
+    }
+
+    :global(.article-note) {
+        margin: 0;
+        padding: 0;
+    }
+
+    :global(.article-link) {
+        color: inherit;
+        transition: opacity 0.2s ease;
+    }
+
+    @media (hover:hover) {
+        :global(.article-link):hover {
+            opacity: 0.6;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .news-header {
+            gap: 12px
+        }
+
+        :global(.article-container) {
+            gap: 24px;
+        }
+    }
+</style>
