@@ -1,7 +1,6 @@
 ---
 import Layout from "./Layout.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import UnderlineText from "../components/UnderlineText.astro";
 
 interface Props {
     title: string;
@@ -15,7 +14,7 @@ const { title, date } = Astro.props
     <div class="container">
         <div class="news-header">
             <p class="news-date text-body">{date}</p>
-            <SectionTitle>{title}</SectionTitle>
+            <h1 class="news-title text-lg">{title}</h1>
         </div>
         <div class="article-container text-body">
             <slot/>
@@ -33,6 +32,14 @@ const { title, date } = Astro.props
     .news-date {
         margin: 0;
         padding: 0;
+    }
+
+    .news-title {
+        width: fit-content;
+        padding: 0 5px 5px 5px;
+        border-bottom: 2px solid var(--color-primary);
+        box-sizing: border-box;
+        margin: 0;
     }
 
     .article-container {

@@ -3,5 +3,28 @@ import NewsDetailLayout from "../../../layouts/NewsDetailLayout.astro";
 ---
 
 <NewsDetailLayout title="楽曲検索ページにおける、「選択中の条件」部分の軽微な修正を行いました。" date="2026.08.18">
-    
+    <p class="article-lead">
+        楽曲検索ページにおいて、「選択中の条件」表示および関連する挙動の修正を行いました。
+    </p>
+
+    <div class="article-section">
+        <h2 class="article-heading">修正内容</h2>
+        <ul class="article-list">
+            <li>条件を複数選択・解除した際、「選択中の条件」の表示が崩れる/正しく反映されない不具合を修正</li>
+            <li>選択条件クリア時の挙動を改善</li>
+        </ul>
+    </div>
+
+    <div class="article-section">
+        <p class="article-text">
+            現在は正常に検索条件の追加・解除が行えるようになっております。
+        </p>
+        <p class="article-text">
+            もし表示が崩れる場合は、一度ページの再読み込み（リロード）をお試しください。
+        </p>
+    </div>
+
+    <p class="article-note">
+        引き続き、使いやすいサイトを目指して改善を行ってまいります。
+    </p>
 </NewsDetailLayout>
