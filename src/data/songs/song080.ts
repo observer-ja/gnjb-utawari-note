@@ -240,12 +240,16 @@ export const song080: SongLyrics = {
                             text: [{ lyrics: "一歩進んで" }]
                         },
                         {
-                            members: ["R"],
+                            members: ["W"],
                             text: [{ lyrics: "戻って" }]
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "意地悪 REAL" }]
+                            text: [{ lyrics: "意地悪" }]
+                        },
+                        {
+                            members: ["W", "G"],
+                            text: [{ lyrics: "REAL" }]
                         },
                     ],
                 },
