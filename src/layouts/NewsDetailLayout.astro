@@ -79,6 +79,17 @@ const { title, date } = Astro.props
         padding: 0;
     }
 
+    :global(.article-link) {
+        color: inherit;
+        transition: opacity 0.2s ease;
+    }
+
+    @media (hover:hover) {
+        :global(.article-link):hover {
+            opacity: 0.6;
+        }
+    }
+
     @media (min-width: 1024px) {
         .news-header {
             gap: 12px
