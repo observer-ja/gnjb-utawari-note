@@ -99,20 +99,6 @@ export const song054: SongLyrics = {
                         },
                     ],
                 },
-                {
-                    members: ["Y"],
-                    chunks: [
-                        { text: [{ lyrics: "酌み交わす度に知る表情" }] },
-                        { text: [{ lyrics: "見つめ合う" }] },
-                    ],
-                },
-                {
-                    members: ["S"],
-                    chunks: [
-                        { text: [{ lyrics: "溶けそうな感覚に" }] },
-                        { text: [{ lyrics: "溺れて目を瞑った" }] },
-                    ],
-                },
             ],
         },
         {
