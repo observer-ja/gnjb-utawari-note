@@ -10,10 +10,6 @@ interface Props {
 
 const { song, note } = Astro.props;
 
-const cdTitles = song.cds
-    .map(c => cds.find(cd => cd.id === c.id)?.title)
-    .filter(Boolean)
-    .join(' / ') || 'ー';
 const date = song.date ? song.date.replaceAll('-', '.') : 'ー';
 
 const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
@@ -74,7 +70,23 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
             <div class="song-meta__row song-meta__row--group">
                 <div class="song-meta__cd">
                     <span class="song-meta__label">収録：</span>
-                    <span class="song-meta__value">{cdTitles}</span>
+                    {song.cds.length === 0 ? (
+                        <span class="song-meta__value">ー</span>
+                    ) : (
+                        <span class="song-meta__value">
+                            {song.cds.map((c, i) => (
+                                <>
+                                    {i > 0 && <span>/</span>}
+                                    <a
+                                        class="song-meta__value-link"
+                                        href={`/gnjb-utawari-note/search?cd=${encodeURIComponent(c.id)}`}
+                                    >
+                                        {(cds.find(cd => cd.id === c.id))?.title ?? c.id}
+                                    </a>
+                                </>
+                            ))}
+                        </span>
+                    )}
                 </div>
                 <div class="song-meta__date">
                     <span class="song-meta__label">リリース日：</span>
