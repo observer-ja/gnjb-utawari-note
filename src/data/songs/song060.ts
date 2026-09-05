@@ -32,7 +32,7 @@ export const song060: SongLyrics = {
         {
             rows: [
                 {
-                    members: ["P"],
+                    members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "影は寄せて波のように" }] },
                         { text: [{ lyrics: "此処は何処と訊ねている" }] },
