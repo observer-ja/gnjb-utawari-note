@@ -139,6 +139,10 @@ const sortOptions = defaultSortOptions;
             return true;
         });
 
+        if (sortOrder === 'date-desc') {
+            filtered.reverse();
+        }
+
         filtered.sort((a: Song, b: Song) => {
             if (sortOrder === 'date-desc') return (b.date || '').localeCompare(a.date || '');
             if (sortOrder === 'date-asc') return (a.date || '').localeCompare(b.date || '');

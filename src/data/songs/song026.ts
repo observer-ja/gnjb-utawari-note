@@ -280,7 +280,7 @@ export const song026: SongLyrics = {
                     ],
                 },
                 {
-                    members: ["W"],
+                    members: ["R"],
                     chunks: [
                         { text: [{ lyrics: "相槌だけはさ打ってようぜ" }] },
                         { text: [{ lyrics: "いつかは本当に変えてこうぜ" }] },

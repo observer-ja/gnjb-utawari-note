@@ -10,13 +10,6 @@ interface Props {
 
 const { song, note } = Astro.props;
 
-const lyricists = song.lyricist.join('・');
-const composers = song.composer.join('・');
-const arrangers = song.arranger.join('・');
-const cdTitles = song.cds
-    .map(c => cds.find(cd => cd.id === c.id)?.title)
-    .filter(Boolean)
-    .join(' / ') || 'ー';
 const date = song.date ? song.date.replaceAll('-', '.') : 'ー';
 
 const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
@@ -28,20 +21,72 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
         <div class="song-meta__credits">
             <div class="song-meta__row">
                 <span class="song-meta__label">作詞：</span>
-                <span class="song-meta__value">{lyricists}</span>
+                <span class="song-meta__value">
+                    {song.lyricist.map((l, i) => (
+                        <>
+                        {i > 0 && <span>・</span>}
+                        <a 
+                            class="song-meta__value-link" 
+                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(l)}`}
+                        >
+                            {l}
+                        </a>
+                        </>
+                    ))}
+                </span>
             </div>
             <div class="song-meta__row">
                 <span class="song-meta__label">作曲：</span>
-                <span class="song-meta__value">{composers}</span>
+                <span class="song-meta__value">
+                    {song.composer.map((c, i) => (
+                        <>
+                        {i > 0 && <span>・</span>}
+                        <a 
+                            class="song-meta__value-link" 
+                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(c)}`}
+                        >
+                            {c}
+                        </a>
+                        </>
+                    ))}
+                </span>
             </div>
             <div class="song-meta__row">
                 <span class="song-meta__label">編曲：</span>
-                <span class="song-meta__value">{arrangers}</span>
+                <span class="song-meta__value">
+                    {song.arranger.map((a, i) => (
+                        <>
+                        {i > 0 && <span>・</span>}
+                        <a 
+                            class="song-meta__value-link" 
+                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(a)}`}
+                        >
+                            {a}
+                        </a>
+                        </>
+                    ))}
+                </span>
             </div>
             <div class="song-meta__row song-meta__row--group">
                 <div class="song-meta__cd">
                     <span class="song-meta__label">収録：</span>
-                    <span class="song-meta__value">{cdTitles}</span>
+                    {song.cds.length === 0 ? (
+                        <span class="song-meta__value">ー</span>
+                    ) : (
+                        <span class="song-meta__value">
+                            {song.cds.map((c, i) => (
+                                <>
+                                    {i > 0 && <span>/</span>}
+                                    <a
+                                        class="song-meta__value-link"
+                                        href={`/gnjb-utawari-note/search?cd=${encodeURIComponent(c.id)}`}
+                                    >
+                                        {(cds.find(cd => cd.id === c.id))?.title ?? c.id}
+                                    </a>
+                                </>
+                            ))}
+                        </span>
+                    )}
                 </div>
                 <div class="song-meta__date">
                     <span class="song-meta__label">リリース日：</span>
@@ -113,6 +158,10 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
 
     .song-meta__value {
         flex-shrink: 1;
+    }
+
+    .song-meta__value-link {
+        color: inherit;
     }
 
     .song-meta__row--group {

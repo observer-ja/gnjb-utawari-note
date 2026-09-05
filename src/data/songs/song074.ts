@@ -1,3 +1,4 @@
+/* 貴方らしく */
 export interface LyricText {
     lyrics: string;
     call?: boolean;

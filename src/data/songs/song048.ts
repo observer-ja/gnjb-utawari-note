@@ -421,7 +421,7 @@ export const song048: SongLyrics = {
                             text: [{ lyrics: "（NoNo）" }]
                         },
                         {
-                            members: ["B"],
+                            members: ["G"],
                             text: [{ lyrics: "だから" }]
                         },
                     ],
@@ -429,7 +429,7 @@ export const song048: SongLyrics = {
                 {
                     chunks: [
                         { 
-                            members: ["B"],
+                            members: ["G"],
                             text: [{ lyrics: "回せ回せハンドル" }]
                         },
                         { 
@@ -437,7 +437,7 @@ export const song048: SongLyrics = {
                             text: [{ lyrics: "（ZoomZoom）" }]
                         },
                         { 
-                            members: ["B"],
+                            members: ["G"],
                             text: [{ lyrics: "見切り発車でカマす" }]
                         },
                         { 
@@ -524,7 +524,7 @@ export const song048: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["G"],
+                            members: ["B"],
                             text: [{ lyrics: "HARE-BAREまわれ" }]
                         },
                         {
@@ -532,7 +532,7 @@ export const song048: SongLyrics = {
                             text: [{ lyrics: "（歓迎）" }]
                         },
                         {
-                            members: ["G"],
+                            members: ["B"],
                             text: [{ lyrics: "負けないで騒げ" }]
                         },
                         {
@@ -544,7 +544,7 @@ export const song048: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["G"],
+                            members: ["B"],
                             text: [{ lyrics: "明日へ向かって捨て去れ固定観念" }]
                         },
                         {
