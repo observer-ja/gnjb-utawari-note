@@ -8,7 +8,7 @@ export const newsData: NewsItemType[] = [
     {
         date: "2026.09.05" ,
         text: "楽曲ページからクリエイター・収録CD別検索ができるようになりました。",
-        slug: "2026-09-05-creator-cd-search.astro"
+        slug: "2026-09-05-creator-cd-search"
     },
     {
         date: "2026.09.05" ,
