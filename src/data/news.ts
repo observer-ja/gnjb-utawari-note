@@ -7,6 +7,11 @@ export interface NewsItemType {
 export const newsData: NewsItemType[] = [
     {
         date: "2026.09.05" ,
+        text: "楽曲ページからクリエイター・収録CD別検索ができるようになりました。",
+        slug: "2026-09-05-creator-cd-search.astro"
+    },
+    {
+        date: "2026.09.05" ,
         text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
         slug: "2026-09-05-lyrics-fix"
     },
