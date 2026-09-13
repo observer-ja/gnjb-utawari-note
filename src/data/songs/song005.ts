@@ -341,7 +341,7 @@ export const song005: SongLyrics = {
                             text: [{ lyrics: "言ってた" }]
                         },
                         {
-                            members: ["B"],
+                            members: ["P"],
                             text: [{ lyrics: "なんだっけ　結局は" }]
                         },
                     ],

@@ -152,7 +152,7 @@ export const song032: SongLyrics = {
             ],
         },
         {
-            members: ["G"],
+            members: ["R"],
             rows: [
                 {
                     chunks: [
