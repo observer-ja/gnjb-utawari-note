@@ -6,6 +6,11 @@ export interface NewsItemType {
 
 export const newsData: NewsItemType[] = [
     {
+        date: "2026.09.20",
+        text: "楽曲ページの「ライブ披露歴」を開閉式にし、ライブ別絞り込み検索ができるようになりました。",
+        slug: "2026-09-20-live-history-toggle-and-search"
+    },
+    {
         date: "2026.09.13" ,
         text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
         slug: "2026-09-13-lyrics-fix"
