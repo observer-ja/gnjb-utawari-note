@@ -9,6 +9,7 @@ interface Props {
 const { live_history = [] } = Astro.props
 
 const songLiveHistory = live_history.map((live) => ({
+    id: live.live_id,
     year: live.live_id.slice(4, 8),
     liveName: lives.find((l) => l.id === live.live_id)?.name || '',
     position: `M${live.position}`,
@@ -31,7 +32,12 @@ const songLiveHistory = live_history.map((live) => ({
                 {songLiveHistory.map((live) => (
                 <tr class="song-live-history__row">
                     <td class="song-live-history__cell song-live-history__cell--year">{live.year}</td>
-                    <td class="song-live-history__cell song-live-history__cell--name">{live.liveName}</td>
+                    <td class="song-live-history__cell song-live-history__cell--name">
+                        <a class="song-live-history__cell-link" 
+                            href={`/gnjb-utawari-note/search/?live=${encodeURIComponent(live.id)}`}>
+                            {live.liveName}
+                        </a>
+                    </td>
                     <td class="song-live-history__cell song-live-history__cell--position">{live.position}</td>
                     <td class="song-live-history__cell song-live-history__cell--note">{live.note}</td>
                 </tr>
@@ -93,6 +99,11 @@ const songLiveHistory = live_history.map((live) => ({
     width: 65%;
 }
 
+.song-live-history__cell-link {
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
 .song-live-history__cell--position {
     text-align: center;
     width: 40px;
@@ -101,5 +112,11 @@ const songLiveHistory = live_history.map((live) => ({
 .song-live-history__cell--note {
     text-align: left;
     width: 35%;
+}
+
+@media (hover: hover) {
+    .song-live-history__cell-link:hover {
+        opacity: 0.6;
+    }
 }
 </style>

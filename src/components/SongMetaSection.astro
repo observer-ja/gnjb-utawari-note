@@ -162,6 +162,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
 
     .song-meta__value-link {
         color: inherit;
+        transition: opacity 0.2s ease;
     }
 
     .song-meta__row--group {
@@ -220,6 +221,12 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
 
         .song-meta__links {
             gap: 12px;
+        }
+    }
+
+    @media (hover: hover) {
+        .song-meta__value-link:hover {
+            opacity: 0.6;
         }
     }
 </style>
