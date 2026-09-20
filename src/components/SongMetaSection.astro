@@ -27,7 +27,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
                         {i > 0 && <span>・</span>}
                         <a 
                             class="song-meta__value-link" 
-                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(l)}`}
+                            href={`/gnjb-utawari-note/search/?creator=${encodeURIComponent(l)}`}
                         >
                             {l}
                         </a>
@@ -43,7 +43,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
                         {i > 0 && <span>・</span>}
                         <a 
                             class="song-meta__value-link" 
-                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(c)}`}
+                            href={`/gnjb-utawari-note/search/?creator=${encodeURIComponent(c)}`}
                         >
                             {c}
                         </a>
@@ -59,7 +59,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
                         {i > 0 && <span>・</span>}
                         <a 
                             class="song-meta__value-link" 
-                            href={`/gnjb-utawari-note/search?creator=${encodeURIComponent(a)}`}
+                            href={`/gnjb-utawari-note/search/?creator=${encodeURIComponent(a)}`}
                         >
                             {a}
                         </a>
@@ -79,7 +79,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
                                     {i > 0 && <span>/</span>}
                                     <a
                                         class="song-meta__value-link"
-                                        href={`/gnjb-utawari-note/search?cd=${encodeURIComponent(c.id)}`}
+                                        href={`/gnjb-utawari-note/search/?cd=${encodeURIComponent(c.id)}`}
                                     >
                                         {(cds.find(cd => cd.id === c.id))?.title ?? c.id}
                                     </a>
@@ -162,6 +162,7 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
 
     .song-meta__value-link {
         color: inherit;
+        transition: opacity 0.2s ease;
     }
 
     .song-meta__row--group {
@@ -220,6 +221,12 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
 
         .song-meta__links {
             gap: 12px;
+        }
+    }
+
+    @media (hover: hover) {
+        .song-meta__value-link:hover {
+            opacity: 0.6;
         }
     }
 </style>

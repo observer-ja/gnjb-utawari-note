@@ -35,7 +35,7 @@ const sortOptions = defaultSortOptions;
 <Layout title='楽曲を探す'>
     <PageHeader title="楽曲を探す" />
     <div class="container">
-        <form action="/gnjb-utawari-note/search" method="GET" class="search-form" id="js-search-form">
+        <form action="/gnjb-utawari-note/search/" method="GET" class="search-form" id="js-search-form">
             <FilterPanel filters={initialFilters}/>
             <ActiveFilter/>
             <div class="search-form__action">
@@ -88,6 +88,22 @@ const sortOptions = defaultSortOptions;
     document.addEventListener('DOMContentLoaded', () => {
         const songs: Song[] = window.__ALL_SONGS__ || [];
         const searchParams = new URLSearchParams(window.location.search);
+
+        const searchForm = document.getElementById('js-search-form') as HTMLFormElement | null;
+        if (searchForm) {
+            searchForm.addEventListener('submit', () => {
+                const inputs = Array.from(
+                    searchForm.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select')
+                );
+
+                inputs.forEach((el) => {
+                    if (el.type === 'checkbox' || el.type === 'radio') return;
+                    if (!el.value || el.value.trim() === '') {
+                        el.disabled = true;
+                    }
+                });
+            });
+        }
 
         const selectedLives = [...new Set(searchParams.getAll('live'))].filter(Boolean);
         const startDate = searchParams.get('startDate') || '';
