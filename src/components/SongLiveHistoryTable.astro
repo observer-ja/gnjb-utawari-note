@@ -2,6 +2,8 @@
 import { lives } from "../data/lives";
 import type { LiveHistory } from "../data/index";
 
+import ExpandToggleChip from "./ExpandToggleChip.astro";
+
 interface Props {
     live_history: LiveHistory[];
 }
@@ -19,6 +21,12 @@ const songLiveHistory = live_history.map((live) => ({
 
 <div class="song-live-history text-body">
     {songLiveHistory.length > 0 ? (
+        <div class="song-live-history__header">
+            <h2 class="song-live-history__title text-md">ライブ披露歴</h2>
+            <div class="song-live-history__toggle">
+                <ExpandToggleChip expandText="ライブ披露歴を表示" />
+            </div>
+        </div>
         <table class="song-live-history__table">
             <thead class="song-live-history__head">
                 <tr class="song-live-history__row">
@@ -52,9 +60,26 @@ const songLiveHistory = live_history.map((live) => ({
 <style>
 .song-live-history {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.song-live-history__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.song-live-history__title {
+    margin: 0;
+    padding: 0 5px 5px 5px;
 }
 
 .song-live-history__table {
+    display: none;
     width: 100%;
     table-layout: fixed;
     border-collapse: separate;
@@ -63,6 +88,10 @@ const songLiveHistory = live_history.map((live) => ({
     border-radius: 10px;
     overflow: hidden;
     background-color: var(--color-bg);
+}
+
+.song-live-history:has(.expand-toggle-chip[data-expanded="true"]) .song-live-history__table {
+    display: table;
 }
 
 .song-live-history__head {
@@ -113,6 +142,11 @@ const songLiveHistory = live_history.map((live) => ({
     text-align: left;
     width: 35%;
 }
+
+@media (max-width: 1024px) {
+    .son-live-history {
+        gap 12px
+    }
 
 @media (hover: hover) {
     .song-live-history__cell-link:hover {
