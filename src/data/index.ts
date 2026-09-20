@@ -835,7 +835,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt00000000124c54d1",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 1, note: [""] },
+            { live_id: "live2026_01", position: 7, perf: 1, note: ["日替わり曲"] },
 
             { live_id: "live2024_08", position: 4, perf: null, note: [""] },
             { live_id: "live2024_01", position: 17, perf: null, note: [""] },
@@ -1530,7 +1530,7 @@ export const songsIndex: Song[] = [
             line_music: "https://music.line.me/webapp/track/mt0000000018cf3fc4",
         },
         live_history: [
-            { live_id: "live2026_01", position: 7, perf: 2, note: [""] },
+            { live_id: "live2026_01", position: 7, perf: 2, note: ["日替わり曲"] },
 
             { live_id: "live2024_03", position: 1, perf: null, note: [""] },
 
