@@ -68,7 +68,7 @@ export const song049: SongLyrics = {
                     members: ["Y", "P"],
                     chunks: [
                         { text: [{ lyrics: "ゆらり動き出すHeart Beat" }] },
-                        { text: [{ lyrics: "そう繰り返すChord" }] },
+                        { text: [{ lyrics: "そう繰り返すChordに" }] },
                     ],
                 },
                 {
