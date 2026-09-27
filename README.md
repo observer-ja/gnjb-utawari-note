@@ -1,66 +1,90 @@
 # 原因は自分にある。歌割りノート
-原因は自分にある。の歌割りをまとめた非公式サイト
+
+7人組ダンスボーカルグループ「原因は自分にある。」の歌割り・パート分けをまとめた非公式ファンサイトです。
+
+🌐 **Webサイト**: [https://observer-ja.github.io/gnjb-utawari-note/](https://observer-ja.github.io/gnjb-utawari-note/)
+
+<!-- サイトのキャプチャ画像があれば配置（任意） -->
+<!-- ![原因は自分にある。歌割りノート](public/ogp.png) -->
+
+---
 
 ## 概要
-- 楽曲ごとの歌割りを確認できるサイトです。
-- ライブ・リリース日・収録CD・作曲者・タイアップの有無・コールの有無・MVの有無により楽曲の絞り込みができます。
-- 管理者である私のデザインおよびコーディングの練習、並びに他の観測者の皆様の情報確認ツールの作成を主な目的としています。
-- ライブでの８の字ペンラ回しおよびコールを強要する意図はございません。
+
+メンバーごとの詳細な歌割りやパート分けの確認に加え、過去のライブ披露履歴の閲覧や複合条件での楽曲検索ができるWebツールです。  
+観測者の皆様の日常的な楽曲鑑賞やライブ前の予習・振り返りツールとしての利便性を追求するとともに、Webフロントエンドの実装・UI/UX設計の学習を兼ねて個人開発・運営しています。
+
+---
+
+## 主な機能
+
+* **歌割り・パート分け表示**
+  * メンバーカラーに合わせた直感的なパート色分け表示
+  * ライブ時の歌唱実態や演出（ペンライトの動き・コール等）を考慮した独自まとめ
+  * 各種公式リンク（YouTube MV / 各サブスクリプション）へのアクセス
+* **ライブ披露歴（セットリスト）連携**
+  * 各楽曲ページにおける過去のライブ披露実績の開閉式一覧表示
+  * 公演名をタップすることで、該当ライブのセットリスト順に並んだ楽曲一覧へ直接アクセス可能
+* **複合条件による楽曲検索・絞り込み**
+  * リリース時期（期間指定）
+  * 収録CD / クリエイター（作詞・作曲・編曲）
+  * 過去の出演ライブ
+  * 各種フラグ（MV有無 / コール有無 / タイアップ有無）
+* **レスポンシブデザイン**
+  * スマートフォンでの閲覧に最適化したモバイルファースト設計
+
+---
 
 ## 技術構成
-- HTML / CSS / JavaScript
-- GitHub Pages
 
-## 利用ソフト等
-- Figma
-- Visual Studio Code
-- GitHub
+### フロントエンド / インフラ
+* **Framework**: [Astro](https://astro.build/)
+* **Languages**: TypeScript / HTML5 / CSS3
+* **Hosting**: GitHub Pages
+* **CI/CD**: GitHub Actions
+* **Analytics & SEO**: Google Analytics 4 (GA4) / Google Search Console / Schema.org (JSON-LD)
 
-## 注意事項
-- 非公式のファンサイトです。原因は自分にある。およびスターダストプロモーション様等関係者の皆様とは一切関係ございません。
-- 掲載している歌割りは「ライブで歌っているかどうか」「８の字ペンラ回しを行うかどうか」を考慮に入れながら、私が独自に判断したものとなります。
-- 内容に誤りがある等のお問い合わせはサイト内の問い合わせフォームよりお問い合わせください。
+### 開発支援・ツール
+* **Design & Prototyping**: Figma
+* **Editor**: Visual Studio Code
+* **AI Coding Assistant**: Gemini / Claude
 
-# Astro Starter Kit: Minimal
+---
 
+## 権利表記・免責事項
+
+* 本サイトは個人が運営する非公式ファンサイトです。
+* 株式会社スターダストプロモーション様、所属レコード会社様、および「原因は自分にある。」公式とは一切関係ございません。
+* 本サイト内で掲載している歌詞・楽曲情報等は、正規の手続きに基づき利用許諾を得て運営しております。
+  * **JASRAC許諾番号**: `第J260843631号`
+* 掲載している歌割り・パート分けは、音源およびライブでの歌唱状況を基に管理人が独自に判断・まとめたものです。公式から提供された正確な割り振りを保証するものではございません。また、コールやペンライトの動作等を強要する意図はございません。
+* 掲載内容の修正依頼やお問い合わせは、サイト内の[お問い合わせフォーム](https://observer-ja.github.io/gnjb-utawari-note/contact/)よりお願いいたします。
+
+---
+
+## ローカル開発手順
+
+ローカル環境でプロジェクトを起動・検証する手順です。
+
+### 1. リポジトリのクローン
 ```sh
-npm create astro@latest -- --template minimal
+git clone https://github.com/observer-ja/gnjb-utawari-note.git
+cd gnjb-utawari-note
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+### 2. 依存パッケージのインストール
+```sh
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 3. 開発サーバの起動
+```sh
+npm run dev
+```
+ローカルサーバー（通常は`http://localhost:4321/gnjb-utawari-note/`）が立ち上がります。
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 4. プロダクションビルド
+```sh
+npm run build
+```
+ビルド成果物が`./dist`ディレクトリに生成されます。
