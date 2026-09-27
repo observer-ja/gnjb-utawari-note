@@ -45,7 +45,7 @@
 * **Analytics & SEO**: Google Analytics 4 (GA4) / Google Search Console / Schema.org (JSON-LD)
 
 ### 開発支援・ツール
-* **Design & Prototyping**: Figma
+* **Design & Prototyping**: [Figma（デザインデータ）](https://www.figma.com/design/k1nFL8lOnF5CJFS4hvGEY1/%E6%AD%8C%E5%89%B2%E3%82%8A%E3%83%9A%E3%83%BC%E3%82%B8?node-id=0-1&t=eJm247KMtXqH1sPZ-1) ※閲覧専用
 * **Editor**: Visual Studio Code
 * **AI Coding Assistant**: Gemini / Claude
 
