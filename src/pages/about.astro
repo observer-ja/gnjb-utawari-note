@@ -25,13 +25,33 @@ import TextSection from '../components/TextSection.astro';
             原因は自分にある。のファンが個人で運営しております。
         </TextSection>
         <TextSection title='お問い合わせ'>
-            歌詞や歌割り、URLの誤りや修正依頼、機能面でのご要望等ございましたら、<a class="contact-link" href="#">こちら</a>の問い合わせフォームよりお伝え下さい。
+            歌詞や歌割り、URLの誤りや修正依頼、機能面でのご要望等ございましたら、<a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdSoF8GitwK7XOyoncTOiQcm12HtlFrOn0W7OElq2pzv_K9aA/viewform?usp=header" target="_blank">こちら</a>の問い合わせフォームよりお伝え下さい。
+        </TextSection>
+        <TextSection title='制作・ソースコード'>
+            サイトのソースコード及びUIデザインの設計図を以下リンクにて公開いたします。
+            <ul class="link-list text-body">
+                <li><strong><a class="link" href="https://github.com/observer-ja/gnjb-utawari-note" target="_blank" rel="noopener noreferrer">ソースコード（GitHub）</a></strong>：サイトのフロントエンド実装コードおよび管理リポジトリ</li>
+                <li><strong><a class="link" href="https://www.figma.com/design/k1nFL8lOnF5CJFS4hvGEY1/%25E6%25AD%258C%25E5%2589%25B2%25E3%2582%258A%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8?node-id=0-1" target="_blank" rel="noopener noreferrer">UIデザイン（Figma）</a></strong>：画面レイアウトやデザインプロトタイプ（閲覧専用）</li>
+            </ul>
         </TextSection>
     </div>
 </Layout>
 
 <style>
-    .contact-link {
-        color: var(--color-text);
+    .link-list {
+        width: 100%;
+        margin: 0;
+    }
+
+    .link {
+        width: 100%;
+        color: inherit;
+        transition: opacity 0.2s ease;
+    }
+
+    @media (hover:hover) {
+        .link:hover {
+            opacity: 0.6;
+        }
     }
 </style>
