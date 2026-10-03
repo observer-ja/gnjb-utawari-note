@@ -6,6 +6,11 @@ export interface NewsItemType {
 
 export const newsData: NewsItemType[] = [
     {
+        date: "2026.10.03" ,
+        text: "一部楽曲の歌詞の修正を行いました。",
+        slug: "2026-10-03-lyrics-fix"
+    },
+    {
         date: "2026.09.28" ,
         text: "Webサイトのソースコード・UIデザイン設計図を公開しました。",
         slug: "2026-09-28-source-code"
