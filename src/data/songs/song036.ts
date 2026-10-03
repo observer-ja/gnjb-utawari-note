@@ -170,7 +170,7 @@ export const song036: SongLyrics = {
                 {
                     members: ["P"],
                     chunks: [
-                        { text: [{ lyrics: "あいも変わらず充電中かい？" }] },
+                        { text: [{ lyrics: "ここで終われない" }] },
                     ],
                 },
                 {
