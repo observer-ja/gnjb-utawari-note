@@ -2869,7 +2869,7 @@ export const songsIndex: Song[] = [
         cds: [/* { id: "sg_05", track: 3 }, */],
         lyricist: ["Kiyoki"],
         composer: ["SARVAL"],
-        arranger: ["SARVAL", "Orcaにゃん", "KONPEKi", "CS4W"],
+        arranger: ["SARVAL", "Kiyoki", "Orcaにゃん", "KONPEKi", "CS4W"],
         tieup: ["TVアニメ『彼⽅から』オープニング主題歌"],
         call: false,
         links: {
