@@ -225,7 +225,7 @@ export const song085: SongLyrics = {
                 {
                     members: ["B"],
                     chunks: [
-                        { text: [{ lyrics: "君と繋ぐエピファニー" }] },
+                        { text: [{ lyrics: "君と繋いだエピファニー" }] },
                         { text: [{ lyrics: "カオスの狭間を超えて行く" }] },
                     ],
                 },
