@@ -2885,7 +2885,7 @@ export const songsIndex: Song[] = [
         id: "song086",
         title: "ラブリーズン",
         title_kana: "らぶりーずん",
-        date: "2026-11-11",
+        date: "2026-10-19",
         cds: [{ id: "sg_05", track: 1 },],
         lyricist: ["syudou"],
         composer: ["syudou"],
