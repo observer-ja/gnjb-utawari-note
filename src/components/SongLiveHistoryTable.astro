@@ -58,99 +58,99 @@ const songLiveHistory = live_history.map((live) => ({
 </div>
 
 <style>
-.song-live-history {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.song-live-history__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.song-live-history__title {
-    margin: 0;
-    padding: 0 5px 5px 5px;
-}
-
-.song-live-history__table {
-    display: none;
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 2px solid var(--color-primary);
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: var(--color-bg);
-}
-
-.song-live-history:has(.expand-toggle-chip[data-expanded="true"]) .song-live-history__table {
-    display: table;
-}
-
-.song-live-history__head {
-    background-color: var(--color-bg-dark);
-}
-
-.song-live-history__cell {
-    padding: 5px 10px;
-    border-right: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    vertical-align: middle;
-}
-
-.song-live-history__cell:last-child {
-    border-right: none;
-}
-
-.song-live-history__body .song-live-history__row:last-child .song-live-history__cell {
-    border-bottom: none;
-}
-
-.song-live-history__cell--head {
-    font-weight: bold;
-    text-align: center;
-}
-
-.song-live-history__cell--year {
-    text-align: center;
-    width: 40px;
-}
-
-.song-live-history__cell--name {
-    text-align: left;
-    width: 65%;
-}
-
-.song-live-history__cell-link {
-    color: inherit;
-    transition: opacity 0.2s ease;
-}
-
-.song-live-history__cell--position {
-    text-align: center;
-    width: 40px;
-}
-
-.song-live-history__cell--note {
-    text-align: left;
-    width: 35%;
-}
-
-@media (max-width: 1024px) {
-    .son-live-history {
-        gap 12px
+    .song-live-history {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
-@media (hover: hover) {
-    .song-live-history__cell-link:hover {
-        opacity: 0.6;
+    .song-live-history__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
-}
+
+    .song-live-history__title {
+        margin: 0;
+        padding: 0 5px 5px 5px;
+    }
+
+    .song-live-history__table {
+        display: none;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 2px solid var(--color-primary);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: var(--color-bg);
+    }
+
+    .song-live-history:has(.expand-toggle-chip[data-expanded="true"]) .song-live-history__table {
+        display: table;
+    }
+
+    .song-live-history__head {
+        background-color: var(--color-bg-dark);
+    }
+
+    .song-live-history__cell {
+        padding: 5px 10px;
+        border-right: 2px solid var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        vertical-align: middle;
+    }
+
+    .song-live-history__cell:last-child {
+        border-right: none;
+    }
+
+    .song-live-history__body .song-live-history__row:last-child .song-live-history__cell {
+        border-bottom: none;
+    }
+
+    .song-live-history__cell--head {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .song-live-history__cell--year {
+        text-align: center;
+        width: 40px;
+    }
+
+    .song-live-history__cell--name {
+        text-align: left;
+        width: 65%;
+    }
+
+    .song-live-history__cell-link {
+        color: inherit;
+        transition: opacity 0.2s ease;
+    }
+
+    .song-live-history__cell--position {
+        text-align: center;
+        width: 40px;
+    }
+
+    .song-live-history__cell--note {
+        text-align: left;
+        width: 35%;
+    }
+
+    @media (max-width: 1024px) {
+        .son-live-history {
+            gap 12px
+        }
+
+    @media (hover: hover) {
+        .song-live-history__cell-link:hover {
+            opacity: 0.6;
+        }
+    }
 </style>

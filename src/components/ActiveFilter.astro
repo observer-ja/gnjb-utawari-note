@@ -11,6 +11,7 @@ import UnderlineText from "./UnderlineText.astro";
     <a href="/gnjb-utawari-note/search/" class="reset-button text-body" id="js-reset-btn">条件をリセット</a>
 </section>
 
+<!-- style定義のためのダミー用のdiv -->
 <div id="js-template-chip" style="display: none;">
     <ActiveFilterChip label="" name="" value="" />
 </div>
@@ -78,7 +79,6 @@ import UnderlineText from "./UnderlineText.astro";
         inputs.forEach((input) => {
             if (input.closest('#js-template-chip')) return;
             if (input.name === 'sort') return;
-            if (input instanceof HTMLInputElement && input.type === 'hidden') return;
 
             if (input instanceof HTMLInputElement && (input.name === 'startDate' || input.name === 'endDate')) {
                 const val = input.value.trim();
@@ -89,7 +89,7 @@ import UnderlineText from "./UnderlineText.astro";
                 return;
             }
 
-            if (input instanceof HTMLInputElement && (input.type === 'text' || input.type === 'search')) {
+            if (input instanceof HTMLInputElement && input.type === 'text') {
                 const val = input.value.trim();
                 if (val) addChipHTML(`「${val}」を含む`, input.name, val);
                 return;
