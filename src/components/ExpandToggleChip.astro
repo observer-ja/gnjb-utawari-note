@@ -98,10 +98,7 @@ const { expandText, isExpanded = false } = Astro.props
 
     buttons.forEach((btn) => {
         const textEl = btn.querySelector('.expand-toggle-chip__text');
-        const isInitialExpanded = btn.dataset.expanded === 'true';
-        const originalText = isInitialExpanded 
-            ? (textEl?.textContent === COLLAPSE_TEXT ? '開く' : textEl?.textContent || '')
-            : (textEl?.textContent || '');
+        const originalText = textEl?.textContent || '開く';
 
         btn.addEventListener('click', () => {
             const isExpanded = btn.dataset.expanded === 'true';
