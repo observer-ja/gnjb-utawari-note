@@ -295,7 +295,7 @@ export const song086: SongLyrics = {
                             text: [{ lyrics: "伝えなくちゃ" }]
                         },
                         {
-                            members: [""],
+                            members: ["R"],
                             text: [{ lyrics: "(笑)" }]
                         },
                     ],
