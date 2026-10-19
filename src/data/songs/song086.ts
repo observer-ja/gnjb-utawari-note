@@ -39,7 +39,7 @@ export const song086: SongLyrics = {
                     ],
                 },
                 {
-                    members: [""],
+                    members: ["W", "P"],
                     chunks: [
                         { text: [{ lyrics: "愛とIが交戦中" }] },
                     ],
@@ -52,7 +52,7 @@ export const song086: SongLyrics = {
                     ],
                 },
                 {
-                    members: [""],
+                    members: ["W", "P"],
                     chunks: [
                         { text: [{ lyrics: "愛とIが交戦中" }] },
                     ],
@@ -106,24 +106,14 @@ export const song086: SongLyrics = {
                     ],
                 },
                 {
-                    members: ["R"],
                     chunks: [
-                        { text: [{ lyrics: "アタシしか知らないアナタのこと" }] },
-                    ],
-                },
-                {
-                    chunks: [
+                        {
+                            members: ["R"],
+                            text: [{ lyrics: "アタシしか知らないアナタのこと" }]
+                        },
                         {
                             members: ["W"],
-                            text: [{ lyrics: "伝" }]
-                        },
-                        {
-                            members: ["P"],
-                            text: [{ lyrics: "えな" }]
-                        },
-                        {
-                            members: ["G"],
-                            text: [{ lyrics: "くちゃ" }]
+                            text: [{ lyrics: "伝えなくちゃ" }]
                         },
                     ],
                 },
@@ -164,7 +154,7 @@ export const song086: SongLyrics = {
         {
             rows: [
                 {
-                    members: [""],
+                    members: ["W", "P"],
                     chunks: [
                         { text: [{ lyrics: "愛とIが交戦中" }] },
                     ],
@@ -177,7 +167,7 @@ export const song086: SongLyrics = {
                     ],
                 },
                 {
-                    members: [""],
+                    members: ["W", "P"],
                     chunks: [
                         { text: [{ lyrics: "愛とIが交戦中" }] },
                     ],
@@ -288,11 +278,7 @@ export const song086: SongLyrics = {
                     chunks: [
                         {
                             members: ["W"],
-                            text: [{ lyrics: "あの子にほら" }]
-                        },
-                        {
-                            members: ["P"],
-                            text: [{ lyrics: "伝えなくちゃ" }]
+                            text: [{ lyrics: "あの子にほら伝えなくちゃ" }]
                         },
                         {
                             members: ["R"],
