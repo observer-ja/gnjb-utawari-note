@@ -170,7 +170,7 @@ export const song086: SongLyrics = {
                     ],
                 },
                 {
-                    members: ["P"],
+                    members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "頼れるもんが何もなかった" }] },
                         { text: [{ lyrics: "日々に注いだ確かな安心感" }] },
