@@ -1,0 +1,50 @@
+/* ドパミン・シンギュラリティ */
+export interface LyricText {
+    lyrics: string;
+    call?: boolean;
+}
+
+export interface LyricChunk {
+    members?: string[];
+    text: LyricText[];
+}
+
+export interface LyricRow {
+    members?: string[];
+    chunks: LyricChunk[];
+}
+
+export interface LyricBlock {
+    members?: string[];
+    rows: LyricRow[];
+}
+
+export interface SongLyrics {
+    id: string;
+    note?: string;
+    lyrics_blocks: LyricBlock[];
+}
+
+export const song087: SongLyrics = {
+    id: "song087",
+    note: "",
+
+    lyrics_blocks: [
+        {
+            rows: [
+                {
+                    chunks: [
+                        { text: [{ lyrics: "歌詞テキスト" }] },
+                        {
+                            members: [""],
+                            text: [
+                                { lyrics: "歌詞テキスト" },
+                                { lyrics: "歌詞テキスト", call: true },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
+}
