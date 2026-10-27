@@ -3053,6 +3053,7 @@ export const songsIndex: Song[] = [
         arranger: [""],
         tieup: [],
         call: ,
+        karaoke: { joysound: , dam: },
         links: {
             mv: null,
             spotify: "",
