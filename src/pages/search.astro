@@ -45,7 +45,6 @@ const sortOptions = defaultSortOptions;
                 sortedSongs={sortedSongs} 
                 sortOptions={sortOptions} 
                 currentSort={initialFilters.sortOrder}
-                liveId=""
             />
         </form>
     </div>
@@ -117,11 +116,15 @@ const sortOptions = defaultSortOptions;
 
         const isSetlistSortable =
             selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+        const isCdSortable =
+            selectedLives.length === 0 && !startDate && !endDate && !!cd && !creator && !tieup && !call && !mv && !query;
 
         const rawSort = searchParams.get('sort');
         const sortOrder = (rawSort && (rawSort !== 'setlist' || isSetlistSortable))
             ? rawSort
-            : (isSetlistSortable ? 'setlist' : 'date-desc');
+            : (isSetlistSortable 
+            ? 'setlist' 
+            : (isCdSortable ? 'cd' : 'date-desc'));
 
         restoreFormState(searchParams);
 
@@ -174,11 +177,17 @@ const sortOptions = defaultSortOptions;
                     return perfA - perfB;
                 }
                 return posA - posB;
+            };
+            if (sortOrder === 'cd') {
+                const cdId = cd;
+                const trkA = a.cds?.find((c: { id: string }) => c.id === cdId)?.track ?? 999;
+                const trkB = b.cds?.find((c: { id: string }) => c.id === cdId)?.track ?? 999;
+                return trkA - trkB;
             }
             return 0;
         });
 
-        updateDOM(filtered, sortOrder, isSetlistSortable);
+        updateDOM(filtered, sortOrder, isSetlistSortable, isCdSortable);
     });
 
     function restoreFormState(params: URLSearchParams) {
@@ -213,7 +222,7 @@ const sortOptions = defaultSortOptions;
         }
     }
 
-    function updateDOM(filteredSongs: Song[], sortOrder: string, isSetlistSortable: boolean) {
+    function updateDOM(filteredSongs: Song[], sortOrder: string, isSetlistSortable: boolean, isCdSortable: boolean) {
         const cardList = document.getElementById('js-song-card-list');
         const songCountEl = document.getElementById('js-song-count');
         const noResultEl = document.getElementById('js-no-result');
@@ -227,6 +236,7 @@ const sortOptions = defaultSortOptions;
             sortSelect.innerHTML = '';
             const options = [
                 ...(isSetlistSortable ? [{ label: 'セットリスト順', value: 'setlist' }] : []),
+                ...(isCdSortable ? [{ label: 'CD収録順', value: 'cd' }] : []),
                 { label: 'リリース日が新しい順', value: 'date-desc' },
                 { label: 'リリース日が古い順', value: 'date-asc' },
                 { label: '曲名順（五十音順）', value: 'title-asc' },
@@ -270,18 +280,42 @@ const sortOptions = defaultSortOptions;
             if (wrapper) {
                 const defaultCard = wrapper.querySelector<HTMLElement>('.js-card-mode--default');
                 const setlistCards = Array.from(wrapper.querySelectorAll<HTMLElement>('.js-card-mode--setlist'));
+                const cdCards = Array.from(wrapper.querySelectorAll<HTMLElement>('.js-card-mode--cd'));
 
-                if (isSetlist && liveId) {
-                    if (defaultCard) defaultCard.style.display = 'none';
-                    setlistCards.forEach(card => {
-                        card.style.display = card.dataset.liveId === liveId ? 'block' : 'none';
-                    });
-                } else {
-                    if (defaultCard) defaultCard.style.display = 'block';
-                    setlistCards.forEach(card => {
-                        card.style.display = 'none';
-                    });
-                }
+                const isSetlist = sortOrder === 'setlist';
+                const isCd = sortOrder === 'cd';
+                const searchParams = new URLSearchParams(window.location.search);
+                const liveId = searchParams.get('live') || '';
+                const cdId = searchParams.get('cd') || '';
+
+                filteredSongs.forEach(song => {
+                    const wrapper = wrapperMap.get(song.id);
+                    if (wrapper) {
+                        const defaultCard = wrapper.querySelector<HTMLElement>('.js-card-mode--default');
+                        const setlistCards = Array.from(
+                            wrapper.querySelectorAll<HTMLElement>('.js-card-mode--setlist')
+                        );
+                        const cdCards = Array.from(
+                            wrapper.querySelectorAll<HTMLElement>('.js-card-mode--cd')
+                        );
+
+                        if (defaultCard) {
+                            defaultCard.style.display = !isSetlist && !isCd ? 'block' : 'none';
+                        }
+
+                        setlistCards.forEach(card => {
+                            card.style.display =
+                                isSetlist && card.dataset.liveId === liveId ? 'block' : 'none';
+                        });
+
+                        cdCards.forEach(card => {
+                            card.style.display =
+                                isCd && card.dataset.cdId === cdId ? 'block' : 'none';
+                        });
+
+                        cardList.appendChild(wrapper);
+                    }
+                });
 
                 cardList.appendChild(wrapper);
             }

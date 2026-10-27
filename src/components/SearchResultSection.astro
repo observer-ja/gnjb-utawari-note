@@ -13,10 +13,9 @@ interface Props {
     sortedSongs: Song[];
     sortOptions: Option[];
     currentSort: string;
-    liveId: string;
 }
 
-const { sortedSongs, sortOptions, currentSort, liveId } = Astro.props;
+const { sortedSongs, sortOptions, currentSort } = Astro.props;
 ---
 
 <div class="search-result-section">
@@ -38,6 +37,11 @@ const { sortedSongs, sortOptions, currentSort, liveId } = Astro.props;
                 {s.live_history?.map((h) => (
                     <div class="js-card-mode js-card-mode--setlist" data-live-id={h.live_id} style="display: none;">
                         <SongCard song={s} displayMode="setlist" liveId={h.live_id} />
+                    </div>
+                ))}
+                {s.cds?.map((c) => (
+                    <div class="js-card-mode js-card-mode--cd" data-cd-id={c.id} style="display: none;">
+                        <SongCard song={s} displayMode="cd" cdId={c.id} />
                     </div>
                 ))}
             </div>
