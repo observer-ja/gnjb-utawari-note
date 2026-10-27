@@ -136,7 +136,8 @@ const sortOptions = defaultSortOptions;
             }
             if (startDate && song.date < startDate) return false;
             if (endDate && song.date > endDate) return false;
-            if (cd && !song.cds?.some((c: { id: string }) => c.id === cd)) return false;
+            if (cd === 'none' && (song.cds?.length ?? 0) > 0) return false;
+            if (cd && cd !== 'none' && !song.cds?.some((c: { id: string }) => c.id === cd)) return false;
             if (creator) {
                 const hasCreator =
                     song.lyricist?.includes(creator) ||
