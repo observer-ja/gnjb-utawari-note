@@ -301,16 +301,6 @@ const creatorOptions = uniqueCreators.map(creator => ({
 </style>
 
 <script>
-    const toggleChip = document.querySelector('.filter-panel__toggle .expand-toggle-chip');
-    const expandedInput = document.getElementById('expanded-input') as HTMLInputElement;
-
-    if (toggleChip && expandedInput) {
-        toggleChip.addEventListener('click', () => {
-            const isExpanded = toggleChip.getAttribute('data-expanded') === 'true';
-            expandedInput.value = isExpanded ? 'true' : 'false';
-        });
-    }
-
     ['tieup', 'mv', 'call'].forEach((name) => {
         const chips = document.querySelectorAll(`input[name="${name}"]`);
         
