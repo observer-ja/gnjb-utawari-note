@@ -117,9 +117,9 @@ const sortOptions = defaultSortOptions;
         const query = searchParams.get('keyword') || '';
 
         const isSetlistSortable =
-            selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+            selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !joysound && !dam && !query;
         const isCdSortable =
-            selectedLives.length === 0 && !startDate && !endDate && !!cd && !creator && !tieup && !call && !mv && !query;
+            selectedLives.length === 0 && !startDate && !endDate && !!cd && !creator && !tieup && !call && !mv && !joysound && !dam && !query;
 
         const rawSort = searchParams.get('sort');
         const sortOrder = (rawSort && (rawSort !== 'setlist' || isSetlistSortable))

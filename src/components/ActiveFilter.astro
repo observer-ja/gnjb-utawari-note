@@ -191,10 +191,17 @@ import UnderlineText from "./UnderlineText.astro";
                             panelInput.value = chipInput.checked ? value : '';
                         } 
                         
-                        /* チップ */
-                        if (panelInput instanceof HTMLInputElement && (panelInput.value === value || panelInput.type === 'radio')) {
+                        /* ライブチップ */
+                        if (panelInput instanceof HTMLInputElement && panelInput.value === value) {
                             panelInput.checked = chipInput.checked;
                             panelInput.dataset.wasChecked = chipInput.checked ? 'true' : 'false';
+                        }
+
+                        /* ラジオボタン */
+                        if (panelInput instanceof HTMLInputElement && panelInput.type === 'radio' && panelInput.name === name) {
+                            if (panelInput.value !== value) {
+                                panelInput.dataset.wasChecked = 'false';
+                            }
                         }
                     });
                 }
