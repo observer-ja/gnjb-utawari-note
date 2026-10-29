@@ -112,6 +112,8 @@ const sortOptions = defaultSortOptions;
         const tieup = searchParams.get('tieup') || '';
         const call = searchParams.get('call') || '';
         const mv = searchParams.get('mv') || '';
+        const joysound = searchParams.get('joysound') || '';
+        const dam = searchParams.get('dam') || '';
         const query = searchParams.get('keyword') || '';
 
         const isSetlistSortable =
@@ -154,6 +156,10 @@ const sortOptions = defaultSortOptions;
             if (mv === "false" && song.links?.mv) return false;
             if (call === "true" && !song.call) return false;
             if (call === "false" && song.call) return false;
+            if (joysound === "true" && !song.karaoke.joysound) return false;
+            if (joysound === "false" && song.karaoke.joysound) return false;
+            if (dam === "true" && !song.karaoke.dam) return false;
+            if (dam === "false" && song.karaoke.dam) return false;
             if (query && !song.title?.includes(query) && !song.title_kana?.includes(query)) return false;
 
             return true;

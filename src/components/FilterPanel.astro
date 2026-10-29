@@ -191,6 +191,22 @@ const creatorOptions = uniqueCreators.map(creator => ({
                     </div>
                 </div>
             </div>
+            <div class="filter-row">
+                <div class="filter-group">
+                    <p class="filter-group__label text-body">JOYSOUND</p>
+                    <div class="filter-group__content">
+                        <FilterChip label="あり" name="joysound" value="true" type='radio' checked={filters.tieup === 'true'} />
+                        <FilterChip label="なし" name="joysound" value="false" type='radio' checked={filters.tieup === 'false'}/>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <p class="filter-group__label text-body">DAM</p>
+                    <div class="filter-group__content">
+                        <FilterChip label="あり" name="dam" value="true" type='radio' checked={filters.call === 'true'}/>
+                        <FilterChip label="なし" name="dam" value="false" type='radio' checked={filters.call === 'false'}/>
+                    </div>
+                </div>
+            </div>
             <div class="filter-group filter-group--search">
                 <p class="filter-group__label text-body">曲名検索</p>
                 <div class="filter-group__content">
@@ -344,7 +360,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
 </style>
 
 <script>
-    ['tieup', 'mv', 'call'].forEach((name) => {
+    ['tieup', 'mv', 'call', 'joysound', 'dam'].forEach((name) => {
         const chips = document.querySelectorAll(`input[name="${name}"]`);
         
         chips.forEach((chip) => {
