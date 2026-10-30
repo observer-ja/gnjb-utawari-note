@@ -8,9 +8,10 @@ interface Props {
     displayMode: 'default' | 'setlist' | 'cd';
     liveId?: string;
     cdId?: string;
+    historyIndex?: number;
 }
 
-const { song, displayMode = 'default', liveId , cdId} = Astro.props
+const { song, displayMode = 'default', liveId , cdId, historyIndex } = Astro.props
 
 const meta = {
     composer:
@@ -28,7 +29,9 @@ const meta = {
 
 const ALLOWED_NOTES = ['初披露', 'シャッフル曲', '日替わり曲', 'メドレー'] as const;
 type ValidNote = typeof ALLOWED_NOTES[number];
-const currentHistory = song.live_history.find(h => h.live_id === liveId);
+const currentHistory = historyIndex !== undefined
+    ? song.live_history[historyIndex]
+    : song.live_history.find(h => h.live_id === liveId);
 const validNote = currentHistory?.note?.find(n => ALLOWED_NOTES.includes(n as ValidNote)) as ValidNote | undefined;
 const cd = song.cds.find(c => c.id === cdId);
 
