@@ -93,6 +93,22 @@ const LINKS = ["mv", "spotify", "apple_music", "line_music"] as const;
                     <span class="song-meta__value">{date}</span>
                 </div>
             </div>
+            <div class="song-meta__row song-meta__row--group">
+                <div class="song-meta__date">
+                    <span class="song-meta__label">JOYSOUND：</span>
+                    {song.karaoke.joysound ?
+                        <span class="song-meta__value">配信済</span> : 
+                        <span class="song-meta__value">未配信</span>
+                    }
+                </div>
+                <div class="song-meta__date">
+                    <span class="song-meta__label">DAM：</span>
+                    {song.karaoke.dam ?
+                        <span class="song-meta__value">配信済</span> : 
+                        <span class="song-meta__value">未配信</span>
+                    }
+                </div>
+            </div>
             {song.tieup.length>0 &&
                 <div class="song-meta__tieup">
                     <span class="song-meta__label">タイアップ：</span>

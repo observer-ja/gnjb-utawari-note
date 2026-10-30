@@ -195,15 +195,15 @@ const creatorOptions = uniqueCreators.map(creator => ({
                 <div class="filter-group">
                     <p class="filter-group__label text-body">JOYSOUND</p>
                     <div class="filter-group__content">
-                        <FilterChip label="あり" name="joysound" value="true" type='radio' checked={filters.tieup === 'true'} />
-                        <FilterChip label="なし" name="joysound" value="false" type='radio' checked={filters.tieup === 'false'}/>
+                        <FilterChip label="配信済" name="joysound" value="true" type='radio' checked={filters.tieup === 'true'} />
+                        <FilterChip label="未配信" name="joysound" value="false" type='radio' checked={filters.tieup === 'false'}/>
                     </div>
                 </div>
                 <div class="filter-group">
                     <p class="filter-group__label text-body">DAM</p>
                     <div class="filter-group__content">
-                        <FilterChip label="あり" name="dam" value="true" type='radio' checked={filters.call === 'true'}/>
-                        <FilterChip label="なし" name="dam" value="false" type='radio' checked={filters.call === 'false'}/>
+                        <FilterChip label="配信済" name="dam" value="true" type='radio' checked={filters.call === 'true'}/>
+                        <FilterChip label="未配信" name="dam" value="false" type='radio' checked={filters.call === 'false'}/>
                     </div>
                 </div>
             </div>
