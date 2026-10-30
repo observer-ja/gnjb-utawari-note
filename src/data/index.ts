@@ -4,6 +4,11 @@ export interface SongCd {
     track: number;
 }
 
+export interface SongKaraoke {
+    joysound: boolean;
+    dam: boolean;
+}
+
 export interface SongLinks {
     mv: string | null;
     spotify: string | null;
@@ -29,6 +34,7 @@ export interface Song {
     arranger: string[];
     tieup: string[];
     call: boolean;
+    karaoke: SongKaraoke;
     links: SongLinks;
     live_history: LiveHistory[];
 }
@@ -46,6 +52,7 @@ export const songsIndex: Song[] = [
         arranger: ["NAMELESS AKA NL"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5ok1L8JoVDUy8rirbbIeQJ",
@@ -67,6 +74,7 @@ export const songsIndex: Song[] = [
         arranger: ["NAMELESS AKA NL"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4x9HfV3Ts78ZHGQsaymmCe",
@@ -88,6 +96,7 @@ export const songsIndex: Song[] = [
         arranger: ["Yocke"],
         tieup: [],
         call: true,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5Lbca0cOGt9l3w5mL4VkPq",
@@ -114,6 +123,7 @@ export const songsIndex: Song[] = [
         arranger: ["Yocke"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3IdHdLPu5Bx9f3G8O6jo5z",
@@ -139,6 +149,7 @@ export const songsIndex: Song[] = [
         arranger: ["楊慶豪"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4kDExms3YDoIi5nXUdIAoE",
@@ -162,6 +173,7 @@ export const songsIndex: Song[] = [
         arranger: ["浅利進吾"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1qETVMaFM5LkyjLWTfBkZ0",
@@ -188,6 +200,7 @@ export const songsIndex: Song[] = [
         arranger: ["楊慶豪"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/7mFKKSh1CDM6DErmVrmO5m",
@@ -217,6 +230,7 @@ export const songsIndex: Song[] = [
             "AbemaTV「Abema Prime」 2019年10月度エンディングテーマソング"
         ],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=-9lpqo83-AA",
             spotify: "https://open.spotify.com/track/4IV4wWIoXASUh61rAI8zlM",
@@ -292,6 +306,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/247zj1W13s0A45rLLxq5Bt",
@@ -348,6 +363,7 @@ export const songsIndex: Song[] = [
         arranger: ["楊慶豪"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2fjUWC8ty7l00RPA53NHYP",
@@ -382,6 +398,7 @@ export const songsIndex: Song[] = [
         arranger: ["楊慶豪"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/08IUfJ5tPNodMLseXpJZZe",
@@ -424,6 +441,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["テレビ朝日系「BREAK OUT」 2020年1月度オープニングテーマソング"],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=hUO_t7h9sKA",
             spotify: "https://open.spotify.com/track/77w4zGklhZhsM7pdDf63bU",
@@ -479,6 +497,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0hgPezCVXVHmqXGXgwiMSS",
@@ -515,6 +534,7 @@ export const songsIndex: Song[] = [
         arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=tFS9kfOxlbw",
             spotify: "https://open.spotify.com/track/6S11Fpkixsbzk1h709XzPi",
@@ -549,6 +569,7 @@ export const songsIndex: Song[] = [
         arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/05IaFhpk0snhDX4UjEoprs",
@@ -579,6 +600,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=JSiRJSfHTP4",
             spotify: "https://open.spotify.com/track/76w3sWVKL3xdFP5FBOv4fW",
@@ -615,6 +637,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["MBS/TBSドラマイズム「年の差婚」 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=HK8CCSngJHE",
             spotify: "https://open.spotify.com/track/0Xvrfpr02t3rvgYsI6ZEZe",
@@ -674,6 +697,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=WmXVTocP5DE",
             spotify: "https://open.spotify.com/track/5bOBtSbFMCBG96l7A0mky7",
@@ -713,6 +737,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3iPQiBrNFhXxZZz1fleVdI",
@@ -753,6 +778,7 @@ export const songsIndex: Song[] = [
         arranger: ["Ayase"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=jmzPBy-9LFs",
             spotify: "https://open.spotify.com/track/4c1WDszgF2oz1UpGcwxax2",
@@ -786,6 +812,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音", "100回嘔吐"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=6CuNydAVO5Q",
             spotify: "https://open.spotify.com/track/3QeJKotbyJm2Bf65us2XI2",
@@ -828,6 +855,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5GUVHXaFyEXP9lQEwVocQY",
@@ -862,6 +890,7 @@ export const songsIndex: Song[] = [
         arranger: ["100回嘔吐"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1vqp3VxbSsPUYul4mIfjGz",
@@ -903,6 +932,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=9ACHYl5SuZg",
             spotify: "https://open.spotify.com/track/1qViBt9YSX8YWArUuBLUag",
@@ -937,6 +967,7 @@ export const songsIndex: Song[] = [
         arranger: ["fox capture plan", "久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=MXJS3WswkSQ",
             spotify: "https://open.spotify.com/track/0GouqJGQE2dtO7wVol4yvr",
@@ -973,6 +1004,7 @@ export const songsIndex: Song[] = [
         arranger: ["吐息"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=UwBHtKbLcXk",
             spotify: "https://open.spotify.com/track/2HQvL3AENi8H6LPbpd58wA",
@@ -1005,6 +1037,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["テレビ東京系10月クールドラマ「じゃない方の彼女」 エンディングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=YdA1h6qG6C4",
             spotify: "https://open.spotify.com/track/1q8uK9dFtc0IOolOki5JfT",
@@ -1040,6 +1073,7 @@ export const songsIndex: Song[] = [
         arranger: ["眞塩楓"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=BqziR8OHwSQ",
             spotify: "https://open.spotify.com/track/3Xj9PZaqPhZUCUqvMVKVpf",
@@ -1073,6 +1107,7 @@ export const songsIndex: Song[] = [
         arranger: ["木下哲", "みきとP"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=SnduVH9DPKw",
             spotify: "https://open.spotify.com/track/3Kn0Df5iSkTl2tcQMatL5T",
@@ -1106,6 +1141,7 @@ export const songsIndex: Song[] = [
         arranger: ["ど〜ぱみん"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/06q68iQ8DZFpUBmzWe9nuC",
@@ -1138,6 +1174,7 @@ export const songsIndex: Song[] = [
         arranger: ["Bee Goodman"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/636awXV8eDX6gD6fA0WVRx",
@@ -1178,6 +1215,7 @@ export const songsIndex: Song[] = [
         arranger: ["霧エクラ"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5r8RkM9tVab347UF2SRQt9",
@@ -1204,6 +1242,7 @@ export const songsIndex: Song[] = [
         arranger: ["村山⭐︎潤"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=UEjalJI6GWI",
             spotify: "https://open.spotify.com/track/0iOXGy6dtAqEuaWhaqkb4R",
@@ -1234,6 +1273,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=SBkxJG112dA",
             spotify: "https://open.spotify.com/track/27uYtluOPiQSRXZdBSY6hO",
@@ -1265,6 +1305,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=DO6GhodQhAQ",
             spotify: "https://open.spotify.com/track/3cFouDxvTfhHo5OoQoFgGx",
@@ -1299,6 +1340,7 @@ export const songsIndex: Song[] = [
         arranger: ["izki"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=dqbbGJvAsBc",
             spotify: "https://open.spotify.com/track/5LMJtGDkaOs66dgTCffDss",
@@ -1330,6 +1372,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=1tB3a5hWiyg",
             spotify: "https://open.spotify.com/track/5oDvcoDrcYDtiAxjRfcdos",
@@ -1361,6 +1404,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=8Az4SQczg8s",
             spotify: "https://open.spotify.com/track/0Aw0obEGgrHcVIXzqWAA29",
@@ -1415,6 +1459,7 @@ export const songsIndex: Song[] = [
         arranger: ["izki"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=-VI6kCBu9Cw",
             spotify: "https://open.spotify.com/track/23xWbjLF0HyuQIgSqKHdEQ",
@@ -1449,6 +1494,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=bLr1uLlbEAk",
             spotify: "https://open.spotify.com/track/0VvNtK1B7ZBln4L4GTTTHV",
@@ -1493,6 +1539,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=RrEO1gP6mfo",
             spotify: "https://open.spotify.com/track/4OzgBpnlznWd72HNLZHOp4",
@@ -1523,6 +1570,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["TBS「王様のブランチ」 2023年1月度エンディングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=ErNj6BgfXvc",
             spotify: "https://open.spotify.com/track/0aUTgemKnK946bC7DPxRl6",
@@ -1554,6 +1602,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["フジテレビ系「Love music」 2023年2月度オープニングテーマ"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=6H4HG7G2qnk",
             spotify: "https://open.spotify.com/track/3RTL8wlZcFh1qpzFYtQ6MX",
@@ -1595,6 +1644,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1MdUS4vrLKIJ81YwThp8WP",
@@ -1619,6 +1669,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2Q6XcF8o5eUvEIA1vR8YB1",
@@ -1648,6 +1699,7 @@ export const songsIndex: Song[] = [
         arranger: ["竹内雄彦"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0YCL6p4btZjOtOpmo9V2op",
@@ -1675,6 +1727,7 @@ export const songsIndex: Song[] = [
         arranger: ["izki"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/516aKBkovU8TwcBEC0U89k",
@@ -1699,6 +1752,7 @@ export const songsIndex: Song[] = [
         arranger: ["izki"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=kMQq49UB8Vg",
             spotify: "https://open.spotify.com/track/1j84JRrMRekoSSH2yU1kHP",
@@ -1726,6 +1780,7 @@ export const songsIndex: Song[] = [
         arranger: ["izki"],
         tieup: ["テレビ東京系アニメ「デュエル・マスターズ WIN 決闘学園編」 エンディングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=SgIjog093T8",
             spotify: "https://open.spotify.com/track/2Gcid6LvComOG1Hop2kCf9",
@@ -1754,6 +1809,7 @@ export const songsIndex: Song[] = [
         arranger: ["あらケン"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=Sv8s19VXzAI",
             spotify: "https://open.spotify.com/track/5m6PQRk6Y88GkFzK4TgDiO",
@@ -1783,6 +1839,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1n19BYXjlCyNFhqoBRrMkc",
@@ -1817,6 +1874,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3B0RfZGfuOBVl3llPNTBdT",
@@ -1843,6 +1901,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=NHSHisdfwfw",
             spotify: "https://open.spotify.com/track/5yK3dAppqCQYsx7X5h7qoq",
@@ -1876,6 +1935,7 @@ export const songsIndex: Song[] = [
         arranger: ["加藤祐平"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4uXqD7ooukoGrkx5NhwRAl",
@@ -1905,6 +1965,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2S6iuA49Pay71EJv1RCGVX",
@@ -1928,6 +1989,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["テレビ東京系ドラマ「沼オトコと沼落ちオンナのmidnight call 〜寝不足の原因は自分にある。〜」 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/01tA7BkMevxSIlWSbJSCPq",
@@ -1954,6 +2016,7 @@ export const songsIndex: Song[] = [
         arranger: ["堀江晶太"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=-X9NzZNVGsk",
             spotify: "https://open.spotify.com/track/7iXhqF9wwmi2wi5F6fvx5G",
@@ -1991,6 +2054,7 @@ export const songsIndex: Song[] = [
         arranger: ["MIMI"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=o51I-_MrasQ",
             spotify: "https://open.spotify.com/track/676LDL3TVRJ4UrHQlQmUEi",
@@ -2016,6 +2080,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=lrE3HUI-PpY",
             spotify: "https://open.spotify.com/track/73bwO8YNQzVwEld8c0yr1U",
@@ -2044,6 +2109,7 @@ export const songsIndex: Song[] = [
         arranger: ["uno biaqio", "Seiji Iwasaki"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=-G6Tpub-LZE",
             spotify: "https://open.spotify.com/track/2MI4L9ifebVs6DBpm0kbFW",
@@ -2072,6 +2138,7 @@ export const songsIndex: Song[] = [
         arranger: ["南雲ゆうき"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5Jg5SYOaxwymuosRUDfxqR",
@@ -2098,6 +2165,7 @@ export const songsIndex: Song[] = [
         arranger: ["ナユタン星人"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=JDsDIf8wsaQ",
             spotify: "https://open.spotify.com/track/7ewxrPqF0obZ3PzcX20gH0",
@@ -2136,6 +2204,7 @@ export const songsIndex: Song[] = [
         arranger: ["酒井拓也"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=n91y4BtpOio",
             spotify: "https://open.spotify.com/track/5rqHKMMJ8w397PCeEOai1i",
@@ -2159,6 +2228,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["読売テレビ・ドラマDiVE『シークレット同盟』 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=_kbBYjpHKvw",
             spotify: "https://open.spotify.com/track/672t5orA6YcHdTM5aGFjUG",
@@ -2197,6 +2267,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["アニメ『エグミレガシー』 テーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=KVw0gdH_wPI",
             spotify: "https://open.spotify.com/track/51B7M78gRDEYzXAtwdj9cM",
@@ -2223,6 +2294,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0QurLzmjaPLt2XQ2UEcqyy",
@@ -2249,6 +2321,7 @@ export const songsIndex: Song[] = [
         arranger: ["堀江晶太"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=so6NgDJ0mjE",
             spotify: "https://open.spotify.com/track/0JnnVhCalDiOo0jXn0ivlc",
@@ -2272,6 +2345,7 @@ export const songsIndex: Song[] = [
         arranger: ["サツキ"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=LNwcs8Vc-wI",
             spotify: "https://open.spotify.com/track/55V3psa2OcuOx5fcDqNKXz",
@@ -2297,6 +2371,7 @@ export const songsIndex: Song[] = [
         arranger: ["B33G", "Kiyoki", "KoTaRo", "SARVAL"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=-kSjzzc-IkQ",
             spotify: "https://open.spotify.com/track/5fZclM8jW0kY7JKEbOIPEi",
@@ -2330,6 +2405,7 @@ export const songsIndex: Song[] = [
         arranger: ["竹縄航太"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=p2RhRskf73E",
             spotify: "https://open.spotify.com/track/46bFnfqjy3nyPKi6GtldSW",
@@ -2357,6 +2433,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=HDCtD4YmllQ",
             spotify: "https://open.spotify.com/track/4noDigrr9ZReEhHuQPuw8j",
@@ -2384,6 +2461,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/0nTn7BrtU9tOcdSdzplysR",
@@ -2410,6 +2488,7 @@ export const songsIndex: Song[] = [
         arranger: [".ENDRECHERI./堂本剛", "宗本康兵"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=k_P491N-_Sk",
             spotify: "https://open.spotify.com/track/5OaH7cJm8yIDB6H6PXLocY",
@@ -2433,6 +2512,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=6LoJ4GVvNDM",
             spotify: "https://open.spotify.com/track/5oLO5hl3wM0MdYv87gSzhs",
@@ -2468,6 +2548,7 @@ export const songsIndex: Song[] = [
         arranger: ["Masaki Tomiyama"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1agWIt6R3A5MdpX1L5quLY",
@@ -2491,6 +2572,7 @@ export const songsIndex: Song[] = [
         arranger: ["IKUTO", "真白あまね", "SARVAL"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2DXyFzJwUdq5yoljbyaAXF",
@@ -2513,6 +2595,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["フジテレビ系アニメ『GO!GO!チャギントン』 エンディングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=aSM59ANCgXA",
             spotify: "https://open.spotify.com/track/7x2i2i2JvhqNWALk5jvz6c",
@@ -2532,6 +2615,7 @@ export const songsIndex: Song[] = [
         arranger: ["Orcaにゃん", "IKUTO", "SARVAL"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1mPy0egDHMQnbuLVWuHedK",
@@ -2557,6 +2641,7 @@ export const songsIndex: Song[] = [
         arranger: ["CS4W", "SARVAL"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/5LerS745dIrtRbCysv5igU",
@@ -2583,6 +2668,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["読売テレビ・ドラマDiVE「あらばしり」 エンディングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1OLnkhGpRCBkuIad3sbHuZ",
@@ -2605,6 +2691,7 @@ export const songsIndex: Song[] = [
         arranger: ["YASU"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=8WM4cH7aYM8",
             spotify: "https://open.spotify.com/track/1yfC94XjRlidTGYdxd2Wkc",
@@ -2628,6 +2715,7 @@ export const songsIndex: Song[] = [
         arranger: ["川谷絵音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=N3E6f_cLdI0",
             spotify: "https://open.spotify.com/track/4uYdHqrUBrf2UkEuF9lkMP",
@@ -2655,6 +2743,7 @@ export const songsIndex: Song[] = [
         arranger: ["笹川真生"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=3h8iVVPlc9A",
             spotify: "https://open.spotify.com/track/76B2mLXjdcyifbvuecYCxf",
@@ -2682,6 +2771,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4yZrNNeXM7xhLPzQhj1oOH",
@@ -2705,6 +2795,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: ["ABCテレビドラマ『修学旅行で仲良くないグループに入りました』 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/3raLYsviJFadclJa87w2j0",
@@ -2731,6 +2822,7 @@ export const songsIndex: Song[] = [
         arranger: ["Nolzy"],
         tieup: ["読売テレビ・ドラマDiVE『親友の「同棲して」に「うん」て言うまで』 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/4GwMw1iuQv0J0d8Lshz09Y",
@@ -2754,6 +2846,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=zUMKlxFPUyU",
             spotify: "https://open.spotify.com/track/1tq4FHHczdk3metmlrjrkZ",
@@ -2781,6 +2874,7 @@ export const songsIndex: Song[] = [
         arranger: ["B33G", "Orcaにゃん", "SARVAL"],
         tieup: [],
         call: true,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/6idtrXLVnkpgPUWXD30yrE",
@@ -2805,6 +2899,7 @@ export const songsIndex: Song[] = [
         arranger: ["竹縄航太"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/1cKDi4rrpDchhwZirxZ61n",
@@ -2827,6 +2922,7 @@ export const songsIndex: Song[] = [
         arranger: ["⭐︎Taku Takahashi"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/10XffNZUvZ7qY0B6FqWqho",
@@ -2848,6 +2944,7 @@ export const songsIndex: Song[] = [
         arranger: ["SARVAL", "Orcaにゃん", "真白あまね"],
         tieup: ["テレビ東京系アニメ『鉄鍋のジャン!』 オープニングテーマソング"],
         call: false,
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=REA6cv8IZqc",
             spotify: "https://open.spotify.com/track/2jVUtXgfpr0xYYdZxxGdHb",
@@ -2872,6 +2969,7 @@ export const songsIndex: Song[] = [
         arranger: ["SARVAL", "Orcaにゃん", "KONPEKi", "CS4W", "Kiyoki"],
         tieup: ["TVアニメ『彼⽅から』オープニング主題歌"],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2tjDVp52gbqzImOMOToaWM",
@@ -2891,6 +2989,7 @@ export const songsIndex: Song[] = [
         arranger: ["渡辺壮亮"],
         tieup: [],
         call: false,
+        karaoke: { joysound: true, dam: false },
         links: {
             mv: "https://www.youtube.com/watch?v=hR1L64Ic8n8",
             spotify: "https://open.spotify.com//track/3Uyt5XXGWjbwkbZaEWfrno",
@@ -2911,6 +3010,7 @@ export const songsIndex: Song[] = [
         arranger: ["真白あまね", "SARVAL"],
         tieup: ["ドラマ『仮面教師〜妻を亡くしたその日から』主題歌"],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: "",
             spotify: "",
@@ -2930,6 +3030,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
+        karaoke: { joysound: false, dam: false },
         links: {
             mv: "",
             spotify: "",
@@ -2952,6 +3053,7 @@ export const songsIndex: Song[] = [
         arranger: [""],
         tieup: [],
         call: ,
+        karaoke: { joysound: , dam: },
         links: {
             mv: null,
             spotify: "",

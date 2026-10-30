@@ -59,6 +59,8 @@ import UnderlineText from "./UnderlineText.astro";
         tieup: 'タイアップ：',
         call: 'コール：',
         mv: 'MV：',
+        joysound: 'JOYSOUND：',
+        dam: 'DAM：',
         live: 'ライブ：',
         cd: 'CD：',
         creator: 'クリエイター：'
@@ -80,6 +82,7 @@ import UnderlineText from "./UnderlineText.astro";
             if (input.closest('#js-template-chip')) return;
             if (input.name === 'sort') return;
 
+            /* 日付 */
             if (input instanceof HTMLInputElement && (input.name === 'startDate' || input.name === 'endDate')) {
                 const val = input.value.trim();
                 if (val) {
@@ -89,12 +92,14 @@ import UnderlineText from "./UnderlineText.astro";
                 return;
             }
 
+            /* 曲名 */
             if (input instanceof HTMLInputElement && input.type === 'text') {
                 const val = input.value.trim();
                 if (val) addChipHTML(`「${val}」を含む`, input.name, val);
                 return;
             }
 
+            /* プルダウン（CD・クリエイター） */
             if (input instanceof HTMLSelectElement) {
                 if (input.value) {
                     let text = input.options[input.selectedIndex].text;
@@ -106,6 +111,7 @@ import UnderlineText from "./UnderlineText.astro";
                 return;
             }
 
+            /* チップ（ライブ・タイアップ・MV・コール） */
             if (input instanceof HTMLInputElement && input.checked) {
                 if (input.name === 'live') {
                     if (processedLives.has(input.value)) return;
@@ -158,14 +164,43 @@ import UnderlineText from "./UnderlineText.astro";
                     const selector = names.map(n => `[name="${n}"]`).join(',');
                     const panelInputs = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>(selector);
                     panelInputs.forEach((panelInput) => {
+
+                        /* 日付 */
+                        if (panelInput instanceof HTMLInputElement && (panelInput.name === 'startDate' || panelInput.name === 'endDate')) {
+                            const [startDate, endDate] = value.split('_');
+
+                            if (chipInput.checked) {
+                                if (name === 'startDate,endDate') {
+                                    const [startDate, endDate] = value.split('_');
+                                    panelInput.value = panelInput.name === 'startDate' ? startDate : endDate;
+                                } else {
+                                    panelInput.value = value;
+                                }
+                            } else {
+                                panelInput.value = '';
+                            }
+                        }
+
+                        /* 曲名 */
+                        if (panelInput instanceof HTMLInputElement && panelInput.type === 'text') {
+                            panelInput.value = chipInput.checked ? value : '';
+                        }
+
+                        /* プルダウン */
                         if (panelInput instanceof HTMLSelectElement) {
-                            panelInput.value = chipInput.checked ? (chipInput.dataset.value || value) : '';
-                        } else if (panelInput instanceof HTMLInputElement) {
-                            if (panelInput.type === 'text' || panelInput.type === 'search' || panelInput.type === 'date' || panelInput.name.includes('Date')) {
-                                if (!chipInput.checked) panelInput.value = '';
-                            } else if (panelInput.value === value || panelInput.type === 'radio') {
-                                panelInput.checked = chipInput.checked;
-                                panelInput.dataset.wasChecked = chipInput.checked ? 'true' : 'false';
+                            panelInput.value = chipInput.checked ? value : '';
+                        } 
+                        
+                        /* ライブチップ */
+                        if (panelInput instanceof HTMLInputElement && panelInput.value === value) {
+                            panelInput.checked = chipInput.checked;
+                            panelInput.dataset.wasChecked = chipInput.checked ? 'true' : 'false';
+                        }
+
+                        /* ラジオボタン */
+                        if (panelInput instanceof HTMLInputElement && panelInput.type === 'radio' && panelInput.name === name) {
+                            if (panelInput.value !== value) {
+                                panelInput.dataset.wasChecked = 'false';
                             }
                         }
                     });

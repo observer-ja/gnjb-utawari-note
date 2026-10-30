@@ -45,7 +45,6 @@ const sortOptions = defaultSortOptions;
                 sortedSongs={sortedSongs} 
                 sortOptions={sortOptions} 
                 currentSort={initialFilters.sortOrder}
-                liveId=""
             />
         </form>
     </div>
@@ -113,15 +112,21 @@ const sortOptions = defaultSortOptions;
         const tieup = searchParams.get('tieup') || '';
         const call = searchParams.get('call') || '';
         const mv = searchParams.get('mv') || '';
+        const joysound = searchParams.get('joysound') || '';
+        const dam = searchParams.get('dam') || '';
         const query = searchParams.get('keyword') || '';
 
         const isSetlistSortable =
-            selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !query;
+            selectedLives.length === 1 && !startDate && !endDate && !cd && !creator && !tieup && !call && !mv && !joysound && !dam && !query;
+        const isCdSortable =
+            selectedLives.length === 0 && !startDate && !endDate && !!cd && !creator && !tieup && !call && !mv && !joysound && !dam && !query;
 
         const rawSort = searchParams.get('sort');
         const sortOrder = (rawSort && (rawSort !== 'setlist' || isSetlistSortable))
             ? rawSort
-            : (isSetlistSortable ? 'setlist' : 'date-desc');
+            : (isSetlistSortable 
+            ? 'setlist' 
+            : (isCdSortable ? 'cd' : 'date-desc'));
 
         restoreFormState(searchParams);
 
@@ -136,7 +141,8 @@ const sortOptions = defaultSortOptions;
             }
             if (startDate && song.date < startDate) return false;
             if (endDate && song.date > endDate) return false;
-            if (cd && !song.cds?.some((c: { id: string }) => c.id === cd)) return false;
+            if (cd === 'none' && (song.cds?.length ?? 0) > 0) return false;
+            if (cd && cd !== 'none' && !song.cds?.some((c: { id: string }) => c.id === cd)) return false;
             if (creator) {
                 const hasCreator =
                     song.lyricist?.includes(creator) ||
@@ -150,6 +156,10 @@ const sortOptions = defaultSortOptions;
             if (mv === "false" && song.links?.mv) return false;
             if (call === "true" && !song.call) return false;
             if (call === "false" && song.call) return false;
+            if (joysound === "true" && !song.karaoke.joysound) return false;
+            if (joysound === "false" && song.karaoke.joysound) return false;
+            if (dam === "true" && !song.karaoke.dam) return false;
+            if (dam === "false" && song.karaoke.dam) return false;
             if (query && !song.title?.includes(query) && !song.title_kana?.includes(query)) return false;
 
             return true;
@@ -159,25 +169,38 @@ const sortOptions = defaultSortOptions;
             filtered.reverse();
         }
 
+        const setlistSongs = sortOrder === 'setlist'
+            ? filtered.flatMap(song =>
+                song.live_history
+                    .map((history, historyIndex) => ({
+                        song,
+                        history,
+                        historyIndex,
+                    }))
+                    .filter(item => item.history.live_id === selectedLives[0])
+            ).sort((a, b) => {
+                if (a.history.position !== b.history.position) {
+                    return a.history.position - b.history.position;
+                }
+
+                return (a.history.perf ?? 999) - (b.history.perf ?? 999);
+            })
+            : [];
+
         filtered.sort((a: Song, b: Song) => {
             if (sortOrder === 'date-desc') return (b.date || '').localeCompare(a.date || '');
             if (sortOrder === 'date-asc') return (a.date || '').localeCompare(b.date || '');
             if (sortOrder === 'title-asc') return (a.title_kana || '').localeCompare(b.title_kana || '', 'ja');
-            if (sortOrder === 'setlist') {
-                const liveId = selectedLives[0];
-                const posA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
-                const posB = b.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.position ?? 999;
-                if (posA === posB) {
-                    const perfA = a.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.perf ?? 999;
-                    const perfB = b.live_history?.find((l: { live_id: string }) => l.live_id === liveId)?.perf ?? 999;
-                    return perfA - perfB;
-                }
-                return posA - posB;
+            if (sortOrder === 'cd') {
+                const cdId = cd;
+                const trkA = a.cds?.find((c: { id: string }) => c.id === cdId)?.track ?? 999;
+                const trkB = b.cds?.find((c: { id: string }) => c.id === cdId)?.track ?? 999;
+                return trkA - trkB;
             }
             return 0;
         });
 
-        updateDOM(filtered, sortOrder, isSetlistSortable);
+        updateDOM(filtered, sortOrder, isSetlistSortable, isCdSortable, setlistSongs);
     });
 
     function restoreFormState(params: URLSearchParams) {
@@ -212,7 +235,20 @@ const sortOptions = defaultSortOptions;
         }
     }
 
-    function updateDOM(filteredSongs: Song[], sortOrder: string, isSetlistSortable: boolean) {
+    let wrapperMap: Map<string, HTMLElement> | null = null;
+    let setlistCardMap: Map<string, HTMLElement> | null = null;
+
+    function updateDOM(
+        filteredSongs: Song[],
+        sortOrder: string,
+        isSetlistSortable: boolean,
+        isCdSortable: boolean,
+        setlistSongs: {
+            song: Song;
+            history: Song['live_history'][number];
+            historyIndex: number;
+        }[]
+    ) {
         const cardList = document.getElementById('js-song-card-list');
         const songCountEl = document.getElementById('js-song-count');
         const noResultEl = document.getElementById('js-no-result');
@@ -226,6 +262,7 @@ const sortOptions = defaultSortOptions;
             sortSelect.innerHTML = '';
             const options = [
                 ...(isSetlistSortable ? [{ label: 'セットリスト順', value: 'setlist' }] : []),
+                ...(isCdSortable ? [{ label: 'CD収録順', value: 'cd' }] : []),
                 { label: 'リリース日が新しい順', value: 'date-desc' },
                 { label: 'リリース日が古い順', value: 'date-asc' },
                 { label: '曲名順（五十音順）', value: 'title-asc' },
@@ -250,40 +287,64 @@ const sortOptions = defaultSortOptions;
 
         if (!cardList) return;
 
-        const existingWrappers = Array.from(cardList.querySelectorAll<HTMLElement>('.js-song-card-wrapper'));
-        const wrapperMap = new Map<string, HTMLElement>();
+        if (!wrapperMap || !setlistCardMap) {
+            wrapperMap = new Map();
+            setlistCardMap = new Map();
 
-        existingWrappers.forEach(wrapper => {
-            const id = wrapper.dataset.songId;
-            if (id) wrapperMap.set(id, wrapper);
-        });
+            cardList.querySelectorAll<HTMLElement>('.js-song-card-wrapper').forEach(wrapper => {
+                const songId = wrapper.dataset.songId;
+                if (songId) wrapperMap!.set(songId, wrapper);
+            });
+
+            cardList.querySelectorAll<HTMLElement>('.js-card-mode--setlist').forEach(card => {
+                const songId = card.dataset.songId;
+                const historyIndex = card.dataset.historyIndex;
+
+                if (songId && historyIndex !== undefined) {
+                    setlistCardMap!.set(`${songId}:${historyIndex}`, card);
+                }
+            });
+        }
 
         cardList.innerHTML = '';
 
-        const isSetlist = sortOrder === 'setlist';
-        const searchParams = new URLSearchParams(window.location.search);
-        const liveId = searchParams.get('live') || '';
+        if (sortOrder === 'setlist') {
+            setlistSongs.forEach(item => {
+                const key = `${item.song.id}:${item.historyIndex}`;
+                const card = setlistCardMap!.get(key);
+
+                if (card) {
+                    card.style.display = 'block';
+                    cardList.appendChild(card);
+                }
+            });
+
+            return;
+        }
+
+        const isCd = sortOrder === 'cd';
+        const cdId = new URLSearchParams(window.location.search).get('cd') || '';
 
         filteredSongs.forEach(song => {
-            const wrapper = wrapperMap.get(song.id);
-            if (wrapper) {
-                const defaultCard = wrapper.querySelector<HTMLElement>('.js-card-mode--default');
-                const setlistCards = Array.from(wrapper.querySelectorAll<HTMLElement>('.js-card-mode--setlist'));
+            const wrapper = wrapperMap!.get(song.id);
 
-                if (isSetlist && liveId) {
-                    if (defaultCard) defaultCard.style.display = 'none';
-                    setlistCards.forEach(card => {
-                        card.style.display = card.dataset.liveId === liveId ? 'block' : 'none';
-                    });
-                } else {
-                    if (defaultCard) defaultCard.style.display = 'block';
-                    setlistCards.forEach(card => {
-                        card.style.display = 'none';
-                    });
-                }
+            if (!wrapper) return;
 
-                cardList.appendChild(wrapper);
+            const defaultCard = wrapper.querySelector<HTMLElement>('.js-card-mode--default');
+            const cdCards = Array.from(
+                wrapper.querySelectorAll<HTMLElement>('.js-card-mode--cd')
+            );
+
+            if (defaultCard) {
+                defaultCard.style.display = isCd ? 'none' : 'block';
             }
+
+            cdCards.forEach(card => {
+                card.style.display =
+                    isCd && card.dataset.cdId === cdId ? 'block' : 'none';
+            });
+
+            cardList.appendChild(wrapper);
         });
     }
 </script>

@@ -4,10 +4,17 @@ interface Option {
     value: string;
 }
 
+interface OptionGroup {
+    label: string;
+    options: Option[];
+}
+
+type SelectOption = Option | OptionGroup;
+
 interface Props {
     name: string;
     placeholder?: string;
-    options: Option[];
+    options: SelectOption[];
     defaultValue?: string;
     submitOnChange?: boolean;
 }
@@ -27,9 +34,19 @@ const {
             <option value="" selected={!defaultValue}>{placeholder}</option>
         )}
         {options.map((opt) => (
+            'options' in opt ? (
+                <optgroup label={opt.label}>
+                    {opt.options.map((child) => (
+                        <option value={child.value} selected={child.value === defaultValue}>
+                            {child.label}
+                        </option>
+                    ))}
+                </optgroup>
+            ) : (
             <option value={opt.value} selected={opt.value === defaultValue}>
                 {opt.label}
             </option>
+            )
         ))}
     </select>
     <img src="/gnjb-utawari-note/icon-select.svg" alt="" class="select-icon">

@@ -45,10 +45,53 @@ const recentLives = lives.slice(-3).reverse().map((live) => ({
 }));
 
 import { cds } from '../data/cds';
-const cdOptions = cds.map((cd) => ({
-    label: cd.title,
-    value: cd.id,
-}));
+const cdOptions = [
+    {
+        label: 'BATTLE STREET',
+        options: cds
+            .filter((cd) => cd.type === 'bs')
+            .map((cd) => ({
+                label: cd.title,
+                value: cd.id,
+            })),
+    },
+    {
+        label: 'シングル',
+        options: cds
+            .filter((cd) => cd.type === 'sg')
+            .map((cd) => ({
+                label: cd.title,
+                value: cd.id,
+            })),
+    },
+    {
+        label: 'アルバム',
+        options: cds
+            .filter((cd) => cd.type === 'al')
+            .map((cd) => ({
+                label: cd.title,
+                value: cd.id,
+            })),
+    },
+    {
+        label: 'ミニアルバム',
+        options: cds
+            .filter((cd) => cd.type === 'ep')
+            .map((cd) => ({
+                label: cd.title,
+                value: cd.id,
+            })),
+    },
+    {
+        label: 'その他',
+        options: [
+            {
+                label: 'CD未収録',
+                value: 'none',
+            },
+        ],
+    },
+];
 
 import { songsIndex } from '../data/index'
 import type { Song } from '../data/index';
@@ -145,6 +188,22 @@ const creatorOptions = uniqueCreators.map(creator => ({
                     <div class="filter-group__content">
                         <FilterChip label="あり" name="mv" value="true" type='radio' checked={filters.mv === 'true'}/>
                         <FilterChip label="なし" name="mv" value="false" type='radio' checked={filters.mv === 'false'}/>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-row">
+                <div class="filter-group">
+                    <p class="filter-group__label text-body">JOYSOUND</p>
+                    <div class="filter-group__content">
+                        <FilterChip label="配信済" name="joysound" value="true" type='radio' checked={filters.tieup === 'true'} />
+                        <FilterChip label="未配信" name="joysound" value="false" type='radio' checked={filters.tieup === 'false'}/>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <p class="filter-group__label text-body">DAM</p>
+                    <div class="filter-group__content">
+                        <FilterChip label="配信済" name="dam" value="true" type='radio' checked={filters.call === 'true'}/>
+                        <FilterChip label="未配信" name="dam" value="false" type='radio' checked={filters.call === 'false'}/>
                     </div>
                 </div>
             </div>
@@ -301,17 +360,7 @@ const creatorOptions = uniqueCreators.map(creator => ({
 </style>
 
 <script>
-    const toggleChip = document.querySelector('.filter-panel__toggle .expand-toggle-chip');
-    const expandedInput = document.getElementById('expanded-input') as HTMLInputElement;
-
-    if (toggleChip && expandedInput) {
-        toggleChip.addEventListener('click', () => {
-            const isExpanded = toggleChip.getAttribute('data-expanded') === 'true';
-            expandedInput.value = isExpanded ? 'true' : 'false';
-        });
-    }
-
-    ['tieup', 'mv', 'call'].forEach((name) => {
+    ['tieup', 'mv', 'call', 'joysound', 'dam'].forEach((name) => {
         const chips = document.querySelectorAll(`input[name="${name}"]`);
         
         chips.forEach((chip) => {

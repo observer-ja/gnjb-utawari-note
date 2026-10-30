@@ -1,5 +1,5 @@
 /* CDデータ */
-export type CdType = "sg" | "al" | "ep" ;
+export type CdType = "bs" | "sg" | "al" | "ep" ;
 
 export interface Cd {
     id: string;
@@ -10,8 +10,8 @@ export interface Cd {
 
 export const cds: Cd[] = [
     /* BATTLE STREET時代 */
-    {id: "bs_01", title: "ebidence", date: "2018-12-19", type: "sg"},
-    {id: "bs_02", title: "Show Time!!", date: "2019-06-19", type: "sg"},
+    {id: "bs_01", title: "ebidence", date: "2018-12-19", type: "bs"},
+    {id: "bs_02", title: "Show Time!!", date: "2019-06-19", type: "bs"},
 
     /* シングル */
     {id: "sg_01", title: "原因は自分にある。", date: "2019-10-09", type: "sg"},

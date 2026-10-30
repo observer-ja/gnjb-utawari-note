@@ -5,11 +5,13 @@ import { cds } from "../data/cds";
 import { lives } from "../data/lives";
 interface Props {
     song: Song;
-    displayMode: 'default' | 'setlist';
+    displayMode: 'default' | 'setlist' | 'cd';
     liveId?: string;
+    cdId?: string;
+    historyIndex?: number;
 }
 
-const { song, displayMode = 'default', liveId } = Astro.props
+const { song, displayMode = 'default', liveId , cdId, historyIndex } = Astro.props
 
 const meta = {
     composer:
@@ -27,8 +29,11 @@ const meta = {
 
 const ALLOWED_NOTES = ['初披露', 'シャッフル曲', '日替わり曲', 'メドレー'] as const;
 type ValidNote = typeof ALLOWED_NOTES[number];
-const currentHistory = song.live_history.find(h => h.live_id === liveId);
+const currentHistory = historyIndex !== undefined
+    ? song.live_history[historyIndex]
+    : song.live_history.find(h => h.live_id === liveId);
 const validNote = currentHistory?.note?.find(n => ALLOWED_NOTES.includes(n as ValidNote)) as ValidNote | undefined;
+const cd = song.cds.find(c => c.id === cdId);
 
 
 const setlistMeta = {
@@ -36,9 +41,11 @@ const setlistMeta = {
     position: currentHistory?.position,
     note: validNote || null,
 }
+
+const cdTitle = cds.find(cd => cd.id === cdId)?.title || 'ー'
 ---
 
-<div class={`song-card-body text-sm ${displayMode === 'setlist' ? 'song-card-body--setlist' : ''}`}>
+<div class={`song-card-body text-sm ${['setlist', 'cd'].includes(displayMode) ? 'song-card-body--small' : ''}`}>
     {displayMode === 'default' && (
         <>
             <div class="song-card-body__row">
@@ -65,6 +72,15 @@ const setlistMeta = {
             </div>
         </>
     )}
+
+    {displayMode === 'cd' && (
+        <>
+            <div class="song-card-body__cd-title">{cdTitle}</div>
+            <div class="song-card-body__cd-track">
+                <span class="song-card-body__position text-body">{cd?.track}</span>
+            </div>
+        </>
+    )}
 </div>
 
 <style>
@@ -83,7 +99,7 @@ const setlistMeta = {
         box-sizing: border-box;
     }
 
-    .song-card-body--setlist {
+    .song-card-body--small {
         height: 66px;
         align-items: center;
     }
@@ -102,13 +118,15 @@ const setlistMeta = {
         flex-shrink: 1;
     }
 
-    .song-card-body__live-name {
+    .song-card-body__live-name, .song-card-body__cd-title {
         text-align: center;
         width: 100%;
         word-break: break-word;
     }
 
-    .song-card-body__setlist-meta {
+    .song-card-body__setlist-meta,
+    .song-card-body__cd-track {
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;

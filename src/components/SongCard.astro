@@ -5,15 +5,17 @@ import type { Song } from '../data/index'
 
 interface Props {
     song: Song;
-    displayMode?: 'default' | 'setlist';
+    displayMode?: 'default' | 'setlist' | 'cd';
     liveId?: string;
+    cdId?: string;
+    historyIndex?: number;
 }
 
-const { song, displayMode = 'default', liveId } = Astro.props
+const { song, displayMode = 'default', liveId , cdId, historyIndex } = Astro.props
 ---
 <a class="song-card" href={`/gnjb-utawari-note/songs/${song.id}/`}>
     <div class="song-card__header text-body">{song.title}</div>
-    <SongCardBody song={song} displayMode={displayMode} liveId={liveId} />
+    <SongCardBody song={song} displayMode={displayMode} liveId={liveId} cdId={cdId} historyIndex={historyIndex} />
     <div class="song-card__footer">
         {song.tieup.length > 0 && <FeatureBadge type="tieup" />}
         {song.call && <FeatureBadge type="call" />}
