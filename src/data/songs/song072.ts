@@ -217,7 +217,7 @@ export const song072: SongLyrics = {
                 {
                     members: ["P"],
                     chunks: [
-                        { text: [{ lyrics: "Yeah bring it" }] },
+                        { text: [{ lyrics: "Yeah bring it on" }] },
                         { text: [{ lyrics: "枯れてた大地毎日水やり" }] },
                     ],
                 },
