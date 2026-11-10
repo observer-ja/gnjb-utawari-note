@@ -6,6 +6,11 @@ export interface NewsItemType {
 
 export const newsData: NewsItemType[] = [
     {
+        date: "2026.11.11" ,
+        text: "5thシングル「ラブリーズン」収録曲の詳細ページを公開しました。",
+        slug: "2026-11-11-new-song"
+    },
+    {
         date: "2026.10.30" ,
         text: "サイトの機能を追加・改善しました。",
         slug: "2026-10-30-site-update"

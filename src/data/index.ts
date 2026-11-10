@@ -2938,7 +2938,7 @@ export const songsIndex: Song[] = [
         title: "火宴",
         title_kana: "かえん",
         date: "2026-07-06",
-        cds: [/* { id: "sg_05", track: 2 }, */],
+        cds: [{ id: "sg_05", track: 2 },],
         lyricist: ["Kiyoki"],
         composer: ["SARVAL"],
         arranger: ["SARVAL", "Orcaにゃん", "真白あまね"],
@@ -2963,7 +2963,7 @@ export const songsIndex: Song[] = [
         title: "逃光行",
         title_kana: "とうひこう",
         date: "2026-10-05",
-        cds: [/* { id: "sg_05", track: 3 }, */],
+        cds: [{ id: "sg_05", track: 3 },],
         lyricist: ["Kiyoki"],
         composer: ["SARVAL"],
         arranger: ["SARVAL", "Orcaにゃん", "KONPEKi", "CS4W", "Kiyoki"],
@@ -2983,7 +2983,7 @@ export const songsIndex: Song[] = [
         title: "ラブリーズン",
         title_kana: "らぶりーずん",
         date: "2026-10-19",
-        cds: [/*{ id: "sg_05", track: 1 },*/],
+        cds: [{ id: "sg_05", track: 1 },],
         lyricist: ["syudou"],
         composer: ["syudou"],
         arranger: ["渡辺壮亮"],
@@ -2998,7 +2998,6 @@ export const songsIndex: Song[] = [
         },
         live_history: [],
     },
-    /*
     {
         id: "song087",
         title: "ドパミン・シンギュラリティ",
@@ -3039,7 +3038,6 @@ export const songsIndex: Song[] = [
         },
         live_history: [],
     },
-    */
 
     /* ひな形
     {
