@@ -2998,7 +2998,6 @@ export const songsIndex: Song[] = [
         },
         live_history: [],
     },
-    /*
     {
         id: "song087",
         title: "ドパミン・シンギュラリティ",
@@ -3039,7 +3038,6 @@ export const songsIndex: Song[] = [
         },
         live_history: [],
     },
-    */
 
     /* ひな形
     {
