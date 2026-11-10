@@ -60,7 +60,7 @@ export const song087: SongLyrics = {
                         },
                         {
                             members: ["P"],
-                            text: [{ lyrics: "(足りねぇよ…)" }]
+                            text: [{ lyrics: "（足りねぇよ…）" }]
                         },
                     ],
                 },
@@ -90,7 +90,7 @@ export const song087: SongLyrics = {
                     members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "歪んだドアノブ" }] },
-                        { text: [{ lyrics: "握るけどビクとも(ハード)" }] },
+                        { text: [{ lyrics: "握るけどビクとも（ハード）" }] },
                     ],
                 },
                 {
@@ -143,7 +143,7 @@ export const song087: SongLyrics = {
                 {
                     members: ["R"],
                     chunks: [
-                        { text: [{ lyrics: "(ドパドパドパドパドパ　熱中しよう)" }] },
+                        { text: [{ lyrics: "（ドパドパドパドパドパ　熱中しよう）" }] },
                     ],
                 },
             ],
@@ -350,7 +350,7 @@ export const song087: SongLyrics = {
                     chunks: [
                         {
                             members: ["Y"],
-                            text: [{ lyrics: "(足りない" }]
+                            text: [{ lyrics: "（足りない" }]
                         },
                         {
                             members: ["B"],
@@ -366,14 +366,14 @@ export const song087: SongLyrics = {
                         },
                         {
                             members: ["R"],
-                            text: [{ lyrics: "足リ無イ)" }]
+                            text: [{ lyrics: "足リ無イ）" }]
                         },
                     ],
                 },
                 {
                     members: ["P"],
                     chunks: [
-                        { text: [{ lyrics: "(足りねぇよ…)" }] },
+                        { text: [{ lyrics: "（足りねぇよ…）" }] },
                     ],
                 },
             ],
@@ -449,7 +449,7 @@ export const song087: SongLyrics = {
                 {
                     members: ["Y"],
                     chunks: [
-                        { text: [{ lyrics: "(ドパドパドパドパドパ　熱中しよう)" }] },
+                        { text: [{ lyrics: "（ドパドパドパドパドパ　熱中しよう）" }] },
                     ],
                 },
             ],
@@ -532,14 +532,14 @@ export const song087: SongLyrics = {
                 {
                     members: ["Y"],
                     chunks: [
-                        { text: [{ lyrics: "(踊ろう　永久的に…)" }] },
+                        { text: [{ lyrics: "（踊ろう　永久的に…）" }] },
                     ],
                 },
                 {
                     members: ["Y"],
                     chunks: [
                         { text: [{ lyrics: "止まらない　ドパミン" }] },
-                        { text: [{ lyrics: "(ドパ・ドパ)" }] },
+                        { text: [{ lyrics: "（ドパ・ドパ）" }] },
                     ],
                 },
                 {
@@ -557,7 +557,7 @@ export const song087: SongLyrics = {
                     chunks: [
                         {
                             members: ["Y"],
-                            text: [{ lyrics: "(足りない" }]
+                            text: [{ lyrics: "（足りない" }]
                         },
                         {
                             members: ["B"],
@@ -569,7 +569,7 @@ export const song087: SongLyrics = {
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "足りない…)" }]
+                            text: [{ lyrics: "足りない…）" }]
                         },
                     ],
                 },

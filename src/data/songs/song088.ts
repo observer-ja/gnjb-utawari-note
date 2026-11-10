@@ -46,7 +46,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(そう？)" }]
+                            text: [{ lyrics: "（そう？）" }]
                         },
                         {
                             members: ["P"],
@@ -54,7 +54,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(そう！)" }]
+                            text: [{ lyrics: "（そう！）" }]
                         },
                     ],
                 },
@@ -78,7 +78,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(そう？)" }]
+                            text: [{ lyrics: "（そう？）" }]
                         },
                         {
                             members: ["Y"],
@@ -86,7 +86,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(そう！)" }]
+                            text: [{ lyrics: "（そう！）" }]
                         },
                     ],
                 },
@@ -121,7 +121,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(なぁ心拍数？)" }]
+                            text: [{ lyrics: "（なぁ心拍数？）" }]
                         },
                     ],
                 },
@@ -133,7 +133,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(なぁ進化途中？)" }]
+                            text: [{ lyrics: "（なぁ進化途中？）" }]
                         },
                     ],
                 },
@@ -156,7 +156,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(おい！)" }]
+                            text: [{ lyrics: "（おい！）" }]
                         },
                     ],
                 },
@@ -178,7 +178,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(接近！)" }]
+                            text: [{ lyrics: "（接近！）" }]
                         },
                     ],
                 },
@@ -190,7 +190,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "(それでも You to say)" }]
+                            text: [{ lyrics: "（それでもYou to say）" }]
                         },
                     ],
                 },
@@ -206,7 +206,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(Loop loop)" }]
+                            text: [{ lyrics: "（Loop loop）" }]
                         },
                     ],
                 },
@@ -218,7 +218,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(ジョイフル)" }]
+                            text: [{ lyrics: "（ジョイフル）" }]
                         },
                     ],
                 },
@@ -401,7 +401,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(接近！)" }]
+                            text: [{ lyrics: "（接近！）" }]
                         },
                     ],
                 },
@@ -413,7 +413,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "(呼吸の時間を Please)" }]
+                            text: [{ lyrics: "（呼吸の時間をPlease）" }]
                         },
                     ],
                 },
@@ -421,11 +421,11 @@ export const song088: SongLyrics = {
                     chunks: [
                         {
                             members: ["W"],
-                            text: [{ lyrics: "期待と不安の重ね合わせで Oh my love" }]
+                            text: [{ lyrics: "期待と不安の重ね合わせでOh my love" }]
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(Loop loop)" }]
+                            text: [{ lyrics: "（Loop loop）" }]
                         },
                     ],
                 },
@@ -451,7 +451,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(Black box)" }]
+                            text: [{ lyrics: "（Black box）" }]
                         },
                     ],
                 },
@@ -459,11 +459,11 @@ export const song088: SongLyrics = {
                     chunks: [
                         {
                             members: ["P"],
-                            text: [{ lyrics: "弾けろよ Slap!" }]
+                            text: [{ lyrics: "弾けろよSlap！" }]
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(Slap!)" }]
+                            text: [{ lyrics: "（Slap!！）" }]
                         },
                     ],
                 },
@@ -483,7 +483,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(興奮)" }]
+                            text: [{ lyrics: "（興奮）" }]
                         },
                     ],
                 },
@@ -495,7 +495,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(覚醒)" }]
+                            text: [{ lyrics: "（覚醒）" }]
                         },
                     ],
                 },
@@ -522,7 +522,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["S"],
-                            text: [{ lyrics: "(エネルギー)" }]
+                            text: [{ lyrics: "（エネルギー）" }]
                         },
                     ],
                 },
@@ -557,7 +557,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(接近！)" }]
+                            text: [{ lyrics: "（接近！）" }]
                         },
                     ],
                 },
@@ -569,7 +569,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "(それでも You to say)" }]
+                            text: [{ lyrics: "（それでもYou to say）" }]
                         },
                     ],
                 },
@@ -585,7 +585,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(Loop loop)" }]
+                            text: [{ lyrics: "（Loop loop）" }]
                         },
                     ],
                 },
@@ -597,7 +597,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "(ジョイフル)" }]
+                            text: [{ lyrics: "（ジョイフル）" }]
                         },
                     ],
                 },
@@ -656,7 +656,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["G"],
-                            text: [{ lyrics: "「ｎ回目！？」" }]
+                            text: [{ lyrics: "「n回目！？」" }]
                         },
                         {
                             members: ["Y"],
