@@ -546,7 +546,7 @@ export const song087: SongLyrics = {
                     members: ["P"],
                     chunks: [
                         { text: [{ lyrics: "止まらない　ドパミン" }] },
-                        { text: [{ lyrics: "(ドパ・ドパ)" }] },
+                        { text: [{ lyrics: "（ドパ・ドパ）" }] },
                     ],
                 },
             ],
