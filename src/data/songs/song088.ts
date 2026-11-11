@@ -463,7 +463,7 @@ export const song088: SongLyrics = {
                         },
                         {
                             members: ["all"],
-                            text: [{ lyrics: "（Slap!！）" }]
+                            text: [{ lyrics: "（Slap！）" }]
                         },
                     ],
                 },
