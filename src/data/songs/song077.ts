@@ -403,11 +403,11 @@ export const song077: SongLyrics = {
                             text: [{ lyrics: "優しくたっていいけどね" }]
                         },
                         {
-                            members: ["B"],
+                            members: [],
                             text: [{ lyrics: "UPUPして" }]
                         },
                         {
-                            members: ["B"],
+                            members: [],
                             text: [{ lyrics: "あ゛～！" }]
                         },
                     ],
@@ -540,7 +540,11 @@ export const song077: SongLyrics = {
                     chunks: [
                         {
                             members: ["B"],
-                            text: [{ lyrics: "勝海舟　勝海舟" }]
+                            text: [{ lyrics: "勝海舟" }]
+                        },
+                        {
+                            members: ["G"],
+                            text: [{ lyrics: "勝海舟" }]
                         },
                         {
                             members: ["W"],
@@ -815,7 +819,7 @@ export const song077: SongLyrics = {
                             text: [{ lyrics: "舌打ちさえご褒美な現場 【現場】 → TSK" }]
                         },
                         {
-                            members: ["B"],
+                            members: [],
                             text: [{ lyrics: "あ゛～！" }]
                         },
                     ],
@@ -923,7 +927,7 @@ export const song077: SongLyrics = {
                             text: [{ lyrics: "UPUPして" }]
                         },
                         {
-                            members: ["R"],
+                            members: ["Y"],
                             text: [{ lyrics: "もっと　もっとして" }]
                         },
                     ],
