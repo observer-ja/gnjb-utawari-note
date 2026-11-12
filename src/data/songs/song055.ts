@@ -419,7 +419,7 @@ export const song055: SongLyrics = {
                             text: [{ lyrics: "(ニナニナニナニナ…)" , call: true }]
                         },
                         {
-                            members: ["Y"],
+                            members: ["G"],
                             text: [{ lyrics: "侵略される……！" }]
                         },
                     ],
