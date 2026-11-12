@@ -287,7 +287,7 @@ export const song077: SongLyrics = {
                             text: [{ lyrics: "わっけわっかんない" }]
                         },
                         {
-                            members: ["S"],
+                            members: ["P"],
                             text: [{ lyrics: "歌詞とりあえずもっかい" }]
                         },
                     ],
@@ -295,7 +295,7 @@ export const song077: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["P"],
+                            members: ["S"],
                             text: [{ lyrics: "でも漢字読めない" }]
                         },
                         {
