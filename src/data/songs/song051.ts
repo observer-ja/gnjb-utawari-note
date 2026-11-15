@@ -141,7 +141,7 @@ export const song051: SongLyrics = {
         {
             rows: [
                 {
-                    members: ["P"],
+                    members: ["S"],
                     chunks: [
                         { text: [{ lyrics: "嗚呼照らして僕の弱さ" }] },
                         { text: [{ lyrics: "も全て包み込んでくれるの" }] },

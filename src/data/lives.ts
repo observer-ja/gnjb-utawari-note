@@ -103,4 +103,9 @@ export const lives: Live[] = [
   /*
   { id: "live2026_09", name: "Laboratory - Ne", date:"2026-12-13", type: "oneman"},
   */
+
+  /* 2027年 */
+  /*
+  { id: "live2027_01", name: "深溟", date:"2027-03-17", type: "oneman"},
+  */
 ]

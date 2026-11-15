@@ -71,7 +71,7 @@ export const song012: SongLyrics = {
                             text: [{ lyrics: "さあ鍵を開けて" }]
                         },
                         {
-                            members: ["S"],
+                            members: ["B"],
                             text: [{ lyrics: "照らす街の灯り" }]
                         },
                         {
