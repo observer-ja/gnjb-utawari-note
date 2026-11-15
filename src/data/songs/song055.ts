@@ -358,7 +358,7 @@ export const song055: SongLyrics = {
                 {
                     chunks: [
                         {
-                            members: ["R"],
+                            members: ["B"],
                             text: [{ lyrics: "めっちゃ強ぇ格ゲー" }]
                         },
                         {

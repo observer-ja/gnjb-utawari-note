@@ -6,8 +6,13 @@ export interface NewsItemType {
 
 export const newsData: NewsItemType[] = [
     {
+        date: "2026.11.15" ,
+        text: "一部楽曲の歌割りの修正を行いました。",
+        slug: "2026-11-15-lyrics-fix"
+    },
+    {
         date: "2026.11.12" ,
-        text: "一部楽曲の歌詞の修正を行いました。",
+        text: "一部楽曲の歌割りの修正を行いました。",
         slug: "2026-11-12-lyrics-fix"
     },
     {
@@ -57,7 +62,7 @@ export const newsData: NewsItemType[] = [
     },
     {
         date: "2026.09.13" ,
-        text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
+        text: "一部楽曲の歌割りの修正を行いました。",
         slug: "2026-09-13-lyrics-fix"
     },
     {
@@ -67,7 +72,7 @@ export const newsData: NewsItemType[] = [
     },
     {
         date: "2026.09.05" ,
-        text: "一部楽曲の歌詞及び歌割りの修正を行いました。",
+        text: "一部楽曲の歌割りの修正を行いました。",
         slug: "2026-09-05-lyrics-fix"
     },
     {
