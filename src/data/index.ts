@@ -2975,7 +2975,7 @@ export const songsIndex: Song[] = [
         arranger: ["SARVAL", "Orcaにゃん", "KONPEKi", "CS4W", "Kiyoki"],
         tieup: ["TVアニメ『彼⽅から』オープニング主題歌"],
         call: false,
-        karaoke: { joysound: true, dam: false },
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: null,
             spotify: "https://open.spotify.com/track/2tjDVp52gbqzImOMOToaWM",
@@ -2997,7 +2997,7 @@ export const songsIndex: Song[] = [
         arranger: ["渡辺壮亮"],
         tieup: [],
         call: false,
-        karaoke: { joysound: true, dam: false },
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "https://www.youtube.com/watch?v=hR1L64Ic8n8",
             spotify: "https://open.spotify.com//track/3Uyt5XXGWjbwkbZaEWfrno",
@@ -3019,7 +3019,7 @@ export const songsIndex: Song[] = [
         arranger: ["真白あまね", "SARVAL"],
         tieup: ["ドラマ『仮面教師〜妻を亡くしたその日から』主題歌"],
         call: false,
-        karaoke: { joysound: false, dam: false },
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/1cnUzF7Y5rJB0RZkcZzTyP",
@@ -3041,7 +3041,7 @@ export const songsIndex: Song[] = [
         arranger: ["久下真音"],
         tieup: [],
         call: false,
-        karaoke: { joysound: false, dam: false },
+        karaoke: { joysound: true, dam: true },
         links: {
             mv: "",
             spotify: "https://open.spotify.com/track/3r24Bpy14knoA6wXkW93Qc",
