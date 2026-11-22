@@ -189,8 +189,12 @@ export const song073: SongLyrics = {
                             text: [{ lyrics: "酸いも“愛”も全部注いだら" }]
                         },
                         {
+                            members: ["B"],
+                            text: [{ lyrics: "すぐに" }]
+                        },
+                        {
                             members: ["P"],
-                            text: [{ lyrics: "すぐに香り立つ世界" }]
+                            text: [{ lyrics: "香り立つ世界" }]
                         },
                     ],
                 },
